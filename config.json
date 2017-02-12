@@ -1,0 +1,21 @@
+{
+  "slug": "typescript",
+  "language": "TypeScript",
+  "repository": "https://github.com/exercism/xtypescript",
+  "active": false,
+  "test_pattern": "TODO",
+  "exercises": [
+
+  ],
+  "deprecated": [
+
+  ],
+  "ignored": [
+    "bin",
+    "img",
+    "docs"
+  ],
+  "foregone": [
+
+  ]
+}
