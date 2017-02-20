@@ -5,6 +5,84 @@
   "active": false,
   "test_pattern": "TODO",
   "exercises": [
+      {
+      "slug": "hello-world",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "leap",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "hamming",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "bob",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "gigasecond",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "pangram",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "anagram",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+      {
+      "slug": "wordy",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+     {
+      "slug": "say",
+      "difficulty": 1,
+      "topics": [
+      ]
+    }
 
   ],
   "deprecated": [
@@ -16,6 +94,7 @@
     "docs", 
     "common"
   ],
+  
   "foregone": [
 
   ]
