@@ -19,5 +19,10 @@ class Anagram {
         return result
     }
 }
+//Testing the linter
+
+
+
+
 
 export default Anagram
