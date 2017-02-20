@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- "node"
+  - "node"
 
 cache: yarn
 
@@ -11,12 +11,12 @@ before_install:
   - gem install danger
 
 before_script:
-- npm install -g yarn
+  - npm install -g yarn
 
 script:
   - bin/fetch-configlet
   - bin/configlet .
-- make test
+  - make test
 
 after_success:
-- danger
+  - danger
