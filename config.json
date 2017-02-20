@@ -3,7 +3,7 @@
   "language": "TypeScript",
   "repository": "https://github.com/exercism/xtypescript",
   "active": false,
-  "test_pattern": "TODO",
+  "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
       {
       "slug": "hello-world",
