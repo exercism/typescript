@@ -1,5 +1,22 @@
-language: bash
+language: node_js
+node_js:
+- "node"
+
+cache: yarn
+
+sudo: true
+
+before_install:
+  - gem install bundler
+  - gem install danger
+
+before_script:
+- npm install -g yarn
 
 script:
   - bin/fetch-configlet
   - bin/configlet .
+- make test
+
+after_success:
+- danger
