@@ -44,7 +44,7 @@ moveAllIntoCommonDir:
 moveCommonIntoSubDir:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) moveAssigmentToSub || exit 1; done
 	
-all: replacePackageFileFromCommonToSubFolders
+all: replacePackageFilesFromCommonToSubFolders
 
 copyPackageFilesToSubFolder:
 	@cp ./common/package.json exercises/$(ASSIGNMENT)/package.json
@@ -52,6 +52,6 @@ copyPackageFilesToSubFolder:
 	@cp ./common/tslint.json exercises/$(ASSIGNMENT)/tslint.json
 	@cp ./common/yarn.lock exercises/$(ASSIGNMENT)/yarn.lock
 
-replacePackageFileFromCommonToSubFolders:
+replacePackageFilesFromCommonToSubFolders:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) copyPackageFilesToSubFolder || exit 1; done
 
