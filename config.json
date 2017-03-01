@@ -2,7 +2,7 @@
   "slug": "typescript",
   "language": "TypeScript",
   "repository": "https://github.com/exercism/xtypescript",
-  "active": false,
+  "active": true,
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
       {
