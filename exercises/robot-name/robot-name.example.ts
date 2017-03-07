@@ -25,7 +25,7 @@ private generateName(): string {
     const numberPart = (unified_random() % 899) + 100
     let result = generateRandomLetter() + generateRandomLetter() + numberPart
     while (this.usedNames.has(result)) {
-        result = generateRandomLetter() + generateRandomLetter() + (numberPart + 1)
+        result = generateRandomLetter() + generateRandomLetter() + numberPart
     }
     this.usedNames.add(result)
     return result

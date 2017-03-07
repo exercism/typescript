@@ -6,6 +6,6 @@ bin/configlet
 bin/configlet.exe
 node_modules
 .idea
-.build
+build
 babel-output
 lintreport.json
