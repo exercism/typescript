@@ -83,6 +83,12 @@
       "topics": [
       ]
     },
+    {
+      "slug": "robot-name",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
       {
       "slug": "wordy",
       "difficulty": 1,
