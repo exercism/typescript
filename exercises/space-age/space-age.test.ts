@@ -53,6 +53,4 @@ describe('Space Age', () => {
     expect(age.onEarth()).toEqual(260.16)
     expect(age.onNeptune()).toEqual(1.58)
   })
-
 })
-
