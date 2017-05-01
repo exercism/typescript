@@ -1,9 +1,7 @@
 export default class Squares {
-    // private integer: number
     squareOfSums: number
     sumOfSquares: number
     difference: number
-
 
     constructor(int: number) {
         this.squareOfSums = this._squareOfSums(int)
