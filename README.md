@@ -21,7 +21,7 @@ Then, `make` commands will install other dependencies as needed.
 
 ## Shared Code
 
-Please keep the `common` folder files synced across all the sub folders. These files should be the same across of problem. 
+Please keep the `common` folder files synced across all the sub folders. These files should be the same across all problems. 
 
 * package.json
 * tsconfig.json
