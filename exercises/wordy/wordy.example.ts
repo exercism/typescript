@@ -37,4 +37,4 @@ class WordProblem {
     }
 }
 
-export { ArgumentError, WordProblem } ;
+export { ArgumentError, WordProblem } 
