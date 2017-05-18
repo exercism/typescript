@@ -119,13 +119,18 @@
       "topics": [
       ]
     },
+     {
+      "slug": "scrabble-score",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
     {
       "slug": "raindrops",
       "difficulty": 1,
       "topics": [
       ]
     }
-
   ],
   "deprecated": [
 
