@@ -9,21 +9,21 @@ describe('Transform', () => {
     expect(transform(old)).toEqual(expected)
   })
 
-  it('transforms more values', () => {
+  xit('transforms more values', () => {
     const old = { 1: [ 'A', 'E', 'I', 'O', 'U' ] }
     const expected = { a: 1, e: 1, i: 1, o: 1, u: 1 }
 
     expect(transform(old)).toEqual(expected)
   })
 
-  it('transforms more keys', () => {
+  xit('transforms more keys', () => {
     const old = { 1: [ 'A', 'E' ], 2: [ 'D', 'G' ] }
     const expected = { a: 1, e: 1, d: 2, g: 2 }
 
     expect(transform(old)).toEqual(expected)
   })
 
-  it('transforms a full dataset', () => {
+  xit('transforms a full dataset', () => {
     const old = {
       1: [ 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T' ],
       2: [ 'D', 'G' ],
