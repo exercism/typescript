@@ -7,42 +7,42 @@ describe('Pangram()', () => {
     expect(pangram.isPangram()).toBe(false)
   })
 
-  it('pangram with only lower case', () => {
+  xit('pangram with only lower case', () => {
     const pangram = new Pangram("the quick brown fox jumps over the lazy dog")
     expect(pangram.isPangram()).toBe(true)
   })
 
-  it("missing character 'x'", () => {
+  xit("missing character 'x'", () => {
     const pangram = new Pangram("a quick movement of the enemy will jeopardize five gunboats")
     expect(pangram.isPangram()).toBe(false)
   })
 
-  it("another missing character 'x'", () => {
+  xit("another missing character 'x'", () => {
     const pangram = new Pangram("the quick brown fish jumps over the lazy dog")
     expect(pangram.isPangram()).toBe(false)
   })
 
-  it("pangram with underscores", () => {
+  xit("pangram with underscores", () => {
     const pangram = new Pangram("the_quick_brown_fox_jumps_over_the_lazy_dog")
     expect(pangram.isPangram()).toBe(true)
   })
 
-  it("pangram with numbers", () => {
+  xit("pangram with numbers", () => {
     const pangram = new Pangram("the 1 quick brown fox jumps over the 2 lazy dogs")
     expect(pangram.isPangram()).toBe(true)
   })
 
-  it('missing letters replaced by numbers', () => {
+  xit('missing letters replaced by numbers', () => {
     const pangram = new Pangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog")
     expect(pangram.isPangram()).toBe(false)
   })
 
-  it('pangram with mixed case and punctuation', () => {
+  xit('pangram with mixed case and punctuation', () => {
     const pangram = new Pangram("\"Five quacking Zephyrs jolt my wax bed.\"")
     expect(pangram.isPangram()).toBe(true)
   })
 
-  it('pangram with non-ascii characters', () => {
+  xit('pangram with non-ascii characters', () => {
     const pangram = new Pangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.")
     expect(pangram.isPangram()).toBe(true)
   })
