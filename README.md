@@ -1,4 +1,4 @@
-# xTypeScript [![Build Status](https://travis-ci.org/exercism/xtypescript.svg?branch=master)](https://travis-ci.org/exercism/xtypescript)
+# TypeScript [![Build Status](https://travis-ci.org/exercism/typescript.svg?branch=master)](https://travis-ci.org/exercism/typescript)
 
 Exercism exercises in TypeScript
 
