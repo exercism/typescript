@@ -12,6 +12,7 @@
         "noImplicitThis":true,
         "noImplicitReturns":true,
         "sourceMap": true,
+        "noEmitOnError": true,
         "outDir": "./build"
     },
     "compileOnSave": true, 

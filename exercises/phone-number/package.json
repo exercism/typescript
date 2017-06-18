@@ -10,15 +10,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest --no-cache",
-    "lint": "tslint '*.ts?(x)'; exit 0"
+    "test": "tsc --noEmit -p . && jest --no-cache",
+    "lint": "tsc --noEmit -p . ; tslint '*.ts?(x)'",
+    "lintci": "tslint '*.ts?(x)'; exit 0"
   },
   "dependencies": {
-    "@types/jest": "^18.1.1",
+    "@types/jest": "^20.0.0",
     "@types/node": "^7.0.5",
-    "jest": "^19.0.2",
-    "ts-jest": "^19.0.0",
-    "tslint": "^4.5.1",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.6",
+    "tslint": "^5.4.3",
     "typescript": "^2.2.1"
   },
   "jest": {
@@ -26,7 +27,6 @@
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
     "moduleFileExtensions": [
       "ts",
       "tsx",
