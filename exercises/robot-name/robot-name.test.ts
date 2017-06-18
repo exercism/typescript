@@ -43,11 +43,6 @@ describe('Robot', () => {
     expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 1)
   })
 
-  xit('internal name cannot be modified', () => {
-    const modifyInternal = () => robot.name += "a modification"
-    expect(modifyInternal).toThrow()
-  })
-
   xit('new names should not be sequential', () => {
     const name1 = robot.name
     const name2 = (new RobotName()).name
