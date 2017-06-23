@@ -9,145 +9,148 @@
       "slug": "hello-world",
       "difficulty": 1,
       "topics": [
-
+        "strings"
       ]
     },
     {
       "slug": "leap",
       "difficulty": 1,
       "topics": [
+        "math",
+        "boolean logic"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "difficulty": 2,
+      "topics": [
 
       ]
     },
     {
       "slug": "hamming",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "bob",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
       "slug": "gigasecond",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "word-count",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
       "slug": "pangram",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "beer-song",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "phone-number",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "anagram",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "food-chain",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "grade-school",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "robot-name",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "etl",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
       "slug": "space-age",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
-
-      ]
-    },
-    {
-      "slug": "wordy",
-      "difficulty": 1,
-      "topics": [
-
-      ]
-    },
-    {
-      "slug": "say",
-      "difficulty": 1,
-      "topics": [
-
+        "pattern matching",
+        "math"
       ]
     },
     {
       "slug": "difference-of-squares",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
       "slug": "scrabble-score",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
       "slug": "raindrops",
-      "difficulty": 1,
+      "difficulty": 3,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "bob",
+      "difficulty": 5,
+      "topics": [
+        "control flow",
+        "string processing"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 5,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "difficulty": 5,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "robot-name",
+      "difficulty": 5,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "difficulty": 6,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "grade-school",
+      "difficulty": 6,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "etl",
+      "difficulty": 6,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "wordy",
+      "difficulty": 6,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "say",
+      "difficulty": 6,
+      "topics": [
+        "pattern matching"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "difficulty": 7,
+      "topics": [
+
+      ]
+    },
+    {
+      "slug": "food-chain",
+      "difficulty": 7,
       "topics": [
 
       ]
