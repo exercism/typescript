@@ -9,14 +9,15 @@
       "slug": "hello-world",
       "difficulty": 1,
       "topics": [
-
+        "strings"
       ]
     },
     {
       "slug": "leap",
       "difficulty": 1,
       "topics": [
-
+        "math",
+        "boolean logic"
       ]
     },
     {
@@ -51,7 +52,8 @@
       "slug": "space-age",
       "difficulty": 3,
       "topics": [
-
+        "pattern matching",
+        "math"
       ]
     },
     {
@@ -79,7 +81,8 @@
       "slug": "bob",
       "difficulty": 5,
       "topics": [
-
+        "control flow",
+        "string processing"
       ]
     },
     {
@@ -135,7 +138,7 @@
       "slug": "say",
       "difficulty": 6,
       "topics": [
-
+        "pattern matching"
       ]
     },
     {
