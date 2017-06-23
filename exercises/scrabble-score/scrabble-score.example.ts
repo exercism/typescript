@@ -12,7 +12,7 @@ const letterScores: LetterScore = {
   q : 10, z : 10
 }
 
-const score = (word: string): number => {
+const score = (word: string | undefined): number => {
     word = word ? word.toLowerCase() : ''
 
     let output = 0
