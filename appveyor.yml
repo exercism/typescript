@@ -6,6 +6,4 @@ cache:
 test: off
 
 build_script:
-  - bin/fetch-configlet
-  - bin/configlet .
   - make test
