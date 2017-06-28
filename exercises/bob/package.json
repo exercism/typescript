@@ -11,8 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "tsc --noEmit -p . && jest --no-cache",
-    "lint": "tsc --noEmit -p . ; tslint '*.ts?(x)'",
-    "lintci": "tslint '*.ts?(x)'; exit 0"
+    "lint": "tsc --noEmit -p . && tslint \"*.ts?(x)\"",
+    "lintci": "tslint \"*.ts?(x)\" --force"
   },
   "dependencies": {
     "@types/jest": "^20.0.0",
