@@ -1,8 +1,10 @@
 image: Visual Studio 2015
 
 install:
-  - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
-  - set PATH=%PATH%;c:\MinGW\bin;%GOPATH%\bin
+  #let's use the pre-installed mingw
+  - ps: $env:PATH = 'C:\MinGW\bin;C:\MinGW\mingw32\bin;C:\MinGW\msys\1.0\bin;' + $env:PATH
+  #we copy mingw32-make to have a "make" executable
+  - cmd: copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
 
 cache:
  - "%LOCALAPPDATA%\\Yarn"
@@ -11,4 +13,4 @@ test: off
 
 build_script:
   - ls
-  - c:\MinGW\bin\mingw32-make.exe test
+  - make test
