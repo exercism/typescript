@@ -8,4 +8,5 @@ cache:
 test: off
 
 build_script:
-  - make test
+  - ls
+  - make.exe test
