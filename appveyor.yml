@@ -1,4 +1,4 @@
-image: Visual Studio 2017
+image: Visual Studio 2015
 
 install:
 - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
