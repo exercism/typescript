@@ -1,6 +1,8 @@
 image: Visual Studio 2015
 
 install:
+  # Get the latest stable version of Node.js
+  - ps:Install-Product node ''
   #let's use the pre-installed mingw
   - ps: $env:PATH = 'C:\MinGW\bin;C:\MinGW\mingw32\bin;C:\MinGW\msys\1.0\bin;' + $env:PATH
   #we copy mingw32-make to have a "make" executable
