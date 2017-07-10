@@ -15,7 +15,7 @@ before_script:
 
 script:
   - bin/fetch-configlet
-  - bin/configlet .
+  - bin/configlet lint .
   - make test
 
 after_success:
