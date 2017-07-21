@@ -1,7 +1,5 @@
 {
-  "slug": "typescript",
   "language": "TypeScript",
-  "repository": "https://github.com/exercism/typescript",
   "active": true,
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
