@@ -1,6 +1,7 @@
 {
   "language": "TypeScript",
   "active": true,
+  "blurb": "TypeScript is a language for application-scale JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.",
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
     {
