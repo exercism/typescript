@@ -42,10 +42,12 @@
       "unlocked_by": "pangram",
       "difficulty": 2,
       "topics": [
-        "strings",
-        "control-flow (loops)",
-        "regular expressions",
-        "transforming"
+        "Control-flow (conditionals)",
+        "Polymorphism",
+        "Strings",
+        "Unicode",
+        "Pattern recognition",
+        "Regular expressions"
       ]
     },
     {
@@ -59,20 +61,9 @@
       ]
     },
     {
-      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
-      "slug": "gigasecond",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "a2c7abe7-b487-4cc2-a86a-d97cdd61709d",
-      "slug": "pangram",
-      "core": false,
-      "unlocked_by": null,
+      "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
+      "slug": "space-age",
+      "core": true,
       "difficulty": 3,
       "topics": [
 
@@ -107,6 +98,43 @@
       "difficulty": 3,
       "topics": [
 
+      ]
+    },
+    {
+      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
+      "slug": "gigasecond",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Time"
+      ]
+    },
+    {
+      "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
+      "slug": "difference-of-squares",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
+      "slug": "word-count",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "Control-flow (loops)",
+        "Lists",
+        "Strings",
+        "Unicode",
+        "Regular expressions"
       ]
     },
     {
@@ -151,28 +179,8 @@
       ]
     },
     {
-      "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
-      "slug": "robot-name",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "7a4fefd2-6e71-42d6-82fd-a25d2ef9eae9",
-      "slug": "beer-song",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "32e79fd7-f002-4bdc-b6bd-7a91d8c1af61",
-      "slug": "grade-school",
+      "uuid": "2ceec21e-fb9d-4145-8788-826c3941eb01",
+      "slug": "anagram",
       "core": false,
       "unlocked_by": null,
       "difficulty": 6,
