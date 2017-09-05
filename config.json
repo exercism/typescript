@@ -43,7 +43,7 @@
       "difficulty": 2,
       "topics": [
         "Control-flow (conditionals)",
-        "Polymorfism",
+        "Polymorphism",
         "Strings",
         "Unicode",
         "Pattern recognition",
@@ -63,15 +63,6 @@
         "Maps",
         "Algorithms",
         "Searching"
-      ]
-    },
-    {
-      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
-      "slug": "gigasecond",
-      "core": true,
-      "difficulty": 3,
-      "topics": [
-        "Time"
       ]
     },
     {
@@ -125,6 +116,43 @@
       ]
     },
     {
+      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
+      "slug": "gigasecond",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Time"
+      ]
+    },
+    {
+      "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
+      "slug": "difference-of-squares",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
+      "slug": "word-count",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "Control-flow (loops)",
+        "Lists",
+        "Strings",
+        "Unicode",
+        "Regular expressions"
+      ]
+    },
+    {
       "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
       "slug": "raindrops",
       "core": false,
@@ -174,33 +202,6 @@
         "Control-flow (loops)",
         "Maps",
         "Strings"
-      ]
-    },
-    {
-      "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
-      "slug": "difference-of-squares",
-      "core": false,
-      "unlocked_by": "space-age",
-      "difficulty": 3,
-      "topics": [
-        "Control-flow (loops)",
-        "Algorithms",
-        "Mathematics",
-        "Integers"
-      ]
-    },
-    {
-      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
-      "slug": "word-count",
-      "core": false,
-      "unlocked_by": "pangram",
-      "difficulty": 1,
-      "topics": [
-        "Control-flow (loops)",
-        "Lists",
-        "Strings",
-        "Unicode",
-        "Regular expressions"
       ]
     },
     {
