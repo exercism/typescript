@@ -35,6 +35,19 @@
       ]
     },
     {
+      "uuid": "f6631a0f-2da3-47a4-b46b-7a81fa0d4dfd",
+      "slug": "acronym",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "control-flow (loops)",
+        "regular expressions",
+        "transforming"
+      ]
+    },
+    {
       "uuid": "18204e23-fca8-44dc-8d5c-abe66b87c640",
       "slug": "hamming",
       "core": false,
