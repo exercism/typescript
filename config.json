@@ -1,38 +1,207 @@
 {
   "language": "TypeScript",
   "active": true,
-  "blurb": "TypeScript is a language for writing more maintainable JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.",
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
     {
       "uuid": "755f6f85-9ab3-4af6-9e35-dbb9d64be9c5",
       "slug": "hello-world",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 1,
       "topics": [
-        "strings"
+        "Control-flow (conditionals)",
+        "Optional values",
+        "Strings",
+        "Text formatting"
       ]
     },
     {
       "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b",
       "slug": "leap",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 1,
       "topics": [
-        "math",
-        "boolean logic"
+        "Booleans",
+        "Integers",
+        "Logic"
       ]
     },
     {
       "uuid": "b4db381f-1c99-44c6-948c-c8892d77823e",
       "slug": "rna-transcription",
-      "core": false,
-      "unlocked_by": null,
+      "core": true,
       "difficulty": 2,
       "topics": [
-
+        "Strings",
+        "Transforming"
+      ]
+    },
+    {
+      "uuid": "3977d4e5-82ca-4801-ae20-6682dda23506",
+      "slug": "bob",
+      "core": true,
+      "difficulty": 2,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Polymorphism",
+        "Strings",
+        "Unicode",
+        "Pattern recognition",
+        "Regular expressions"
+      ]
+    },
+    {
+      "uuid": "a2c7abe7-b487-4cc2-a86a-d97cdd61709d",
+      "slug": "pangram",
+      "core": true,
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Lists",
+        "Strings",
+        "Maps",
+        "Algorithms",
+        "Searching"
+      ]
+    },
+    {
+      "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
+      "slug": "space-age",
+      "core": true,
+      "difficulty": 3,
+      "topics": [
+        "Classes",
+        "Floating-point numbers",
+        "Mathematics"
+      ]
+    },
+    {
+      "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
+      "slug": "robot-name",
+      "core": true,
+      "difficulty": 6,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Exception handling",
+        "Sets",
+        "Randomness",
+        "Regular expressions"
+      ]
+    },
+    {
+      "uuid": "32e79fd7-f002-4bdc-b6bd-7a91d8c1af61",
+      "slug": "grade-school",
+      "core": true,
+      "difficulty": 6,
+      "topics": [
+        "Arrays",
+        "Maps",
+        "Sorting"
+      ]
+    },
+    {
+      "uuid": "269577e5-e782-4264-9ad9-9ad4b8bc0aab",
+      "slug": "wordy",
+      "core": true,
+      "difficulty": 7,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Regular expressions",
+        "Exception handling",
+        "Strings",
+        "Pattern recognition",
+        "Parsing"
+      ]
+    },
+    {
+      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
+      "slug": "gigasecond",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Time"
+      ]
+    },
+    {
+      "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
+      "slug": "difference-of-squares",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
+      "slug": "word-count",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "Control-flow (loops)",
+        "Lists",
+        "Strings",
+        "Unicode",
+        "Regular expressions"
+      ]
+    },
+    {
+      "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
+      "slug": "raindrops",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Strings",
+        "Integers",
+        "Transforming"
+      ]
+    },
+    {
+      "uuid": "ab027a47-d483-4011-aac4-564a6284e5b8",
+      "slug": "etl",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
+      "topics": [
+        "Control-flow (loops)",
+        "Transforming",
+        "Maps",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "18204e23-fca8-44dc-8d5c-abe66b87c640",
+      "slug": "hamming",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Equality",
+        "Strings"
+      ]
+    },
+    {
+      "uuid": "7c60f7c5-2922-4ce4-acbe-51c5ab654b4d",
+      "slug": "scrabble-score",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Maps",
+        "Strings"
       ]
     },
     {
@@ -49,189 +218,67 @@
       ]
     },
     {
-      "uuid": "18204e23-fca8-44dc-8d5c-abe66b87c640",
-      "slug": "hamming",
+      "uuid": "2ceec21e-fb9d-4145-8788-826c3941eb01",
+      "slug": "anagram",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
+      "unlocked_by": "pangram",
+      "difficulty": 2,
       "topics": [
-
-      ]
-    },
-    {
-      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
-      "slug": "gigasecond",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "a2c7abe7-b487-4cc2-a86a-d97cdd61709d",
-      "slug": "pangram",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
-      "slug": "space-age",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-        "pattern matching",
-        "math"
-      ]
-    },
-    {
-      "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
-      "slug": "difference-of-squares",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "7c60f7c5-2922-4ce4-acbe-51c5ab654b4d",
-      "slug": "scrabble-score",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
-      "slug": "raindrops",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "3977d4e5-82ca-4801-ae20-6682dda23506",
-      "slug": "bob",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "control flow",
-        "string processing"
-      ]
-    },
-    {
-      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
-      "slug": "word-count",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-
+        "Strings",
+        "Filtering"
       ]
     },
     {
       "uuid": "bbd4665c-be4b-4d70-bc92-e91ce7a1d55f",
       "slug": "phone-number",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "pangram",
       "difficulty": 5,
       "topics": [
-
-      ]
-    },
-    {
-      "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
-      "slug": "robot-name",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-
+        "Parsing",
+        "Transforming"
       ]
     },
     {
       "uuid": "7a4fefd2-6e71-42d6-82fd-a25d2ef9eae9",
       "slug": "beer-song",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
+      "unlocked_by": "bob",
+      "difficulty": 5,
       "topics": [
-
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings"
       ]
     },
-    {
-      "uuid": "32e79fd7-f002-4bdc-b6bd-7a91d8c1af61",
-      "slug": "grade-school",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
 
-      ]
-    },
-    {
-      "uuid": "ab027a47-d483-4011-aac4-564a6284e5b8",
-      "slug": "etl",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "269577e5-e782-4264-9ad9-9ad4b8bc0aab",
-      "slug": "wordy",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-
-      ]
-    },
     {
       "uuid": "8e7b92f4-a508-4200-bd62-b36281dd9ed9",
       "slug": "say",
       "core": false,
-      "unlocked_by": null,
+      "unlocked_by": "bob",
       "difficulty": 6,
       "topics": [
-        "pattern matching"
-      ]
-    },
-    {
-      "uuid": "2ceec21e-fb9d-4145-8788-826c3941eb01",
-      "slug": "anagram",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 7,
-      "topics": [
-
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Mathematics",
+        "Integers",
+        "Exception handling",
+        "Strings",
+        "Text formatting"
       ]
     },
     {
       "uuid": "246129c9-83b5-43e0-beb6-8a2cea7e4e17",
       "slug": "food-chain",
       "core": false,
-      "unlocked_by": null,
-      "difficulty": 7,
+      "unlocked_by": "bob",
+      "difficulty": 4,
       "topics": [
-
+        "Text formatting",
+        "Algorithms"
       ]
     }
   ],
-  "foregone": [
-
-  ]
+  "foregone": []
 }
