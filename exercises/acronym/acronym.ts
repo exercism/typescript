@@ -1,5 +1,5 @@
-export default class Acronyms {
+export default class Acronym {
   static parse(phrase: string): string {
-    return '';
+    return ''
   }
 }

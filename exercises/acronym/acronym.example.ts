@@ -1,4 +1,4 @@
-export default class Acronyms {
+export default class Acronym {
   static parse(phrase: string): string {
     if (typeof phrase !== 'undefined' && phrase !== undefined ) {
       const match = phrase.match(/[A-Z]+[a-z]*|[a-z]+/g)
