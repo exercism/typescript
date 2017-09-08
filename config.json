@@ -63,15 +63,6 @@
     {
       "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
       "slug": "space-age",
-      "core": true,
-      "difficulty": 3,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
-      "slug": "space-age",
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
@@ -98,6 +89,16 @@
       "difficulty": 3,
       "topics": [
 
+      ]
+    },
+    {
+      "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
+      "slug": "gigasecond",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Time"
       ]
     },
     {
@@ -141,6 +142,33 @@
       "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
       "slug": "raindrops",
       "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
+    },
+    {
+      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
+      "slug": "word-count",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "Control-flow (loops)",
+        "Lists",
+        "Strings",
+        "Unicode",
+        "Regular expressions"
+      ]
+    },
+    {
+      "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
+      "slug": "raindrops",
+      "core": false,
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
@@ -156,26 +184,6 @@
       "topics": [
         "control flow",
         "string processing"
-      ]
-    },
-    {
-      "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
-      "slug": "word-count",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-
-      ]
-    },
-    {
-      "uuid": "bbd4665c-be4b-4d70-bc92-e91ce7a1d55f",
-      "slug": "phone-number",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-
       ]
     },
     {
