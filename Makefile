@@ -20,7 +20,7 @@ test-assignment:
 	@sed 's/xit/it/g; s/xdescribe/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@cd $(INTDIR) && yarn install && yarn lintci && yarn test
-	@cd $(INTDIR) && npm install && npm lintci && npm test
+	@cd $(INTDIR) && npm install && npm run lintci && npm test
 
 test:
 	$(MAKE) checkAllPackageFilesAreTheSame
