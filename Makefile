@@ -20,13 +20,14 @@ test-assignment:
 	@sed 's/xit/it/g; s/xdescribe/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@cd $(INTDIR) && yarn install && yarn lintci && yarn test
+	@cd $(INTDIR) && npm install && npm lintci && npm test
 
 test:
 	$(MAKE) checkAllPackageFilesAreTheSame
 	@npm install tslint typescript -g
 	@tslint './**/*.ts?(x)' -c "./common/tslint.json" --format "json" >> lintreport.json ; exit 0
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) test-assignment || exit 1; done
-	
+
 
 all: moveAllIntoCommonDir
 all: moveCommonIntoSubDir
@@ -44,7 +45,7 @@ moveAllIntoCommonDir:
 
 moveCommonIntoSubDir:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) moveAssigmentToSub || exit 1; done
-	
+
 all: replacePackageFilesFromCommonToSubFolders
 
 copyPackageFilesToSubFolder:
@@ -67,9 +68,9 @@ checkPackageFilesMach:
 reportError:
 	@echo "**Package files in |$(ASSIGNMENT)| are not equal to the |common| folder**" ;
 	@exit 1
-	
+
 checkAllPackageFilesAreTheSame:
-	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) checkPackageFilesMach || ASSIGNMENT=$$assignment $(MAKE) reportError || exit 1 ;done 
+	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) checkPackageFilesMach || ASSIGNMENT=$$assignment $(MAKE) reportError || exit 1 ;done
 	@echo "==All package support files look to be the same as the ones in common=="
 
 
