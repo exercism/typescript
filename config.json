@@ -292,6 +292,18 @@
         "Text formatting",
         "Algorithms"
       ]
+    },
+    {
+      "uuid": "c6960d69-7794-4711-8891-9c5a63727112",
+      "slug": "clock",
+      "core": true,
+      "difficulty": 3,
+      "topics": [
+        "Mathematics",
+        "Strings",
+        "Integers",
+        "Logic"
+      ]
     }
   ],
   "foregone": []
