@@ -2,7 +2,7 @@ class Node<T> {
   private value: T
   private next: Node<T> | undefined
   private prev: Node<T> | undefined
-  
+
   constructor(value: T) {
     this.value = value
   }
@@ -13,7 +13,7 @@ class Node<T> {
 
   public setNext(newNext: Node<T> | undefined) {
     this.next = newNext
-  } 
+  }
 
   public getPrev(): Node<T> | undefined {
     return this.prev
@@ -27,7 +27,7 @@ class Node<T> {
     return this.value
   }
 }
-  
+
 export default class LinkedList<T> {
   size: number = 0
   head: Node<T> | undefined
@@ -37,7 +37,7 @@ export default class LinkedList<T> {
     if (!this.head) {
       return undefined
     }
-    
+
     const value = this.head.getValue()
     this.head = this.head.getNext()
     if (this.head) {
@@ -118,7 +118,7 @@ export default class LinkedList<T> {
         } else if (this.head) {
           this.head = this.head.getNext()
         }
-        
+
         element = undefined
       } else {
         element = element.getNext()
