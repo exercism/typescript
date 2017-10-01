@@ -78,6 +78,21 @@
       ]
     },
     {
+      "uuid": "7d42dd76-a6cf-11e7-abc4-cec278b6b50a",
+      "slug": "linked-list",
+      "core": true,
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Algorithms",
+        "Data structures",
+        "Arrays",
+        "Lists",
+        "Optional values"
+      ]
+    },
+    {
       "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
       "slug": "robot-name",
       "core": true,
