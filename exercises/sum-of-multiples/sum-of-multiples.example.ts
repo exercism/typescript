@@ -1,5 +1,6 @@
 class SumOfMultiples {
   private numbers: number[]
+
   constructor(numbers: number[]) {
     this.numbers = numbers
   }
