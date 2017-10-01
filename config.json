@@ -91,6 +91,19 @@
       ]
     },
     {
+      "uuid": "b2f90523-0cb1-f080-a03c-5aee5f919abf93b491b",
+      "slug": "binary-search-tree",
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 6,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Recursion",
+        "Algorithms"
+      ]
+    },
+    {
       "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
       "slug": "robot-name",
       "core": true,
