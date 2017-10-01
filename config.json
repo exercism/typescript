@@ -78,6 +78,19 @@
       ]
     },
     {
+      "uuid": "f7452f71-795b-40b6-847c-67ef4bb9db45",
+      "slug": "sum-of-multiples",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Lists",
+        "Integers"
+      ]
+    },
+    {
       "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
       "slug": "robot-name",
       "core": true,
