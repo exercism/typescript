@@ -13,12 +13,12 @@ export default class BinarySearchTree {
       this.insertRight(value)
   }
 
-  public each(fn: (data: number) => any): void {
-    if(this._left) {
+  public each(fn: (data: number) => void): void {
+    if (this._left) {
       this._left.each(fn)
     }
-    fn(this._data)
-    if(this._right) {
+    fn (this._data)
+    if (this._right) {
       this._right.each(fn)
     }
   }
@@ -36,7 +36,7 @@ export default class BinarySearchTree {
   }
 
   private insertLeft(value: number): this {
-    if(!this._left) {
+    if (!this._left) {
       this._left = new BinarySearchTree(value)
     } else {
       this._left.insert(value)
@@ -45,7 +45,7 @@ export default class BinarySearchTree {
   }
 
   private insertRight(value: number): this {
-    if(!this._right) {
+    if (!this._right) {
       this._right = new BinarySearchTree(value)
     } else {
       this._right.insert(value)
