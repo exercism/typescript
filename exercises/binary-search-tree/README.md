@@ -55,7 +55,7 @@ And if we then added 1, 5, and 7, it would look like this
 
 ## Setup
 
-Go through the setup instructions for Typescript to
+Go through the setup instructions for TypeScript to
 install the necessary dependencies:
 
 http://exercism.io/languages/typescript
@@ -65,7 +65,7 @@ http://exercism.io/languages/typescript
 Install assignment dependencies:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ## Making the test suite pass
@@ -73,14 +73,8 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+$ yarn test
 ```
-
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xtest` to `test`.
-
 
 ## Source
 
