@@ -168,6 +168,19 @@
       ]
     },
     {
+      "uuid": "5178ae53-5364-46c9-bee3-70e6e8a8c2e3",
+      "slug": "series",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Exception handling",
+        "Strings",
+        "Text formatting"
+      ]
+    },
+    {
       "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
       "slug": "difference-of-squares",
       "core": false,
