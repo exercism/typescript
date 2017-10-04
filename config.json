@@ -78,6 +78,19 @@
       ]
     },
     {
+      "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a",
+      "slug": "prime-factors",
+      "core": true,
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Mathematics",
+        "Algorithms",
+        "Integers"
+      ]
+    },
+    {
       "uuid": "e431fb10-766a-4542-94ad-9c30224a3885",
       "slug": "sum-of-multiples",
       "core": false,
