@@ -1,5 +1,5 @@
 class Bob {
-    hey() {
+    hey( /* Parameters go here */ ) {
         // Your code here
     }
 }

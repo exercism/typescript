@@ -1,5 +1,5 @@
 class Transcriptor {
-    toRna() {
+    toRna( /* Parameters go here */ ) {
         // Your code here
     }
 }

@@ -1,5 +1,5 @@
 class Pangram {
-    constructor() {
+    constructor( /* Parameters go here */ ) {
         // Your code here
     }
 

@@ -1,4 +1,4 @@
-function isLeapYear() {
+function isLeapYear( /* Parameters go here */ ) {
     // Your code here
 }
 
