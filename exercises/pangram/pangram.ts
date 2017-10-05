@@ -1,5 +1,5 @@
 class Pangram {
-    constructor(){
+    constructor() {
         // Your code here
     }
 
