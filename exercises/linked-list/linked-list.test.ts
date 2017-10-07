@@ -1,7 +1,7 @@
 import LinkedList from './linked-list'
 
 describe('LinkedList', () => {
-  test('add/extract elements to the end of the list with push/pop', () => {
+  it('add/extract elements to the end of the list with push/pop', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.push(20)
@@ -9,7 +9,7 @@ describe('LinkedList', () => {
     expect(list.pop()).toBe(10)
   })
 
-  xtest('extract elements from the beginning of the list with shift', () => {
+  xit('extract elements from the beginning of the list with shift', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.push(20)
@@ -17,7 +17,7 @@ describe('LinkedList', () => {
     expect(list.shift()).toBe(20)
   })
 
-  xtest('add/extract elements from the beginning of the list with unshift/shift', () => {
+  xit('add/extract elements from the beginning of the list with unshift/shift', () => {
     const list = new LinkedList<number>()
     list.unshift(10)
     list.unshift(20)
@@ -25,7 +25,7 @@ describe('LinkedList', () => {
     expect(list.shift()).toBe(10)
   })
 
-  xtest('unshift/pop', () => {
+  xit('unshift/pop', () => {
     const list = new LinkedList<number>()
     list.unshift(10)
     list.unshift(20)
@@ -33,7 +33,7 @@ describe('LinkedList', () => {
     expect(list.pop()).toBe(20)
   })
 
-  xtest('example', () => {
+  xit('example', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.push(20)
@@ -47,7 +47,7 @@ describe('LinkedList', () => {
     expect(list.shift()).toBe(30)
   })
 
-  xtest('can count its elements', () => {
+  xit('can count its elements', () => {
     const list = new LinkedList<number>()
     expect(list.count()).toBe(0)
     list.push(10)
@@ -56,7 +56,7 @@ describe('LinkedList', () => {
     expect(list.count()).toBe(2)
   })
 
-  xtest('sets head/tail after popping last element', () => {
+  xit('sets head/tail after popping last element', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.pop()
@@ -65,7 +65,7 @@ describe('LinkedList', () => {
     expect(list.pop()).toBe(20)
   })
 
-  xtest('sets head/tail after shifting last element', () => {
+  xit('sets head/tail after shifting last element', () => {
     const list = new LinkedList<number>()
     list.unshift(10)
     list.shift()
@@ -74,7 +74,7 @@ describe('LinkedList', () => {
     expect(list.shift()).toBe(20)
   })
 
-  xtest('deletes the element with the specified value from the list', () => {
+  xit('deletes the element with the specified value from the list', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.push(20)
@@ -85,14 +85,14 @@ describe('LinkedList', () => {
     expect(list.shift()).toBe(10)
   })
 
-  xtest('deletes the only element', () => {
+  xit('deletes the only element', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.delete(10)
     expect(list.count()).toBe(0)
   })
 
-  xtest('delete does not modify the list if the element is not found', () => {
+  xit('delete does not modify the list if the element is not found', () => {
     const list = new LinkedList<number>()
     list.push(10)
     list.delete(20)
