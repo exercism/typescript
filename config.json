@@ -91,6 +91,21 @@
       ]
     },
     {
+      "uuid": "4c1392d7-8779-496f-b0bb-81605e777e3b",
+      "slug": "nth-prime",
+      "core": false,
+      "unlocked_by": "prime-factors",
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Exception handling",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
+    },
+    {
       "uuid": "e431fb10-766a-4542-94ad-9c30224a3885",
       "slug": "sum-of-multiples",
       "core": false,
