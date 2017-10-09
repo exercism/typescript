@@ -4,7 +4,6 @@ enum Type {
     Scalene = "scalene"
 }
 
-
 export default class Triangle {
     sides: number[];
 
