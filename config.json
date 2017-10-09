@@ -373,6 +373,20 @@
         "Integers",
         "Logic"
       ]
+    },
+    {
+      "uuid": "cf2d545c-036e-0980-3ac2-64ad54c3867e37f4cfa",
+      "slug": "triangle",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 3,
+      "topics": [
+        "Control-flow (loops)",
+        "Control-flow (conditionals)",
+        "Exception handling",
+        "Integers",
+        "Mathematics"
+      ]
     }
   ],
   "foregone": []

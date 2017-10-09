@@ -1,0 +1,22 @@
+{
+    "compilerOptions": { 
+        "target": "es2017",
+        "module": "commonjs",
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "preserveConstEnums": true,
+        "noFallthroughCasesInSwitch":true,
+        "noImplicitThis":true,
+        "noImplicitReturns":true,
+        "sourceMap": true,
+        "noEmitOnError": true,
+        "outDir": "./build"
+    },
+    "compileOnSave": true, 
+    "exclude": [
+        "node_modules"
+    ]
+}
