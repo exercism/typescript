@@ -1,12 +1,12 @@
 export default class Triangle {
 
-    sides: number[];
+    sides: number[]
 
     constructor(...sides: number[]) {
-        this.sides = sides;
+        this.sides = sides
     }
 
     kind() {
-        return "";
+        return ""
     }
 }
