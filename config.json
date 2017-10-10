@@ -387,6 +387,17 @@
         "Integers",
         "Mathematics"
       ]
+    },
+    {
+      "uuid": "a4054ca4-0737-6e80-3ca5-372be502b1d8bb93b20",
+      "slug": "pascals-triangle",
+      "core": true,
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Mathematics"
+      ]
     }
   ],
   "foregone": []
