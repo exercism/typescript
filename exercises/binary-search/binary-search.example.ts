@@ -26,7 +26,7 @@ export default class BinarySearch<T> {
         let end = arr.length
         while (start <= end) {
             const mid = Math.floor((start + end) / 2)
-            if (arr[mid] == val) {
+            if (arr[mid] === val) {
                 return mid
             }
             if (arr[mid] > val) {
