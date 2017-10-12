@@ -398,6 +398,18 @@
         "Control-flow (loops)",
         "Mathematics"
       ]
+    },
+    {
+      "uuid": "b2fcd8f0-03b2-7880-ec70-65ad5cedfdd8116012d",
+      "slug": "binary-search",
+      "core": false,
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Arrays",
+        "Algorithms"
+      ]
     }
   ],
   "foregone": []
