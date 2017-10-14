@@ -410,6 +410,17 @@
         "Arrays",
         "Algorithms"
       ]
+    },
+    {
+      "uuid": "1447f7bc-0d30-b980-378b-ab8defd8ff148419dbd",
+      "slug": "rotational-cipher",
+      "core": false,
+      "difficulty": 4,
+      "topics": [
+        "ascii",
+        "Mathematics",
+        "Iterators"
+      ]
     }
   ],
   "foregone": []
