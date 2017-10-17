@@ -78,6 +78,21 @@
       ]
     },
     {
+      "uuid": "e16c3064-b2ef-11e7-abc4-cec278b6b50a",
+      "slug": "strain",
+      "core": false,
+      "difficulty": 4,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Algorithms",
+        "Lists",
+        "Arrays",
+        "Callbacks",
+        "Filtering"
+      ]
+    },
+    {
       "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a",
       "slug": "prime-factors",
       "core": true,
