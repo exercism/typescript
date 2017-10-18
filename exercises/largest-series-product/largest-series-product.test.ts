@@ -1,17 +1,17 @@
 import Series from './largest-series-product'
 
 describe('Series', () => {
-  xit('can get the largest product of 2', () => {
-    expect(new Series('0123456789').largestProduct(2)).toBe(72);
-  });
+  it('can get the largest product of 2', () => {
+    expect(new Series('0123456789').largestProduct(2)).toBe(72)
+  })
 
   xit('works for a tiny number', () => {
-    expect(new Series('19').largestProduct(2)).toBe(9);
-  });
+    expect(new Series('19').largestProduct(2)).toBe(9)
+  })
 
   xit('can get the largest product of 3', () => {
-    expect(new Series('1027839564').largestProduct(3)).toBe(270);
-  });
+    expect(new Series('1027839564').largestProduct(3)).toBe(270)
+  })
 
   xit('can get the largest product of a big number', () => {
     const largeNumber = '73167176531330624919225119674426574742355349194934969835203127745063262395783180169848018694788' +
@@ -22,47 +22,47 @@ describe('Series', () => {
       '48283972241375657056057490261407972968652414535100474821663704844031998900088952434506585412275886668811642717147' +
       '99244429282308634656748139191231628245861786645835912456652947654568284891288314260769004224219022671055626321111' +
       '10937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636' +
-      '899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450';
-    expect(new Series(largeNumber).largestProduct(13)).toBe(23514624000);
-  });
+      '899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450'
+    expect(new Series(largeNumber).largestProduct(13)).toBe(23514624000)
+  })
 
   xit('returns 0 if all digits are zero', () => {
-    expect(new Series('0000').largestProduct(2)).toBe(0);
-  });
+    expect(new Series('0000').largestProduct(2)).toBe(0)
+  })
 
   xit('returns 0 if all spans contain zero', () => {
-    expect(new Series('99099').largestProduct(3)).toBe(0);
-  });
+    expect(new Series('99099').largestProduct(3)).toBe(0)
+  })
 
   xit('rejects invalid character in input', () => {
     expect(() => {
-      new Series('1234a5').largestProduct(2);
-    }).toThrowError('Invalid input.');
-  });
+      new Series('1234a5').largestProduct(2)
+    }).toThrowError('Invalid input.')
+  })
 
   xit('rejects negative span', () => {
     expect(() => {
-      new Series('12345').largestProduct(-1);
-    }).toThrowError('Invalid input.');
-  });
+      new Series('12345').largestProduct(-1)
+    }).toThrowError('Invalid input.')
+  })
 
   xit('returns 1 for empty string and zero slice length', () => {
-    expect(new Series('').largestProduct(0)).toBe(1);
-  });
+    expect(new Series('').largestProduct(0)).toBe(1)
+  })
 
   xit('returns 1 for non-empty string and zero slice length', () => {
-    expect(new Series('123').largestProduct(0)).toBe(1);
-  });
+    expect(new Series('123').largestProduct(0)).toBe(1)
+  })
 
   xit('throws an error for slices bigger than the number', () => {
     expect(() => {
-      new Series('123').largestProduct(4);
-    }).toThrowError('Slice size is too big.');
-  });
+      new Series('123').largestProduct(4)
+    }).toThrowError('Slice size is too big.')
+  })
 
   xit('throws an error for empty string and non-zero slice length', () => {
     expect(() => {
-      new Series('').largestProduct(1);
-    }).toThrowError('Slice size is too big.');
-  });
-});
+      new Series('').largestProduct(1)
+    }).toThrowError('Slice size is too big.')
+  })
+})
