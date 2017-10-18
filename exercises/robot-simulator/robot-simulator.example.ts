@@ -1,80 +1,80 @@
 export default class Robot {
-  public coordinates: number[];
-  public bearing: string;
+  public coordinates: number[]
+  public bearing: string
 
   constructor() {
-    this.coordinates = [0, 0];
-    this.bearing = 'north';
+    this.coordinates = [0, 0]
+    this.bearing = 'north'
   }
 
   at(xcoord: number, ycoord: number) {
-    this.coordinates = [xcoord, ycoord];
+    this.coordinates = [xcoord, ycoord]
   }
 
   orient(direction: string) {
-    this.bearing = direction;
-    return `The robot is pointed ${direction}`;
+    this.bearing = direction
+    return `The robot is pointed ${direction}`
   }
 
   advance() {
     if (this.bearing === 'north') {
-      this.coordinates[1] += 1;
+      this.coordinates[1] += 1
     } else if (this.bearing === 'south') {
-      this.coordinates[1] -= 1;
+      this.coordinates[1] -= 1
     } else if (this.bearing === 'east') {
-      this.coordinates[0] += 1;
+      this.coordinates[0] += 1
     } else if (this.bearing === 'west') {
-      this.coordinates[0] -= 1;
+      this.coordinates[0] -= 1
     }
   }
 
   turnLeft() {
     if (this.bearing === 'north') {
-      this.orient('west');
+      this.orient('west')
     } else if (this.bearing === 'south') {
-      this.orient('east');
+      this.orient('east')
     } else if (this.bearing === 'east') {
-      this.orient('north');
+      this.orient('north')
     } else if (this.bearing === 'west') {
-      this.orient('south');
+      this.orient('south')
     }
   }
 
   turnRight() {
     if (this.bearing === 'north') {
-      this.orient('east');
+      this.orient('east')
     } else if (this.bearing === 'south') {
-      this.orient('west');
+      this.orient('west')
     } else if (this.bearing === 'east') {
-      this.orient('south');
+      this.orient('south')
     } else if (this.bearing === 'west') {
-      this.orient('north');
+      this.orient('north')
     }
   }
 
   instructions(s: string) {
     return [...s].map((character) => {
       if (character === 'L') {
-        return 'turnLeft';
+        return 'turnLeft'
       } else if (character === 'R') {
-        return 'turnRight';
+        return 'turnRight'
       } else if (character === 'A') {
-        return 'advance';
+        return 'advance'
       } else {
         throw 'Invalid Instruction'
       }
-    });
+    })
   }
 
   place(args: any) {
-    this.coordinates = [args.x, args.y];
-    this.bearing = args.direction;
+    this.coordinates = [args.x, args.y]
+    this.bearing = args.direction
   }
 
   evaluate(s: string) {
     this.instructions(s).forEach((instruction) => {
-      this[instruction]();
-    });
+      this[instruction]()
+    })
   }
 
 }
