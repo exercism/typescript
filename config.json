@@ -201,6 +201,21 @@
       ]
     },
     {
+      "uuid": "3cc210e8-b3bb-11e7-abc4-cec278b6b50a",
+      "slug": "circular-buffer",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Data structures",
+        "Lists",
+        "Arrays",
+        "Exception handling"
+      ]
+    },
+    {
       "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
       "slug": "gigasecond",
       "core": false,
