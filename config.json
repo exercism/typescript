@@ -436,6 +436,22 @@
         "Mathematics",
         "Iterators"
       ]
+    },
+    {
+      "uuid": "b646dc26-59c1-436e-883a-20290de7a526",
+      "slug": "largest-series-product",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 7,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Mathematics",
+        "Integers",
+        "Strings",
+        "Exception handling",
+        "Regular expressions"
+      ]
     }
   ],
   "foregone": []
