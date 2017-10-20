@@ -124,19 +124,16 @@ describe('Robot', () => {
   })
 
   xit('instruct robot', () => {
-    robot.place({ x: -2, y: 1, direction: 'east' })
-    robot.evaluate('RLAALAL')
-    expect(robot.coordinates).toEqual([0, 2])
-    expect(robot.bearing).toEqual('west')
+    const robotI = new Robot(-2, 1, 'east')
+    robotI.evaluate('RLAALAL')
+    expect(robotI.coordinates).toEqual([0, 2])
+    expect(robotI.bearing).toEqual('west')
   })
 
   xit('instruct many robots', () => {
-    const robot1 = new Robot()
-    const robot2 = new Robot()
-    const robot3 = new Robot()
-    robot1.place({ x: 0, y: 0, direction: 'north' })
-    robot2.place({ x: 2, y: -7, direction: 'east' })
-    robot3.place({ x: 8, y: 4, direction: 'south' })
+    const robot1 = new Robot(0, 0, 'north')
+    const robot2 = new Robot(2, -7, 'east')
+    const robot3 = new Robot(8, 4, 'south')
     robot1.evaluate('LAAARALA')
     robot2.evaluate('RRAAAAALA')
     robot3.evaluate('LAAARRRALLLL')

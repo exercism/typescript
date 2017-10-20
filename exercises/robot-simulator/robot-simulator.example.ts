@@ -2,9 +2,9 @@ export default class Robot {
   public coordinates: number[]
   public bearing: string
 
-  constructor() {
-    this.coordinates = [0, 0]
-    this.bearing = 'north'
+  constructor(xcoord: number = 0, ycoord: number = 0, direction: string = 'north') {
+    this.coordinates = [xcoord, ycoord]
+    this.bearing = direction
   }
 
   at(xcoord: number, ycoord: number) {
@@ -66,15 +66,9 @@ export default class Robot {
     })
   }
 
-  place(args: any) {
-    this.coordinates = [args.x, args.y]
-    this.bearing = args.direction
-  }
-
   evaluate(s: string) {
     this.instructions(s).forEach((instruction) => {
       this[instruction]()
     })
   }
-
 }
