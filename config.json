@@ -467,6 +467,21 @@
         "Exception handling",
         "Regular expressions"
       ]
+    },
+    {
+      "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66",
+      "slug": "robot-simulator",
+      "core": false,
+      "unlocked_by": "wordy",
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Exception handling",
+        "Strings",
+        "Games",
+        "Parsing"
+      ]
     }
   ],
   "foregone": []
