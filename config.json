@@ -482,6 +482,20 @@
         "Games",
         "Parsing"
       ]
+    },
+    {
+      "uuid": "394755a3-c743-4b85-b9b8-387907f4e32d",
+      "slug": "pythagorean-triplet",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 5,
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Algorithms",
+        "Mathematics",
+        "Integers"
+      ]
     }
   ],
   "foregone": []
