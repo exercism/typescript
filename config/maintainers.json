@@ -1,25 +1,25 @@
 {
+  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "github_username": "masters3d",
-      "show_on_website": false,
       "alumnus": false,
-      "name": null,
+      "avatar_url": null,
       "bio": null,
+      "github_username": "masters3d",
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": null,
+      "show_on_website": false
     },
     {
-      "github_username": "dsudia",
-      "show_on_website": true,
       "alumnus": false,
-      "name": "Dave Sudia",
+      "avatar_url": null,
       "bio": "I'm a career-changer from education, and I used Exercism to reinforce my skills as I made the switch. I love TypeScript for the flexibility of JS with the consistency of strongly typed languages. Maintaining the TS track has grown my appreciation for the language.",
+      "github_username": "dsudia",
       "link_text": null,
       "link_url": null,
-      "avatar_url": null
+      "name": "Dave Sudia",
+      "show_on_website": true
     }
-  ],
-  "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md"
+  ]
 }
