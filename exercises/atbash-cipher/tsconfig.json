@@ -1,0 +1,24 @@
+{
+    "compilerOptions": { 
+        "target": "ES6",
+        "module": "commonjs",
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "preserveConstEnums": true,
+        "noFallthroughCasesInSwitch":true,
+        "noImplicitThis":true,
+        "noImplicitReturns":true,
+        "sourceMap": true,
+        "noEmitOnError": true,
+        "outDir": "./build",
+		"lib":["ES6"]
+    },
+    "compileOnSave": true, 
+    "exclude": [
+        "node_modules"
+    ],
+	"files":["atbash-cipher.example.ts"]
+}
