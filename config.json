@@ -480,21 +480,21 @@
       "unlocked_by": "wordy",
       "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66"
     },
-	{
-	  "core": false,
-	  "difficulty": 5,
+    {
+      "core": false,
+      "difficulty": 5,
       "slug": "atbash-cipher",
       "topics": [
         "control_flow_conditionals",
         "control_flow_loops",
+        "crypthography",
         "games",
         "parsing",
-        "strings",
-		"pattern",
-		"crypthography"
+        "pattern",
+        "strings"
       ],
-	  "uuid": "b8ef4837-190e-41bb-9d61-98fcd6199416"
-	}
+      "uuid": "b8ef4837-190e-41bb-9d61-98fcd6199416"
+    }
   ],
   "foregone": [],
   "language": "TypeScript",
