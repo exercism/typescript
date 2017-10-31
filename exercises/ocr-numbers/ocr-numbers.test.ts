@@ -1,9 +1,8 @@
-import OcrParser from './ocr-numbers'
-const ocr = new OcrParser()
+import OcrParser from "./ocr-numbers"
 
 describe('ocr', () => {
     it('recognizes zero', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '| |\n' +
             '|_|\n' +
@@ -12,7 +11,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes one', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '   \n' +
             '  |\n' +
             '  |\n' +
@@ -21,7 +20,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes two', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             ' _|\n' +
             '|_ \n' +
@@ -30,7 +29,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes three', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             ' _|\n' +
             ' _|\n' +
@@ -39,7 +38,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes four', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '   \n' +
             '|_|\n' +
             '  |\n' +
@@ -48,7 +47,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes five', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '|_ \n' +
             ' _|\n' +
@@ -57,7 +56,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes six', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '|_ \n' +
             '|_|\n' +
@@ -66,7 +65,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes seven', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '  |\n' +
             '  |\n' +
@@ -75,7 +74,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes eight', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '|_|\n' +
             '|_|\n' +
@@ -84,7 +83,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes nine', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             ' _ \n' +
             '|_|\n' +
             ' _|\n' +
@@ -93,7 +92,7 @@ describe('ocr', () => {
     })
 
     xit('recognizes ten', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '    _ \n' +
             '  || |\n' +
             '  ||_|\n' +
@@ -102,7 +101,7 @@ describe('ocr', () => {
     })
 
     xit('identifies garble', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '   \n' +
             '| |\n' +
             '| |\n' +
@@ -111,7 +110,7 @@ describe('ocr', () => {
     })
 
     xit('converts 110101100', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '       _     _        _  _ \n' +
             '  |  || |  || |  |  || || |\n' +
             '  |  ||_|  ||_|  |  ||_||_|\n' +
@@ -120,7 +119,7 @@ describe('ocr', () => {
     })
 
     xit('identifies garble mixed in', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '       _     _           _ \n' +
             '  |  || |  || |     || || |\n' +
             '  |  | _|  ||_|  |  ||_||_|\n' +
@@ -129,7 +128,7 @@ describe('ocr', () => {
     })
 
     xit('converts 1234567890', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '    _  _     _  _  _  _  _  _ \n' +
             '  | _| _||_||_ |_   ||_||_|| |\n' +
             '  ||_  _|  | _||_|  ||_| _||_|\n' +
@@ -138,7 +137,7 @@ describe('ocr', () => {
     })
 
     xit('converts 123 456 789', () => {
-        expect(ocr.convert(
+        expect(OcrParser.convert(
             '    _  _ \n' +
             '  | _| _|\n' +
             '  ||_  _|\n' +

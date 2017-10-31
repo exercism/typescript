@@ -46,7 +46,7 @@ const PATTERNS: Patterns = {
 }
 
 export default class OcrParser {
-    convert(text: string) {
+    static convert(text: string) {
         return OcrParser.splitIntoRows(text).map(OcrParser.valuesInRow).join(',')
     }
 
