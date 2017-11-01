@@ -479,6 +479,22 @@
       ],
       "unlocked_by": "wordy",
       "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66"
+    },
+    {
+      "core": false,
+      "difficulty": 5,
+      "slug": "ocr-numbers",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "equality",
+        "parsing",
+        "integers",
+        "text_formatting"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "61f0964f-0779-446d-bd6b-6bb988414302"
     }
   ],
   "foregone": [],
