@@ -481,6 +481,20 @@
       "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66"
     },
     {
+      "uuid": "85d74be3-8a54-4355-9ef8-0f13ed2a7683",
+      "slug": "pythagorean-triplet",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 5,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "algorithms",
+        "mathematics",
+        "integers"
+      ]
+    },
+    {
       "core": false,
       "difficulty": 5,
       "slug": "ocr-numbers",
