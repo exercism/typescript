@@ -1,4 +1,4 @@
-import Diamond from './diamond.example'
+import Diamond from './diamond'
 
 describe('Make diamond function', () => {
   const diamond = new Diamond()
