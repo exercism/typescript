@@ -1,5 +1,6 @@
 import Diamond from './diamond'
 
+/* tslint:disable no-trailing-whitespace*/
 describe('Make diamond function', () => {
   const diamond = new Diamond()
 
