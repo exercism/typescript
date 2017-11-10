@@ -157,7 +157,7 @@
         "recursion"
       ],
       "unlocked_by": "sum-of-multiples",
-      "uuid": "b2f90523-0cb1-f080-a03c-5aee5f919abf93b491b"
+      "uuid": "b912fe4f-c505-4bac-8029-76412644375b"
     },
     {
       "core": true,
@@ -413,7 +413,7 @@
         "mathematics"
       ],
       "unlocked_by": "leap",
-      "uuid": "cf2d545c-036e-0980-3ac2-64ad54c3867e37f4cfa"
+      "uuid": "0eb37e93-d191-4451-bd77-cd3681c91d94"
     },
     {
       "core": true,
@@ -424,7 +424,7 @@
         "control_flow_loops",
         "mathematics"
       ],
-      "uuid": "a4054ca4-0737-6e80-3ca5-372be502b1d8bb93b20"
+      "uuid": "10edb37d-cf5d-443a-bb4c-8831a3986b61"
     },
     {
       "core": false,
@@ -436,7 +436,7 @@
         "control_flow_conditionals",
         "control_flow_loops"
       ],
-      "uuid": "b2fcd8f0-03b2-7880-ec70-65ad5cedfdd8116012d"
+      "uuid": "53584e8d-9b8d-4c0e-8ad8-4c228fcf6bcf"
     },
     {
       "core": false,
@@ -447,7 +447,7 @@
         "iterators",
         "mathematics"
       ],
-      "uuid": "1447f7bc-0d30-b980-378b-ab8defd8ff148419dbd"
+      "uuid": "dbe39983-5635-4369-89a3-fd549144259b"
     },
     {
       "core": false,
@@ -511,7 +511,7 @@
       "uuid": "61f0964f-0779-446d-bd6b-6bb988414302"
     },
     {
-      "uuid": "2331a447-054d-4a80-52d7-fe2d667baaafcd3fc58",
+      "uuid": "df7c1bff-2224-422b-9c34-64b28b09510e",
       "slug": "diamond",
       "core": false,
       "unlocked_by": "pascals-triangle",
