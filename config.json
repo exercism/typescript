@@ -525,6 +525,22 @@
         "Exception handling",
         "Text formatting"
       ]
+    },
+    {
+        "uuid": "7dd29a19-08f6-8480-2e01-1f7262d8860a",
+        "slug": "two-bucket",
+        "core": false,
+        "unlocked_by": "pangram",
+        "difficulty": 6,
+        "topics": [
+            "algorithms",
+            "arrays",
+            "control-flow-(conditionals)",
+            "control-flow-(loops)",
+            "exception-handling",
+            "games",
+            "parsing"
+        ]
     }
   ],
   "foregone": [],
