@@ -541,6 +541,19 @@
             "games",
             "parsing"
         ]
+    },
+    {
+      "uuid": "04de61fb-9fde-461c-b306-0b4ce52e2169",
+      "slug": "atbash-cipher",
+      "core": true,
+      "difficulty": 7,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control-flow-(conditionals)",
+        "control-flow-(loops)",
+        "text-formatting" 
+      ]
     }
   ],
   "foregone": [],
