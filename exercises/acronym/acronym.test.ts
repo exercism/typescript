@@ -1,8 +1,11 @@
-import Acronym from './acronym'
+import Acronym from './acronym.example'
 
 describe('Acronym are produced from', () => {
   it('title cased phrases', () => {
-    expect(Acronym.parse('Portable Network Graphics')).toEqual('PNG')
+    return async function getModule() {
+      const Acronym = await import('./acronym.example') || await import ('./acronym')
+      expect(Acronym.parse('Portable Network Graphics')).toEqual('PNG')
+    }
   })
 
   xit('other title cased phrases', () => {
