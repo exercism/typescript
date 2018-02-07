@@ -52,17 +52,6 @@ Execute the tests with:
 $ yarn test
 ```
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-
-```bash
-$ yarn test
-```
-
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xit` to `it`.
 
 
 ## Source
