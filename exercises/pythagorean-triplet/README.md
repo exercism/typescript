@@ -3,13 +3,13 @@
 A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for
 which,
 
-```
+```text
 a**2 + b**2 = c**2
 ```
 
-For example, 
+For example,
 
-```
+```text
 3**2 + 4**2 = 9 + 16 = 25 = 5**2.
 ```
 
@@ -40,10 +40,6 @@ Execute the tests with:
 $ yarn test
 ```
 
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by
-changing `xit` to `it`.
 
 
 ## Source

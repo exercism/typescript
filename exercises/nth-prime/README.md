@@ -8,7 +8,6 @@ the 6th prime is 13.
 If your language provides methods in the standard library to deal with prime
 numbers, pretend they don't exist and implement them yourself.
 
-
 ## Setup
 
 Go through the setup instructions for TypeScript to
@@ -31,6 +30,12 @@ Execute the tests with:
 ```bash
 $ yarn test
 ```
+
+
+
+## Source
+
+A variation on Problem 7 at Project Euler [http://projecteuler.net/problem=7](http://projecteuler.net/problem=7)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
