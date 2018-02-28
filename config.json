@@ -416,6 +416,20 @@
       "uuid": "0eb37e93-d191-4451-bd77-cd3681c91d94"
     },
     {
+      "core": false,
+      "difficulty": 4,
+      "slug": "collatz-conjecture",
+      "topics": [
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "mathematics",
+        "recursion"
+      ],
+      "unlocked_by": "leap",
+      "uuid": "a701b4ca-55ea-4aa9-a607-2fe8a9828d9c"
+    },
+    {
       "core": true,
       "difficulty": 5,
       "slug": "pascals-triangle",
