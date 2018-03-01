@@ -105,6 +105,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "nucleotide-count",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings",
+        "arrays",
+        "text_formatting"
+      ],
+      "unlocked_by": "rna-transcription",
+      "uuid": "ef16d487-524e-4c5a-8311-9162babba181",
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
@@ -566,7 +580,7 @@
         "arrays",
         "control-flow-(conditionals)",
         "control-flow-(loops)",
-        "text-formatting" 
+        "text-formatting"
       ]
     }
   ],
