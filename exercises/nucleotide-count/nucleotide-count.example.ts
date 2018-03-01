@@ -1,14 +1,18 @@
 class NucleotideCount {
   static nucleotideCounts(strand: string) {
-    const nucleotideOccurrences: {[nucleotide: string]: number} = {}
-    nucleotideOccurrences['A'] = 0
-    nucleotideOccurrences['C'] = 0
-    nucleotideOccurrences['G'] = 0
-    nucleotideOccurrences['T'] = 0
+    const nucleotideOccurrences = {
+      A: 0,
+      C: 0,
+      G: 0,
+      T: 0
+    }
 
     strand.split('').forEach((nucleotide) => {
       if (nucleotide in nucleotideOccurrences) {
-        nucleotideOccurrences[nucleotide]++
+        if (nucleotide === 'A') nucleotideOccurrences.A++
+        if (nucleotide === 'C') nucleotideOccurrences.C++
+        if (nucleotide === 'G') nucleotideOccurrences.G++
+        if (nucleotide === 'T') nucleotideOccurrences.T++
       } else {
         throw new Error('Invalid nucleotide in strand')
       }
