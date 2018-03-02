@@ -6,12 +6,12 @@ describe('TwoFer', () => {
     expect(TwoFer.twoFer()).toEqual(expected)
   })
 
-  it('a name given', () => {
+  xit('a name given', () => {
     const expected = 'One for Alice, one for me.'
     expect(TwoFer.twoFer('Alice')).toEqual(expected)
   })
 
-  it('another name given', () => {
+  xit('another name given', () => {
     const expected = 'One for Bob, one for me.'
     expect(TwoFer.twoFer('Bob')).toEqual(expected)
   })
