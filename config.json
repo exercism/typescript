@@ -77,6 +77,20 @@
     },
     {
       "core": false,
+      "difficulty": 3,
+      "slug": "roman-numerals",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "mathematics",
+        "pattern_recognition",
+        "transforming"
+      ],
+      "unlocked_by": "pangram",
+      "uuid": "a4ea1a4d-d010-4039-a2b5-e3e748df7f8a"
+    },
+    {
+      "core": false,
       "difficulty": 4,
       "slug": "strain",
       "topics": [
