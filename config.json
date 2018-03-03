@@ -76,6 +76,21 @@
       "uuid": "a2c7abe7-b487-4cc2-a86a-d97cdd61709d"
     },
     {
+      "core": false,
+      "difficulty": 3,
+      "slug": "isogram",
+      "topics": [
+        "ascii",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "filtering",
+        "searching",
+        "strings"
+      ],
+      "unlocked_by": "pangram",
+      "uuid": "505eadfc-40df-476f-82d7-fe3b78b1f713"
+    },
+    {
       "core": true,
       "difficulty": 3,
       "slug": "space-age",
