@@ -61,6 +61,19 @@
       "uuid": "3977d4e5-82ca-4801-ae20-6682dda23506"
     },
     {
+      "core": false,
+      "difficulty": 2,
+      "slug": "protein-translation",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings"
+      ],
+      "unlocked_by": "rna-transcription",
+      "uuid": "e18a436f-5d7b-4372-9f74-15e8e9a52d63"
+    },
+    {
       "core": true,
       "difficulty": 3,
       "slug": "pangram",
