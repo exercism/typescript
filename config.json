@@ -144,6 +144,21 @@
       "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a"
     },
     {
+      "core": true,
+      "difficulty": 4,
+      "slug": "matrix",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "matrices",
+        "text_formatting"
+      ],
+      "unlocked_by": "prime-factors",
+      "uuid": "167ec8f2-a206-4a7e-999d-7dbfc136a9fe"
+    },
+    {
       "core": false,
       "difficulty": 4,
       "slug": "nucleotide-count",
