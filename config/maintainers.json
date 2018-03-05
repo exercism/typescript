@@ -20,6 +20,16 @@
       "link_url": null,
       "name": "Dave Sudia",
       "show_on_website": true
+    },
+    {
+      "alumnus": false,
+      "avatar_url": null,
+      "bio": "I am a Software Engineering student from San Sebastian. I enjoy a lot reading about topics related to Java, software maintainability and web technologies. My love for TypeScript began developing web apps with Angular framework.",
+      "github_username": "CRivasGomez",
+      "link_text": null,
+      "link_url": null,
+      "name": "Cristian Rivas Gómez",
+      "show_on_website": true
     }
   ]
 }
