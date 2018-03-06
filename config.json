@@ -144,6 +144,20 @@
       "uuid": "e16c3064-b2ef-11e7-abc4-cec278b6b50a"
     },
     {
+      "core": false,
+      "difficulty": 4,
+      "slug": "twelve-days",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "polymorphism",
+        "strings",
+        "pattern_recognition"
+      ],
+      "unlocked_by": "bob",
+      "uuid": "cb04ab17-9611-44a1-8406-ed385da0044d"
+    },
+    {
       "core": true,
       "difficulty": 4,
       "slug": "prime-factors",
@@ -154,6 +168,7 @@
         "integers",
         "mathematics"
       ],
+      "unlocked_by": "bob",
       "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a"
     },
     {
