@@ -37,6 +37,22 @@
       "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b"
     },
     {
+      "core": true,
+      "difficulty": 1,
+      "slug": "simple-cipher",
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "mathematics",
+        "randomness",
+        "strings",
+        "text_formatting",
+        "transforming"
+      ],
+      "uuid": "3ea9d03e-6d06-48e5-a4d3-6e1bb9367c2f"
+    },
+    {
       "core": false,
       "difficulty": 2,
       "slug": "reverse-string",
