@@ -145,6 +145,20 @@
     {
       "core": false,
       "difficulty": 3,
+      "slug": "perfect-numbers",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ],
+      "unlocked_by": "space-age",
+      "uuid": "53cc064f-35d2-4a0e-a915-6a25130252c3"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
       "slug": "roman-numerals",
       "topics": [
         "control_flow_conditionals",
