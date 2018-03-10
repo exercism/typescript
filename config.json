@@ -55,6 +55,22 @@
     {
       "core": false,
       "difficulty": 2,
+      "slug": "run-length-encoding",
+      "topics": [
+        "control_flow_conditionals",
+        "exception_handling",
+        "parsing",
+        "pattern_recognition",
+        "regular_expressions",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "16c5cf98-c381-46bb-a439-78dbc847c0d0"
+    },
+    {
+      "core": false,
+      "difficulty": 2,
       "slug": "reverse-string",
       "topics": [
         "loops",
