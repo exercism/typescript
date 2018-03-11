@@ -289,6 +289,20 @@
       "uuid": "7d42dd76-a6cf-11e7-abc4-cec278b6b50a"
     },
     {
+      "core": true,
+      "difficulty": 6,
+      "slug": "secret-handshake",
+      "topics": [
+        "algorithms",
+        "arrays",
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "games"
+      ],
+      "uuid": "ac2ec51b-a2cd-4d8c-99e3-5bd6758b4e7b"
+    },
+    {
       "core": false,
       "difficulty": 6,
       "slug": "allergies",
