@@ -55,6 +55,18 @@
     {
       "core": false,
       "difficulty": 2,
+      "slug": "armstrong-numbers",
+      "topics": [
+        "algorithms",
+        "integers",
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "31e1b8ba-a5dd-4806-9a4c-94f7550e25d5"
+    },
+    {
+      "core": false,
+      "difficulty": 2,
       "slug": "run-length-encoding",
       "topics": [
         "control_flow_conditionals",
