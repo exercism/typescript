@@ -654,6 +654,18 @@
     {
       "core": false,
       "difficulty": 5,
+      "slug": "rational-numbers",
+      "topics": [
+        "floating_point_numbers",
+        "mathematics",
+        "algorithms"
+      ],
+      "unlocked_by": "pascals-triangle",
+      "uuid": "4439ab9d-266b-483b-b5ca-3920c478fd62"
+    },
+    {
+      "core": false,
+      "difficulty": 5,
       "slug": "binary-search",
       "topics": [
         "algorithms",
