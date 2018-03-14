@@ -768,6 +768,24 @@
         ]
     },
     {
+      "core": false,
+      "difficulty": 6,
+      "slug": "variable-length-quantity",
+      "topics": [
+        "algorithms",
+        "arrays",
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "lists",
+        "loops",
+        "transforming"
+      ],
+      "unlocked_by": "two-bucket",
+      "uuid": "50050198-b5a3-4ab1-8b4b-0eadc8007ebb"
+    },
+    {
       "uuid": "04de61fb-9fde-461c-b306-0b4ce52e2169",
       "slug": "atbash-cipher",
       "core": true,
