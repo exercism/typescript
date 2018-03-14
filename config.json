@@ -238,7 +238,6 @@
         "integers",
         "mathematics"
       ],
-      "unlocked_by": "bob",
       "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a"
     },
     {
@@ -253,7 +252,6 @@
         "matrices",
         "text_formatting"
       ],
-      "unlocked_by": "prime-factors",
       "uuid": "167ec8f2-a206-4a7e-999d-7dbfc136a9fe"
     },
     {
@@ -367,7 +365,7 @@
         "control_flow_loops",
         "recursion"
       ],
-      "unlocked_by": "sum-of-multiples",
+      "unlocked_by": "binary-search",
       "uuid": "b912fe4f-c505-4bac-8029-76412644375b"
     },
     {
@@ -652,7 +650,7 @@
       "uuid": "10edb37d-cf5d-443a-bb4c-8831a3986b61"
     },
     {
-      "core": false,
+      "core": true,
       "difficulty": 5,
       "slug": "rational-numbers",
       "topics": [
