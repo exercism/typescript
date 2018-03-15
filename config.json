@@ -329,6 +329,18 @@
       "uuid": "7d42dd76-a6cf-11e7-abc4-cec278b6b50a"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "bracket-push",
+      "topics": [
+        "parsing",
+        "stacks",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "b455f96b-329d-4dec-ac31-599b02c0b2e5"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
@@ -762,20 +774,20 @@
       ]
     },
     {
-        "uuid": "7dd29a19-08f6-8480-2e01-1f7262d8860a",
-        "slug": "two-bucket",
-        "core": false,
-        "unlocked_by": "pangram",
-        "difficulty": 6,
-        "topics": [
-            "algorithms",
-            "arrays",
-            "control-flow-(conditionals)",
-            "control-flow-(loops)",
-            "exception-handling",
-            "games",
-            "parsing"
-        ]
+      "uuid": "7dd29a19-08f6-8480-2e01-1f7262d8860a",
+      "slug": "two-bucket",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 6,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control-flow-(conditionals)",
+        "control-flow-(loops)",
+        "exception-handling",
+        "games",
+        "parsing"
+      ]
     },
     {
       "core": false,
