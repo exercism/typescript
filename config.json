@@ -287,6 +287,21 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "pig-latin",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "games",
+        "regular_expressions",
+        "strings",
+        "transforming"
+      ],
+      "unlocked_by": "bob",
+      "uuid": "38951bf1-6e7d-4d7d-9b7d-219471f17112"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
