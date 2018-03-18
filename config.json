@@ -369,6 +369,19 @@
       "uuid": "ebe8227e-f445-4387-bf9f-54d4d9730142"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "grains",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ],
+      "unlocked_by": "space-age",
+      "uuid": "5a04b3f8-99b6-4aec-8afd-0d54930e4aff"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
