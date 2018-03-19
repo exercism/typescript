@@ -302,6 +302,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "luhn",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "strings"
+      ],
+      "unlocked_by": "space-age",
+      "uuid": "249365fb-145c-40e3-90ed-11f3f74a9df1"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
