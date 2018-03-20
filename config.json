@@ -396,6 +396,20 @@
       "uuid": "5a04b3f8-99b6-4aec-8afd-0d54930e4aff"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "sieve",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics",
+        "recursion"
+      ],
+      "unlocked_by": "prime-factors",
+      "uuid": "f3ad1525-c124-4b2f-b09f-4639eb4a6ad9"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
