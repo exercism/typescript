@@ -410,6 +410,20 @@
       "uuid": "f3ad1525-c124-4b2f-b09f-4639eb4a6ad9"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "sublist",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "lists"
+      ],
+      "unlocked_by": "linked-list",
+      "uuid": "c5ed4703-59cd-4e31-b109-ba5bfc48a578"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
