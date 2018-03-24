@@ -332,20 +332,6 @@
     },
     {
       "core": false,
-      "difficulty": 4,
-      "slug": "isbn-verifier",
-      "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
-        "pattern_recognition",
-        "regular_expressions",
-        "strings"
-      ],
-      "unlocked_by": "bob",
-      "uuid": "7df093a0-2e63-4830-bcde-14da6d9fdc0e"
-    },
-    {
-      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
