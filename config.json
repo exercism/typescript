@@ -316,6 +316,22 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "transpose",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "lists",
+        "matrices",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "4e484e0f-0b24-4778-a949-224294735c23"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
