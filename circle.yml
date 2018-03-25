@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: bin/fetch-configlet
-      - run: bin/configlet lint .
+      - run: bin/configlet lint . --track-id=typescript
       - run: make test
 
 workflows:
