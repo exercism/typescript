@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  macbuild:
+  macbuild92:
     macos:
       xcode: "9.2.0"
     steps:
@@ -14,4 +14,4 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - macbuild
+      - macbuild92
