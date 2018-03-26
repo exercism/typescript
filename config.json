@@ -346,6 +346,21 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "proverb",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ],
+      "unlocked_by": "bob",
+      "uuid": "b18876a7-f281-46e5-94b9-f805bb0d1fec"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
