@@ -842,6 +842,20 @@
     },
     {
       "core": false,
+      "difficulty": 7,
+      "slug": "kindergarten-garden",
+      "topics": [
+        "Control-flow (conditionals)",
+        "Control-flow (loops)",
+        "Strings",
+        "Arrays",
+        "Text formatting"
+      ],
+      "unlocked_by": "wordy",
+      "uuid": "b1ab1795-3f8e-43f6-86b4-88be4967e934"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "robot-simulator",
       "topics": [
