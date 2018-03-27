@@ -200,6 +200,20 @@
     },
     {
       "core": false,
+      "difficulty": 3,
+      "slug": "diffie-hellman",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "algorithms",
+        "arrays",
+        "exception_handling"
+      ],
+      "unlocked_by": "simple-cipher",
+      "uuid": "1d12bce3-bfdc-4785-9dc7-0a496d2e6d38"
+    },
+    {
+      "core": false,
       "difficulty": 4,
       "slug": "strain",
       "topics": [
