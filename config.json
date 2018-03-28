@@ -483,6 +483,19 @@
       "uuid": "c5ed4703-59cd-4e31-b109-ba5bfc48a578"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "accumulate",
+      "topics": [
+        "algorithms",
+        "callbacks",
+        "control_flow_conditionals",
+        "lists"
+      ],
+      "unlocked_by": null,
+      "uuid": "32953258-d488-4761-9669-895a359a8b9a"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
