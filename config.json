@@ -496,6 +496,21 @@
       "uuid": "32953258-d488-4761-9669-895a359a8b9a"
     },
     {
+      "core": false,
+      "difficulty": 5,
+      "slug": "all-your-base",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "integers",
+        "mathematics",
+        "parsing"
+      ],
+      "unlocked_by": null,
+      "uuid": "0f4f98fe-245a-4842-b3cf-6581b89afd44"
+    },
+    {
       "core": true,
       "difficulty": 6,
       "slug": "secret-handshake",
