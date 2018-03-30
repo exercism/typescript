@@ -8,11 +8,11 @@ class Anagram {
         this.value = input
     }
 
-   matches(...input: string[]): string[] {
+    matches(...input: string[]): string[] {
         const result: string[] = []
         for (const each of input) {
-            if ( sort(each) === sort(this.value) ) {
-                if (each.toLowerCase() === this.value.toLowerCase()) {continue}
+            if (sort(each) === sort(this.value)) {
+                if (each.toLowerCase() === this.value.toLowerCase()) { continue }
                 result.push(each)
             }
         }
