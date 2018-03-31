@@ -606,6 +606,23 @@
     },
     {
       "core": false,
+      "difficulty": 9,
+      "slug": "crypto-square",
+      "topics": [
+        "algorithms",
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions",
+        "sorting",
+        "text_formatting",
+        "transforming"
+      ],
+      "unlocked_by": "simple-cipher",
+      "uuid": "e92b7444-a5c3-4452-82fd-8c70cf14085a"
+    },
+    {
+      "core": false,
       "difficulty": 3,
       "slug": "gigasecond",
       "topics": [
