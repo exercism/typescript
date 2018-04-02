@@ -2,7 +2,7 @@ const aToZ =  [...Array<string>(26)].map( ( _ , index) => {
     return String.fromCharCode(index + 65)
  })
 
- class Panagram {
+ class Pangram {
      value: string
      constructor(input: string = "") {
          this.value = input
@@ -29,4 +29,4 @@ const aToZ =  [...Array<string>(26)].map( ( _ , index) => {
      }
 }
 
-export default Panagram
+export default Pangram
