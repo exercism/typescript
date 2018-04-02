@@ -1,7 +1,6 @@
 import Pangram from './pangram'
 
 describe('Pangram()', () => {
-
   it('empty sentence', () => {
     const pangram = new Pangram('')
     expect(pangram.isPangram()).toBe(false)
@@ -46,5 +45,4 @@ describe('Pangram()', () => {
     const pangram = new Pangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.")
     expect(pangram.isPangram()).toBe(true)
   })
-
 })
