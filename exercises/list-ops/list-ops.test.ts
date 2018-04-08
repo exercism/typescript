@@ -9,7 +9,7 @@ describe('append entries to a list and return the new list', () => {
 
     xit('empty list to list', () => {
         const list1 = new List([1, 2, 3, 4])
-        const list2 = new List()
+        const list2 = new List<number>()
         expect(list1.append(list2)).toEqual(list1)
     })
 
@@ -39,14 +39,12 @@ describe('concat lists and lists of lists into new list', () => {
 describe('filter list returning only values that satisfy the filter function', () => {
     xit('empty list', () => {
         const list1 = new List([])
-        // tslint:disable-next-line: no-any
-        expect(list1.filter((el: any) => el % 2 === 1).values).toEqual([])
+        expect(list1.filter((el: number) => el % 2 === 1).values).toEqual([])
     })
 
     xit('non empty list', () => {
         const list1 = new List([1, 2, 3, 5])
-        // tslint:disable-next-line: no-any
-        expect(list1.filter((el: any) => el % 2 === 1).values).toEqual([1, 3, 5])
+        expect(list1.filter((el: number) => el % 2 === 1).values).toEqual([1, 3, 5])
     })
 })
 
@@ -65,42 +63,36 @@ describe('returns the length of a list', () => {
 describe('returns a list of elements whose values equal the list value transformed by the mapping function', () => {
     xit('empty list', () => {
         const list1 = new List()
-        // tslint:disable-next-line: no-any
-        expect(list1.map((el: any) => ++el).values).toEqual([])
+        expect(list1.map((el: number) => ++el).values).toEqual([])
     })
 
     xit('non-empty list', () => {
         const list1 = new List([1, 3, 5, 7])
-        // tslint:disable-next-line: no-any
-        expect(list1.map((el: any) => ++el).values).toEqual([2, 4, 6, 8])
+        expect(list1.map((el: number) => ++el).values).toEqual([2, 4, 6, 8])
     })
 })
 
 describe('folds (reduces) the given list from the left with a function', () => {
     xit('empty list', () => {
         const list1 = new List()
-        // tslint:disable-next-line: no-any
-        expect(list1.foldl((acc: any, el: any) => el / acc, 2)).toEqual(2)
+        expect(list1.foldl((acc: number, el: number) => el / acc, 2)).toEqual(2)
     })
 
     xit('division of integers', () => {
         const list1 = new List([1, 2, 3, 4])
-        // tslint:disable-next-line: no-any
-        expect(list1.foldl((acc: any, el: any) => el / acc, 24)).toEqual(64)
+        expect(list1.foldl((acc: number, el: number) => el / acc, 24)).toEqual(64)
     })
 })
 
 describe('folds (reduces) the given list from the right with a function', () => {
     xit('empty list', () => {
         const list1 = new List()
-        // tslint:disable-next-line: no-any
-        expect(list1.foldr((acc: any, el: any) => el / acc, 2)).toEqual(2)
+        expect(list1.foldr((acc: number, el: number) => el / acc, 2)).toEqual(2)
     })
 
     xit('division of integers', () => {
         const list1 = new List([1, 2, 3, 4])
-        // tslint:disable-next-line: no-any
-        expect(list1.foldr((acc: any, el: any) => el / acc, 24)).toEqual(9)
+        expect(list1.foldr((acc: number, el: number) => el / acc, 24)).toEqual(9)
     })
 })
 

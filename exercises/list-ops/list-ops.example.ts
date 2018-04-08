@@ -1,23 +1,22 @@
-class List {
-    values: number[]
+class List<T> {
+    values: T[]
 
-    constructor(arr?: number[]) {
+    constructor(arr?: T[]) {
         this.values = arr || []
     }
 
-    append(otherList: List) {
+    append(otherList: List<T>) {
         for (const el of otherList.values) {
             this.values.push(el)
         }
         return this
     }
 
-    concat(otherList: List) {
+    concat(otherList: List<T>) {
         return this.append(otherList)
     }
 
-    // tslint:disable-next-line: no-any
-    filter(operation: any) {
+    filter(operation: (arg: T) => boolean) {
         const filteredValues = []
         for (const el of this.values) {
             if (operation(el)) {
@@ -34,8 +33,7 @@ class List {
         return length
     }
 
-    // tslint:disable-next-line: no-any
-    map(operation: any) {
+    map(operation: (arg: T) => T) {
         const mappedValues = []
         for (const el of this.values) {
             mappedValues.push(operation(el))
@@ -44,8 +42,7 @@ class List {
         return this
     }
 
-    // tslint:disable-next-line: no-any
-    foldl(operation: any, initialValue: any) {
+    foldl(operation: (arg1: T, arg2: T) => T, initialValue: T) {
         let acc = initialValue
         for (const el of this.values) {
             acc = operation(acc, el)
@@ -53,8 +50,7 @@ class List {
         return acc
     }
 
-    // tslint:disable-next-line: no-any
-    foldr(operation: any, initialValue: any) {
+    foldr(operation: (arg1: T, arg2: T) => T, initialValue: T) {
         let acc = initialValue
         let index = this.length() - 1
         while (index >= 0) {
