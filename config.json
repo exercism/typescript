@@ -591,6 +591,18 @@
     },
     {
       "core": false,
+      "difficulty": 7,
+      "slug": "minesweeper",
+      "topics": [
+        "algorithms",
+        "arrays",
+        "games"
+      ],
+      "unlocked_by": null,
+      "uuid": "f5b00e76-3015-444d-8012-9862990db08c"
+    },
+    {
+      "core": false,
       "difficulty": 8,
       "slug": "circular-buffer",
       "topics": [
