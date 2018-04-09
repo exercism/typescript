@@ -1,10 +1,24 @@
 import SimpleCipher from './simple-cipher'
 
+describe('Random key generation', () => {
+    xit('generates keys at random', () => {
+        // Strictly speaking, this is difficult to test with 100% certainty.
+        // But, if you have a generator that generates 100-character-long
+        // strings of lowercase letters at random, the odds of two consecutively
+        // generated keys being identical are astronomically low.
+        expect(new SimpleCipher().key).not.toEqual(new SimpleCipher().key)
+    })
+})
+
 describe('Random key cipher', () => {
     const simpleCipher = new SimpleCipher()
 
     it('has a key made of letters', () => {
         expect(simpleCipher.key).toMatch(/^[a-z]+$/)
+    })
+
+    xit('has a key that is at least 100 characters long', () => {
+        expect(simpleCipher.key.length).toBeGreaterThanOrEqual(100)
     })
 
     // Here we take advantage of the fact that plaintext of "aaa..."
