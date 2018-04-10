@@ -375,6 +375,19 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "complex-numbers",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "mathematics"
+      ],
+      "unlocked_by": "space-age",
+      "uuid": "59d842b4-a804-4cd5-a388-983a22a70c9e"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
