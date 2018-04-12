@@ -588,6 +588,23 @@
       "uuid": "32e79fd7-f002-4bdc-b6bd-7a91d8c1af61"
     },
     {
+      "core": false,
+      "difficulty": 6,
+      "slug": "custom-set",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "arrays",
+        "lists",
+        "sets",
+        "equality",
+        "recursion"
+      ],
+      "unlocked_by": "linked-list",
+      "uuid": "e2cfc3b4-5c71-4344-a692-5d55609f097b"
+    },
+    {
       "core": true,
       "difficulty": 7,
       "slug": "wordy",
