@@ -388,6 +388,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "house",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings",
+        "arrays",
+        "recursion"
+      ],
+      "unlocked_by": "bob",
+      "uuid": "9850a74a-1842-4db0-b3ed-5a53b4f25050"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
