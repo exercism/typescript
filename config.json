@@ -924,11 +924,11 @@
         "mathematics",
         "algorithms"
       ],
-      "unlocked_by": "pascals-triangle",
+      "unlocked_by": null,
       "uuid": "4439ab9d-266b-483b-b5ca-3920c478fd62"
     },
     {
-      "core": false,
+      "core": true,
       "difficulty": 5,
       "slug": "binary-search",
       "topics": [
@@ -1072,7 +1072,7 @@
         "loops",
         "transforming"
       ],
-      "unlocked_by": "two-bucket",
+      "unlocked_by": "pangram",
       "uuid": "50050198-b5a3-4ab1-8b4b-0eadc8007ebb"
     },
     {
