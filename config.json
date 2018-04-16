@@ -673,6 +673,22 @@
     },
     {
       "core": false,
+      "difficulty": 8,
+      "slug": "bowling",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "games",
+        "parsing",
+        "text_formatting"
+      ],
+      "unlocked_by": "grade-school",
+      "uuid": "18376dda-8e8d-4cf7-a44a-db71da438e87"
+    },
+    {
+      "core": false,
       "difficulty": 9,
       "slug": "crypto-square",
       "topics": [
