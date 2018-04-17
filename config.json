@@ -647,6 +647,21 @@
     },
     {
       "core": false,
+      "difficulty": 7,
+      "slug": "connect",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "games",
+        "parsing",
+        "arrays",
+        "maps"
+      ],
+      "unlocked_by": "grade-school",
+      "uuid": "69cbdc2a-50f4-4e14-b9f4-c1ddee021018"
+    },
+    {
+      "core": false,
       "difficulty": 8,
       "slug": "circular-buffer",
       "topics": [
