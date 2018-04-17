@@ -1,4 +1,4 @@
-import Board from './connect'
+import ConnectBoard from './connect'
 
 describe('Judging a game of connect', () => {
     it('an empty board has no winner', () => {
@@ -9,21 +9,21 @@ describe('Judging a game of connect', () => {
             '   . . . . .',
             '    . . . . .',
         ]
-        expect(new Board(board).winner()).toEqual('')
+        expect(new ConnectBoard(board).winner()).toEqual('')
     })
 
     xit('X can win on a 1x1 board', () => {
         const board = [
             'X',
         ]
-        expect(new Board(board).winner()).toEqual('X')
+        expect(new ConnectBoard(board).winner()).toEqual('X')
     })
 
     xit('O can win on a 1x1 board', () => {
         const board = [
             'O',
         ]
-        expect(new Board(board).winner()).toEqual('O')
+        expect(new ConnectBoard(board).winner()).toEqual('O')
     })
 
     xit('only edges does not make a winner', () => {
@@ -33,7 +33,7 @@ describe('Judging a game of connect', () => {
             '  X . . X',
             '   X O O O',
         ]
-        expect(new Board(board).winner()).toEqual('')
+        expect(new ConnectBoard(board).winner()).toEqual('')
     })
 
     xit('illegal diagonal does not make a winner', () => {
@@ -44,7 +44,7 @@ describe('Judging a game of connect', () => {
             '   . O X .',
             '    X X O O',
         ]
-        expect(new Board(board).winner()).toEqual('')
+        expect(new ConnectBoard(board).winner()).toEqual('')
     })
 
     xit('nobody wins crossing adjacent angles', () => {
@@ -55,7 +55,7 @@ describe('Judging a game of connect', () => {
             '   . O . X',
             '    . . O .',
         ]
-        expect(new Board(board).winner()).toEqual('')
+        expect(new ConnectBoard(board).winner()).toEqual('')
     })
 
     xit('X wins crossing from left to right', () => {
@@ -66,7 +66,7 @@ describe('Judging a game of connect', () => {
             '   X X O X',
             '    . O X .',
         ]
-        expect(new Board(board).winner()).toEqual('X')
+        expect(new ConnectBoard(board).winner()).toEqual('X')
     })
 
     xit('O wins crossing from top to bottom', () => {
@@ -77,7 +77,7 @@ describe('Judging a game of connect', () => {
             '   X X O X',
             '    . O X .',
         ]
-        expect(new Board(board).winner()).toEqual('O')
+        expect(new ConnectBoard(board).winner()).toEqual('O')
     })
 
     xit('X wins using a convoluted path', () => {
@@ -88,7 +88,7 @@ describe('Judging a game of connect', () => {
             '   . X X . .',
             '    O O O O O',
         ]
-        expect(new Board(board).winner()).toEqual('X')
+        expect(new ConnectBoard(board).winner()).toEqual('X')
     })
 
     xit('X wins using a spiral path', () => {
@@ -103,6 +103,6 @@ describe('Judging a game of connect', () => {
             '       O O O O O O O X O',
             '        X X X X X X X X O',
         ]
-        expect(new Board(board).winner()).toEqual('X')
+        expect(new ConnectBoard(board).winner()).toEqual('X')
     })
 })

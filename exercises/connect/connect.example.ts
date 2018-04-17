@@ -2,7 +2,7 @@
  * "Player O" plays from top to bottom, "Player X" plays from left to right.
  * @param board
  */
-export default class {
+export default class ConnectBoard {
     board: string[][]
 
     constructor(board: string[]) {
@@ -29,7 +29,7 @@ export default class {
         return false
     }
 
-    search(pos: {x: number, y: number}, XorO: string, checked: Array<{x: number, y: number}>): boolean {
+    search(pos: { x: number, y: number }, XorO: string, checked: Array<{ x: number, y: number }>): boolean {
         if (!this.matches(pos, XorO)) {
             return false
         }
@@ -46,7 +46,7 @@ export default class {
         return matches.filter((spot) => this.search(spot, XorO, checked)).length > 0
     }
 
-    neighbors(pos: {x: number, y: number}) {
+    neighbors(pos: { x: number, y: number }) {
         return [
             { x: pos.x, y: pos.y + 2 },
             { x: pos.x, y: pos.y - 2 },
@@ -65,13 +65,13 @@ export default class {
             this.board[0].map((_, i) => ({ x: 0, y: i }))
     }
 
-    winningSpot(pos: {x: number, y: number}, XorO: string) {
+    winningSpot(pos: { x: number, y: number }, XorO: string) {
         return XorO === 'X' ?
             pos.y === this.board[0].length - 1 + pos.x :
             pos.x === this.board.length - 1
     }
 
-    matches(pos: {x: number, y: number}, XorO: string) {
+    matches(pos: { x: number, y: number }, XorO: string) {
         return this.board[pos.x] !== undefined && this.board[pos.x][pos.y] === XorO
     }
 }
