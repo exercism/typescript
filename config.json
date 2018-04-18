@@ -402,6 +402,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "rectangles",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "arrays",
+        "matrices",
+        "strings"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "6d81d98f-afde-4aea-85ff-c7baef98fb7e"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
