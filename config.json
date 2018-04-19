@@ -676,6 +676,20 @@
     },
     {
       "core": false,
+      "difficulty": 7,
+      "slug": "palindrome-products",
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "mathematics"
+      ],
+      "unlocked_by": "prime-factors",
+      "uuid": "ffb0ad36-2cf5-46d4-9a5f-5bbdfb9691a7"
+    },
+    {
+      "core": false,
       "difficulty": 8,
       "slug": "circular-buffer",
       "topics": [
