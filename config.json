@@ -746,6 +746,22 @@
     },
     {
       "core": false,
+      "difficulty": 8,
+      "slug": "queen-attack",
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "exception_handling",
+        "optional_values",
+        "parsing",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "837fbe57-a567-4fc7-a7a2-8b63059ac8b7"
+    },
+    {
+      "core": false,
       "difficulty": 9,
       "slug": "crypto-square",
       "topics": [
