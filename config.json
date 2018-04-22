@@ -416,6 +416,20 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "spiral-matrix",
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "data_structures",
+        "matrices"
+      ],
+      "unlocked_by": "matrix",
+      "uuid": "702b1e87-55db-479f-9ef9-4ccdfe8849b1"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "nth-prime",
       "topics": [
