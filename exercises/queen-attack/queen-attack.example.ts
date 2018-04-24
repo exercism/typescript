@@ -1,15 +1,11 @@
 class QueenAttack {
     W = 8
     H = 8
-    STARTING = { black: [7, 3], white: [0, 3] }
     black: number[]
     white: number[]
     board: string[]
 
-    constructor(params?: { black: number[], white: number[] }) {
-        if (params === undefined) {
-            params = this.STARTING
-        }
+    constructor(params: { black: [number, number], white: [number, number] }) {
         const self = this instanceof QueenAttack ? this : Object.getPrototypeOf(QueenAttack)
         if (this.samePosition(params)) {
             throw new Error('Queens cannot share the same space')
