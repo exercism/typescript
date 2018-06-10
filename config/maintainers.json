@@ -2,34 +2,34 @@
   "docs_url": "https://github.com/exercism/docs/blob/master/maintaining-a-track/maintainer-configuration.md",
   "maintainers": [
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": null,
       "github_username": "masters3d",
-      "link_text": null,
-      "link_url": null,
+      "alumnus": false,
+      "show_on_website": false,
       "name": null,
-      "show_on_website": false
+      "link_text": null,
+      "link_url": null,
+      "avatar_url": null,
+      "bio": null
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": "I'm a career-changer from education, and I used Exercism to reinforce my skills as I made the switch. I love TypeScript for the flexibility of JS with the consistency of strongly typed languages. Maintaining the TS track has grown my appreciation for the language.",
       "github_username": "thedevelopnik",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Dave Sudia",
       "link_text": null,
       "link_url": null,
-      "name": "Dave Sudia",
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": "I'm a career-changer from education, and I used Exercism to reinforce my skills as I made the switch. I love TypeScript for the flexibility of JS with the consistency of strongly typed languages. Maintaining the TS track has grown my appreciation for the language."
     },
     {
-      "alumnus": false,
-      "avatar_url": null,
-      "bio": "I am a Software Engineering student from San Sebastian. I enjoy a lot reading about topics related to Java, software maintainability and web technologies. My love for TypeScript began developing web apps with Angular framework.",
       "github_username": "CRivasGomez",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Cristian Rivas Gómez",
       "link_text": null,
       "link_url": null,
-      "name": "Cristian Rivas Gómez",
-      "show_on_website": true
+      "avatar_url": null,
+      "bio": "I am a Software Engineering student from San Sebastian. I enjoy a lot reading about topics related to Java, software maintainability and web technologies. My love for TypeScript began developing web apps with Angular framework."
     }
   ]
 }
