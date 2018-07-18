@@ -175,7 +175,7 @@ $ yarn test
 yarn run v1.2.1
 $ tsc --noEmit -p . && jest --no-cache
 hello-world.test.ts(7,12): error TS2554: Expected 1 arguments, but got 0.
-hello-world.ts(2,18): error TS6133: 'name' is declared but never used.
+hello-world.ts(2,18): error TS6133: 'message' is declared but never used.
 ```
 
 Ok, now we have problem with the 7th line of `hello-world.test.ts` – the method expects 1 argument but we pass 0:
