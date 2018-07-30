@@ -91,8 +91,13 @@ describe('Substitution cipher', () => {
         expect(simpleCipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz')
     })
 
-    xit('can handle messages longer than the key', () => {
+    xit('can handle messages longer than the key (encode)', () => {
         expect(new SimpleCipher('abc').encode('iamapandabear'))
             .toEqual('iboaqcnecbfcr')
+    })
+
+    xit('can handle messages longer than the key (decode)', () => {
+        expect(new SimpleCipher('abc').decode('iboaqcnecbfcr'))
+            .toEqual('iamapandabear')
     })
 })
