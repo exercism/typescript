@@ -17,7 +17,7 @@ all: test
 test-assignment:
 	@printf "\e[4mRunning tests for $(ASSIGNMENT) assignment\e[0m\n"
 	@cp -a common/. $(INTDIR)
-	@sed 's/xit/it/g; s/xdescribe/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
+	@sed 's/\bxit\b/it/g; s/\bxdescribe\b/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
 	@cd $(INTDIR) && yarn install && yarn lintci && yarn test
 
