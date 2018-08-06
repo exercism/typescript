@@ -11,6 +11,7 @@ jobs:
       - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
       - run: brew bundle
       - run: gsed 's/\b@sed\b/@gsed/g;' Makefile > Makefile
+      - run: cat Makefile
       - run: make test
 
 workflows:
