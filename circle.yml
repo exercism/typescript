@@ -8,8 +8,9 @@ jobs:
       - checkout
       - run: bin/fetch-configlet
       - run: bin/configlet lint . --track-id=typescript
+      - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
       - run: brew bundle
-      - run: PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+      - run: gsed 's/\b@sed\b/@gsed/g;'
       - run: make test
 
 workflows:
