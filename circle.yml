@@ -8,7 +8,8 @@ jobs:
       - checkout
       - run: bin/fetch-configlet
       - run: bin/configlet lint . --track-id=typescript
-      - run: brew outdated gnu-sed || brew upgrade gnu-sed
+      - run: touch Brewfile; echo 'install gnu-sed' >> Brewfile;
+      - run: brew bundle
       - run: make test
 
 workflows:
