@@ -10,7 +10,7 @@ jobs:
       - run: bin/configlet lint . --track-id=typescript
       - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
       - run: brew bundle
-      - run: gsed 's/\b@sed\b/@gsed/g;'
+      - run: gsed 's/\b@sed\b/@gsed/g;' Makefile > Makefile
       - run: make test
 
 workflows:
