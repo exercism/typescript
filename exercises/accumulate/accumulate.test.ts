@@ -25,7 +25,7 @@ describe('accumulate()', () => {
     })
 
     xit('accumulate recursively', () => {
-        const result = accumulate('a b c'.split(/\s/), (char: string) => accumulate('1 2 3'.split(/\s/), (digit: number) => char + digit))
+        const result = accumulate('a b c'.split(/\s/), (char: string) => accumulate('1 2 3'.split(/\s/), (digit: string) => char + digit))
 
         expect(result).toEqual([['a1', 'a2', 'a3'], ['b1', 'b2', 'b3'], ['c1', 'c2', 'c3']])
     })
