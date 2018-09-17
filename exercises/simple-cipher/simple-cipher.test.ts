@@ -45,6 +45,12 @@ describe('Incorrect key cipher', () => {
         }).toThrowError('Bad key')
     })
 
+    xit('throws an error with a mixed case key', () => {
+        expect(() => {
+            new SimpleCipher('AbcdEF')
+        }).toThrowError('Bad key')
+    })
+
     xit('throws an error with a numeric key', () => {
         expect(() => {
             new SimpleCipher('12345')
