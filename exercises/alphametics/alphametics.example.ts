@@ -6,7 +6,7 @@ class Alphametics {
   }
 
   solve() {
-    const parts = this.puzzle
+    const parts: string[] = this.puzzle
       .split(/[+|==]/g)
       .map((o) => o.trim())
       .filter((o) => o !== '')
@@ -18,12 +18,13 @@ class Alphametics {
     const uniqueLetters = new Set(parts.join('').split(''))
     const firstLetters = new Set(parts.map((p) => p[0]))
 
-    const numberCombinations = this.getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size)
+    const numberCombinations: number[][] = this.getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size)
 
     while (numberCombinations.length) {
-      const permutations = this.generate(Array(uniqueLetters.size).fill().map((_, i) => i))
-      const numberCombination = numberCombinations.pop()
+      const permutations = this.generate(Array(uniqueLetters.size).fill(Array<number>()).map((_, i) => i))
+      const numberCombination: number[] = numberCombinations.pop() || []
       for (const permutation of permutations) {
+
         const newNumbers = this.assignNumbers(numberCombination, uniqueLetters, permutation)
         if (this.testNumbers(newNumbers, parts, firstLetters)) {
           return newNumbers
@@ -33,8 +34,8 @@ class Alphametics {
     return undefined
   }
 
-  assignNumbers(numberCombination, uniqueLetters, permutation) {
-    const output = {}
+  assignNumbers(numberCombination: number[], uniqueLetters: Set<string>, permutation: number[]) {
+    const output: { [key: string]: number } = {}
     let i = 0
     for (const letter of uniqueLetters.values()) {
       output[letter] = numberCombination[permutation[i++]]
@@ -42,8 +43,8 @@ class Alphametics {
     return output
   }
 
-  testNumbers(numbers, puzzleParts, firstLetters) {
-    const keys = Object.keys(numbers)
+  testNumbers(numbers: { [key: string]: number } , puzzleParts: string[], firstLetters: Set<string>) {
+    const keys: string[] = Object.keys(numbers)
     for (const key of keys) {
       if (numbers[key] === 0 && firstLetters.has(key)) {
         return false
@@ -51,18 +52,18 @@ class Alphametics {
     }
     const replaceRegex = new RegExp(`[${keys.join('')}]`, 'g')
 
-    puzzleParts = puzzleParts.join(',')
-      .replace(replaceRegex, (input) => numbers[input])
+    const puzzlePartsNumbers: number[] = puzzleParts.join(',')
+      .replace(replaceRegex, (input) => numbers[input].toString())
       .split(',')
-      .map((t) => parseInt(t))
+      .map((t) => parseInt(t, 10))
 
-    const total = puzzleParts.slice(puzzleParts.length - 1)[0]
+    const total = puzzlePartsNumbers.slice(puzzlePartsNumbers.length - 1)[0]
     return total === puzzleParts
       .slice(0, puzzleParts.length - 1)
-      .reduce((acc, val) => acc + val, 0)
+      .reduce((acc: number, val: string) => acc + parseInt(val, 10), 0)
   }
 
-  *generate(A) {
+  *generate(A: number[]) {
     const c = []
     const n = A.length
     yield A
@@ -87,7 +88,7 @@ class Alphametics {
     }
   }
 
-  swap(list, x, y) {
+  swap(list: number[], x: number, y: number) {
     const tmp = list[x]
     list[x] = list[y]
     list[y] = tmp
@@ -111,12 +112,3 @@ class Alphametics {
 }
 
 export default Alphametics
-
-const puzzle = 'I + BB == ILL'
-const expected = {
-  I: 1,
-  B: 9,
-  L: 0,
-}
-
-console.log('Debug:', new Alphametics(puzzle).solve())
