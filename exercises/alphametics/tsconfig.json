@@ -1,5 +1,5 @@
 {
-    "compilerOptions": {
+    "compilerOptions": { 
         "target": "es2017",
         "module": "commonjs",
         "alwaysStrict": true,
@@ -15,7 +15,7 @@
         "noEmitOnError": true,
         "outDir": "./build"
     },
-    "compileOnSave": true,
+    "compileOnSave": true, 
     "exclude": [
         "node_modules"
     ]
