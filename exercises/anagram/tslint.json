@@ -93,7 +93,7 @@
             "check-separator",
             "check-type"
         ],
-        "no-namespace": true,
+        "no-namespace": true, 
         "prefer-for-of": true,
         "only-arrow-functions": [true, "allow-declarations"],
         "no-var-requires": true,
