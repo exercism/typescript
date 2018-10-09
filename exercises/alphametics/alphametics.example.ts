@@ -58,9 +58,9 @@ class Alphametics {
       .map((t) => parseInt(t, 10))
 
     const total = puzzlePartsNumbers.slice(puzzlePartsNumbers.length - 1)[0]
-    return total === puzzleParts
+    return total === puzzlePartsNumbers
       .slice(0, puzzleParts.length - 1)
-      .reduce((acc: number, val: string) => acc + parseInt(val, 10), 0)
+      .reduce((acc: number, val: number) => acc + val, 0)
   }
 
   *generate(A: number[]) {
