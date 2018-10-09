@@ -1192,6 +1192,17 @@
         "control_flow_loops",
         "text_formatting"
       ]
+    },
+    {
+      "slug": "alphametics",
+      "uuid": "a602bd33-69fc-4b67-a3d3-95198853095e",
+      "core": false,
+      "unlocked_by": "grade-school",
+      "difficulty": 7,
+      "topics": [
+        "algorithms",
+        "games"
+      ]
     }
   ]
 }
