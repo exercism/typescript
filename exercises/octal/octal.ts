@@ -1,5 +1,5 @@
 export default class Octal {
-  static octal(num: string) {
+  static toDecimal(num: string): number {
     // Your code here
   }
 }
