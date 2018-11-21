@@ -38,7 +38,7 @@ class TwelveDays {
     }
 
     private static reciteVerse(verse: number) {
-        let result = 'On the ' + this.days[verse - 1] + ' day of Christmas my true love gave to me, '
+        let result = 'On the ' + this.days[verse - 1] + ' day of Christmas my true love gave to me: '
         for (let i = verse; i > 0; i--) {
             if (verse !== 1 && i === 1) {
                 result += 'and '
