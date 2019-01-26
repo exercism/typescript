@@ -4,10 +4,13 @@ describe('Palindrome', () => {
     it('largest palindrome from single digit factors', () => {
         const palindromes = generate({ maxFactor: 9 })
         const largest = palindromes.largest
+        const containsMatch1 = largest.factors.some((el) => numericalArraysMatch(el, [3, 3]))
+        const containsMatch2 = largest.factors.some((el) => numericalArraysMatch(el, [1, 9]))
 
         expect(largest.value).toEqual(9)
-        const containsMatch = [[3, 3], [1, 9]].filter((el) => numericalArraysMatch(el, [3, 3])).length > 0
-        expect(containsMatch).toBe(true)
+        expect(largest.factors.length).toEqual(2)
+        expect(containsMatch1).toBe(true)
+        expect(containsMatch2).toBe(true)
     })
 
     xit('largest palindrome from double digit factors', () => {
