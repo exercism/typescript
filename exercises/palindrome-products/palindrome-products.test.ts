@@ -4,13 +4,11 @@ describe('Palindrome', () => {
     it('largest palindrome from single digit factors', () => {
         const palindromes = generate({ maxFactor: 9 })
         const largest = palindromes.largest
-        const containsMatch1 = largest.factors.some((el) => numericalArraysMatch(el, [3, 3]))
-        const containsMatch2 = largest.factors.some((el) => numericalArraysMatch(el, [1, 9]))
 
         expect(largest.value).toEqual(9)
-        expect(largest.factors.length).toEqual(2)
-        expect(containsMatch1).toBe(true)
-        expect(containsMatch2).toBe(true)
+        expect(largest.factors).toHaveLength(2)
+        expect(largest.factors).toContainArray([3, 3])
+        expect(largest.factors).toContainArray([1, 9])
     })
 
     xit('largest palindrome from double digit factors', () => {
@@ -18,7 +16,8 @@ describe('Palindrome', () => {
         const largest = palindromes.largest
 
         expect(largest.value).toEqual(9009)
-        expect(largest.factors).toEqual([91, 99])
+        expect(largest.factors).toHaveLength(1)
+        expect(largest.factors).toContainArray([91, 99])
     })
 
     xit('smallest palindrome from double digit factors', () => {
@@ -26,7 +25,8 @@ describe('Palindrome', () => {
         const smallest = palindromes.smallest
 
         expect(smallest.value).toEqual(121)
-        expect(smallest.factors).toEqual([11, 11])
+        expect(smallest.factors).toHaveLength(1)
+        expect(smallest.factors).toContainArray([11, 11])
     })
 
     xit('largest palindrome from triple digit factors', () => {
@@ -34,7 +34,8 @@ describe('Palindrome', () => {
         const largest = palindromes.largest
 
         expect(largest.value).toEqual(906609)
-        expect(largest.factors).toEqual([913, 993])
+        expect(largest.factors).toHaveLength(1)
+        expect(largest.factors).toContainArray([913, 993])
     })
 
     xit('smallest palindrome from triple digit factors', () => {
@@ -42,8 +43,19 @@ describe('Palindrome', () => {
         const smallest = palindromes.smallest
 
         expect(smallest.value).toEqual(10201)
-        expect(smallest.factors).toEqual([101, 101])
+        expect(smallest.factors).toHaveLength(1)
+        expect(smallest.factors).toContainArray([101, 101])
     })
+})
+
+expect.extend({
+    toContainArray(received: number[][], argument) {
+        const pass = received.some((el) => numericalArraysMatch(el, argument))
+        return {
+            pass,
+            message: () => `expected ${JSON.stringify(received)} ${pass ? 'not ' : ''}to contain ${JSON.stringify(argument)}`
+        }
+    }
 })
 
 function numericalArraysMatch(a: number[], b: number[]) {
