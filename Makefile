@@ -78,9 +78,8 @@ reportNoStubFile:
 	@exit 1
 
 checkStubFileExists:
-	[ -f ./exercises/$(ASSIGNMENT)/$(ASSIGNMENT).ts ] || exit 1;
+	[ -f ./exercises/$(ASSIGNMENT)/$(ASSIGNMENT).$(FILEEXT) ] || exit 1;
 
 checkAllExercisesHaveStubFile:
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment $(MAKE) checkStubFileExists || ASSIGNMENT=$$assignment $(MAKE) reportNoStubFile || exit 1 ;done
 	@echo "==All exercises should contain a stub file with the exercise name=="
-
