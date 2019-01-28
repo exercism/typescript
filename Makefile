@@ -19,6 +19,7 @@ test-assignment:
 	@cp -a common/. $(INTDIR)
 	@sed 's/\bxit\b/it/g; s/\bxdescribe\b/describe/g' exercises/$(ASSIGNMENT)/$(TSTFILE) > $(INTDIR)/$(TSTFILE)
 	@cp exercises/$(ASSIGNMENT)/$(EXAMPLE) $(INTDIR)/$(ASSIGNMENT).$(FILEEXT)
+	@if [ -d ./exercises/$(ASSIGNMENT)/test-type-definitions ]; then cp -r ./exercises/$(ASSIGNMENT)/test-type-definitions $(INTDIR); fi
 	@cd $(INTDIR) && yarn install && yarn lintci && yarn test
 
 test:
