@@ -6,8 +6,8 @@ describe('Palindrome', () => {
         const largest = palindromes.largest
 
         expect(largest.value).toEqual(9)
-        const containsMatch = [[3, 3], [1, 9]].filter((el) => numericalArraysMatch(el, [3, 3])).length > 0
-        expect(containsMatch).toBe(true)
+        expect(largest.factors).toHaveLength(2)
+        expect(sort2dArray(largest.factors)).toEqual([[1, 9], [3, 3]])
     })
 
     xit('largest palindrome from double digit factors', () => {
@@ -15,7 +15,7 @@ describe('Palindrome', () => {
         const largest = palindromes.largest
 
         expect(largest.value).toEqual(9009)
-        expect(largest.factors).toEqual([91, 99])
+        expect(sort2dArray(largest.factors)).toEqual([[91, 99]])
     })
 
     xit('smallest palindrome from double digit factors', () => {
@@ -23,7 +23,7 @@ describe('Palindrome', () => {
         const smallest = palindromes.smallest
 
         expect(smallest.value).toEqual(121)
-        expect(smallest.factors).toEqual([11, 11])
+        expect(sort2dArray(smallest.factors)).toEqual([[11, 11]])
     })
 
     xit('largest palindrome from triple digit factors', () => {
@@ -31,7 +31,7 @@ describe('Palindrome', () => {
         const largest = palindromes.largest
 
         expect(largest.value).toEqual(906609)
-        expect(largest.factors).toEqual([913, 993])
+        expect(sort2dArray(largest.factors)).toEqual([[913, 993]])
     })
 
     xit('smallest palindrome from triple digit factors', () => {
@@ -39,31 +39,14 @@ describe('Palindrome', () => {
         const smallest = palindromes.smallest
 
         expect(smallest.value).toEqual(10201)
-        expect(smallest.factors).toEqual([101, 101])
+        expect(sort2dArray(smallest.factors)).toEqual([[101, 101]])
     })
 })
 
-function numericalArraysMatch(a: number[], b: number[]) {
-    if (a.length !== b.length) {
-        return false
-    }
-    const one = [...a].sort(numericalSort)
-    const two = [...b].sort(numericalSort)
-    let result = true
-    let index = 0
-    while (index < one.length) {
-        result = result && one[index] === two[index]
-        index++
-    }
-    return result
-}
-
-function numericalSort(x: number, y: number) {
-    if (x < y) {
-        return -1
-    }
-    if (x > y) {
-        return 1
-    }
-    return 0
+// This conversion may seem a bit convoluted, but it allows a broader set of solutions
+// and it helps by being a bit more specific about what values were expected.
+function sort2dArray<T>(input: T[][]): number[][] {
+    return Array.from(input).map(
+        (subArray: T[]): number[] => Array.from(subArray).map((el) => Number(el)).sort()
+    ).sort()
 }

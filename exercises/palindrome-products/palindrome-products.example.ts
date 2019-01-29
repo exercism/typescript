@@ -1,38 +1,40 @@
-const isPalindrome = (num: number) => num.toString().split('').reverse().join('') === num.toString()
+interface Input { maxFactor: number, minFactor?: number }
+interface Palindrome { value: number, factors: Array<[number, number]> }
+interface Output { largest: Palindrome, smallest: Palindrome }
 
-const Palindromes = (params: {maxFactor: number, minFactor?: number}) => {
-    let maxFactor,
-        minFactor,
-        maxProduct,
-        minProduct,
-        data
-    maxFactor = params.maxFactor
-    minFactor = params.minFactor || 1
-    maxProduct = 1
-    minProduct = Infinity
-    data = []
+function generate({ maxFactor, minFactor = 1 }: Input): Output {
+  const factors = Array.from({ length: (maxFactor - minFactor + 1) }, (_, k) => k + minFactor)
+  const products: Map<number, Array<[number, number]>> = new Map<number, Array<[number, number]>>()
 
-    for (let ii = minFactor; ii < maxFactor; ii++) {
-        for (let jj = ii; jj <= maxFactor; jj++) {
-            const product = ii * jj
-            if (isPalindrome(product)) {
-                data[product] = [ii, jj]
-                maxProduct = Math.max(maxProduct, product)
-                minProduct = Math.min(minProduct, product)
-            }
-        }
-    }
+  let min: number = Infinity
+  let max: number = 0
 
-    return {
-        largest: {
-            value: maxProduct,
-            factors: data[maxProduct],
-        },
-        smallest: {
-            value: minProduct,
-            factors: data[minProduct],
-        },
-    }
+  factors.forEach((x: number, index: number) => {
+    factors.slice(index).forEach((y) => {
+      const product = x * y
+      if (isPalidrome(product)) {
+        const factorPair: [number, number] = [x, y]
+        const newFactors = products.get(product) || []
+        newFactors.push(factorPair)
+        products.set(product, newFactors)
+
+        min = Math.min(min, product)
+        max = Math.max(max, product)
+      }
+    })
+  })
+
+  const largest: Palindrome = { value: max, factors: products.get(max) || [] }
+  const smallest: Palindrome = { value: min, factors: products.get(min) || [] }
+
+  return { largest, smallest }
 }
 
-export default Palindromes
+function isPalidrome(x: number): boolean {
+  const a = x.toString()
+  const b = [...a].reverse().join('')
+
+  return a === b
+}
+
+export default generate
