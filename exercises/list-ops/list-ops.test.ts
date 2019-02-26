@@ -23,7 +23,7 @@ describe('append entries to a list and return the new list', () => {
 describe('concat lists and lists of lists into new list', () => {
     xit('empty list', () => {
         const list1 = new List()
-        const list2 = new List()
+        const list2 = new List([])
         expect(list1.concat(list2).values).toEqual([])
     })
 
@@ -32,7 +32,8 @@ describe('concat lists and lists of lists into new list', () => {
         const list2 = new List([3])
         const list3 = new List([])
         const list4 = new List([4, 5, 6])
-        expect(list1.concat(list2).concat(list3).concat(list4).values).toEqual([1, 2, 3, 4, 5, 6])
+        const listOfLists = new List([list2, list3, list4])
+        expect(list1.concat(listOfLists).values).toEqual([1, 2, 3, 4, 5, 6])
     })
 })
 
