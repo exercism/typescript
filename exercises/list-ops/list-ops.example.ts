@@ -12,8 +12,11 @@ class List<T> {
         return this
     }
 
-    concat(otherList: List<T>) {
-        return this.append(otherList)
+    concat(listOfLists: List<List<T>>) {
+        for (const list of listOfLists.values) {
+            this.append(list)
+        }
+        return this
     }
 
     filter(operation: (arg: T) => boolean) {
@@ -70,7 +73,6 @@ class List<T> {
         }
         return this
     }
-
 }
 
 export default List
