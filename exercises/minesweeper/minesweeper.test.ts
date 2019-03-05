@@ -71,20 +71,6 @@ describe('Minesweeper()', () => {
         expect(minesweeper.annotate(input)).toEqual(expected)
     })
 
-    xit('handles space surrounded by mines', () => {
-        const input = [
-            '***',
-            '* *',
-            '***',
-        ]
-        const expected = [
-            '***',
-            '*8*',
-            '***',
-        ]
-        expect(minesweeper.annotate(input)).toEqual(expected)
-    })
-
     xit('handles horizontal line', () => {
         const input = [' * * ']
         const expected = ['1*2*1']
