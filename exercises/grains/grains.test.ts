@@ -37,18 +37,15 @@ describe('returns the number of grains on the square', () => {
     })
 
     xit('square 0 raises an exception', () => {
-        const expected = -1
-        expect(Grains.square(0)).toEqual(expected)
+        expect(() => Grains.square(0)).toThrow()
     })
 
     xit('negative square raises an exception', () => {
-        const expected = -1
-        expect(Grains.square(-1)).toEqual(expected)
+        expect(() => Grains.square(-1)).toThrow()
     })
 
     xit('square greater than 64 raises an exception', () => {
-        const expected = -1
-        expect(Grains.square(65)).toEqual(expected)
+        expect(() => Grains.square(65)).toThrow()
     })
 })
 
