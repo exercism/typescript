@@ -33,7 +33,7 @@ class PerfectNumbers {
     static getDivisors(n: number): number[] {
         const divs: number[] = []
 
-        // Accepts only natura numbers greater than 1.
+        // Accepts only natural numbers greater than 1.
         if (n <= 1) {
             return divs
         }
