@@ -6,12 +6,12 @@ describe('Perfect numbers', () => {
         expect(PerfectNumbers.classify(6)).toEqual(expected)
     })
 
-    xit('Smallest perfect number is classified correctly', () => {
+    xit('Medium perfect number is classified correctly', () => {
         const expected = 'perfect'
         expect(PerfectNumbers.classify(28)).toEqual(expected)
     })
 
-    xit('Smallest perfect number is classified correctly', () => {
+    xit('Large perfect number is classified correctly', () => {
         const expected = 'perfect'
         expect(PerfectNumbers.classify(33550336)).toEqual(expected)
     })
