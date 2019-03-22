@@ -1,7 +1,7 @@
 class Grains {
     static square(square: number): number {
         if (square <= 0 || square >= 65) {
-            return -1
+            throw new Error()
         }
 
         return Math.pow(2, square - 1)
