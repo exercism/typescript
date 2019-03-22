@@ -1,24 +1,32 @@
 class Bob {
-
-    private isNullOrWhitespace( input: string ): boolean {
-    if (typeof input === 'undefined' || input === undefined ) { return true }
-    return input.replace(/\s/g, '').length < 1
-}
-
-    hey(inputRaw: string): string {
-        const input = inputRaw.trim()
-        if (this.isNullOrWhitespace(input)) {
-            return "Fine. Be that way!"
-        }
-        if ( !(input.toLowerCase() === input) &&
-            (input.toUpperCase() === input)) {
-            return "Whoa, chill out!"
-        }
-
-        if ( input.endsWith("?")) { return "Sure." }
-
-        return "Whatever."
-        }
+    private isYelling(message: string): boolean {
+        return (message.toUpperCase() === message) && (message.toLowerCase() !== message)
     }
+    private isQuestion(message: string): boolean {
+        return message.trim().slice(-1) === '?'
+    }
+    private isSilence(message: string): boolean {
+        return message.trim().length === 0
+    }
+    hey(message: string): string {
+        if (this.isYelling(message) && this.isQuestion(message)) {
+            return 'Calm down, I know what I\'m doing!'
+        }
+
+        if (this.isYelling(message)) {
+            return 'Whoa, chill out!'
+        }
+
+        if (this.isQuestion(message)) {
+            return 'Sure.'
+        }
+
+        if (this.isSilence(message)) {
+            return 'Fine. Be that way!'
+        }
+
+        return 'Whatever.'
+    }
+}
 
 export default Bob
