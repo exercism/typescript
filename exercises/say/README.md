@@ -24,7 +24,7 @@ Some good test cases for this program are:
 ### Extension
 
 If you're on a Mac, shell out to Mac OS X's `say` program to talk out
-loud.
+loud. If you're on Linux or Windows, eSpeakNG may be available with the command `espeak`.
 
 ## Step 2
 
@@ -64,10 +64,10 @@ Use _and_ (correctly) when spelling out the number in English:
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -85,11 +85,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 A variation on JavaRanch CattleDrive, exercise 4a [http://www.javaranch.com/say.jsp](http://www.javaranch.com/say.jsp)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.
