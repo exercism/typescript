@@ -61,10 +61,10 @@ While asking for Bob's plants would yield:
 
 ## Setup
 
-Go through the setup instructions for Typescript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -84,14 +84,14 @@ $ yarn test
 
 In the test suites all tests but the first have been skipped.
 
-Once you get a test passing, you can enable the next one by
-changing `xit` to `it`.
-
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 Random musings during airplane trip. [http://jumpstartlab.com](http://jumpstartlab.com)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-<Paste>
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

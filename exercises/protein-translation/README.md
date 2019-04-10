@@ -43,10 +43,10 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -64,11 +64,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 Tyler Long
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

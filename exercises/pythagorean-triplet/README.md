@@ -7,22 +7,28 @@ which,
 a**2 + b**2 = c**2
 ```
 
+and such that,
+
+```text
+a < b < c
+```
+
 For example,
 
 ```text
 3**2 + 4**2 = 9 + 16 = 25 = 5**2.
 ```
 
-There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+Given an input integer N, find all Pythagorean triplets for which `a + b + c = N`.
 
-Find the product a * b * c.
+For example, with N = 1000, there is exactly one Pythagorean triplet for which `a + b + c = 1000`: `{200, 375, 425}`.
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -40,11 +46,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 Problem 9 at Project Euler [http://projecteuler.net/problem=9](http://projecteuler.net/problem=9)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

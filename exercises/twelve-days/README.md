@@ -30,10 +30,10 @@ On the twelfth day of Christmas my true love gave to me: twelve Drummers Drummin
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -51,11 +51,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 Wikipedia [http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)](http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song))
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

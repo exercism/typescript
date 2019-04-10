@@ -175,7 +175,7 @@ $ yarn test
 yarn run v1.2.1
 $ tsc --noEmit -p . && jest --no-cache
 hello-world.test.ts(7,12): error TS2554: Expected 1 arguments, but got 0.
-hello-world.ts(2,18): error TS6133: 'message' is declared but never used.
+hello-world.ts(2,18): error TS6133: 'name' is declared but never used.
 ```
 
 Ok, now we have problem with the 7th line of `hello-world.test.ts` – the method expects 1 argument but we pass 0:
@@ -396,10 +396,10 @@ $ exercism submit hello-world.ts
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -417,11 +417,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.

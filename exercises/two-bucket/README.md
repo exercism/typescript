@@ -27,14 +27,14 @@ To conclude, the only valid moves are:
 - emptying one bucket and doing nothing to the other
 - filling one bucket and doing nothing to the other
 
-Written with <3 at [Fullstack Academy](http://www.fullstackacademy.com/) by [Lindsay](http://lindsaylevine.com).
+Written with <3 at [Fullstack Academy](http://www.fullstackacademy.com/) by Lindsay Levine.
 
 ## Setup
 
-Go through the setup instructions for TypeScript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary
+dependencies:
 
-http://exercism.io/languages/typescript
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
@@ -52,11 +52,16 @@ Execute the tests with:
 $ yarn test
 ```
 
+In the test suites all tests but the first have been skipped.
 
+Once you get a test passing, you can enable the next one by changing `xit` to
+`it`.
 
 ## Source
 
 Water Pouring Problem [http://demonstrations.wolfram.com/WaterPouringProblem/](http://demonstrations.wolfram.com/WaterPouringProblem/)
 
 ## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+
+It's possible to submit an incomplete solution so you can see how others have
+completed the exercise.
