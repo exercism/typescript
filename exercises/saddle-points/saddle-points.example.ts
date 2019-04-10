@@ -23,7 +23,7 @@ class SaddlePoints {
         for (let i = 0; i < maximumRowValues.length; i++) {
             for (let j = 0; j < minimumColumnValues.length; j++) {
                 if (maximumRowValues[i] === minimumColumnValues[j]) {
-                    resultPoints.push({row: i, column: j})
+                    resultPoints.push({row: i + 1, column: j + 1})
                 }
             }
         }
