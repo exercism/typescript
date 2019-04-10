@@ -38,32 +38,6 @@ describe('Random key cipher', () => {
     })
 })
 
-describe('Incorrect key cipher', () => {
-    xit('throws an error with an all caps key', () => {
-        expect(() => {
-            new SimpleCipher('ABCDEF')
-        }).toThrowError('Bad key')
-    })
-
-    xit('throws an error with a mixed case key', () => {
-        expect(() => {
-            new SimpleCipher('AbcdEF')
-        }).toThrowError('Bad key')
-    })
-
-    xit('throws an error with a numeric key', () => {
-        expect(() => {
-            new SimpleCipher('12345')
-        }).toThrow('Bad key')
-    })
-
-    xit('throws an error with an empty key', () => {
-        expect(() => {
-            new SimpleCipher('')
-        }).toThrow('Bad key')
-    })
-})
-
 describe('Substitution cipher', () => {
     const key = 'abcdefghij'
     const simpleCipher = new SimpleCipher(key)
@@ -97,12 +71,12 @@ describe('Substitution cipher', () => {
         expect(simpleCipher.decode('zabcdefghi')).toEqual('zzzzzzzzzz')
     })
 
-    xit('can handle messages longer than the key (encode)', () => {
+    xit('can encode messages longer than the key"', () => {
         expect(new SimpleCipher('abc').encode('iamapandabear'))
             .toEqual('iboaqcnecbfcr')
     })
 
-    xit('can handle messages longer than the key (decode)', () => {
+    xit('can decode messages longer than the key', () => {
         expect(new SimpleCipher('abc').decode('iboaqcnecbfcr'))
             .toEqual('iamapandabear')
     })
