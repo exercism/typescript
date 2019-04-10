@@ -67,8 +67,8 @@ describe('Saddle Points', () => {
 
     xit('Can identify saddle points in a non square matrix', () => {
         const expected = [
-            {row: 1, column: 3},
-            {row: 1, column: 1}
+            {row: 1, column: 1},
+            {row: 1, column: 3}
         ]
         expect(SaddlePoints.saddlePoints([
             [3, 1, 3],
