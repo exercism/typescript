@@ -822,6 +822,21 @@
       ]
     },
     {
+      "slug": "nth-prime",
+      "uuid": "4c1392d7-8779-496f-b0bb-81605e777e3b",
+      "core": false,
+      "unlocked_by": "robot-name",
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "integers",
+        "math"
+      ]
+    },
+    {
       "slug": "alphametics",
       "uuid": "7219275b-935b-48ac-8bed-3436221bf3f1",
       "core": false,
@@ -875,6 +890,22 @@
         "control_flow_loops",
         "integers",
         "math"
+      ]
+    },
+    {
+      "slug": "diamond",
+      "uuid": "df7c1bff-2224-422b-9c34-64b28b09510e",
+      "core": false,
+      "unlocked_by": "clock",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "exception_handling",
+        "games",
+        "parsing",
+        "text_formatting"
       ]
     },
     {
@@ -946,6 +977,34 @@
         "data_structures",
         "exception_handling",
         "lists"
+      ]
+    },
+    {
+      "slug": "sieve",
+      "uuid": "f3ad1525-c124-4b2f-b09f-4639eb4a6ad9",
+      "core": false,
+      "unlocked_by": "rational-numbers",
+      "difficulty": 5,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "math",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "palindrome-products",
+      "uuid": "ffb0ad36-2cf5-46d4-9a5f-5bbdfb9691a7",
+      "core": false,
+      "unlocked_by": "atbash-cipher",
+      "difficulty": 7,
+      "topics": [
+        "algorithms",
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "math"
       ]
     },
     {
