@@ -1,4 +1,4 @@
-class BracketPush {
+class MatchingBrackets {
     bracketPairs: Map<string, string>
     expression: string
 
@@ -47,4 +47,4 @@ class BracketPush {
     }
 }
 
-export default BracketPush
+export default MatchingBrackets
