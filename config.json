@@ -18,6 +18,18 @@
       ]
     },
     {
+      "slug": "two-fer",
+      "uuid": "f66508fe-4ddc-4bbd-b8e6-542d400e57e9",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b",
       "core": true,
@@ -250,18 +262,6 @@
       ]
     },
     {
-      "slug": "two-fer",
-      "uuid": "f66508fe-4ddc-4bbd-b8e6-542d400e57e9",
-      "core": false,
-      "unlocked_by": "hello-world",
-      "difficulty": 1,
-      "topics": [
-        "optional_values",
-        "strings",
-        "text_formatting"
-      ]
-    },
-    {
       "slug": "word-count",
       "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
       "core": false,
@@ -302,7 +302,7 @@
       "slug": "reverse-string",
       "uuid": "86d5a60a-fc44-443d-bc00-5c6265e736c4",
       "core": false,
-      "unlocked_by": "leap",
+      "unlocked_by": "two-fer",
       "difficulty": 2,
       "topics": [
         "for",
