@@ -155,7 +155,7 @@ describe('Exponentiation of a real number to a rational number', () => {
 
     xit('Raise a real number to a negative rational number', () => {
         const expected = 1.0/3.0
-        expect(new Rational(-1, 2).expreal(9)).toEqual(expected)
+        expect(new Rational(-1, 2).expreal(9)).toBeCloseTo(expected, 15)
     })
 
     xit('Raise a real number to a zero rational number', () => {
