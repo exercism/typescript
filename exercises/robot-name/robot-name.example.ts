@@ -12,7 +12,7 @@ function  generateRandomLetter(): string {
 
 export default class RobotName {
     private _name: string
-    private usedNames = new Set<string>()
+    private static usedNames = new Set<string>()
 
     get name(): string {
         return this._name
@@ -24,10 +24,10 @@ export default class RobotName {
 private generateName(): string {
     const numberPart = (unified_random() % 899) + 100
     let result = generateRandomLetter() + generateRandomLetter() + numberPart
-    while (this.usedNames.has(result)) {
+    while (RobotName.usedNames.has(result)) {
         result = generateRandomLetter() + generateRandomLetter() + numberPart
     }
-    this.usedNames.add(result)
+    RobotName.usedNames.add(result)
     return result
 }
     resetName() {
