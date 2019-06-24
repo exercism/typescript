@@ -31,7 +31,7 @@ describe('Robot', () => {
   })
 
   xit('should set a unique name after reset', () => {
-    const otherRobot = new Robot()
+    const otherRobot = new RobotName()
     const NUMBER_OF_ROBOTS = 10000
     const usedNames = new Set()
 
