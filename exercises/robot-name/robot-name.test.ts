@@ -31,16 +31,20 @@ describe('Robot', () => {
   })
 
   xit('should set a unique name after reset', () => {
+    const otherRobot = new Robot()
     const NUMBER_OF_ROBOTS = 10000
     const usedNames = new Set()
 
     usedNames.add(robot.name)
-    for (let i = 0; i < NUMBER_OF_ROBOTS; i++) {
+    usedNames.add(otherRobot.name)
+    for (let i = 0; i < NUMBER_OF_ROBOTS / 2; i++) {
       robot.resetName()
+      otherRobot.resetName()
       usedNames.add(robot.name)
+      usedNames.add(otherRobot.name)
     }
 
-    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 1)
+    expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 2)
   })
 
   xit('new names should not be sequential', () => {
