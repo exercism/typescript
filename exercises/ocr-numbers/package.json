@@ -22,7 +22,7 @@
   "scripts": {
     "test": "yarn lint:types && jest --no-cache",
     "lint": "yarn lint:types && yarn lint:ci",
-    "lint:types": "tsc --noEmit -p .",
+    "lint:types": "yarn tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts"
   },
   "dependencies": {}

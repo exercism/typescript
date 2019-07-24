@@ -9,6 +9,7 @@ jobs:
       - run: bin/fetch-configlet
       - run: bin/configlet lint . --track-id=typescript
       - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
+      - run: brew update
       - run: brew bundle
       - run: gsed -i 's/@sed/@gsed/g;' Makefile
       - run: cat Makefile
