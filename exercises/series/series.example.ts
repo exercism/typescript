@@ -1,17 +1,17 @@
 export default class Series {
-  numberString: string
-  digits: number[]
+  private readonly numberString: string
+  public readonly digits: number[]
 
   constructor(numberString: string) {
     this.numberString = numberString
     this.digits = this.getDigits()
   }
 
-  getDigits(): number[] {
+  private getDigits(): number[] {
     return [...this.numberString].map((digit) => parseInt(digit, 10))
   }
 
-  slices(sliceSize: number): number[][] {
+  public slices(sliceSize: number): number[][] {
     const result: number[][] = []
 
     if (sliceSize > this.digits.length) {
