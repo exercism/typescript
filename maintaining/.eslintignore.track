@@ -6,3 +6,7 @@ production_node_modules/*
 test/fixtures/*
 tmp/*
 jest.config.js
+
+*.ts
+!*.example.ts
+!*.test.ts

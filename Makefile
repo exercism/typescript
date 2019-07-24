@@ -55,7 +55,7 @@ prepare-test:
 #
 # make test
 #
-test: check-configurations check-stubs report
+test: check-configurations check-stubs
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment "$(MAKE)" test-assignment || exit 1; done
 
 ##
@@ -75,6 +75,24 @@ report:
 # Create the report
 	@cd ./exercises && yarn install && yarn lint:report >> /dev/null || exit 0;
 	@mv ./exercises/lintreport.json ./
+
+# Remove all the track level configuration
+	@rm -f ./exercises/package.json
+	@rm -f ./exercises/tsconfig.json
+	@rm -f ./exercises/.eslint.track.rc
+	@rm -f ./exercises/.eslintignore
+	@rm -f ./exercises/yarn.lock
+	@rm -rf ./exercises/node_modules
+
+lint-track:
+# Add all the track level configuration
+	@cp ./maintaining/package.track.json ./exercises/package.json
+	@cp ./maintaining/tsconfig.track.json ./exercises/tsconfig.json
+	@cp ./maintaining/.eslint.track.rc ./exercises
+	@cp ./maintaining/.eslintignore.track ./exercises/.eslintignore
+
+# Lint everything
+	@cd ./exercises && yarn install && yarn lint;
 
 # Remove all the track level configuration
 	@rm -f ./exercises/package.json

@@ -15,7 +15,8 @@
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "lint:report": "yarn eslint . --ext .tsx,.ts -c .eslint.track.rc --format json -o lintreport.json"
+    "lint": "yarn eslint . --ext .tsx,.ts -c .eslint.track.rc",
+    "lint:report": "yarn lint --format json -o lintreport.json"
   },
   "dependencies": {}
 }
