@@ -6,7 +6,7 @@ describe("TwoBucket", () => {
     const buckTwo = 5
     const goal = 1
 
-    test("starting with bucket one", () => {
+    it("starting with bucket one", () => {
       const starterBuck = Bucket.One // indicates which bucket to fill first
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck)
       expect(twoBucket.moves()).toEqual(4) // includes the first fill
@@ -14,7 +14,7 @@ describe("TwoBucket", () => {
       expect(twoBucket.otherBucket).toEqual(5) // leftover value in the "other" bucket once the goal has been reached
     })
 
-    xtest("starting with bucket two", () => {
+    xit("starting with bucket two", () => {
       const starterBuck = Bucket.Two
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck)
       expect(twoBucket.moves()).toEqual(8)
@@ -28,7 +28,7 @@ describe("TwoBucket", () => {
     const buckTwo = 11
     const goal = 2
 
-    xtest("starting with bucket one", () => {
+    xit("starting with bucket one", () => {
       const starterBuck = Bucket.One
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck)
       expect(twoBucket.moves()).toEqual(14)
@@ -36,7 +36,7 @@ describe("TwoBucket", () => {
       expect(twoBucket.otherBucket).toEqual(11)
     })
 
-    xtest("starting with bucket two", () => {
+    xit("starting with bucket two", () => {
       const starterBuck = Bucket.Two
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck)
       expect(twoBucket.moves()).toEqual(18)

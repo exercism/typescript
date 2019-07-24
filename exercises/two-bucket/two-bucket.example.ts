@@ -4,10 +4,10 @@ export enum Bucket {
 }
 
 export class TwoBucket {
-  starter: Bucket
-  x: number
-  y: number
-  z: number
+  private readonly starter: Bucket
+  private readonly x: number
+  private readonly y: number
+  private readonly z: number
 
   public goalBucket!: Bucket
   public otherBucket!: number
@@ -94,12 +94,12 @@ export class TwoBucket {
     this.starter === Bucket.One ? (j = this.x) : (k = this.y)
     const measurements = [j, k]
     let moveCount = 0
-    const prBool = true; // pour / receive boolean - need to pour or receive every other turn
+    const prBool = true // pour / receive boolean - need to pour or receive every other turn
     if (this.starter === Bucket.One) {
       moveCount = this.smallFirst(measurements, moveCount, prBool)
     } else {
       moveCount = this.bigFirst(measurements, moveCount, prBool)
     }
-    return moveCount + 1; // accounts for first move made before loop (and moveCount starts at zero before loop)
+    return moveCount + 1 // accounts for first move made before loop (and moveCount starts at zero before loop)
   }
 }

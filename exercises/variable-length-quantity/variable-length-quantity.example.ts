@@ -14,7 +14,7 @@ class VariableLengthQuantity {
       left = left >>> this.LENGTH
       this.buf.push(bits)
     }
-    this.buf[0] = this.buf[0] & this.DATA_BITS; // cancel the last continuation
+    this.buf[0] = this.buf[0] & this.DATA_BITS // cancel the last continuation
     return this.buf.reverse()
   }
 
@@ -24,7 +24,7 @@ class VariableLengthQuantity {
     for (let i = 0; i <= buf.length - 1; i++) {
       val = (val << this.LENGTH) | (buf[i] & this.DATA_BITS)
     }
-    return val >>> 0; // convert to unsigned 32-bit
+    return val >>> 0 // convert to unsigned 32-bit
   }
 
   public static encode(data: number[]): number[] {

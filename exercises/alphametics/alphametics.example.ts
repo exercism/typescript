@@ -1,5 +1,5 @@
 class Alphametics {
-  puzzle: string
+  private readonly puzzle: string
 
   constructor(puzzle: string) {
     this.puzzle = puzzle
