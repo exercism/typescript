@@ -3,18 +3,18 @@ import PhoneNumber from './phone-number'
 describe('PhoneNumber()', () => {
 
   it('cleans the number', () => {
-    const phone = new PhoneNumber('(123) 456-7890')
-    expect(phone.number()).toEqual('1234567890')
+    const phone = new PhoneNumber('(223) 456-7890')
+    expect(phone.number()).toEqual('2234567890')
   })
 
   xit('cleans numbers with dots', () => {
-    const phone = new PhoneNumber('123.456.7890')
-    expect(phone.number()).toEqual('1234567890')
+    const phone = new PhoneNumber('223.456.7890')
+    expect(phone.number()).toEqual('2234567890')
   })
 
   xit('cleans numbers with multiple spaces', () => {
-    const phone = new PhoneNumber('123 456   7890   ')
-    expect(phone.number()).toEqual('1234567890')
+    const phone = new PhoneNumber('223 456   7890   ')
+    expect(phone.number()).toEqual('2234567890')
   })
 
   xit('invalid when 9 digits', () => {
