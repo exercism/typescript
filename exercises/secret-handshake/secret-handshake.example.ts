@@ -14,7 +14,7 @@ class HandShake {
     return this.shakeWith
   }
 
-  private calculateHandshake(handshake: number): string[] {
+   calculateHandshake(handshake: number): string[] {
     const shakeWith = []
 
     for (let i = 0; i < this.allCommands.length; i++) {
