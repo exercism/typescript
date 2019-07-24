@@ -1,6 +1,5 @@
 import Diamond from './diamond'
 
-/* tslint:disable no-trailing-whitespace*/
 describe('Make diamond function', () => {
   const diamond = new Diamond()
 
@@ -10,25 +9,25 @@ describe('Make diamond function', () => {
   })
 
   test('test letter C', () => {
-    const result = `  A  
- B B 
+    const result = `  A
+ B B
 C   C
- B B 
-  A  
+ B B
+  A
 `
     expect(diamond.makeDiamond('C')).toEqual(result)
   })
 
   test('test letter E', () => {
-    const result = `    A    
-   B B   
-  C   C  
- D     D 
+    const result = `    A
+   B B
+  C   C
+ D     D
 E       E
- D     D 
-  C   C  
-   B B   
-    A    
+ D     D
+  C   C
+   B B
+    A
 `
     expect(diamond.makeDiamond('E')).toEqual(result)
   })

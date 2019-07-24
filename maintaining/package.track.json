@@ -1,5 +1,5 @@
 {
-  "name": "xtypescript-track",
+  "name": "@exercism/typescript-track",
   "version": "1.0.0",
   "description": "Exercism TypeScript track top-level runner. Not meant for individual exercises.",
   "private": true,

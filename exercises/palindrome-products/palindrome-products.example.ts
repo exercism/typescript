@@ -1,13 +1,13 @@
-interface Input { maxFactor: number, minFactor?: number }
-interface Palindrome { value: number, factors: Array<[number, number]> }
-interface Output { largest: Palindrome, smallest: Palindrome }
+interface Input { maxFactor: number; minFactor?: number }
+interface Palindrome { value: number; factors: Array<[number, number]> }
+interface Output { largest: Palindrome; smallest: Palindrome }
 
 function generate({ maxFactor, minFactor = 1 }: Input): Output {
   const factors = Array.from({ length: (maxFactor - minFactor + 1) }, (_, k) => k + minFactor)
   const products: Map<number, Array<[number, number]>> = new Map<number, Array<[number, number]>>()
 
-  let min: number = Infinity
-  let max: number = 0
+  let min = Infinity
+  let max = 0
 
   factors.forEach((x: number, index: number) => {
     factors.slice(index).forEach((y) => {

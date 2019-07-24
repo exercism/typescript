@@ -5,7 +5,7 @@ class Alphametics {
     this.puzzle = puzzle
   }
 
-  solve() {
+  public solve(): undefined | { [key: string]: number } {
     const parts: string[] = this.puzzle
       .split(/[+|==]/g)
       .map((o) => o.trim())
@@ -34,7 +34,7 @@ class Alphametics {
     return undefined
   }
 
-  assignNumbers(numberCombination: number[], uniqueLetters: Set<string>, permutation: number[]) {
+  private assignNumbers(numberCombination: number[], uniqueLetters: Set<string>, permutation: number[]): { [key: string]: number } {
     const output: { [key: string]: number } = {}
     let i = 0
     for (const letter of uniqueLetters.values()) {
@@ -43,7 +43,7 @@ class Alphametics {
     return output
   }
 
-  testNumbers(numbers: { [key: string]: number } , puzzleParts: string[], firstLetters: Set<string>) {
+  private testNumbers(numbers: { [key: string]: number } , puzzleParts: string[], firstLetters: Set<string>): boolean {
     const keys: string[] = Object.keys(numbers)
     for (const key of keys) {
       if (numbers[key] === 0 && firstLetters.has(key)) {
@@ -63,7 +63,7 @@ class Alphametics {
       .reduce((acc: number, val: number) => acc + val, 0)
   }
 
-  *generate(A: number[]) {
+  private *generate(A: number[]): IterableIterator<number[]> {
     const c = []
     const n = A.length
     yield A
@@ -88,14 +88,14 @@ class Alphametics {
     }
   }
 
-  swap(list: number[], x: number, y: number) {
+  private swap(list: number[], x: number, y: number): number[] {
     const tmp = list[x]
     list[x] = list[y]
     list[y] = tmp
     return list
   }
 
-  getNumberCombinations(arr: number[], size: number): number[][] {
+  private getNumberCombinations(arr: number[], size: number): number[][] {
     const len = arr.length
 
     if (size === len) {

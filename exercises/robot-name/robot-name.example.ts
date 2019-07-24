@@ -1,36 +1,37 @@
-
-function unified_random(): number {
-    return Math.trunc(Math.random() * Number.MAX_SAFE_INTEGER)
+function unifiedRandom(): number {
+  return Math.trunc(Math.random() * Number.MAX_SAFE_INTEGER)
 }
 
-function  generateRandomLetter(): string {
-    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    const letters = alphabet.split("")
-    const randomIndex = unified_random() % letters.length
-    return letters[randomIndex]
+function generateRandomLetter(): string {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const letters = alphabet.split("")
+  const randomIndex = unifiedRandom() % letters.length
+  return letters[randomIndex]
 }
 
 export default class RobotName {
-    private _name: string
-    private usedNames = new Set<string>()
+  private _name!: string
+  private usedNames = new Set<string>()
 
-    get name(): string {
-        return this._name
-    }
+  public get name(): string {
+    return this._name
+  }
 
-    constructor() {
-       this.resetName()
-    }
-private generateName(): string {
-    const numberPart = (unified_random() % 899) + 100
+  constructor() {
+    this.resetName()
+  }
+
+  private generateName(): string {
+    const numberPart = (unifiedRandom() % 899) + 100
     let result = generateRandomLetter() + generateRandomLetter() + numberPart
     while (this.usedNames.has(result)) {
-        result = generateRandomLetter() + generateRandomLetter() + numberPart
+      result = generateRandomLetter() + generateRandomLetter() + numberPart
     }
     this.usedNames.add(result)
     return result
-}
-    resetName() {
-        this._name = this.generateName()
-    }
+  }
+
+  public resetName(): void {
+    this._name = this.generateName()
+  }
 }

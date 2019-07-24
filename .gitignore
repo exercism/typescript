@@ -25,3 +25,4 @@ lintreport.json
 /exercises/.eslintignore
 /exercises/yarn.lock
 /exercises/node_modules
+exercises/yarn-error.log

@@ -16,7 +16,7 @@ const range = (min: number, max: number): number[] => {
 }
 
 class Prime {
-  nth(nthPrime: number): number {
+  public nth(nthPrime: number): number {
     if (nthPrime === 0) {
       throw new Error('Prime is not possible')
     }

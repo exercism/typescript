@@ -1,6 +1,6 @@
 export default class Clock {
-  private hour: number
-  private minute: number
+  private hour!: number
+  private minute!: number
 
   constructor(hour: number, minute: number = 0) {
     this.reset()
@@ -13,38 +13,38 @@ export default class Clock {
     this.minute = 0
   }
 
-  getHour(): number {
+  public getHour(): number {
     return this.hour
   }
 
-  getMinute(): number {
+  public getMinute(): number {
     return this.minute
   }
 
-  toString(): string {
+  public toString(): string {
     return `${this.formatNumber(this.hour)}:${this.formatNumber(this.minute)}`
   }
 
   private formatNumber(numberToFormat: number): string {
     const numberString = numberToFormat.toString()
     return numberString.length === 1 ? `0${numberString}` : numberString
-}
+  }
 
-  plus(minutes: number): Clock {
+  public plus(minutes: number): Clock {
     this.adjustTime(minutes)
     return this
   }
 
-  minus(minutes: number): Clock {
+  public minus(minutes: number): Clock {
     this.adjustTime(-1 * minutes)
     return this
   }
 
-  equals(clock: Clock): boolean {
+  public equals(clock: Clock): boolean {
     return this.hour === clock.getHour() && this.minute === clock.getMinute()
   }
 
-  private adjustTime(delta: number) {
+  private adjustTime(delta: number): void {
     const minutesPerDay = 1440
     const minutesPerHour = 60
     const hoursPerDay = 24

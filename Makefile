@@ -55,9 +55,8 @@ prepare-test:
 #
 # make test
 #
-test: check-configurations check-stubs
+test: check-configurations check-stubs report
 	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment "$(MAKE)" test-assignment || exit 1; done
-	"$(MAKE)" report
 
 ##
 # Generate a lint report for all .ts(x) files of all exercises. It does so by
