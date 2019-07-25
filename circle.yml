@@ -5,6 +5,10 @@ jobs:
     macos:
       xcode: "9.2.0"
     steps:
+      - run: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+      - run: nvm install --lts
+      - run: node -v
+      - run: yarn -v
       - checkout
       - run: bin/fetch-configlet
       - run: bin/configlet lint . --track-id=typescript
