@@ -45,7 +45,7 @@ test: check-stubs check-configurations prepare-test-dependencies prepare-test-co
 	@for assignment in $(ASSIGNMENTS); \
 		do ASSIGNMENT=$$assignment INTDIR="$(INTDIR)" "$(MAKE)" --no-print-directory enable-test-example || exit 1; \
 	done
-	@printf "\E[34mRunning all tests ($(ASSIGNMENTS))\E[0;10m\n"
+	@printf "\E[1K\r\E[34mRunning all tests ($(ASSIGNMENTS))\E[0;10m\n"
 	cd "$(INTDIR)" && yarn test && yarn lint:ci
 
 ##
@@ -102,6 +102,7 @@ lint-track:
 # ASSIGNMENT=bob make sync-assignment-configuration
 #
 sync-assignment-configuration:
+	@printf "\E[1K\r\E[36mSyncing 'common' configuration to 'exercises/$(ASSIGNMENT)'\E[0;10m"
 	@cp ./common/.eslintrc "exercises/$(ASSIGNMENT)/.eslintrc"
 	@cp ./common/.eslintignore "exercises/$(ASSIGNMENT)/.eslintignore"
 	@cp ./common/jest.config.js "exercises/$(ASSIGNMENT)/jest.config.js"
@@ -115,9 +116,12 @@ sync-assignment-configuration:
 # make sync-configurations
 #
 sync-configurations:
+	@printf "\E[34mSyncing 'common' configuration to all assignments\E[0;10m\n"
 	@for assignment in $(ASSIGNMENTS); \
-		do ASSIGNMENT=$$assignment "$(MAKE)" sync-assignment-configuration || exit 1; \
+		do ASSIGNMENT=$$assignment "$(MAKE)" --no-print-directory sync-assignment-configuration || exit 1; \
 	done
+	@printf "\E[1K\r\E[32mAll exercises have the 'common' configuration\E[0;10m\n"
+
 
 ##
 # Syncs the maintaining configuration to the root folder. This may be necessary
@@ -217,13 +221,15 @@ check-assignment-stub:
 
 check-stubs:
 	@printf "\E[34mChecking all assignments on their stubs\E[0;10m\n"
-	@for assignment in $(ASSIGNMENTS); do ASSIGNMENT=$$assignment "$(MAKE)" --no-print-directory check-assignment-stub || ASSIGNMENT=$$assignment "$(MAKE)" --no-print-directory report-no-stub || exit 1 ;done
+	@for assignment in $(ASSIGNMENTS); \
+		do ASSIGNMENT=$$assignment "$(MAKE)" --no-print-directory check-assignment-stub || ASSIGNMENT=$$assignment "$(MAKE)" --no-print-directory report-no-stub || exit 1 ; \
+	done
 	@printf "\E[1K\r\E[32mAll exercises contain a stub file (<exercise-name>.ts)\E[0;10m\n"
 
 report-error:
-	@printf "\E[1K\E[31mPackage files in '$(ASSIGNMENT)' are not equal to the 'common' folder\E[0;10m\n";
+	@printf "\E[1K\r\E[31mPackage files in '$(ASSIGNMENT)' are not equal to the 'common' folder\E[0;10m\n";
 	@exit 1
 
 report-no-stub:
-	@printf "\E[1K\E[31mExercise '$(ASSIGNMENT)' does contain a stub file ($(ASSIGNMENT).ts)\E[0;10m\n";
+	@printf "\E[1K\r\E[31mExercise '$(ASSIGNMENT)' does contain a stub file ($(ASSIGNMENT).ts)\E[0;10m\n";
 	@exit 1
