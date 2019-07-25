@@ -13,7 +13,7 @@ jobs:
       - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
       - run: brew update
       - run: brew bundle
-      - run: brew install node
+      - run: brew upgrade node
       - run: node -v
       - run: gsed -i 's/@sed/@gsed/g;' Makefile
       - run: cat Makefile
