@@ -31,7 +31,10 @@ if contents.to_s == ''
 end
 json = JSON.parse contents
 
+puts Pathname.new(defined_in_file).dirname.to_s
+
 json.each do |object|
+  puts object["filePath"]
   source_file = "." + Pathname.new(object["filePath"])
     .relative_path_from(Pathname.new(defined_in_file).dirname).to_s;
 
