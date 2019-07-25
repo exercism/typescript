@@ -31,14 +31,10 @@ if contents.to_s == ''
 end
 json = JSON.parse contents
 
-puts Pathname.new(__dir__).to_s
-
 json.each do |object|
-  puts object["filePath"]
-  source_file = "." + Pathname.new(object["filePath"])
-    .relative_path_from(__dir__).to_s;
-
-  puts source_file
+  source_file = Pathname.new(object["filePath"])
+    # TODO: use env path so it works everwhere
+    .relative_path_from('/home/travis/build/exercism/typescript/').to_s;
 
   (object["messages"] || []).each do |message|
     danger_message = "#{message["message"].to_s} (#{message["ruleId"].to_s})"
