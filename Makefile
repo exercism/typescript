@@ -27,7 +27,7 @@ all: test sync-configurations
 #
 test-assignment: prepare-test-dependencies prepare-test-configuration enable-test-example
 	@printf "\E[34mRunning tests for '$(ASSIGNMENT)'\E[0;10m\n"
-	cd "$(INTDIR)" && yarn test && yarn lint:ci
+	cd "$(INTDIR)" && yarn install && yarn test && yarn lint:ci
 	@ASSIGNMENT="$(ASSIGNMENT)" INTDIR="$(INTDIR)" "$(MAKE)" --no-print-directory cleanup-test
 
 ##
@@ -46,7 +46,7 @@ test: check-stubs check-configurations prepare-test-dependencies prepare-test-co
 		do ASSIGNMENT=$$assignment INTDIR="$(INTDIR)" "$(MAKE)" --no-print-directory enable-test-example || exit 1; \
 	done
 	@printf "\E[1K\r\E[34mRunning all tests ($(ASSIGNMENTS))\E[0;10m\n"
-	cd "$(INTDIR)" && yarn test && yarn lint:ci
+	cd "$(INTDIR)" && yarn install && yarn test && yarn lint:ci
 
 ##
 # Generate a lint report for all .ts(x) files of all exercises. It does so by
@@ -181,7 +181,9 @@ prepare-test-configuration:
 # Create a symlink from node_modules to temp/<dir>/node_modules
 # TODO: use -l for everything, or everything that supports it
 #       MacOSX doesn't support it, so removed it for now
-	@cp -r ./common/node_modules "$(INTDIR)/node_modules"
+#
+# Instead, it's doing yarn install in $(INTDIR)
+# @cp -r ./common/node_modules "$(INTDIR)/node_modules"
 
 ##
 # Remove the assignment files, leaving the testing directory configuration
