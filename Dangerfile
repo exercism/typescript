@@ -32,18 +32,20 @@ json = JSON.parse contents
 git_root = __dir__
 
 json.each do |object|
-  shortFile = object["filePath"].sub(git_root, '*/').sub('//', '/')
+  source_file = object["filePath"].sub(git_root, '*/').sub('//', '/')
 
   (object["messages"] || []).each do |message|
-    message = "#{object["message"].to_s} (#{object["ruleId"].to_s})"
-    line = object["line"]
+    danger_message = "#{message["message"].to_s} (#{message["ruleId"].to_s})"
+    source_line = message["line"]
 
     # only warn for files that were edited in this PR.
-    if git.modified_files.include? shortFile
-      shortFile.prepend("/") unless shortFile[0] == '/'  # get away from doing inline comments since they are buggy as of Sep-2016
-      warn(message, file: shortFile, line: line)
+    if git.modified_files.include? source_file
+      # get away from doing inline comments since they are buggy as of Sep-2016
+      shortFile.prepend("/") unless source_file[0] == '/'
+
+      warn(danger_message, file: source_file, line: source_line)
     else
-      message(message, file: shortFile, line: line)
+      message(danger_message, file: source_file, line: source_line)
     end
   end
 end
