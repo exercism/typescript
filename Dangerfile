@@ -34,7 +34,7 @@ json = JSON.parse contents
 json.each do |object|
   # TODO: use env path so it works everwhere
   source_file = Pathname.new(object["filePath"])
-    .relative_path_from('/home/travis/build/exercism/typescript/').to_s;
+    .relative_path_from(Pathname.new('/home/travis/build/exercism/typescript/')).to_s;
 
   (object["messages"] || []).each do |message|
     danger_message = "#{message["message"].to_s} (#{message["ruleId"].to_s})"
