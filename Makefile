@@ -172,14 +172,14 @@ prepare-test-configuration:
 	@cp ./maintaining/.eslint.track.rc "$(INTDIR)/.eslintrc"
 
 # Copy all the configuration from common to temp/<dir>/node_modules
-	@cp -n ./common/.eslintignore "$(INTDIR)"
-	@cp -n ./common/jest.config.js "$(INTDIR)"
-	@cp -n ./common/package.json "$(INTDIR)"
-	@cp -n ./common/tsconfig.json "$(INTDIR)"
-	@cp -n ./common/yarn.lock "$(INTDIR)"
+	@cp ./common/.eslintignore "$(INTDIR)"
+	@cp ./common/jest.config.js "$(INTDIR)"
+	@cp ./common/package.json "$(INTDIR)"
+	@cp ./common/tsconfig.json "$(INTDIR)"
+	@cp ./common/yarn.lock "$(INTDIR)"
 
 # Create a symlink from node_modules to temp/<dir>/node_modules
-	@cp -nrl ./common/node_modules "$(INTDIR)/node_modules"
+	@cp -rl ./common/node_modules "$(INTDIR)/node_modules"
 
 ##
 # Remove the assignment files, leaving the testing directory configuration
