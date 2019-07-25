@@ -179,7 +179,9 @@ prepare-test-configuration:
 	@cp ./common/yarn.lock "$(INTDIR)"
 
 # Create a symlink from node_modules to temp/<dir>/node_modules
-	@cp -rl ./common/node_modules "$(INTDIR)/node_modules"
+# TODO: use -l for everything, or everything that supports it
+#       MacOSX doesn't support it, so removed it for now
+	@cp -r ./common/node_modules "$(INTDIR)/node_modules"
 
 ##
 # Remove the assignment files, leaving the testing directory configuration
