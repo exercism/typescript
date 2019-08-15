@@ -1,5 +1,5 @@
 class RomanNumerals {
-  private static readonly arabicToRomanConversions = [
+  static arabicToRomanConversions = [
     {arabic: 1000, roman: 'M'},
     {arabic: 900, roman: 'CM'},
     {arabic: 500, roman: 'D'},
@@ -15,14 +15,14 @@ class RomanNumerals {
     {arabic: 1, roman: 'I'},
   ]
 
-  public static roman(n: number): string {
+  static roman(n: number) {
     let result = ''
 
     this.arabicToRomanConversions.forEach((conversion) => {
-      while (n >= conversion.arabic) {
-        result += conversion.roman
-        n -= conversion.arabic
-      }
+        while (n >= conversion.arabic) {
+          result += conversion.roman
+          n -= conversion.arabic
+        }
     })
 
     return result

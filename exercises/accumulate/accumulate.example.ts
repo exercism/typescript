@@ -1,11 +1,12 @@
-export default <T, O>(list: T[], accumulator: (arg: T) => O): O[] => {
-  const out = []
-  let idx = -1
-  const end = Array.isArray(list) ? list.length : 0
+// tslint:disable-next-line: no-any
+export default (list: any[], accumulator: any) => {
+    const out = []
+    let idx = -1
+    const end = Array.isArray(list) ? list.length : 0
 
-  while (++idx < end) {
-    out.push(accumulator(list[idx]))
-  }
+    while (++idx < end) {
+        out.push(accumulator(list[idx]))
+    }
 
-  return out
+    return out
 }

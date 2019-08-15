@@ -5,8 +5,8 @@ class SumOfMultiples {
     this.numbers = numbers
   }
 
-  public to(limit: number): number {
-    const multiples = new Set<number>()
+  to(limit: number): number {
+    const multiples = new Set()
     this.numbers.forEach((n: number) => {
       let i = n
       while (i < limit) {
@@ -18,4 +18,4 @@ class SumOfMultiples {
   }
 }
 
-export default (numbers: number[]): SumOfMultiples => new SumOfMultiples(numbers)
+export default (numbers: number[]) => new SumOfMultiples(numbers)

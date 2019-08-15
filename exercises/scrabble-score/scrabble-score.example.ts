@@ -1,5 +1,5 @@
 interface LetterScore {
-  [key: string]: number;
+    [key: string]: number
 }
 
 const letterScores: LetterScore = {
@@ -13,14 +13,14 @@ const letterScores: LetterScore = {
 }
 
 const score = (word: string | undefined): number => {
-  word = word ? word.toLowerCase() : ''
+    word = word ? word.toLowerCase() : ''
 
-  let output = 0
-  word.split('').forEach((letter: string): void => {
-    output += letterScores[letter]
-  })
+    let output = 0
+    word.split('').forEach((letter: string): void => {
+        output += letterScores[letter]
+    })
 
-  return output
+    return output
 }
 
 export default score

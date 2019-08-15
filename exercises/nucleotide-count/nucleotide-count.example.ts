@@ -1,8 +1,6 @@
-type Counts = Record<'A' | 'C' | 'G' | 'T', number>
-
 class NucleotideCount {
-  public static nucleotideCounts(strand: string): Counts {
-    const nucleotideOccurrences: Counts = {
+  static nucleotideCounts(strand: string) {
+    const nucleotideOccurrences = {
       A: 0,
       C: 0,
       G: 0,

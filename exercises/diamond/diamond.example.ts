@@ -27,7 +27,7 @@ class Diamond {
     return `${this.padString(alphaStr, difference)}`
   }
 
-  private padString(str: string, times: number): string {
+  private padString(str: string, times: number) {
     const spaces = ' '.repeat(times)
     return `${spaces}${str}${spaces}`
   }

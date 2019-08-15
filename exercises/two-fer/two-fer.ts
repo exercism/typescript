@@ -1,5 +1,5 @@
 class TwoFer {
-  public static twoFer( /* Parameters go here */ ): string {
+  static twoFer( /* Parameters go here */ ) {
     // Your code here
   }
 }

@@ -11,7 +11,7 @@ class Node<T> {
     return this.next
   }
 
-  public setNext(newNext: Node<T> | undefined): void {
+  public setNext(newNext: Node<T> | undefined) {
     this.next = newNext
   }
 
@@ -19,7 +19,7 @@ class Node<T> {
     return this.prev
   }
 
-  public setPrev(newPrev: Node<T> | undefined): void {
+  public setPrev(newPrev: Node<T> | undefined) {
     this.prev = newPrev
   }
 
@@ -29,10 +29,11 @@ class Node<T> {
 }
 
 export default class LinkedList<T> {
-  private head: Node<T> | undefined
-  private tail: Node<T> | undefined
+  size: number = 0
+  head: Node<T> | undefined
+  tail: Node<T> | undefined
 
-  public pop(): T | undefined {
+  pop(): T | undefined {
     if (!this.head) {
       return undefined
     }
@@ -48,7 +49,7 @@ export default class LinkedList<T> {
     return value
   }
 
-  public push(value: T): void {
+  push(value: T) {
     if (this.head) {
       const newHead = new Node<T>(value)
       newHead.setNext(this.head)
@@ -60,7 +61,7 @@ export default class LinkedList<T> {
     }
   }
 
-  public shift(): T | undefined {
+  shift(): T | undefined {
     if (!this.tail) {
       return undefined
     }
@@ -76,7 +77,7 @@ export default class LinkedList<T> {
     return value
   }
 
-  public unshift(value: T): void {
+  unshift(value: T) {
     if (this.tail) {
       const newTail = new Node<T>(value)
       newTail.setPrev(this.tail)
@@ -88,8 +89,8 @@ export default class LinkedList<T> {
     }
   }
 
-  public count(): number {
-    let count = 0
+  count(): number {
+    let count: number = 0
     let element: Node<T> | undefined = this.head
 
     while (this.head && element) {
@@ -99,7 +100,7 @@ export default class LinkedList<T> {
     return count
   }
 
-  public delete(value: T): void {
+  delete(value: T) {
     let element = this.head
     while (element) {
       if (element.getValue() === value) {

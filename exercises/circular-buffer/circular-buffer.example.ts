@@ -1,7 +1,7 @@
 interface Buffer<T> {
-  read(): T | undefined;
-  write(value: T): void;
-  clear(): void;
+  read(): T | undefined
+  write(value: T): void
+  clear(): void
 }
 
 export class BufferOverflowError extends Error {
@@ -24,28 +24,28 @@ export default class CircularBuffer<T> implements Buffer<T> {
     this.capacity = capacity
   }
 
-  public read(): T | undefined {
+  public read() {
     if (this.buffer.length === 0) {
       throw new BufferEmptyError()
     }
     return this.buffer.shift()
   }
 
-  public write(value: T): void {
+  public write(value: T) {
     if (this.buffer.length + 1 > this.capacity) {
       throw new BufferOverflowError()
     }
     this.buffer.push(value)
   }
 
-  public forceWrite(value: T): void {
+  public forceWrite(value: T) {
     if (this.buffer.length === this.capacity) {
       this.read()
     }
     this.buffer.push(value)
   }
 
-  public clear(): void {
+  public clear() {
     this.buffer = []
   }
 }

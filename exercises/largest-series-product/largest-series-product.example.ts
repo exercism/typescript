@@ -11,11 +11,11 @@ export default class Series {
     this.digits = this.getDigits()
   }
 
-  private getDigits(): number[] {
+  getDigits() {
     return [...this.numberString].map((digit) => parseInt(digit, 10))
   }
 
-  public largestProduct(size: number): number {
+  largestProduct(size: number) {
     if (size < 0) {
       throw new Error('Invalid input.')
     }
@@ -31,7 +31,7 @@ export default class Series {
     return max
   }
 
-  private slices(sliceSize: number): number[][] {
+  slices(sliceSize: number) {
     const result = []
     let slice = []
 
