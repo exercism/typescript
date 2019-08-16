@@ -1,7 +1,7 @@
 export default class BinarySearchTree {
   private _data: number
-  private _left?: BinarySearchTree
-  private _right?: BinarySearchTree
+  private _left: BinarySearchTree
+  private _right: BinarySearchTree
 
   constructor(_data: number) {
     this._data = _data
@@ -28,11 +28,11 @@ export default class BinarySearchTree {
   }
 
   public get left(): BinarySearchTree {
-    return this._left!
+    return this._left
   }
 
   public get right(): BinarySearchTree {
-    return this._right!
+    return this._right
   }
 
   private insertLeft(value: number): this {

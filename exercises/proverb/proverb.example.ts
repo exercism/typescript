@@ -1,16 +1,23 @@
-const conclusion = (firstArg: string): string =>
-  `And all for the want of a ${firstArg}.`
+const lastArgIsOptions = (args: string[]) => {
+    const last = args[args.length - 1]
+    return typeof last === 'object'
+}
 
-const proverb = (...args: string[]): string => {
+const conclusion = (firstArg: string, qualifier = '') => `And all for the want of a ${qualifier}${firstArg}.`
 
-  const allExceptLastArg = args.slice(0, -1)
-  const chainOfEvents = allExceptLastArg.map(
-    (arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`
-  )
+const proverb = (...args: any[]) => { // tslint:disable-line
+    let options: any = {} // tslint:disable-line
+    if (lastArgIsOptions(args)) {
+        options = String(args.pop())
+    }
 
-  chainOfEvents.push(conclusion(args[0]))
+    const allExceptLastArg = args.slice(0, -1)
+    const chainOfEvents = allExceptLastArg.map((arg, index) => `For want of a ${arg} the ${args[index + 1]} was lost.`)
 
-  return chainOfEvents.join("\n")
+    const qualifier = options.qualifier ? `${options.qualifier} ` : options.qualifier
+    chainOfEvents.push(conclusion(args[0], qualifier))
+
+    return chainOfEvents.join('\n')
 }
 
 export default proverb

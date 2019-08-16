@@ -1,61 +1,59 @@
 export default class Square {
-  private input: string
+    input: string
 
-  constructor(input: string) {
-    this.input = input
-  }
-
-  public normalizePlaintext(): string {
-    return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, "")
-  }
-
-  public size(): number {
-    const realLength = Math.sqrt(this.normalizePlaintext().length)
-    return Math.ceil(realLength)
-  }
-
-  public plaintextSegments(): ArrayLike<string> | null {
-    const plainText = this.normalizePlaintext()
-    const chunkSize = this.size()
-
-    const splitRegex = new RegExp(`.{1,${chunkSize}}`, "g")
-    return plainText.match(splitRegex)
-  }
-
-  public ciphertext(): string {
-    const textSegments = this.plaintextSegments()
-    let i
-    let j
-    const columns: string[][] = []
-    let currentSegment
-    let currentLetter
-
-    for (i = 0; i < this.size(); i++) {
-      columns.push([])
+    constructor(input: string) {
+        this.input = input
     }
 
-    for (i = 0; i < textSegments!.length; i++) {
-      currentSegment = textSegments![i]
-
-      for (j = 0; j < currentSegment.length; j++) {
-        currentLetter = currentSegment[j]
-        columns[j].push(currentLetter)
-      }
+    normalizePlaintext(): string {
+        return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
     }
 
-    const result: string[] = []
-    for (i = 0; i < columns.length; i++) {
-      result[i] = columns[i].join("")
+    size() {
+        const realLength = Math.sqrt(this.normalizePlaintext().length)
+        return Math.ceil(realLength)
     }
 
-    return result.join("")
-  }
+    plaintextSegments() {
+        const plainText = this.normalizePlaintext()
+        const chunkSize = this.size()
 
-  public normalizeCiphertext(): string {
-    const chunkSize = this.size()
-    const splitRegex = new RegExp(`.{1,${chunkSize}}`, "g")
-    return this.ciphertext()
-      .match(splitRegex)!
-      .join(" ")
-  }
+        const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g')
+        return plainText.match(splitRegex)
+    }
+
+    ciphertext() {
+        const textSegments = this.plaintextSegments()
+        let i
+        let j
+        // tslint:disable-next-line: no-any
+        const columns: any[] = []
+        let currentSegment
+        let currentLetter
+
+        for (i = 0; i < this.size(); i++) {
+            columns.push([])
+        }
+
+        for (i = 0; i < textSegments!.length; i++) {
+            currentSegment = textSegments![i]
+
+            for (j = 0; j < currentSegment.length; j++) {
+                currentLetter = currentSegment[j]
+                columns[j].push(currentLetter)
+            }
+        }
+
+        for (i = 0; i < columns.length; i++) {
+            columns[i] = columns[i].join('')
+        }
+
+        return columns.join('')
+    }
+
+    normalizeCiphertext() {
+        const chunkSize = this.size()
+        const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g')
+        return this.ciphertext().match(splitRegex)!.join(' ')
+    }
 }

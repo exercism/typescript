@@ -1,17 +1,17 @@
 class Transpose {
-  public static transpose(lines: string[]): string[] {
-    return lines.reduce((result: string[], line, lineNo) => {
-      line.split("").map((value, key) => {
-        if (typeof result[key] === "undefined") {
-          result[key] = new Array(lineNo + 1).join(" ")
-        }
+    static transpose(lines: string[]): string[] {
+        return lines.reduce((result: string[], line, lineNo) => {
+            line.split('').map((value, key) => {
+                if (typeof result[key] === 'undefined') {
+                    result[key] = new Array(lineNo + 1).join(' ')
+                }
 
-        result[key] += value
-      })
+                result[key] += value
+            })
 
-      return result
-    }, [])
-  }
+            return result
+        }, [])
+    }
 }
 
 export default Transpose
