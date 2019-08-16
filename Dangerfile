@@ -1,6 +1,8 @@
+require 'pathname';
+
 # Ensure a clean commits history
 if git.commits.any? { |c| c.message =~ /^Merge branch '#{github.branch_for_base}'/ }
-  fail('Please rebase to get rid of the merge commits in this PR')
+  warn('Please rebase to get rid of the merge commits in this PR, otherwise, if this PR is small, this should be squash-merged so the merge commit is squashed.')
 end
 can_merge = github.pr_json["mergeable"]
 is_merged = github.pr_json["merged"]
@@ -17,7 +19,7 @@ warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 # Warn when there is a big PR
 warn("Big PR") if git.lines_of_code > 500
 
-#ENSURE THERE IS A SUMMARY FOR A PR
+# Ensure there is a summary
 warn("Please provide a summary in the Pull Request description. See more info <a href=\"http\://tinyletter.com/exercism/letters/exercism-pull-requests\">here.</a>") if github.pr_body.length < 5
 
 # LINT Comments in for each Line
@@ -25,19 +27,27 @@ jsonpath = "lintreport.json"
 contents = File.read jsonpath
 require "json"
 if contents.to_s == ''
-	contents = "[]"
+  contents = "[]"
 end
 json = JSON.parse contents
+
 json.each do |object|
-   shortFile =  object["name"]
-   shortFile = shortFile.to_s || ''
-   msg = object["failure"].to_s || ''
-   line = object["endPosition"]["line"] || 1
-   #only warn for files that were edited in this PR.
-   if git.modified_files.include? shortFile
-   	shortFile.prepend("/")  # get away from doing inline comments since they are buggy as of Sep-2016
-   	warn(msg, file: shortFile, line: line)
-   else
-   	message(msg, file: shortFile, line: line)
-   end
+  # TODO: use env path so it works everwhere
+  source_file = Pathname.new(object["filePath"])
+    .relative_path_from(Pathname.new('/home/travis/build/exercism/typescript/')).to_s;
+
+  (object["messages"] || []).each do |message|
+    danger_message = "#{message["message"].to_s} (#{message["ruleId"].to_s})"
+    source_line = message["line"]
+
+    # only warn for files that were edited in this PR.
+    if git.modified_files.include? source_file
+      # get away from doing inline comments since they are buggy as of Sep-2016
+      shortFile.prepend("/") unless source_file[0] == '/'
+
+      warn(danger_message, file: source_file, line: source_line)
+    else
+      message(danger_message, file: source_file, line: source_line)
+    end
+  end
 end

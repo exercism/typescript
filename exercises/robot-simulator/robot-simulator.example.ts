@@ -7,16 +7,16 @@ export default class Robot {
     this.bearing = direction
   }
 
-  at(xcoord: number, ycoord: number) {
+  public at(xcoord: number, ycoord: number): void {
     this.coordinates = [xcoord, ycoord]
   }
 
-  orient(direction: string) {
+  public orient(direction: string): string {
     this.bearing = direction
     return `The robot is pointed ${direction}`
   }
 
-  advance() {
+  public advance(): void {
     if (this.bearing === 'north') {
       this.coordinates[1] += 1
     } else if (this.bearing === 'south') {
@@ -28,7 +28,7 @@ export default class Robot {
     }
   }
 
-  turnLeft() {
+  public turnLeft(): void {
     if (this.bearing === 'north') {
       this.orient('west')
     } else if (this.bearing === 'south') {
@@ -40,7 +40,7 @@ export default class Robot {
     }
   }
 
-  turnRight() {
+  public turnRight(): void {
     if (this.bearing === 'north') {
       this.orient('east')
     } else if (this.bearing === 'south') {
@@ -52,7 +52,7 @@ export default class Robot {
     }
   }
 
-  instructions(s: string) {
+  public instructions(s: string): Array<'turnLeft' | 'turnRight' | 'advance'> {
     return [...s].map((character) => {
       if (character === 'L') {
         return 'turnLeft'
@@ -66,7 +66,7 @@ export default class Robot {
     })
   }
 
-  evaluate(s: string) {
+  public evaluate(s: string): void {
     this.instructions(s).forEach((instruction) => {
       this[instruction]()
     })

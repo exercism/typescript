@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json", // Path will resolve when this file is copied
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/array-type": ["error", "array-simple"],
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn", {
+        "allowExpressions": false,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": [
+      "warn", {
+        "accessibility": "no-public",
+        "overrides": {
+          "accessors": "explicit",
+          "constructors": "no-public",
+          "methods": "explicit",
+          "properties": "explicit",
+          "parameterProperties": "off"
+        }
+      }
+    ],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-parameter-properties": [
+      "warn", {
+        "allows": [
+          "private", "protected", "public",
+          "private readonly", "protected readonly", "public readonly"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off", // Covered by the tsc compiler (noUnusedLocals)
+    "@typescript-eslint/no-use-before-define": [
+      "error", {
+        "functions": false,
+        "typedefs": false
+      }
+    ],
+    "semi": "off",
+    "@typescript-eslint/semi": ["error", "never"]
+  }
+}

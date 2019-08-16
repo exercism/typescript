@@ -9,3 +9,20 @@ node_modules
 build
 babel-output
 lintreport.json
+
+# These should be placed in common or maintaining. Only have them in the root
+# to make editor plugins work.
+/.eslintignore
+/.eslintrc
+/tsconfig.json
+
+# These are artifacts from running make test. They should be removed by make.
+# The correct location for these files is the maintaining folder.
+/exercises/package.json
+/exercises/tsconfig.json
+/exercises/.eslint.track.rc
+/exercises/.eslintrc
+/exercises/.eslintignore
+/exercises/yarn.lock
+/exercises/node_modules
+exercises/yarn-error.log

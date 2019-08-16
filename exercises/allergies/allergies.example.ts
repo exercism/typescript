@@ -1,7 +1,7 @@
 class Allergies {
-  allergenIndex: number
+  private allergenIndex: number
 
-  possibleAllergies = [
+  private possibleAllergies = [
     'eggs',
     'peanuts',
     'shellfish',
@@ -10,13 +10,13 @@ class Allergies {
     'chocolate',
     'pollen',
     'cats'
-  ]
+  ] as const
 
   constructor(allergenIndex: number) {
     this.allergenIndex = allergenIndex
   }
 
-  allergicTo(food: string) {
+  public allergicTo(food: string): boolean {
     let isAllergic = false
 
     const allergyList = this.list()
@@ -30,7 +30,7 @@ class Allergies {
     return isAllergic
   }
 
-  list(): string[] {
+  public list(): string[] {
     const possibleAllergies = this.possibleAllergies
     const allergicTo = []
 

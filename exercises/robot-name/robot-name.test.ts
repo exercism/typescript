@@ -1,5 +1,22 @@
 import RobotName from './robot-name'
 
+
+const areSequential = (name1: string, name2: string): boolean => {
+  const alpha1 = name1.substr(0, 2)
+  const alpha2 = name2.substr(0, 2)
+  const num1 = +name1.substr(2, 3)
+  const num2 = +name2.substr(2, 3)
+
+  const numDiff = num2 - num1
+  const alphaDiff = (alpha2.charCodeAt(0) - alpha1.charCodeAt(0)) * 26
+    + (alpha2.charCodeAt(1) - alpha1.charCodeAt(1))
+
+  const totalDiff = alphaDiff * 1000 + numDiff
+
+  return Math.abs(totalDiff) <= 1
+}
+
+
 describe('Robot', () => {
   let robot: RobotName
 
@@ -64,18 +81,3 @@ describe('Robot', () => {
   })
 
 })
-
-const areSequential = (name1: string, name2: string) => {
-  const alpha1 = name1.substr(0, 2)
-  const alpha2 = name2.substr(0, 2)
-  const num1 = +name1.substr(2, 3)
-  const num2 = +name2.substr(2, 3)
-
-  const numDiff = num2 - num1
-  const alphaDiff = (alpha2.charCodeAt(0) - alpha1.charCodeAt(0)) * 26
-    + (alpha2.charCodeAt(1) - alpha1.charCodeAt(1))
-
-  const totalDiff = alphaDiff * 1000 + numDiff
-
-  return Math.abs(totalDiff) <= 1
-}

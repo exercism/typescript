@@ -1,6 +1,6 @@
 import BinarySearchTree from './binary-search-tree'
 
-function recordAllData(bst: BinarySearchTree) {
+function recordAllData(bst: BinarySearchTree): number[] {
   const out: number[] = []
   bst.each((data: number) => out.push(data))
   return out

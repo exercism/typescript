@@ -1,39 +1,39 @@
 export default class Squares {
-    squareOfSum: number
-    sumOfSquares: number
-    difference: number
+  public readonly squareOfSum: number
+  public readonly sumOfSquares: number
+  public readonly difference: number
 
-    constructor(int: number) {
-        this.squareOfSum = this._squareOfSum(int)
-        this.sumOfSquares = this._sumOfSquares(int)
-        this.difference = this._difference()
+  constructor(int: number) {
+    this.squareOfSum = this._squareOfSum(int)
+    this.sumOfSquares = this._sumOfSquares(int)
+    this.difference = this._difference()
+  }
+
+  private _squareOfSum(int: number): number {
+    let sum = 0
+    let i = 1
+
+    while (i <= int) {
+      sum += i
+      i++
     }
 
-    private _squareOfSum(int: number) {
-        let sum = 0
-        let i = 1
+    return sum * sum
+  }
 
-        while (i <= int) {
-            sum += i
-            i++
-        }
+  private _sumOfSquares(int: number): number {
+    let sum = 0
+    let i = 1
 
-        return sum * sum
+    while (i <= int) {
+      sum += i * i
+      i++
     }
 
-    private _sumOfSquares(int: number) {
-        let sum = 0
-        let i = 1
+    return sum
+  }
 
-        while (i <= int) {
-            sum += (i * i)
-            i++
-        }
-
-        return sum
-    }
-
-    private _difference() {
-        return this.squareOfSum - this.sumOfSquares
-    }
+  private _difference(): number {
+    return this.squareOfSum - this.sumOfSquares
+  }
 }

@@ -5,12 +5,16 @@ jobs:
     macos:
       xcode: "9.2.0"
     steps:
+      - run: node -v
+      - run: yarn -v
       - checkout
       - run: bin/fetch-configlet
       - run: bin/configlet lint . --track-id=typescript
       - run: touch Brewfile; echo "brew 'gnu-sed'" >> Brewfile;
       - run: brew update
       - run: brew bundle
+      - run: brew upgrade node
+      - run: node -v
       - run: gsed -i 's/@sed/@gsed/g;' Makefile
       - run: cat Makefile
       - run: make test

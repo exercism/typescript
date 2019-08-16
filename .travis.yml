@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "node"
+  - "lts/*"
 
 cache: yarn
 
@@ -12,11 +12,12 @@ before_install:
 
 before_script:
   - npm install -g yarn
+  - node -v
+  - yarn -v
+  - ruby -v
 
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - make test
-
-after_success:
+  - make report
   - danger

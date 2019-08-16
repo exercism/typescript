@@ -1,56 +1,55 @@
 enum Type {
-    Equilateral = "equilateral",
-    Isosceles = "isosceles",
-    Scalene = "scalene"
+  Equilateral = "equilateral",
+  Isosceles = "isosceles",
+  Scalene = "scalene"
 }
 
 export default class Triangle {
-    sides: number[]
+  private readonly sides: number[]
 
-    constructor(...sides: number[]) {
-        this.sides = sides
+  constructor(...sides: number[]) {
+    this.sides = sides
+  }
+
+  public kind(): Type {
+    if (this.isIllegal()) {
+      throw new TypeError("illegal")
     }
 
-    kind() {
-        if (this.isIllegal()) {
-            throw new TypeError('illegal')
-        }
-
-        if (this.isEquilateral()) {
-            return Type.Equilateral
-        }
-
-        if (this.isIsosceles()) {
-            return Type.Isosceles
-        }
-
-        return Type.Scalene
+    if (this.isEquilateral()) {
+      return Type.Equilateral
     }
 
-    isIllegal() {
-        return this.violatesInequality() || this.hasImpossibleSides()
+    if (this.isIsosceles()) {
+      return Type.Isosceles
     }
 
-    violatesInequality() {
-        const [a, b, c] = this.sides
-        return a + b < c || a + c < b || b + c < a
-    }
+    return Type.Scalene
+  }
 
-    hasImpossibleSides() {
-        const [a, b, c] = this.sides
-        return a <= 0 || b <= 0 || c <= 0
-    }
+  private isIllegal(): boolean {
+    return this.violatesInequality() || this.hasImpossibleSides()
+  }
 
-    isEquilateral() {
-        return this.uniqueSidesLength() === 1
-    }
+  private violatesInequality(): boolean {
+    const [a, b, c] = this.sides
+    return a + b < c || a + c < b || b + c < a
+  }
 
-    isIsosceles() {
-        return this.uniqueSidesLength() === 2
-    }
+  private hasImpossibleSides(): boolean {
+    const [a, b, c] = this.sides
+    return a <= 0 || b <= 0 || c <= 0
+  }
 
-    uniqueSidesLength() {
-        return new Set(this.sides).size
-    }
+  private isEquilateral(): boolean {
+    return this.uniqueSidesLength() === 1
+  }
 
+  private isIsosceles(): boolean {
+    return this.uniqueSidesLength() === 2
+  }
+
+  private uniqueSidesLength(): number {
+    return new Set(this.sides).size
+  }
 }
