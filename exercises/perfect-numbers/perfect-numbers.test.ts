@@ -62,13 +62,13 @@ describe("Deficient numbers", () => {
 })
 
 describe("Invalid inputs", () => {
-  xit("Zero is rejected (not a natural number", () => {
+  xit("Zero is rejected (not a natural number)", () => {
     expect(() => {
       PerfectNumbers.classify(0)
     }).toThrowError("Classification is only possible for natural numbers.")
   })
 
-  xit("Negative integer is rejected (not a natural number", () => {
+  xit("Negative integer is rejected (not a natural number)", () => {
     expect(() => {
       PerfectNumbers.classify(-1)
     }).toThrowError("Classification is only possible for natural numbers.")
