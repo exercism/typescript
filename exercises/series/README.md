@@ -5,14 +5,16 @@ that string in the order that they appear.
 
 For example, the string "49142" has the following 3-digit series:
 
-- "491"
-- "914"
-- "142"
+| 4   | 9   | 1   |
+| --- | --- | --- |
+| 9   | 1   | 4   |
+| 1   | 4   | 2   |
 
 And the following 4-digit series:
 
-- "4914"
-- "9142"
+| 4   | 9   | 1   | 4   |
+| --- | --- | --- | --- |
+| 9   | 1   | 4   | 2   |
 
 And if you ask for a 6-digit series from a 5-digit string, you deserve
 whatever you get.
