@@ -37,3 +37,5 @@ jobs:
       run: |
         make report
         danger
+      env:
+        DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
