@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Danger Danger
+    name: Danger
     runs-on: ubuntu-latest
 
     steps:
