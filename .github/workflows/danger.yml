@@ -1,0 +1,39 @@
+name: Danger
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Danger Danger
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        version: 2.6.x
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install yarn
+      run: npm install --global yarn
+    - name: Install gem dependencies
+      run: |
+        gem install bundler
+        gem install danger
+    - name: configlet lint
+      run: |
+        bin/fetch-configlet
+        bin/configlet lint .
+    - name: make report
+      run: |
+        make report
+        danger
