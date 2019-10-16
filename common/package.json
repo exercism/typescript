@@ -15,7 +15,9 @@
     "@typescript-eslint/parser": "^2.3.3",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   },
@@ -23,7 +25,13 @@
     "test": "yarn lint:types && jest --no-cache",
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
-    "lint:ci": "eslint . --ext .tsx,.ts"
+    "lint:ci": "eslint . --ext .tsx,.ts",
+    "prettier": "yarn prettier --write --no-semi --single-quote exercises/**/*.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
   },
   "dependencies": {}
 }
