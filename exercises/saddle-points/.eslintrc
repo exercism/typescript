@@ -36,6 +36,11 @@
     ], // Prevent bugs
     "@typescript-eslint/explicit-member-accessibility": "off", // Styling not forced upon the student
     "@typescript-eslint/indent": "off", // Styling not forced upon the student
+    "@typescript-eslint/no-inferrable-types": [
+      "error", {
+        "ignoreParameters": true
+      }
+    ],
     "@typescript-eslint/member-delimiter-style": "off", // Styling not forced upon the student
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-parameter-properties": [
