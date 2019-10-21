@@ -1,6 +1,6 @@
 class AtbashCipher {
-  private alphabet: string = "abcdefghijklmnopqrstuvwxyz"
-  private numbers: string = "0123456789"
+  private alphabet = "abcdefghijklmnopqrstuvwxyz"
+  private numbers = "0123456789"
 
   public encode(plainText: string): string {
     const lowerCaseLettersOnly = plainText
