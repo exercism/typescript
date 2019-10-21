@@ -1,6 +1,6 @@
 class HelloWorld {
   public static hello(): string {
-    return `Hello, World!`
+    return 'Hello, World!'
   }
 }
 
