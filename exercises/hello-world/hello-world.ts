@@ -1,5 +1,5 @@
 class HelloWorld {
-    static hello( /* Parameters go here */ ) {
+    static hello() {
         // Your code here
     }
 }
