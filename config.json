@@ -276,6 +276,22 @@
       ]
     },
     {
+      "slug": "word-search",
+      "uuid": "8ba2c83e-f544-11e9-802a-5aa538984bd8",
+      "core": false,
+      "unlocked_by": "linked-list",
+      "difficulty": 8,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "loops",
+        "equality",
+        "optional_values",
+        "parsing",
+        "text_formatting"
+      ]
+    },
+    {
       "slug": "difference-of-squares",
       "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
       "core": false,
