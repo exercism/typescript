@@ -1,6 +1,6 @@
 interface Result {
-  start: number[];
-  end: number[];
+  start: number[]
+  end: number[]
 }
 
 export default class WordSearch {
@@ -50,7 +50,6 @@ export default class WordSearch {
   private getDirectionFunction(originCoords: number[], destinationCoords: number[]): (currentCoords: number[]) => number[] {
     return (nextCoord: number[]): number[] => [nextCoord[0] + (destinationCoords[0] - originCoords[0]), nextCoord[1] + (destinationCoords[1] - originCoords[1])]
   }
-
 
   private getValidNeighbouringCoordinates(initial: number[], board: string[], letter: string): number[][] {
     return this.getCoordsOfSurroundingLetters(initial, board.length, board[0].length)
