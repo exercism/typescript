@@ -1,6 +1,6 @@
 interface Result {
-  start: number[]
-  end: number[]
+  start: number[];
+  end: number[];
 }
 
 export default class WordSearch {
