@@ -53,6 +53,17 @@
       ]
     },
     {
+      "slug": "resistor-color",
+      "uuid": "c6f41fd5-584c-46ca-b3c5-6a0825446bf4",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
       "slug": "rna-transcription",
       "uuid": "b4db381f-1c99-44c6-948c-c8892d77823e",
       "core": true,
