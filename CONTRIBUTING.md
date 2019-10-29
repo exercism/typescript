@@ -192,7 +192,7 @@ ASSIGNMENT=two-fer make sync-assignment-configuration
 [contributing-javascript-test-runner]: https://github.com/exercism/javascript-test-runner
 [contributing-typescript]: https://github.com/exercism/typescript/blob/master/CONTRIBUTING.md
 [contributing-typescript-analyzer]: https://github.com/exercism/typescript-analyzer/blob/master/CONTRIBUTING.md
-[contributing-typescript-test-runner]: https://github.com/exercism/javascript-test-runner
+[contributing-typescript-test-runner]: https://github.com/exercism/typescript-test-runner
 [contributing-website-copy]: https://github.com/exercism/website-copy#contributing
 [doc-readme]: https://github.com/exercism/docs/blob/master/language-tracks/exercises/anatomy/readmes.md
 [problem-specifications]: https://github.com/exercism/problem-specifications
