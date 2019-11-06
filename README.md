@@ -4,7 +4,7 @@ Exercism exercises in TypeScript
 
 ## Running Unit Test Suite
 
-Yarn must be installed. The official installation steps can be found [here](https://yarnpkg.com/en/docs/install#mac-stable). Choose your operating system, and follow the instructions. (Note: installation via npm is not recommended)
+Yarn must be installed. The official installation steps can be found [here](https://yarnpkg.com/en/docs/install). (Note: installation via npm is not recommended)
 
 Then, `make` commands will install other dependencies as needed.
 
