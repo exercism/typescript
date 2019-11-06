@@ -4,10 +4,7 @@ Exercism exercises in TypeScript
 
 ## Running Unit Test Suite
 
-[Yarn](https://yarnpkg.com/en/docs/install) must be installed.    
-If you have [node](https://nodejs.org) installed, you can install yarn via `npm`
-
-    % npm install --global yarn
+Yarn must be installed. The official installation steps can be found [here](https://yarnpkg.com/en/docs/install). (Note: installation via npm is not recommended)
 
 Then, `make` commands will install other dependencies as needed.
 
