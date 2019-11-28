@@ -4,7 +4,7 @@ node_js:
 
 cache: yarn
 
-sudo: true
+sudo: required
 
 before_install:
   - gem install bundler
