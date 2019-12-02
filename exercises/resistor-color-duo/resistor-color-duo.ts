@@ -1,6 +1,8 @@
+export class ResistorColor {
+  private colors: string[];
 
-
-
-export const value = (_: string[]): number => {
-  return 0
+  constructor(colors: string[]) {
+    this.colors = colors;
+  }
+  value = (): number => 0;
 }
