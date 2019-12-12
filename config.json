@@ -30,6 +30,17 @@
       ]
     },
     {
+      "slug": "resistor-color-duo",
+      "uuid": "78645d36-12be-11ea-8d71-362b9e155667",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "arrays"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b",
       "core": true,
