@@ -28,8 +28,8 @@ describe('PhoneNumber()', () => {
   })
 
   xit('valid when 11 digits and starting with 1', () => {
-    const phone = new PhoneNumber('11234567890')
-    expect(phone.number()).toEqual('1234567890')
+    const phone = new PhoneNumber('12234567890')
+    expect(phone.number()).toEqual('2234567890')
   })
 
   xit('invalid when 12 digits', () => {
