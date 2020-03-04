@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript-track",
+  "name": "@exercism/typescript",
   "version": "1.0.0",
   "description": "Exercism TypeScript track top-level runner. Not meant for individual exercises.",
   "private": true,
@@ -8,8 +8,9 @@
     "url": "https://github.com/exercism/typescript"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "danger": "9.2.2",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
     "typescript": "^3.6.4"
