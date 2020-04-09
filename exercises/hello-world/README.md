@@ -60,7 +60,7 @@ but it helps to understand what a test looks like, and what
 it is doing.
 
 Open up the test file, hello-world.test.ts.
-There are three tests inside:
+There is a single test inside:
 
 ```typescript
   it('says hello world with no name', () => {
@@ -173,11 +173,6 @@ Execute the tests with:
 ```bash
 $ yarn test
 ```
-
-In the test suites all tests but the first have been skipped.
-
-Once you get a test passing, you can enable the next one by changing `xit` to
-`it`.
 
 ## Source
 
