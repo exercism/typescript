@@ -20,14 +20,16 @@ Then, `make` commands will install other dependencies as needed.
 
 Please keep the `common` folder files synced across all the sub folders. These files should be the same across all problems. 
 
-* package.json
-* tsconfig.json
-* tslint.json
-* yarn.lock
+ * .eslintignore
+ * .eslintrc
+ * jest.config.js 
+ * package.json
+ * tsconfig.json
+ * yarn.lock
 
 There are some utility methods in the `Makefile` to help with development. The below will move the contents of the `common` to all the subfolders. 
 
-	% make replacePackageFilesFromCommonToSubFolders
+	% make sync-configurations
 	
 ## Contributing Guide
 
