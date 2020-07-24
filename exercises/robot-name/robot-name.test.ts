@@ -1,4 +1,4 @@
-import RobotName from './robot-name'
+import Robot from './robot-name'
 
 
 const areSequential = (name1: string, name2: string): boolean => {
@@ -18,26 +18,26 @@ const areSequential = (name1: string, name2: string): boolean => {
 
 
 describe('Robot', () => {
-  let robot: RobotName
+  let robot: Robot
 
   beforeEach(() => {
-    robot = new RobotName()
+    robot = new Robot()
   })
 
   it('has a name', () => {
     expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/)
   })
 
-  xit('name is the same each time', () => {
+  it('name is the same each time', () => {
     expect(robot.name).toEqual(robot.name)
   })
 
-  xit('different robots have different names', () => {
-    const differentRobot = new RobotName()
+  it('different robots have different names', () => {
+    const differentRobot = new Robot()
     expect(differentRobot.name).not.toEqual(robot.name)
   })
 
-  xit('is able to reset the name', () => {
+  it('is able to reset the name', () => {
     const originalName = robot.name
 
     robot.resetName()
@@ -47,7 +47,7 @@ describe('Robot', () => {
     expect(originalName).not.toEqual(newName)
   })
 
-  xit('should set a unique name after reset', () => {
+  it('should set a unique name after reset', () => {
     const NUMBER_OF_ROBOTS = 10000
     const usedNames = new Set()
 
@@ -60,16 +60,16 @@ describe('Robot', () => {
     expect(usedNames.size).toEqual(NUMBER_OF_ROBOTS + 1)
   })
 
-  xit('new names should not be sequential', () => {
+  it('new names should not be sequential', () => {
     const name1 = robot.name
-    const name2 = (new RobotName()).name
-    const name3 = (new RobotName()).name
+    const name2 = (new Robot()).name
+    const name3 = (new Robot()).name
     expect(areSequential(name1, name1)).toBe(true)
     expect(areSequential(name1, name2)).toBe(false)
     expect(areSequential(name2, name3)).toBe(false)
   })
 
-  xit('names from reset should not be sequential', () => {
+  it('names from reset should not be sequential', () => {
     const name1 = robot.name
     robot.resetName()
     const name2 = robot.name

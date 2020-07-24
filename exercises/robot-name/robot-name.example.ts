@@ -9,7 +9,7 @@ function generateRandomLetter(): string {
   return letters[randomIndex]
 }
 
-export default class RobotName {
+export default class Robot {
   private _name!: string
   private usedNames = new Set<string>()
 
