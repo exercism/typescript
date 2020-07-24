@@ -16,6 +16,11 @@ const areSequential = (name1: string, name2: string): boolean => {
   return Math.abs(totalDiff) <= 1
 }
 
+const TOTAL_NUMBER_OF_NAMES = 26 // A-Z
+  * 26 // A-Z
+  * 10 // 0-9
+  * 10 // 0-9
+  * 10; // 0-9
 
 describe('Robot', () => {
   let robot: Robot
@@ -23,6 +28,10 @@ describe('Robot', () => {
   beforeEach(() => {
     robot = new Robot()
   })
+
+  afterEach(() => {
+    Robot.releaseNames();
+  });
 
   it('has a name', () => {
     expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/)
@@ -79,5 +88,18 @@ describe('Robot', () => {
     expect(areSequential(name2, name3)).toBe(false)
     expect(areSequential(name3, name3)).toBe(true)
   })
+
+    // This test is optional.
+    it('all the names can be generated', () => {
+      const usedNames = new Set();
+      usedNames.add(robot.name);
+
+      for (let i = 0; i < TOTAL_NUMBER_OF_NAMES - 1; i += 1) {
+        const newRobot = new Robot();
+        usedNames.add(newRobot.name);
+      }
+
+      expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
+    });
 
 })
