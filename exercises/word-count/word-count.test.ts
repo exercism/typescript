@@ -43,9 +43,19 @@ describe('words()', () => {
     expect(words.count('hello\nworld')).toEqual(expectedCounts)
   })
 
+  xit('counts multiple multiline characters', () => {
+    const expectedCounts = new Map(Object.entries({ hello: 1, multiple: 1, newlines: 1 }))
+    expect(words.count('hello\nmultiple\nnewlines')).toEqual(expectedCounts)
+  })
+
   xit('counts tabs', () => {
     const expectedCounts = new Map(Object.entries({ hello: 1, world: 1 }))
     expect(words.count('hello\tworld')).toEqual(expectedCounts)
+  })
+
+  xit('counts multiple tab characters', () => {
+    const expectedCounts = new Map(Object.entries({ hello: 1, multiple: 1, tabs: 1 }))
+    expect(words.count('hello\tmultiple\ttabs')).toEqual(expectedCounts)
   })
 
   xit('counts multiple spaces as one', () => {
