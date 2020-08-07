@@ -2,9 +2,7 @@ class Words {
   public count(input: string): Map<string, number> {
     const inputArray = input
       .toLowerCase()
-      .replace(/\n/m, " ")
-      .replace(/\t/m, " ")
-      .split(" ")
+      .split(/\s+/)
     const inputMap = new Map<string, number>()
 
     for (const each of inputArray) {
