@@ -45,7 +45,7 @@ Once you get a test passing, you can enable the next one by changing `xit` to
 
 ## Source
 
-A debugging session with Paul Blackwell at gSchool. [http://gschool.it](http://gschool.it)
+A debugging session with Paul Blackwell at gSchool. 
 
 ## Submitting Incomplete Solutions
 
