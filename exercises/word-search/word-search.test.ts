@@ -1,7 +1,7 @@
 import WordSearch from './word-search'
 
 describe('single line grids', () => {
-  xtest('Should accept an initial game grid', () => {
+  test('Should accept an initial game grid', () => {
     const grid = ['jefblpepre']
     const wordSearch = new WordSearch(grid)
 
