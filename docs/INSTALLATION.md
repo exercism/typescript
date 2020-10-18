@@ -14,4 +14,4 @@ They can be installed running this command within each assignment directory:
 $ yarn install
 ```
 
-You must run install before you are able to run the tests.
+You must run install _inside the exercise directory_ before you are able to run the tests.

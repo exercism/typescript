@@ -1,0 +1,69 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory):
+ *
+ * yarn babel-node scripts/pr path/1 path/2 path/3
+ *
+ * This will run following checks:
+ *
+ * 1. Find the exercises at all the paths provided
+ * 2. Run tests for those exercises against sample solutions
+ */
+
+const {
+  findExerciseDirectory,
+  prepareAndRun,
+  prepare,
+  cleanUp,
+  registerExitHandler,
+} = require('./helpers')
+
+const shell = require('shelljs')
+const path = require('path')
+const files = process.argv.slice(2)
+
+if (files.length === 0) {
+  shell.echo(
+    '[Failure] No files passed in. Pass in paths to exercise directories or its file.'
+  )
+  shell.exit(-1)
+}
+
+const exercises = files
+  .map((file) => {
+    const directory = findExerciseDirectory(file)
+    return directory ? path.basename(directory) : null
+  })
+  .filter(Boolean)
+  .filter((exercise, index, array) => array.indexOf(exercise) === index)
+
+if (exercises.length === 0) {
+  shell.echo('[Skip] None of the files are inside an exercise directory.')
+  shell.exit(0)
+}
+
+registerExitHandler()
+
+shell.env['PREPARE'] = false
+shell.env['CLEANUP'] = false
+
+const infoStr = `Running tests for ${
+  exercises.length === 1 ? exercises[0] : `${exercises.length} exercises\n`
+}`
+const failureStr = '[Failure] Tests failed!'
+
+// Prepare exercises
+exercises.forEach(prepare)
+
+// Run tests
+prepareAndRun('yarn jest --bail tmp_exercises', infoStr, failureStr)
+
+shell.echo(
+  exercises.length === 1
+    ? `[Success] Tests passed for ${exercises[0]}`
+    : `[Success] Tests passed for all ${exercises.length} exercises`
+)
+
+// Cleanup
+cleanUp()

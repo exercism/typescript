@@ -2,7 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json", // Path will resolve when this file is copied
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -11,12 +11,18 @@
   },
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -46,7 +52,7 @@
         }
       }
     ],
-    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/indent": 0,
     "@typescript-eslint/no-inferrable-types": [
       "error", {
         "ignoreParameters": true
@@ -61,7 +67,8 @@
         ]
       }
     ],
-    "@typescript-eslint/no-unused-vars": "off", // Covered by the tsc compiler (noUnusedLocals)
+    // Covered by the tsc compiler (noUnusedLocals)
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-use-before-define": [
       "error", {
         "functions": false,
@@ -69,6 +76,18 @@
       }
     ],
     "semi": "off",
-    "@typescript-eslint/semi": ["error", "never"]
-  }
+    "@typescript-eslint/semi": ["error", "never"],
+
+    // disable the rule for all files
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "overrides": [
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": ["error"]
+      }
+    }
+  ]
 }

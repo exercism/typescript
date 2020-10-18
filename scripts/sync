@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): yarn babel-node scripts/sync
+ *
+ * This script is used to copy following files to all exercises & keep them in sync:
+ * 1. package.json
+ * 2. babel.config.js
+ * 3. .eslintrc
+ * 4. .npmrc
+ * There is a CI step which checks that package.json in root & exercises match
+ * (see checksum script for more info).
+ */
+
+const shell = require('shelljs')
+const assignment = shell.env['ASSIGNMENT']
+const helpers = require('./helpers')
+const path = require('path')
+
+function copyConfigForAssignment(assignment) {
+  const destination = path.join('exercises', assignment)
+  helpers.COMMON_FILES.forEach((file) => {
+    shell.cp(path.join('common', file), path.join(destination, file))
+  })
+}
+
+if (assignment) {
+  shell.echo('Syncing ' + assignment + '...')
+  copyConfigForAssignment(assignment)
+} else {
+  shell.echo('Syncing all assignments...')
+  helpers.assignments.forEach(copyConfigForAssignment)
+}

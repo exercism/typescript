@@ -1,0 +1,14 @@
+bin/*
+dist/*
+docs/*
+node_modules/*
+production_node_modules/*
+test/fixtures/*
+tmp/*
+
+# These have their own config files (not overrides)
+common/*
+exercises/*
+
+# typescript-eslint can't lint correctly files in a project without extension
+scripts/*

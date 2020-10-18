@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): yarn babel-node scripts/lint
+ *
+ * This runs `eslint` on all sample solutions (and test) files
+ */
+
+const shell = require('shelljs')
+const helpers = require('./helpers')
+const assignment = shell.env['ASSIGNMENT']
+
+helpers.registerExitHandler()
+
+const infoStr = assignment
+  ? 'Running lint for ' + assignment + '...'
+  : 'Running lint for all exercises...'
+const failureStr = '[Failure] Lint check failed!'
+
+// Copies the necessary files
+shell.env['PREPARE'] = true
+
+// Cleans up after
+if (shell.env['CLEANUP'] === undefined) {
+  shell.env['CLEANUP'] = true
+}
+
+helpers.prepareAndRun(
+  'yarn eslint tmp_exercises --ext .ts --ext .tsx',
+  infoStr,
+  failureStr
+)
