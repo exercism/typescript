@@ -1,5 +1,6 @@
 # TypeScript
-[![typescript/ci](https://github.com/exercism/typescript/workflows/exercism/typescript%20ci/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3A%22exercism%typescript+ci%22)
+
+[![configlet](https://github.com/exercism/typescript/workflows/configlet/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3Aconfiglet) [![typescript / ci](https://github.com/exercism/typescript/workflows/typescript%20/%20ci/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3A%typescript+%2F+ci%22)
 
 **Exercism exercises in TypeScript**
 
