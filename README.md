@@ -1,38 +1,53 @@
-# TypeScript [![Build Status](https://travis-ci.org/exercism/typescript.svg?branch=master)](https://travis-ci.org/exercism/typescript)
+# TypeScript
 
-Exercism exercises in TypeScript
+[![configlet](https://github.com/exercism/typescript/workflows/configlet/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3Aconfiglet) [![typescript / ci](https://github.com/exercism/typescript/workflows/typescript%20/%20ci/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3A%typescript+%2F+ci%22)
 
-## Running Unit Test Suite
+**Exercism exercises in TypeScript**
 
-Yarn must be installed. The official installation steps can be found [here](https://yarnpkg.com/en/docs/install). (Note: installation via npm is not recommended)
+This is the TypeScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises - the ones a student _must_ complete - and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config].
 
-Then, `make` commands will install other dependencies as needed.
+> In version 3 of exercism, the above no longer holds. See the [`exercism/v3`][git-v3] repository for more information.
 
-### All Assignments
+## Tools
 
-    % make test
+See [CONTRIBUTING.md][file-contributing] for a list of requirements to contribute to this track. It also has a list of tools you can use, of which the `test` tool is one of them.
 
-### Single Assignment
+## Running the test suite
 
-    % make test-assignment ASSIGNMENT=palindrome-products
+This runs `jest` tests for all sample solutions. This *does not* use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
-## Shared Code
+```shell
+yarn babel-node scripts/test
+```
 
-Please keep the `common` folder files synced across all the sub folders. These files should be the same across all problems. 
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the `two-fer.example.ts` for `two-fer`, you may, depending on your environment, use:
 
- * .eslintignore
- * .eslintrc
- * jest.config.js 
- * package.json
- * tsconfig.json
- * yarn.lock
+```shell
+ASSIGNMENT=two-fer yarn babel-node scripts/test
+```
 
-There are some utility methods in the `Makefile` to help with development. The below will move the contents of the `common` to all the subfolders. 
+> Running on Windows? Depending on your shell, environment variables are set differently. You can use `cross-env` to normalize this. The following should work across environments:
+>
+> ```bash
+> yarn cross-env ASSIGNMENT=two-fer babel-node scripts/test
+> ```
 
-	% make sync-configurations
-	
-## Contributing Guide
+## Related repositories
 
-Please see the [contributing guide](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md)
+* [Website Copy][git-website-copy] (Mentor Notes)
+* [The JavaScript track][git-javascript]
+* [The TypeScript Analyzer][git-typescript-analyzer]
+* [The JavaScript Analyzer][git-javascript-analyzer] (Automated Code Analysis)
+* [The JavaScript Test Runner][git-javascript-test-runner]
 
+[web-exercism]: https://exercism.io
+[file-config]: https://github.com/exercism/typescript/blob/master/config.json
+[file-contributing]: https://github.com/exercism/typescript/blob/master/CONTRIBUTING.md
 
+[git-javascript]: https://github.com/exercism/javascript
+[git-javascript-analyzer]: https://github.com/exercism/javascript-analyzer
+[git-javascript-test-runner]: https://github.com/exercism/javascript-test-runner
+[git-typescript]: https://github.com/exercism/typescript/
+[git-typescript-analyzer]: https://github.com/exercism/typescript-analyzer
+[git-v3]: https://github.com/exercism/v3
+[git-website-copy]: https://github.com/exercism/website-copy

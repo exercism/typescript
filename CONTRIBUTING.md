@@ -4,10 +4,10 @@ This is the TypeScript track, one of the many tracks on [exercism][web-exercism]
 It holds all the _exercises_ that are currently implemented and available for students
 to complete. The track consists of various **core** exercises, the ones a student _must_
 complete, and each **core** exercise may unlock various _side_ exercises. You can find
-this in the [`config.json`][file-config]. It's not uncommon that people discover 
+this in the [`config.json`][file-config]. It's not uncommon that people discover
 incorrect implementations of certain tests, have a suggestion for a track specific hint
 to aid the student on the _JavaScript specifics_, see optimisations in terms of the
-configurations of `jest`, `eslint` or other dependencies, report missing edge cases, 
+configurations of `jest`, `eslint` or other dependencies, report missing edge cases,
 factual errors, logical errors, and, implement exercises or develop new exercises.
 
 We welcome contributions of all sorts and sizes, from reporting issues to
@@ -46,9 +46,9 @@ There are two ways to implement new exercises.
 
 Let's say you want to implement a new exercise, from the list of exercises, because
 you've noticed that this track could benefit from this exercise, really liked it in
-another track, or just because you find this interesting; the first step is to 
-[check for an open issue][issue-new-exercise]. If it's there, make sure no one is 
-working on it, and most of all that there is not an open Pull Request towards this 
+another track, or just because you find this interesting; the first step is to
+[check for an open issue][issue-new-exercise]. If it's there, make sure no one is
+working on it, and most of all that there is not an open Pull Request towards this
 exercise.
 
 If there is no such issue, you may open one. The baseline of work is as follows:
@@ -56,17 +56,19 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Open a new issue, we'll label it with `new exercise ✨`
 1. We'll assign the issue to you, so you get to work on this exercise
 1. Create a new folder in `/exercises`
-1. You'll need to sync this folder with the matching config files. You can use 
-`make` to do this: `ASSIGNMENT=slug make sync-assignment-configuration`.
+1. You'll need to sync this folder with the matching config files. You can use
+`make` to do this: `ASSIGNMENT=slug yarn babel-node scripts/sync`.
 1. Create a `<slug>.ts` stub file.
-1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if 
+2. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if
 possible.
-1. Create a `<slug>.example.ts` file. Place a working implementation, assuming it's renamed 
+1. Create a `<slug>.example.ts` file. Place a working implementation, assuming it's renamed
 to `<slug>.ts`
-1. Run the tests locally, using `make`: 
-`ASSIGNMENT=slug make test-assignment`.
+1. Run the tests locally, using `scripts/test`:
+`ASSIGNMENT=slug yarn babel-node scripts/test`.
+1. Run the linter locally, using `scripts/lint`:
+`ASSIGNMENT=slug yarn babel-node scripts/lint`.
 
-The final step is opening a Pull Request, with these items all checked off. Make 
+The final step is opening a Pull Request, with these items all checked off. Make
 sure the tests run and the linter is happy. It will run automatically on your PR.
 
 #### Creating a track-specific exercise
@@ -76,15 +78,15 @@ established, existing exercise. The differences are:
 
 - You'll have to write a README.md and test-suite from scratch
 - You'll have to come up with a unique _slug_.
-- We need to require an icon for it. 
+- We need to require an icon for it.
 - Generate a UUID, for example using [configlet][configlet].
 
-Open a new issue with your proposal, and we'll make sure all these steps are 
+Open a new issue with your proposal, and we'll make sure all these steps are
 correctly taken. Don't worry! You're not alone in this.
 
 ### Existing exercises
 
-There are always improvements possible on existing exercises. 
+There are always improvements possible on existing exercises.
 
 #### Improving the README.md
 
@@ -104,14 +106,13 @@ no `README.md` explanation should _give away_ a certain implementation. The
 #### Syncing the exercise
 
 Syncing an exercise with _canonical data_: There is a [problem-specifications][problem-specifications]
-repository that holds test data in a standardised format. These tests are 
-occasionally fixed, improved, added, removed or otherwise changed. Each change also
-changes the _version_ of that canonical data. Syncing an exercise consists of:
+repository that holds test data in a standardised format. These tests are
+occasionally fixed, improved, added, removed or otherwise changed. Syncing an exercise consists of:
 
-  - updating or adding the `"version"` key in the `package.json` file, 
+  - updating `tests.toml`,
   - updating the `<slug>.test.ts` file,
-  - match the `example.js` file to still work with the new tests, and 
-  - regenerate the `README.md`, should there be any changes.
+  - match the `example.js` file to still work with the new tests, and
+  - regenerate the `README.md`][doc-readme], should there be any changes.
 
 #### Improving or adding mentor notes
 
@@ -122,60 +123,137 @@ the `website-copy` repository. Find their [contributing guidelines][contributing
 #### Improving or adding automated test analyzers
 
 Some exercises already have automated mentoring support. These automations
-don't live in this repository, but instead in the `javascript-analyzer` repository. 
-Find their [contributing guidelines][contributing-javascript-analyzer] [here][contributing-javascript-analyzer].
+don't live in this repository, but instead in the `typescript-analyzer` repository.
+Find their [contributing guidelines][contributing-typescript-analyzer] [here][contributing-typescript-analyzer].
 
 ## Documentation
 
-There is quite a bit of student-facing documentation, which can be found in the 
-[`docs`][file-docs] folder. You may improve these files by making the required 
+There is quite a bit of student-facing documentation, which can be found in the
+[`docs`][file-docs] folder. You may improve these files by making the required
 changes and opening a new Pull Request.
 
 ## Tools
 
 You'll need LTS or higher NodeJS in order to contribute to the _code_ in this
-respository. Run `npm install` in the root in order to be able to run the scripts
+respository. Run `yarn` in the root in order to be able to run the scripts
 as listed below. We use the following dependencies:
 
-- `make` in order to provide shell interface to scripts
+- `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
 - `jest` to run all the test files on all example implementations
-- `tsc` to transpile everything from typescript to javascript.
+- `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
 ### Fetch configlet
 
 If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet]
-binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your 
+binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your
 local drive. Find more information about [configlet][configlet] [here][configlet].
 
 ### Scripts
 
-We have various `scripts` for you in order to aid with maintaining and contributing 
-to this repository. Some of them use `make` and some of them are in `package.json`.
+We have various `scripts` for you in order to aid with maintaining and contributing
+to this repository.
 
-#### `yarn lint`
+#### `lint`
 
-Lints a single exercise. Make sure you're _inside_ the right directory.
-
-#### `make test`
+```js
+/*
+ * Run this script (from root directory): yarn babel/node scripts/lint
+ *
+ * This runs `eslint` on all sample solutions (and test) files
+ */
+```
 
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For
-example, if you only want to test the `two-fer.example.ts` for `two-fer`, you may, depending 
+example, if you only want to lint `two-fer`, you may, depending on your environment
+use:
+
+```shell
+ASSIGNMENT=two-fer yarn babel/node scripts/lint
+```
+
+#### `test`
+
+```js
+/**
+ * Run this script (from root directory): yarn babel/node scripts/test
+ *
+ * This runs `jest` tests for all sample solutions
+ */
+```
+
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For
+example, if you only want to test the `example.js` for `two-fer`, you may, depending
 on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer make test-assignment
+ASSIGNMENT=two-fer yarn babel/node scripts/test
 ```
 
-#### `make sync-assignment-configuration`
+#### `sync`
 
-If the `ASSIGNMENT` environment variable is set, only _that_ exercise is synced. For
-example, if you only want to sync the files for `two-fer`, you may, depending on 
+```js
+/**
+ * Run this script (from root directory): yarn babel/node scripts/sync
+ *
+ * This script is used to propagate any change to root package.json to
+ * all exercises and keep them in sync.
+ * There is a CI step which checks that package.json in root & exercises match
+ * (see checksum script for more info).
+ */
+```
+
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For
+example, if you only want to sync the files for `two-fer`, you may, depending on
 your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer make sync-assignment-configuration
+ASSIGNMENT=two-fer yarn babel/node scripts/sync
 ```
+
+#### `checksum`
+
+```js
+/*
+ * Run this script (from root directory): yarn babel/node scripts/checksum
+ *
+ * This will check root `package.json` matches each exercise's `package.json`.
+ * But the catch is there are some dependencies used for build but not served to end users
+ * We skip those dependencies while performing checksum.
+ * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for list of skipped packages.
+ */
+```
+
+#### `ci-check`
+
+```js
+/**
+ * Run this script (from root directory): yarn babel-node scripts/ci-check
+ *
+ * This will run following checks:
+ *
+ * 1. Check config in all exercises matches
+ * 2. Checks stubs exist
+ * 3. Run eslint to check code-style
+ */
+```
+
+Run this script to check stubs, configuration integrity and lint the code.
+
+#### `ci`
+
+```js
+/**
+ * Run this script (from root directory): yarn babel/node scripts/ci
+ *
+ * This will run following checks:
+ *
+ * 1. Find the exercises
+ * 2. Run tests against sample solutions
+ */
+```
+
+Run this script to test all exercises.
 
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet

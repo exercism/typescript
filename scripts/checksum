@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+
+/**
+ * Run this script (from root directory): yarn babel-node scripts/checksum
+ *
+ * This will check root `package.json` matches each exercise's `package.json`.
+ * But the catch is there are some dependencies used for build but not served to end users
+ * We skip those dependencies while performing checksum.
+ * See `SKIP_PACKAGES_FOR_CHECKSUM` in helpers.js for list of skipped packages.
+ */
+
+const shell = require('shelljs')
+const helpers = require('./helpers')
+const crypto = require('crypto')
+const path = require('path')
+
+const sha = (str) => crypto.createHash('md5').update(str).digest('hex')
+
+// Helper function to check single assignment
+function checksum(filename, assignment, rootChecksum) {
+  if (!assignment) {
+    return
+  }
+
+  let assignmentConfig = shell
+    .cat(['exercises', assignment, filename].join('/'))
+    .toString()
+
+  const assignmentChecksum = sha(assignmentConfig)
+
+  if (assignmentChecksum !== rootChecksum) {
+    shell.echo(`[Failure] ${filename} did not match for ${assignment}`)
+    shell.exit(1)
+  }
+}
+
+// Check all assignments by default
+// or single if ASSIGNMENT is given
+function checkSumAll(filename, rootFileName = filename) {
+  const assignment = shell.env['ASSIGNMENT']
+
+  shell.echo(`Checking integrity of ${assignment}/${filename}...`)
+
+  const config = shell.cat(rootFileName).toString()
+  const rootChecksum = sha(config)
+
+  if (assignment) {
+    checksum(filename, assignment, rootChecksum)
+  } else {
+    helpers.assignments.forEach((assignment) =>
+      checksum(filename, assignment, rootChecksum)
+    )
+  }
+}
+
+const files = [
+  '.eslintignore',
+  '.eslintrc',
+  'babel.config.js',
+  'jest.config.js',
+  'package.json',
+  'tsconfig.json',
+]
+
+files.forEach((file) => {
+  checkSumAll(file, path.join('common', file))
+})

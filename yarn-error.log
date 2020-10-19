@@ -1,0 +1,57 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @babel/cli @babel/chore @babel/node @babel/plugin-syntax-bigint @babel/preset-env @types/jest @types/node babel-eslint babel-jest jest shelljs -D
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Derk-Jan\bin;C:\Users\Derk-Jan\AppData\Local\Google\Chrome SxS\Application;C:\Python38\Scripts;C:\Python38;C:\Program Files\ImageMagick-6.9.7-Q16-HDRI;C:\Program Files (x86)\GnuWin32\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Amazon\AWSCLI;C:\Users\Derk-Jan\AppData\Roaming\npm;C:\Program Files\PuTTY;C:\Users\Derk-Jan\AppData\Roaming\Python\Python36\Scripts;C:\Program Files\Git\usr\bin;C:\Program Files\Redis;C:\opscode\chefdk\bin;C:\Program Files\dotnet;C:\uru;C:\WINDOWS\System32\OpenSSH;C:\ffmpeg;C:\Program Files\nodejs;C:\Program Files\Git LFS;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Program Files\Telegrap;C:\Program Files\Chronograf;C:\Program Files\Kapacitor;C:\Program Files\InfluxDB;.;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Derk-Jan\.windows-build-tools\python27;C:\Users\Derk-Jan\AppData\Local\Yarn\Data\global\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Derk-Jan\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Go\bin;C:\TDM-GCC-64\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\GnuPG\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Ruby26-x64\bin;C:\Users\Derk-Jan\scoop\shims;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\ImageMagick-6.9.7-Q16-HDRI;C:\Program Files (x86)\GnuWin32\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Amazon\AWSCLI;C:\Users\Derk-Jan\AppData\Roaming\npm;C:\Program Files\PuTTY;C:\Users\Derk-Jan\AppData\Roaming\Python\Python36\Scripts;C:\Program Files\Git\usr\bin;C:\Program Files\Redis;C:\Program Files\dotnet;C:\uru;C:\WINDOWS\System32\OpenSSH;C:\ffmpeg;C:\Program Files\nodejs;C:\Program Files\Git LFS;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Program Files\Telegrap;C:\Program Files\Chronograf;C:\Program Files\Kapacitor;C:\Program Files\InfluxDB;.;C:\Users\Derk-Jan\.cargo\bin;C:\Users\Derk-Jan\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\Derk-Jan\AppData\Local\Programs\Python\Python36;C:\Program Files (x86)\FAHClient;C:\Users\Derk-Jan\AppData\Roaming\Dashlane\4.8.7.35982\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\Derk-Jan\AppData\Roaming\Dashlane\4.8.7.35982\ucrt;C:\Users\Derk-Jan\AppData\Local\Microsoft\WindowsApps;C:\Exercism;C:\Users\Derk-Jan\AppData\Local\GitHubDesktop\bin;C:\Users\Derk-Jan\go\bin;C:\Users\Derk-Jan\AppData\Local\Code\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\Users\Derk-Jan\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Graphviz2.38\bin;C:\youtube-dl;C:\Users\Derk-Jan\AppData\Local\Yarn\bin;C:\vips\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babel%2fchore: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1223:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "@exercism/typescript-track",
+    "version": "1.0.0",
+    "description": "Exercism TypeScript track top-level runner. Not meant for individual exercises.",
+    "private": true,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/exercism/typescript"
+    },
+    "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^4.4.1",
+      "@typescript-eslint/parser": "^4.4.1",
+      "eslint": "^7.11.0",
+      "eslint-plugin-import": "^2.22.1",
+      "typescript": "^4.0.3"
+    },
+    "scripts": {
+      "lint": "yarn eslint . --ext .tsx,.ts -c .eslint.track.rc",
+      "lint:report": "yarn lint --format json -o lintreport.json"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
