@@ -7,26 +7,34 @@
  */
 
 const shell = require('shelljs')
-const helpers = require('./helpers')
-const assignment = shell.env['ASSIGNMENT']
+const {
+  registerExitHandler,
+  prepareAndRun,
+  assignments: exercises,
+} = require('./helpers')
 
-helpers.registerExitHandler()
+registerExitHandler()
+
+const assignment = exercises.length === 0 ? exercises[0] : undefined
+
+// Prepare exercises and cleanup afterwards
+shell.env['PREPARE'] = true
+shell.env['CLEANUP'] = true
 
 const infoStr = assignment
-  ? 'Running lint for ' + assignment + '...'
-  : 'Running lint for all exercises...'
+  ? `Running lint for ${assignment}...`
+  : `Running lint for ${exercises.length} exercises...`
 const failureStr = '[Failure] Lint check failed!'
 
-// Copies the necessary files
-shell.env['PREPARE'] = true
-
-// Cleans up after
-if (shell.env['CLEANUP'] === undefined) {
-  shell.env['CLEANUP'] = true
-}
-
-helpers.prepareAndRun(
+// Run lint all at once
+prepareAndRun(
   'yarn eslint tmp_exercises --ext .ts --ext .tsx',
   infoStr,
   failureStr
+)
+
+shell.echo(
+  assignment
+    ? `[Success] Lint passed for ${assignment}`
+    : `[Success] Lint passed for all ${exercises.length} exercises`
 )

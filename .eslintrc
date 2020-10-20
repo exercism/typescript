@@ -79,7 +79,10 @@
     "@typescript-eslint/semi": ["error", "never"],
 
     // disable the rule for all files
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    // disable rule because typescript takes care of this
+    "import/no-unresolved": "off"
   },
   "overrides": [
     {
