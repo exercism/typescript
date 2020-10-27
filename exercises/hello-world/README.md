@@ -128,7 +128,7 @@ Now we see that the method doesn't return anything, which is the reason for our 
 
 ```typescript
 class HelloWorld {
-    static hello(message:string) {
+    static hello() {
         return 'Hello, World!'
     }
 }
