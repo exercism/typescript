@@ -1,3 +1,9 @@
+interface WhereOptions {
+  maxFactor: number;
+  minFactor?: number;
+  sum?: number;
+}
+
 export default class Triplet {
   private readonly a: number
   private readonly b: number
@@ -21,9 +27,9 @@ export default class Triplet {
     return this.a * this.b * this.c
   }
 
-  public static where(maxFactor: number, minFactor?: number, sum?: number): Triplet[] {
+  public static where(options: WhereOptions): Triplet[] {
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    return new Triplets(maxFactor, minFactor, sum).toArray()
+    return new Triplets(options.maxFactor, options.minFactor, options.sum).toArray()
   }
 }
 
