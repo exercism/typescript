@@ -1,31 +1,35 @@
-export default class GradeSchool {
-  private roster = new Map<number, Set<string>>()
+type Student = string
+type Grade = number
+type StudentRooster = Map<string, Student[]>
+type StudentGrades = Map<Student, Grade>
 
-  public addStudent(name: string, grade: number): void {
-    const students = this.roster.get(grade) || new Set<string>()
-    students.add(name)
-    this.roster.set(grade, students)
+class GradeSchool {
+  private studentGrades: StudentGrades
+  constructor() { this.studentGrades = new Map() }
+  private studentGradeEntries(): [Student, Grade][] {
+    return Array.from(this.studentGrades.entries());
   }
+  public studentRoster(): StudentRooster {
+    const grades: Grade[] =
+      Array.from(new Set(this.studentGrades.values()).values())
+        .sort()
 
-  public studentsInGrade(grade: number): string[] {
-    const toReturn = this.roster.get(grade) || new Set<string>()
-    return Array.from(toReturn).sort()
+    const emptyStudentsRooster: StudentRooster = new Map()
+
+    const gradesReducer =
+      (rooster: StudentRooster, grade: Grade): StudentRooster =>
+        rooster.set(grade.toString(), this.studentsInGrade(grade))
+
+    return grades.reduce(gradesReducer, emptyStudentsRooster)
   }
-
-  public studentRoster(): Map<string, string[]> {
-    const temp = new Map<string, string[]>()
-    const keys: number[] = []
-
-    for (const key of this.roster.keys()) {
-      keys.push(key)
-    }
-    keys.sort()
-
-    for (const each of keys) {
-      const values = this.roster.get(each) || new Set<string>()
-      temp.set(each.toString(10), Array.from(values).sort())
-    }
-
-    return temp
+  addStudent(s: Student, g: Grade): void {
+    this.studentGrades.set(s, g)
+  }
+  studentsInGrade(g: Grade): Student[] {
+    return this.studentGradeEntries()
+      .filter(([_, sg]) => sg == g)
+      .map(([s, _]) => s).sort()
   }
 }
+
+export default GradeSchool
