@@ -1,8 +1,34 @@
 # Contributing
 
-This is the TypeScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various \*core** exercises, the ones a student _must_ complete, and each **core\*\* exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config]. It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
+This is the TypeScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises, the ones a student _must_ complete, and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config]. It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
+
+---
+
+## Table of Contents
+
+- [Code of Conduct](#code-of-conduct)
+- [Exercises](#exercises)
+  - [New exercise](#new-exercise)
+    - [Implementing existing exercise](#implementing-existing-exercise)
+    - [ Creating a track-specific exercise](#creating-a-track-specific-exercise)
+  - [Existing exercises](#existing-exercises)
+    - [Improving the README.md](#improving-the-readmemd)
+    - [Syncing the exercise](#syncing-the-exercise)
+    - [Improving or adding mentor notes](#improving-or-adding-mentor-notes)
+    - [Improving or adding automated test analyzers](#improving-or-adding-automated-test-analyzers)
+- [Documentation](#documentation)
+- [Tools](#tools)
+  - [Fetch `configlet`](#fetch-configlet)
+  - [Fetch `canonical_data_syncer`](#fetch-canonical-data-syncer)
+  - [Scripts](#scripts)
+    - [`lint`](#lint)
+    - [`test`](#test)
+    - [`sync`](#sync)
+    - [`checksum`](#checksum)
+    - [`ci-check`](#ci-check)
+    - [`ci`](#ci)
 
 ---
 
@@ -25,9 +51,9 @@ Before contributing code to any existing exercise or any new exercise, please ha
 
 ### New exercise
 
-There are two ways to implement new exercises.
+There are two ways to implement new exercises (exercises that don't exist in this track).
 
-1. Pick one from [the list of exercises][list-of-exercises]
+1. Pick one from [the list of exercises][list-of-exercises] (implemented in other tracks).
 2. Create a new, track-specific exercise from scratch.
 
 #### Implementing existing exercise
@@ -41,10 +67,12 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Create a new folder in `/exercises`
 1. You'll need to sync this folder with the matching config files. You can use `sync` to do this: `ASSIGNMENT=slug yarn babel-node scripts/sync`.
 1. Create a `<slug>.ts` stub file.
-1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible.
+1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible (more on canonical data below).
 1. Create a `<slug>.example.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
+1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the canonical data syncer which aids generating this file _interactively_.
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug yarn babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug yarn babel-node scripts/lint`.
+1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
 
 The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
 
@@ -77,12 +105,11 @@ There are always improvements possible on existing exercises.
 
 Syncing an exercise with _canonical data_: There is a [problem-specifications][problem-specifications] repository that holds test data in a standardised format. These tests are occasionally fixed, improved, added, removed or otherwise changed. Syncing an exercise consists of:
 
-- updating `tests.toml`,
-- updating the `<slug>.test.ts` file,
-- match the `example.js` file to still work with the new tests, and
+- updating `tests.toml`;
+- updating the `<slug>.test.ts` file;
+- updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications]. The contents of this file can be updated using the canonical data syncer, interactively;
+- match the `example.js` file to still work with the new tests; and
 - regenerate the [`README.md`][doc-readme], should there be any changes.
-
-> **Note**: Recently, changes were made to the canonical-data repository. There is now a `tests.toml` syncing step. The new steps are not yet part of this document, but will be in the future.
 
 #### Improving or adding mentor notes
 
@@ -108,6 +135,26 @@ You'll need LTS or higher NodeJS in order to contribute to the _code_ in this re
 ### Fetch configlet
 
 If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive. Find more information about [configlet][configlet] [here][configlet].
+
+### Fetch canonical data syncer
+
+> If a track implements an exercise for which test data exists, the exercise _must_ contain a `.meta/tests.toml` file. The goal of the `tests.toml` file is to keep track of which tests are implemented by the exercise. Tests in this file are identified by their UUID and each test has a boolean value that indicates if it is implemented by that exercise.
+
+A `tests.toml` file for a track's `two-fer` exercise looks like this:
+
+```toml
+[canonical-tests]
+# no name given
+"19709124-b82e-4e86-a722-9e5c5ebf3952" = true
+# a name given
+"3451eebd-123f-4256-b667-7b109affce32" = true
+# another name given
+"653611c6-be9f-4935-ab42-978e25fe9a10" = false
+```
+
+To make it easy to keep the tests.toml up to date, contributors can use the `canonical_data_syncer` application. This application is a small, standalone binary that will compare the tests specified in the tests.toml files against the tests that are defined in the exercise's canonical data. It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the tests.toml file accordingly.
+
+If you'd like to download [`canonical_data_syncer`][canonical-data-syncer], you can use the [`fetch-canonical_data_syncer`][bin-fetch-canonical-data-syncer] binary. It will run on Linux, Mac OSX and Windows, and download `canonical_data_syncer` to your local drive. Find more information about [`canonical_data_syncer`][canonical-data-syncer] [here][canonical-data-syncer].
 
 ### Scripts
 
@@ -241,14 +288,16 @@ This script is _almost_ the same as `test`. You may use them interchangeably at 
 Run this script to test all exercises.
 
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
+[canonical-data-syncer]: https://github.com/exercism/canonical-data-syncer
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
+[bin-fetch-canonical-data-syncer]: https://github.com/exercism/javascript/blob/master/bin/fetch-canonical_data_syncer
 [web-exercism]: https://exercism.io
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json
 [file-docs]: https://github.com/exercism/javascript/blob/master/docs
 [issue-open]: https://github.com/exercism/javascript/issues
 [issue-discussion]: https://github.com/exercism/javascript/labels/discussion%20%3Aspeech_balloon%3A
 [issue-new-exercise]: https://github.com/exercism/javascript/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Asparkles%3A+new+exercise%22
-[list-of-exercises]: https://github.com/exercism/javascript/issues/660
+[list-of-exercises]: https://tracks.exercism.io/typescript/master/unimplemented
 [contributing-generic]: https://github.com/exercism/docs/tree/master/contributing-to-language-tracks
 [contributing-javascript]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
 [contributing-javascript-analyzer]: https://github.com/exercism/javascript-analyzer/blob/master/CONTRIBUTING.md
