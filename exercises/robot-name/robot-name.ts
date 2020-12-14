@@ -9,7 +9,7 @@ export default class Robot {
     throw new Error('Implement Robot#resetName')
   }
 
-  static releaseNames(): void {
+  public static releaseNames(): void {
     throw new Error('Implement Robot.releaseNames')
   }
 }

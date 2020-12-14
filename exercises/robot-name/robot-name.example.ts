@@ -8,17 +8,18 @@
 const rand = (maximum: number): number => Math.floor(Math.random() * maximum)
 
 class NameDatabase {
-  static ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  private static ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   private availableNames!: string[]
+
   constructor() {
     this.releaseNames()
   }
 
-  releaseNames(): void {
+  public releaseNames(): void {
     this.availableNames = this.allPossibleNames()
   }
 
-  allPossibleNames(): string[] {
+  public allPossibleNames(): string[] {
     const names = []
     for (const a of NameDatabase.ALPHABET) {
       for (const b of NameDatabase.ALPHABET) {
@@ -30,7 +31,7 @@ class NameDatabase {
     return names
   }
 
-  fetchNewName(): string {
+  public fetchNewName(): string {
     if (this.availableNames.length === 0) throw 'no more names'
 
     const randomPosition = rand(this.availableNames.length)
@@ -62,7 +63,7 @@ export default class Robot {
     this._name = RobotsDB.fetchNewName()
   }
 
-  static releaseNames(): void {
+  public static releaseNames(): void {
     RobotsDB.releaseNames()
   }
 }

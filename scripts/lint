@@ -33,7 +33,7 @@ const failureStr = '[Failure] Lint check failed!'
 
 // Run lint all at once
 prepareAndRun(
-  'yarn eslint tmp_exercises --ext .ts --ext .tsx',
+  'yarn eslint tmp_exercises --ext .ts --ext .tsx -c .eslintrc',
   infoStr,
   failureStr
 )
