@@ -1,17 +1,57 @@
-function unifiedRandom(): number {
-  return Math.trunc(Math.random() * Number.MAX_SAFE_INTEGER)
+/**
+ * generates a random number from 0 to maximum-1
+ *
+ * random(5) => generates an integer 0 - 4
+ *
+ * @param maximum - max limit of generated number
+ */
+const rand = (maximum: number) => Math.floor(Math.random() * maximum)
+
+class NameDatabase {
+  static ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  private availableNames!: string[]
+  constructor() {
+    this.releaseNames()
+  }
+
+  releaseNames() {
+    this.availableNames = this.allPossibleNames()
+  }
+
+  allPossibleNames(): string[] {
+    const names = []
+    for (const a of NameDatabase.ALPHABET) {
+      for (const b of NameDatabase.ALPHABET) {
+        for (let i = 0; i < 1000; i++) {
+          names.push(`${a}${b}${i.toString().padStart(3,"0")}`)
+        }
+      }
+    }
+    return names
+  }
+
+  fetchNewName():string {
+    if (this.availableNames.length === 0)
+      throw "no more names"
+
+    const randomPosition = rand(this.availableNames.length)
+    const name = this.availableNames[randomPosition]
+    const lastName = this.availableNames.pop()!
+    // swap the last name into the position of the name
+    // we just removed (unless we happened to randomly
+    // pick the very last name already)
+    if (name !== lastName)
+      this.availableNames[randomPosition] = lastName
+
+    return name
+  }
+
 }
 
-function generateRandomLetter(): string {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const letters = alphabet.split("")
-  const randomIndex = unifiedRandom() % letters.length
-  return letters[randomIndex]
-}
+const RobotsDB = new NameDatabase()
 
-export default class RobotName {
+export default class Robot {
   private _name!: string
-  private usedNames = new Set<string>()
 
   public get name(): string {
     return this._name
@@ -21,17 +61,11 @@ export default class RobotName {
     this.resetName()
   }
 
-  private generateName(): string {
-    const numberPart = (unifiedRandom() % 899) + 100
-    let result = generateRandomLetter() + generateRandomLetter() + numberPart
-    while (this.usedNames.has(result)) {
-      result = generateRandomLetter() + generateRandomLetter() + numberPart
-    }
-    this.usedNames.add(result)
-    return result
+  public resetName(): void {
+    this._name = RobotsDB.fetchNewName()
   }
 
-  public resetName(): void {
-    this._name = this.generateName()
+  static releaseNames(): void {
+      RobotsDB.releaseNames();
   }
 }

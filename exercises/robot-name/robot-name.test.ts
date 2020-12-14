@@ -1,4 +1,4 @@
-import RobotName from './robot-name'
+import Robot from './robot-name'
 
 
 const areSequential = (name1: string, name2: string): boolean => {
@@ -16,16 +16,26 @@ const areSequential = (name1: string, name2: string): boolean => {
   return Math.abs(totalDiff) <= 1
 }
 
+const NAME_RE = /^[A-Z]{2}\d{3}$/
+const TOTAL_NUMBER_OF_NAMES = 26 // A-Z
+  * 26 // A-Z
+  * 10 // 0-9
+  * 10 // 0-9
+  * 10; // 0-9
 
 describe('Robot', () => {
-  let robot: RobotName
+  let robot: Robot
 
   beforeEach(() => {
-    robot = new RobotName()
+    robot = new Robot()
   })
 
+  afterEach(() => {
+    Robot.releaseNames();
+  });
+
   it('has a name', () => {
-    expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/)
+    expect(robot.name).toMatch(NAME_RE)
   })
 
   xit('name is the same each time', () => {
@@ -33,7 +43,7 @@ describe('Robot', () => {
   })
 
   xit('different robots have different names', () => {
-    const differentRobot = new RobotName()
+    const differentRobot = new Robot()
     expect(differentRobot.name).not.toEqual(robot.name)
   })
 
@@ -43,7 +53,7 @@ describe('Robot', () => {
     robot.resetName()
     const newName = robot.name
 
-    expect(newName).toMatch(/^[A-Z]{2}\d{3}$/)
+    expect(newName).toMatch(NAME_RE)
     expect(originalName).not.toEqual(newName)
   })
 
@@ -62,8 +72,8 @@ describe('Robot', () => {
 
   xit('new names should not be sequential', () => {
     const name1 = robot.name
-    const name2 = (new RobotName()).name
-    const name3 = (new RobotName()).name
+    const name2 = (new Robot()).name
+    const name3 = (new Robot()).name
     expect(areSequential(name1, name1)).toBe(true)
     expect(areSequential(name1, name2)).toBe(false)
     expect(areSequential(name2, name3)).toBe(false)
@@ -79,5 +89,18 @@ describe('Robot', () => {
     expect(areSequential(name2, name3)).toBe(false)
     expect(areSequential(name3, name3)).toBe(true)
   })
+
+    // This test is optional.
+    xit('all the names can be generated', () => {
+      const usedNames = new Set();
+      usedNames.add(robot.name);
+
+      for (let i = 0; i < TOTAL_NUMBER_OF_NAMES - 1; i += 1) {
+        const newRobot = new Robot();
+        usedNames.add(newRobot.name);
+      }
+
+      expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES);
+    });
 
 })
