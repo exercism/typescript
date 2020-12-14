@@ -1,20 +1,23 @@
 *.swp
 .DS_Store
-npm-debug.log
-tmp
-bin/configlet
-bin/configlet.exe
-bin/canonical_data_syncer
-bin/canonical_data_syncer.exe
-node_modules
 .idea
+npm-debug.log
 build
 babel-output
 lintreport.json
 
-# These are artifacts from running make test. They should be removed by make.
-# The correct location for these files is the maintaining folder.
+# Binaries downloaded by binary download scripts
+bin/configlet
+bin/configlet.exe
+bin/canonical_data_syncer
+bin/canonical_data_syncer.exe
+
+# Node modules
 /exercises/**/node_modules
-/exercises/**/yarn.lock
 /common/node_modules
 /node_modules
+
+# Maintainer specific generated files
+/exercises/**/yarn.lock
+/tmp_exercises
+/tmp
