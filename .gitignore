@@ -4,6 +4,9 @@ npm-debug.log
 tmp
 bin/configlet
 bin/configlet.exe
+bin/canonical_data_syncer
+bin/canonical_data_syncer.exe
+node_modules
 .idea
 build
 babel-output
