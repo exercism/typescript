@@ -5,34 +5,34 @@
  *
  * @param maximum - max limit of generated number
  */
-const rand = (maximum: number) => Math.floor(Math.random() * maximum)
+const rand = (maximum: number): number => Math.floor(Math.random() * maximum)
 
 class NameDatabase {
-  static ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  private static ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   private availableNames!: string[]
+
   constructor() {
     this.releaseNames()
   }
 
-  releaseNames() {
+  public releaseNames(): void {
     this.availableNames = this.allPossibleNames()
   }
 
-  allPossibleNames(): string[] {
+  public allPossibleNames(): string[] {
     const names = []
     for (const a of NameDatabase.ALPHABET) {
       for (const b of NameDatabase.ALPHABET) {
         for (let i = 0; i < 1000; i++) {
-          names.push(`${a}${b}${i.toString().padStart(3,"0")}`)
+          names.push(`${a}${b}${i.toString().padStart(3, '0')}`)
         }
       }
     }
     return names
   }
 
-  fetchNewName():string {
-    if (this.availableNames.length === 0)
-      throw "no more names"
+  public fetchNewName(): string {
+    if (this.availableNames.length === 0) throw 'no more names'
 
     const randomPosition = rand(this.availableNames.length)
     const name = this.availableNames[randomPosition]
@@ -40,12 +40,10 @@ class NameDatabase {
     // swap the last name into the position of the name
     // we just removed (unless we happened to randomly
     // pick the very last name already)
-    if (name !== lastName)
-      this.availableNames[randomPosition] = lastName
+    if (name !== lastName) this.availableNames[randomPosition] = lastName
 
     return name
   }
-
 }
 
 const RobotsDB = new NameDatabase()
@@ -65,7 +63,7 @@ export default class Robot {
     this._name = RobotsDB.fetchNewName()
   }
 
-  static releaseNames(): void {
-      RobotsDB.releaseNames();
+  public static releaseNames(): void {
+    RobotsDB.releaseNames()
   }
 }
