@@ -18,7 +18,7 @@ describe("Triplet", () => {
   })
 
   xit("can make triplets up to 10", () => {
-    const triplets = Triplet.where(10)
+    const triplets = Triplet.where({ maxFactor: 10 })
     const products = triplets
       .sort()
       .map((triplet: Triplet) => triplet.product())
@@ -26,7 +26,7 @@ describe("Triplet", () => {
   })
 
   xit("can make triplets 11 through 20", () => {
-    const triplets = Triplet.where(20, 11)
+    const triplets = Triplet.where({ minFactor: 11, maxFactor: 20 })
     const products = triplets
       .sort()
       .map((triplet: Triplet) => triplet.product())
@@ -34,7 +34,7 @@ describe("Triplet", () => {
   })
 
   xit("can filter on sum", () => {
-    const triplets = Triplet.where(100, undefined, 180)
+    const triplets = Triplet.where({ sum: 180, maxFactor: 100 })
     const products = triplets
       .sort()
       .map((triplet: Triplet) => triplet.product())
