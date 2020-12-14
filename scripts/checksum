@@ -53,15 +53,6 @@ function checkSumAll(filename, rootFileName = filename) {
   }
 }
 
-const files = [
-  '.eslintignore',
-  '.eslintrc',
-  'babel.config.js',
-  'jest.config.js',
-  'package.json',
-  'tsconfig.json',
-]
-
-files.forEach((file) => {
+helpers.COMMON_FILES.forEach((file) => {
   checkSumAll(file, path.join('common', file))
 })
