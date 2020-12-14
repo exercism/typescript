@@ -5,10 +5,13 @@ type StudentGrades = Map<Student, Grade>
 
 class GradeSchool {
   private studentGrades: StudentGrades
+
   constructor() { this.studentGrades = new Map() }
-  private studentGradeEntries(): [Student, Grade][] {
-    return Array.from(this.studentGrades.entries());
+
+  private studentGradeEntries(): Array<[Student, Grade]> {
+    return Array.from(this.studentGrades.entries())
   }
+
   public studentRoster(): StudentRooster {
     const grades: Grade[] =
       Array.from(new Set(this.studentGrades.values()).values())
@@ -22,10 +25,12 @@ class GradeSchool {
 
     return grades.reduce(gradesReducer, emptyStudentsRooster)
   }
-  addStudent(s: Student, g: Grade): void {
+
+  public addStudent(s: Student, g: Grade): void {
     this.studentGrades.set(s, g)
   }
-  studentsInGrade(g: Grade): Student[] {
+
+  public studentsInGrade(g: Grade): Student[] {
     return this.studentGradeEntries()
       .filter(([_, sg]) => sg == g)
       .map(([s, _]) => s).sort()
