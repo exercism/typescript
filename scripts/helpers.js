@@ -19,6 +19,7 @@ export const COMMON_FILES = [
   'jest.config.js',
   'package.json',
   'tsconfig.json',
+  'yarn.lock',
 ]
 
 export const assignments = shell.env['ASSIGNMENT']
