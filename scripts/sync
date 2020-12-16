@@ -3,11 +3,17 @@
 /**
  * Run this script (from root directory): yarn babel-node scripts/sync
  *
- * This script is used to copy following files to all exercises & keep them in sync:
- * 1. package.json
- * 2. babel.config.js
- * 3. .eslintrc
- * 4. .npmrc
+ * This script is used to copy the following files to all exercises and keep
+ * them in sync:
+ *
+ * - .eslintignore
+ * - .eslintrc
+ * - babel.config.js
+ * - jest.config.js
+ * - package.json
+ * - tsconfig.json
+ * - yarn.lock
+ *
  * There is a CI step which checks that package.json in root & exercises match
  * (see checksum script for more info).
  */
