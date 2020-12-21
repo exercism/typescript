@@ -1141,6 +1141,18 @@
         "parsing",
         "text_formatting"
       ]
-    }
+    },
+    {
+      "slug": "react",
+      "uuid": "6ad78102-09cc-4aeb-bfa7-58ba3dba57f3",
+      "core": false,
+      "unlocked_by": "anagram",
+      "difficulty": 8,
+      "topics": [
+        "algorithms",
+        "closures",
+        "reactive_programming"
+      ]
+    },
   ]
 }
