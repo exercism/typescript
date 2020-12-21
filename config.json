@@ -1146,7 +1146,7 @@
       "slug": "react",
       "uuid": "6ad78102-09cc-4aeb-bfa7-58ba3dba57f3",
       "core": false,
-      "unlocked_by": "anagram",
+      "unlocked_by": null,
       "difficulty": 8,
       "topics": [
         "algorithms",
