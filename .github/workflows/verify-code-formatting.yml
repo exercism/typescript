@@ -1,4 +1,4 @@
-name: javascript / format
+name: typescript / format
 
 on:
   push:
