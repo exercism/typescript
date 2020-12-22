@@ -2,7 +2,9 @@
 //  Heavily inspired by signal.ts from [https://github.com/ryansolid/solid]
 //  and by extension S.js [https://github.com/adamhaile/S]
 //
-// See: https://indepth.dev/posts/1269/finding-fine-grained-reactive-programming#how-it-works
+// See:
+// https://indepth.dev/posts/1269/finding-fine-grained-reactive-programming#how-it-works
+// https://levelup.gitconnected.com/finding-fine-grained-reactive-programming-89741994ddee?source=friends_link&sk=31c66a70c1dce7dd5f3f4229423ad127#4543
 //
 
 enum Status {
