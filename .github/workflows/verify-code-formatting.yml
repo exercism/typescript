@@ -1,0 +1,18 @@
+name: javascript / format
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+
+      - name: 'Verify formatting of all files'
+        run: ./bin/check-formatting.sh
+        env:
+          EXERCISM_PRETTIER_VERSION: '2.2.1'

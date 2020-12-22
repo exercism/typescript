@@ -35,7 +35,8 @@
     "ci:check": "yarn babel-node scripts/ci-check",
     "lint": "yarn babel-node scripts/lint",
     "sync": "yarn babel-node scripts/sync",
-    "test": "yarn babel-node scripts/test"
+    "test": "yarn babel-node scripts/test",
+    "format": "yarn babel-node scripts/format"
   },
   "dependencies": {}
 }
