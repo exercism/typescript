@@ -1,24 +1,24 @@
-import Transpose from "./transpose"
+import transpose from "./transpose"
 
 describe("Transpose", () => {
   it("empty string", () => {
     const expected: string[] = []
-    expect(Transpose.transpose([])).toEqual(expected)
+    expect(transpose([])).toEqual(expected)
   })
 
   xit("two characters in a row", () => {
     const expected = ["A", "1"]
-    expect(Transpose.transpose(["A1"])).toEqual(expected)
+    expect(transpose(["A1"])).toEqual(expected)
   })
 
   xit("two characters in a column", () => {
     const expected = ["A1"]
-    expect(Transpose.transpose(["A", "1"])).toEqual(expected)
+    expect(transpose(["A", "1"])).toEqual(expected)
   })
 
   xit("simple", () => {
     const expected = ["A1", "B2", "C3"]
-    expect(Transpose.transpose(["ABC", "123"])).toEqual(expected)
+    expect(transpose(["ABC", "123"])).toEqual(expected)
   })
 
   xit("single line", () => {
@@ -36,7 +36,7 @@ describe("Transpose", () => {
       "e",
       "."
     ]
-    expect(Transpose.transpose(["Single line."])).toEqual(expected)
+    expect(transpose(["Single line."])).toEqual(expected)
   })
 
   xit("first line longer than second line", () => {
@@ -59,7 +59,7 @@ describe("Transpose", () => {
       "."
     ]
     expect(
-      Transpose.transpose(["The fourth line.", "The fifth line."])
+      transpose(["The fourth line.", "The fifth line."])
     ).toEqual(expected)
   })
 
@@ -83,14 +83,14 @@ describe("Transpose", () => {
       " ."
     ]
     expect(
-      Transpose.transpose(["The first line.", "The second line."])
+      transpose(["The first line.", "The second line."])
     ).toEqual(expected)
   })
 
   xit("square", () => {
     const expected = ["HEART", "EMBER", "ABUSE", "RESIN", "TREND"]
     expect(
-      Transpose.transpose(["HEART", "EMBER", "ABUSE", "RESIN", "TREND"])
+      transpose(["HEART", "EMBER", "ABUSE", "RESIN", "TREND"])
     ).toEqual(expected)
   })
 
@@ -106,7 +106,7 @@ describe("Transpose", () => {
       "EDGE"
     ]
     expect(
-      Transpose.transpose(["FRACTURE", "OUTLINED", "BLOOMING", "SEPTETTE"])
+      transpose(["FRACTURE", "OUTLINED", "BLOOMING", "SEPTETTE"])
     ).toEqual(expected)
   })
 
@@ -120,7 +120,29 @@ describe("Transpose", () => {
       "     R"
     ]
     expect(
-      Transpose.transpose(["T", "EE", "AAA", "SSSS", "EEEEE", "RRRRRR"])
+      transpose(["T", "EE", "AAA", "SSSS", "EEEEE", "RRRRRR"])
+    ).toEqual(expected)
+  })
+
+  xit("jagged triangle", () => {
+    const expected = [
+      "123456",
+      "1 3456",
+      "  3456",
+      "  3 56",
+      "    56",
+      "    5"
+    ]
+
+    expect(
+      transpose([
+        "11",
+        "2",
+        "3333",
+        "444",
+        "555555",
+        "66666"
+      ])
     ).toEqual(expected)
   })
 
@@ -164,24 +186,24 @@ describe("Transpose", () => {
       " et  tormsural",
       "dniuthwea'g t ",
       "iennwesnr hsts",
-      "g,ycoitkrttet",
-      "n,l rs'a anr",
-      "ief 'dgcgdi",
-      "taol  eoe,v",
-      "yneisl,u;e",
-      ",.sftol ",
-      "     ervdt",
-      "     ;ie o",
-      "       f,r ",
-      "       eem",
-      "       .me",
-      "          on",
-      "          vd",
-      "          e.",
-      "          ,"
+      "g,ycoi tkrttet",
+      "n ,l r s'a anr",
+      "i  ef  'dgcgdi",
+      "t  aol   eoe,v",
+      "y  nei sl,u; e",
+      ",  .sf to l   ",
+      "     e rv d  t",
+      "     ; ie    o",
+      "       f, r   ",
+      "       e  e  m",
+      "       .  m  e",
+      "          o  n",
+      "          v  d",
+      "          e  .",
+      "          ,",
     ]
     expect(
-      Transpose.transpose([
+      transpose([
         "Chor. Two households, both alike in dignity,",
         "In fair Verona, where we lay our scene,",
         "From ancient grudge break to new mutiny,",
