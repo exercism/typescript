@@ -1,3 +1,1 @@
-export default class OcrParser {
-
-}
+export default class OcrParser {}

@@ -1,7 +1,7 @@
 enum Type {
-  Equilateral = "equilateral",
-  Isosceles = "isosceles",
-  Scalene = "scalene"
+  Equilateral = 'equilateral',
+  Isosceles = 'isosceles',
+  Scalene = 'scalene',
 }
 
 export default class Triangle {
@@ -13,7 +13,7 @@ export default class Triangle {
 
   public kind(): Type {
     if (this.isIllegal()) {
-      throw new TypeError("illegal")
+      throw new TypeError('illegal')
     }
 
     if (this.isEquilateral()) {

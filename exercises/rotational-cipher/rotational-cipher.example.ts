@@ -1,10 +1,10 @@
 export default class RotationalCipher {
   public static rotate(text: string, shiftBy: number): string {
     return [...text]
-      .map(c => {
+      .map((c) => {
         const isUpper = c.toUpperCase() === c
         const isAlpha = c.match(/[a-z]/i)
-        const caseCharCode = (isUpper ? "A" : "a").charCodeAt(0)
+        const caseCharCode = (isUpper ? 'A' : 'a').charCodeAt(0)
         if (isAlpha) {
           const charCode = c.charCodeAt(0)
           return String.fromCharCode(
@@ -14,6 +14,6 @@ export default class RotationalCipher {
           return c
         }
       })
-      .join("")
+      .join('')
   }
 }

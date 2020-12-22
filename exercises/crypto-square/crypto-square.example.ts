@@ -6,7 +6,7 @@ export default class Square {
   }
 
   public normalizePlaintext(): string {
-    return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, "")
+    return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
   }
 
   public size(): number {
@@ -18,7 +18,7 @@ export default class Square {
     const plainText = this.normalizePlaintext()
     const chunkSize = this.size()
 
-    const splitRegex = new RegExp(`.{1,${chunkSize}}`, "g")
+    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g')
     return plainText.match(splitRegex)
   }
 
@@ -45,17 +45,15 @@ export default class Square {
 
     const result: string[] = []
     for (i = 0; i < columns.length; i++) {
-      result[i] = columns[i].join("")
+      result[i] = columns[i].join('')
     }
 
-    return result.join("")
+    return result.join('')
   }
 
   public normalizeCiphertext(): string {
     const chunkSize = this.size()
-    const splitRegex = new RegExp(`.{1,${chunkSize}}`, "g")
-    return this.ciphertext()
-      .match(splitRegex)!
-      .join(" ")
+    const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g')
+    return this.ciphertext().match(splitRegex)!.join(' ')
   }
 }

@@ -18,14 +18,24 @@ class Alphametics {
     const uniqueLetters = new Set(parts.join('').split(''))
     const firstLetters = new Set(parts.map((p) => p[0]))
 
-    const numberCombinations: number[][] = this.getNumberCombinations([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], uniqueLetters.size)
+    const numberCombinations: number[][] = this.getNumberCombinations(
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      uniqueLetters.size
+    )
 
     while (numberCombinations.length) {
-      const permutations = this.generate(Array(uniqueLetters.size).fill(Array<number>()).map((_, i) => i))
+      const permutations = this.generate(
+        Array(uniqueLetters.size)
+          .fill(Array<number>())
+          .map((_, i) => i)
+      )
       const numberCombination: number[] = numberCombinations.pop() || []
       for (const permutation of permutations) {
-
-        const newNumbers = this.assignNumbers(numberCombination, uniqueLetters, permutation)
+        const newNumbers = this.assignNumbers(
+          numberCombination,
+          uniqueLetters,
+          permutation
+        )
         if (this.testNumbers(newNumbers, parts, firstLetters)) {
           return newNumbers
         }
@@ -34,7 +44,11 @@ class Alphametics {
     return undefined
   }
 
-  private assignNumbers(numberCombination: number[], uniqueLetters: Set<string>, permutation: number[]): { [key: string]: number } {
+  private assignNumbers(
+    numberCombination: number[],
+    uniqueLetters: Set<string>,
+    permutation: number[]
+  ): { [key: string]: number } {
     const output: { [key: string]: number } = {}
     let i = 0
     for (const letter of uniqueLetters.values()) {
@@ -43,7 +57,11 @@ class Alphametics {
     return output
   }
 
-  private testNumbers(numbers: { [key: string]: number } , puzzleParts: string[], firstLetters: Set<string>): boolean {
+  private testNumbers(
+    numbers: { [key: string]: number },
+    puzzleParts: string[],
+    firstLetters: Set<string>
+  ): boolean {
     const keys: string[] = Object.keys(numbers)
     for (const key of keys) {
       if (numbers[key] === 0 && firstLetters.has(key)) {
@@ -52,15 +70,19 @@ class Alphametics {
     }
     const replaceRegex = new RegExp(`[${keys.join('')}]`, 'g')
 
-    const puzzlePartsNumbers: number[] = puzzleParts.join(',')
+    const puzzlePartsNumbers: number[] = puzzleParts
+      .join(',')
       .replace(replaceRegex, (input) => numbers[input].toString())
       .split(',')
       .map((t) => parseInt(t, 10))
 
     const total = puzzlePartsNumbers.slice(puzzlePartsNumbers.length - 1)[0]
-    return total === puzzlePartsNumbers
-      .slice(0, puzzleParts.length - 1)
-      .reduce((acc: number, val: number) => acc + val, 0)
+    return (
+      total ===
+      puzzlePartsNumbers
+        .slice(0, puzzleParts.length - 1)
+        .reduce((acc: number, val: number) => acc + val, 0)
+    )
   }
 
   private *generate(A: number[]): IterableIterator<number[]> {
@@ -103,8 +125,10 @@ class Alphametics {
     }
 
     return arr.reduce((acc: number[][], val: number, i: number) => {
-      const res: number[][] = this.getNumberCombinations(arr.slice(i + 1), size - 1)
-        .map((comb) => [val].concat(comb))
+      const res: number[][] = this.getNumberCombinations(
+        arr.slice(i + 1),
+        size - 1
+      ).map((comb) => [val].concat(comb))
 
       return acc.concat(res)
     }, [])

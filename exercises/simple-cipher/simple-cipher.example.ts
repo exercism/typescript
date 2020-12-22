@@ -9,14 +9,14 @@ class SimpleCipher {
         this.key += String.fromCharCode(Math.random() * 26 + 97)
       }
     } else if (!/^[a-z]+$/.test(key)) {
-      throw new Error("Bad key")
+      throw new Error('Bad key')
     } else {
       this.key = key
     }
   }
 
   public encode(decodedMessage: string): string {
-    let encodedMessage = ""
+    let encodedMessage = ''
     for (let i = 0; i < decodedMessage.length; i++) {
       let encodedChar = String.fromCharCode(
         decodedMessage.charCodeAt(i) +
@@ -31,7 +31,7 @@ class SimpleCipher {
   }
 
   public decode(encodedMessage: string): string {
-    let decodedMessage = ""
+    let decodedMessage = ''
     for (let i = 0; i < encodedMessage.length; i++) {
       let decodedChar = String.fromCharCode(
         encodedMessage.charCodeAt(i) -

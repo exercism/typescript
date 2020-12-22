@@ -47,11 +47,10 @@ Open up the test file, hello-world.test.ts.
 There is a single test inside:
 
 ```typescript
-  it('says hello world with no name', () => {
-    expect(HelloWorld.hello()).toEqual('Hello, World!')
-  })
+it('says hello world with no name', () => {
+  expect(HelloWorld.hello()).toEqual('Hello, World!')
+})
 ```
-
 
 Run the test now, with the following command on the command-line:
 
@@ -87,6 +86,7 @@ The failure looks like this:
 And these are those code lines with probable defects in the `hello-world.test.ts` file:
 
 the 6th line:
+
 ```
     expect(HelloWorld.hello)).toEqual('Hello, World!')
                               ^
@@ -99,9 +99,9 @@ So let's check now this method in the `hello-worlds.ts` file:
 
 ```typescript
 class HelloWorld {
-    static hello() {
-        // Your code here
-    }
+  static hello() {
+    // Your code here
+  }
 }
 
 export default HelloWorld
@@ -111,17 +111,20 @@ Now we see that the method doesn't return anything, which is the reason for our 
 
 ```typescript
 class HelloWorld {
-    static hello(message:string) {
-        return 'Hello, World!'
-    }
+  static hello(message: string) {
+    return 'Hello, World!'
+  }
 }
 
 export default HelloWorld
 ```
+
 Run the test again:
+
 ```bash
  PASS  ./hello-world.test.ts
   Hello World
     √ says hello world with no name (4ms)
 ```
+
 And it passes!

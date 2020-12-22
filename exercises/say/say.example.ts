@@ -1,36 +1,36 @@
 const numbersMap = new Map<number, string>([
-  [0, "zero"],
-  [1, "one"],
-  [2, "two"],
-  [3, "three"],
-  [4, "four"],
-  [5, "five"],
-  [6, "six"],
-  [7, "seven"],
-  [8, "eight"],
-  [9, "nine"],
-  [10, "ten"],
-  [11, "eleven"],
-  [12, "twelve"],
-  [13, "thirteen"],
-  [14, "fourteen"],
-  [15, "fifteen"],
-  [16, "sixteen"],
-  [17, "seventeen"],
-  [18, "eighteen"],
-  [19, "nineteen"],
-  [20, "twenty"],
-  [30, "thirty"],
-  [40, "forty"],
-  [50, "fifty"],
-  [60, "sixty"],
-  [70, "seventy"],
-  [80, "eighty"],
-  [90, "ninety"],
-  [100, "hundred"],
-  [1000, "thousand"],
-  [1000000, "million"],
-  [1000000000, "billion"]
+  [0, 'zero'],
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+  [4, 'four'],
+  [5, 'five'],
+  [6, 'six'],
+  [7, 'seven'],
+  [8, 'eight'],
+  [9, 'nine'],
+  [10, 'ten'],
+  [11, 'eleven'],
+  [12, 'twelve'],
+  [13, 'thirteen'],
+  [14, 'fourteen'],
+  [15, 'fifteen'],
+  [16, 'sixteen'],
+  [17, 'seventeen'],
+  [18, 'eighteen'],
+  [19, 'nineteen'],
+  [20, 'twenty'],
+  [30, 'thirty'],
+  [40, 'forty'],
+  [50, 'fifty'],
+  [60, 'sixty'],
+  [70, 'seventy'],
+  [80, 'eighty'],
+  [90, 'ninety'],
+  [100, 'hundred'],
+  [1000, 'thousand'],
+  [1000000, 'million'],
+  [1000000000, 'billion'],
 ])
 
 function divideNoDecimal(input: number, by: number): number {
@@ -63,12 +63,12 @@ function numberGenerator(input: number): string {
   const thirdPlace = divideNoDecimal(input, level)
   const remainer = input % level
 
-  let builder = ""
+  let builder = ''
   builder +=
     thirdPlace === 0
-      ? ""
+      ? ''
       : `${numberGenerator(thirdPlace)} ${numbersMap.get(level)!}`
-  builder += remainer === 0 ? "" : " " + `${numberGenerator(remainer)}`
+  builder += remainer === 0 ? '' : ' ' + `${numberGenerator(remainer)}`
   return builder
 }
 
@@ -85,13 +85,13 @@ function zeroTo99(input: number): string {
     const remainer = numbersMap.get(input % teen)!
     return `${tens}-${remainer}`
   }
-  return ""
+  return ''
 }
 
 class Say {
   public inEnglish(input: number): string {
     if (input < 0 || input > 999999999999) {
-      throw new Error("Number must be between 0 and 999,999,999,999.")
+      throw new Error('Number must be between 0 and 999,999,999,999.')
     }
 
     return numberGenerator(input)

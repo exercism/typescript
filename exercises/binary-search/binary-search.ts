@@ -1,3 +1,1 @@
-export default class BinarySearch {
-
-}
+export default class BinarySearch {}

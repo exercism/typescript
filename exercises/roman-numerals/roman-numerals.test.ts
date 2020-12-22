@@ -1,4 +1,4 @@
-import  RomanNumerals from './roman-numerals'
+import RomanNumerals from './roman-numerals'
 
 describe('RomanNumerals', () => {
   it('1 is a single I', () => {
@@ -6,12 +6,12 @@ describe('RomanNumerals', () => {
     expect(RomanNumerals.roman(1)).toEqual(expected)
   })
 
-  xit('2 is two I\'s', () => {
+  xit("2 is two I's", () => {
     const expected = 'II'
     expect(RomanNumerals.roman(2)).toEqual(expected)
   })
 
-  xit('3 is three I\'s', () => {
+  xit("3 is three I's", () => {
     const expected = 'III'
     expect(RomanNumerals.roman(3)).toEqual(expected)
   })
@@ -36,7 +36,7 @@ describe('RomanNumerals', () => {
     expect(RomanNumerals.roman(9)).toEqual(expected)
   })
 
-  xit('20 is two X\'s', () => {
+  xit("20 is two X's", () => {
     const expected = 'XXVII'
     expect(RomanNumerals.roman(27)).toEqual(expected)
   })
@@ -91,7 +91,7 @@ describe('RomanNumerals', () => {
     expect(RomanNumerals.roman(1024)).toEqual(expected)
   })
 
-  xit('3000 is three M\'s', () => {
+  xit("3000 is three M's", () => {
     const expected = 'MMM'
     expect(RomanNumerals.roman(3000)).toEqual(expected)
   })

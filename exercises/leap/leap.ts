@@ -1,5 +1,5 @@
-function isLeapYear( /* Parameters go here */ ) {
-    // Your code here
+function isLeapYear(/* Parameters go here */) {
+  // Your code here
 }
 
 export default isLeapYear

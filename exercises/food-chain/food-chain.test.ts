@@ -159,5 +159,4 @@ She's dead, of course!
 `
     expect(FoodChain.verses(1, 8)).toEqual(expected)
   })
-
 })

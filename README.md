@@ -14,7 +14,7 @@ See [CONTRIBUTING.md][file-contributing] for a list of requirements to contribut
 
 ## Running the test suite
 
-This runs `jest` tests for all sample solutions. This *does not* use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
+This runs `jest` tests for all sample solutions. This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
 yarn babel-node scripts/test
@@ -34,16 +34,15 @@ ASSIGNMENT=two-fer yarn babel-node scripts/test
 
 ## Related repositories
 
-* [Website Copy][git-website-copy] (Mentor Notes)
-* [The JavaScript track][git-javascript]
-* [The TypeScript Analyzer][git-typescript-analyzer]
-* [The JavaScript Analyzer][git-javascript-analyzer] (Automated Code Analysis)
-* [The JavaScript Test Runner][git-javascript-test-runner]
+- [Website Copy][git-website-copy] (Mentor Notes)
+- [The JavaScript track][git-javascript]
+- [The TypeScript Analyzer][git-typescript-analyzer]
+- [The JavaScript Analyzer][git-javascript-analyzer] (Automated Code Analysis)
+- [The JavaScript Test Runner][git-javascript-test-runner]
 
 [web-exercism]: https://exercism.io
 [file-config]: https://github.com/exercism/typescript/blob/master/config.json
 [file-contributing]: https://github.com/exercism/typescript/blob/master/CONTRIBUTING.md
-
 [git-javascript]: https://github.com/exercism/javascript
 [git-javascript-analyzer]: https://github.com/exercism/javascript-analyzer
 [git-javascript-test-runner]: https://github.com/exercism/javascript-test-runner

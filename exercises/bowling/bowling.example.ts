@@ -34,34 +34,47 @@ export default class Bowling {
       const strike = state.rollNumber === 1 && roll === 10
       const spare = state.rollNumber === 2 && roll === state.pinsRemaining
       const frameOver = finalFrame
-        ? (!state.fillBall && !spare && state.rollNumber === 2) || state.rollNumber === 3
+        ? (!state.fillBall && !spare && state.rollNumber === 2) ||
+          state.rollNumber === 3
         : strike || spare || state.rollNumber === 2
 
       let score = state.score + roll
 
-      if (state.strikeLastFrame && state.rollNumber < 3) { score += roll }
-      if (state.spareLastFrame && state.rollNumber === 1) { score += roll }
-      if (state.twoStrikesInARow && state.rollNumber === 1) { score += roll }
+      if (state.strikeLastFrame && state.rollNumber < 3) {
+        score += roll
+      }
+      if (state.spareLastFrame && state.rollNumber === 1) {
+        score += roll
+      }
+      if (state.twoStrikesInARow && state.rollNumber === 1) {
+        score += roll
+      }
 
       const next = {
         frameNumber: 0,
-        rollNumber:  0,
-        pinsRemaining:  0,
+        rollNumber: 0,
+        pinsRemaining: 0,
         spareLastFrame: false,
         strikeLastFrame: false,
         twoStrikesInARow: false,
         fillBall: false,
-        score: 0
+        score: 0,
       }
 
       next.frameNumber = frameOver ? state.frameNumber + 1 : state.frameNumber
       next.rollNumber = frameOver ? 1 : state.rollNumber + 1
       next.pinsRemaining = finalFrame
-        ? ((strike || spare) ? 10 : state.pinsRemaining - roll)
-        : (frameOver ? 10 : state.pinsRemaining - roll)
+        ? strike || spare
+          ? 10
+          : state.pinsRemaining - roll
+        : frameOver
+        ? 10
+        : state.pinsRemaining - roll
       next.spareLastFrame = frameOver ? spare : state.spareLastFrame
       next.strikeLastFrame = frameOver ? strike : state.strikeLastFrame
-      next.twoStrikesInARow = frameOver ? strike && state.strikeLastFrame : state.twoStrikesInARow
+      next.twoStrikesInARow = frameOver
+        ? strike && state.strikeLastFrame
+        : state.twoStrikesInARow
       next.fillBall = next.fillBall || (finalFrame && (strike || spare))
       next.score = score
 

@@ -16,7 +16,10 @@ const isInputValid = (array: number[], base: number): boolean => {
   return true
 }
 
-const convertFromDecimalToBase = (num: number, outputBase: number): number[] => {
+const convertFromDecimalToBase = (
+  num: number,
+  outputBase: number
+): number[] => {
   let tmp = num
   const result = []
   while (tmp) {
@@ -27,7 +30,11 @@ const convertFromDecimalToBase = (num: number, outputBase: number): number[] => 
 }
 
 export default class Converter {
-  public convert(array: number[], inputBase: number, outputBase: number): number[] {
+  public convert(
+    array: number[],
+    inputBase: number,
+    outputBase: number
+  ): number[] {
     if (isValidBase(inputBase)) {
       throw new Error('Wrong input base')
     }
@@ -36,8 +43,7 @@ export default class Converter {
     }
     const regexp = new RegExp('^0.', 'g')
     const str = array.join('')
-    if (str.match(regexp)
-      || !isInputValid(array, inputBase)) {
+    if (str.match(regexp) || !isInputValid(array, inputBase)) {
       throw new Error('Input has wrong format')
     }
     if (str === '0') {
@@ -46,7 +52,10 @@ export default class Converter {
     if (str === '1') {
       return [1]
     }
-    const decimalValue = array.reduce((accumulator, value) => accumulator * inputBase + value, 0)
+    const decimalValue = array.reduce(
+      (accumulator, value) => accumulator * inputBase + value,
+      0
+    )
     return convertFromDecimalToBase(decimalValue, outputBase)
   }
 }

@@ -8,16 +8,16 @@ export default class BinarySearchTree {
   }
 
   public insert(value: number): this {
-    return value <= this._data ?
-      this.insertLeft(value) :
-      this.insertRight(value)
+    return value <= this._data
+      ? this.insertLeft(value)
+      : this.insertRight(value)
   }
 
   public each(fn: (data: number) => void): void {
     if (this._left) {
       this._left.each(fn)
     }
-    fn (this._data)
+    fn(this._data)
     if (this._right) {
       this._right.each(fn)
     }

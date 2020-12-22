@@ -1,5 +1,7 @@
 class SaddlePoints {
-  public static saddlePoints(matrix: number[][]): Array<{ row: number; column: number }> {
+  public static saddlePoints(
+    matrix: number[][]
+  ): Array<{ row: number; column: number }> {
     const maximumRowValues: number[] = []
     const minimumColumnValues: number[] = []
 

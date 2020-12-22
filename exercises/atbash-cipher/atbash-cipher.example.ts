@@ -1,31 +1,38 @@
 class AtbashCipher {
-  private alphabet = "abcdefghijklmnopqrstuvwxyz"
-  private numbers = "0123456789"
+  private alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  private numbers = '0123456789'
 
   public encode(plainText: string): string {
     const lowerCaseLettersOnly = plainText
       .toLowerCase()
-      .split("")
-      .filter((char) => this.alphabet.includes(char) || this.numbers.includes(char))
-      .join("")
+      .split('')
+      .filter(
+        (char) => this.alphabet.includes(char) || this.numbers.includes(char)
+      )
+      .join('')
 
     return this.decode(lowerCaseLettersOnly)
-      .split("")
+      .split('')
       .reduce((accumulator: string[], _, index, array) => {
         if (index % 5 === 0) {
-          accumulator.push(array.slice(index, index + 5).join(""))
+          accumulator.push(array.slice(index, index + 5).join(''))
         }
         return accumulator
       }, [])
-      .join(" ")
+      .join(' ')
   }
 
   public decode(cipherText: string): string {
     return cipherText
-      .split(" ").join("")
-      .split("")
-      .map((char) => this.alphabet.includes(char) ? this.alphabet[25 - this.alphabet.indexOf(char)] : char)
-      .join("")
+      .split(' ')
+      .join('')
+      .split('')
+      .map((char) =>
+        this.alphabet.includes(char)
+          ? this.alphabet[25 - this.alphabet.indexOf(char)]
+          : char
+      )
+      .join('')
   }
 }
 

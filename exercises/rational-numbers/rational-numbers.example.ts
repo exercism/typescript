@@ -4,7 +4,7 @@ class Rational {
 
   constructor(numerator: number, denominator: number) {
     if (denominator === 0) {
-      throw new Error("Denominator must not be zero.")
+      throw new Error('Denominator must not be zero.')
     }
 
     this.numerator = numerator

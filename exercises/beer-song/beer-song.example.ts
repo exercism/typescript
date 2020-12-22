@@ -1,15 +1,14 @@
-
 class Beer {
   private static pluralize(input: number): string {
     if (input === 0) {
-      return "o more bottles "
+      return 'o more bottles '
     }
 
-    return (input === 1) ? "1 bottle " : `${input} bottles `
+    return input === 1 ? '1 bottle ' : `${input} bottles `
   }
 
   public static verse(input: number): string {
-    const wall = "of beer on the wall"
+    const wall = 'of beer on the wall'
     if (input === 0) {
       return `N${Beer.pluralize(0)}${wall}, n${Beer.pluralize(0)}of beer.
 Go to the store and buy some more, ${Beer.pluralize(99)}${wall}.
@@ -27,10 +26,10 @@ Take one down and pass it around, ${Beer.pluralize(input - 1)}${wall}.
 
   public static sing(end: number = 99, start: number = 0): string {
     let temp = ``
-    for (let i: number = end; i >= start ; i -= 1) {
+    for (let i: number = end; i >= start; i -= 1) {
       temp += Beer.verse(i)
-      if (i !== start ) {
-        temp += "\n"
+      if (i !== start) {
+        temp += '\n'
       }
     }
     return temp

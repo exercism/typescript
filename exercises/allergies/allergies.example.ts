@@ -9,7 +9,7 @@ class Allergies {
     'tomatoes',
     'chocolate',
     'pollen',
-    'cats'
+    'cats',
   ] as const
 
   constructor(allergenIndex: number) {
