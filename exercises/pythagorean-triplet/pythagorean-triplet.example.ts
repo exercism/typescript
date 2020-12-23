@@ -1,7 +1,7 @@
 interface WhereOptions {
-  maxFactor: number;
-  minFactor?: number;
-  sum?: number;
+  maxFactor: number
+  minFactor?: number
+  sum?: number
 }
 
 export default class Triplet {
@@ -29,7 +29,11 @@ export default class Triplet {
 
   public static where(options: WhereOptions): Triplet[] {
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
-    return new Triplets(options.maxFactor, options.minFactor, options.sum).toArray()
+    return new Triplets(
+      options.maxFactor,
+      options.minFactor,
+      options.sum
+    ).toArray()
   }
 }
 

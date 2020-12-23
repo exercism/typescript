@@ -47,7 +47,7 @@ class VariableLengthQuantity {
       }
     }
     if (start < data.length) {
-      throw new Error("Incomplete sequence")
+      throw new Error('Incomplete sequence')
     }
     return vals
   }

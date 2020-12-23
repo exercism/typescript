@@ -1,4 +1,4 @@
-function transform( /* Parameters go here */ ): {
+function transform(/* Parameters go here */): {
   // Your code here
 }
 

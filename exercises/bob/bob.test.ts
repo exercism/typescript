@@ -1,7 +1,6 @@
 import Bob from './bob'
 
 describe('Bob', () => {
-
   const bob = new Bob()
 
   it('stating something', () => {
@@ -46,7 +45,7 @@ describe('Bob', () => {
 
   xit('forceful question', () => {
     const result = bob.hey('WHAT THE HELL WERE YOU THINKING?')
-    expect(result).toEqual('Calm down, I know what I\'m doing!')
+    expect(result).toEqual("Calm down, I know what I'm doing!")
   })
 
   xit('shouting numbers', () => {
@@ -100,7 +99,9 @@ describe('Bob', () => {
   })
 
   xit('multiple line question', () => {
-    const result = bob.hey('\nDoes this cryogenic chamber make me look fat?\nNo.')
+    const result = bob.hey(
+      '\nDoes this cryogenic chamber make me look fat?\nNo.'
+    )
     expect(result).toEqual('Whatever.')
   })
 
@@ -123,5 +124,4 @@ describe('Bob', () => {
     const result = bob.hey('This is a statement ending with whitespace      ')
     expect(result).toEqual('Whatever.')
   })
-
 })

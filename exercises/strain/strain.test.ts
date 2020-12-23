@@ -1,4 +1,4 @@
-import {keep, discard} from './strain'
+import { keep, discard } from './strain'
 
 describe('strain', () => {
   it('keeps on empty array returns empty array', () => {
@@ -14,12 +14,18 @@ describe('strain', () => {
   })
 
   xit('keeps neither first nor last', () => {
-    expect(keep<number>([1, 2, 3, 4, 5], (e: number) => e % 2 === 0)).toEqual([2, 4])
+    expect(keep<number>([1, 2, 3, 4, 5], (e: number) => e % 2 === 0)).toEqual([
+      2,
+      4,
+    ])
   })
 
   xit('keeps strings', () => {
     const words = 'apple zebra banana zombies cherimoya zelot'.split(' ')
-    const result = keep<string>(words, (word: string) => word.indexOf('z') === 0)
+    const result = keep<string>(
+      words,
+      (word: string) => word.indexOf('z') === 0
+    )
     expect(result).toEqual('zebra zombies zelot'.split(' '))
   })
 
@@ -34,7 +40,12 @@ describe('strain', () => {
       [1, 2, 5],
     ]
     const result = keep<number[]>(rows, (row: number[]) => row.indexOf(5) > -1)
-    expect(result).toEqual([[5, 5, 5], [5, 1, 2], [1, 5, 2], [1, 2, 5]])
+    expect(result).toEqual([
+      [5, 5, 5],
+      [5, 1, 2],
+      [1, 5, 2],
+      [1, 2, 5],
+    ])
   })
 
   xit('empty discard', () => {
@@ -56,7 +67,10 @@ describe('strain', () => {
 
   xit('discards strings', () => {
     const words = 'apple zebra banana zombies cherimoya zelot'.split(' ')
-    const result = discard<string>(words, (word: string) => word.indexOf('z') === 0)
+    const result = discard<string>(
+      words,
+      (word: string) => word.indexOf('z') === 0
+    )
     expect(result).toEqual('apple banana cherimoya'.split(' '))
   })
 
@@ -70,7 +84,14 @@ describe('strain', () => {
       [2, 2, 1],
       [1, 2, 5],
     ]
-    const result = discard<number[]>(rows, (row: number[]) => row.indexOf(5) > -1)
-    expect(result).toEqual([[1, 2, 3], [2, 1, 2], [2, 2, 1]])
+    const result = discard<number[]>(
+      rows,
+      (row: number[]) => row.indexOf(5) > -1
+    )
+    expect(result).toEqual([
+      [1, 2, 3],
+      [2, 1, 2],
+      [2, 2, 1],
+    ])
   })
 })

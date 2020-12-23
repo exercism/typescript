@@ -6,7 +6,7 @@ class Diamond {
     for (let i = 0; i <= inputIx; i++) {
       lines.push(this.getLine(inputIx, i))
     }
-    for (let i = (inputIx - 1); i >= 0; i--) {
+    for (let i = inputIx - 1; i >= 0; i--) {
       lines.push(lines[i])
     }
     return lines.join('\n') + '\n'

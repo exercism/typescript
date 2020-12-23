@@ -1,5 +1,5 @@
 class Isogram {
-  private static alphabet = "abcdefghijklmnopqrstuvwxyz"
+  private static alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
   public static isIsogram(phrase: string): boolean {
     const appearances = new Set()

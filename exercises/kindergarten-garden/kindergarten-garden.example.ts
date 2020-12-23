@@ -1,38 +1,38 @@
 const defaultChildren = [
-  "Alice",
-  "Bob",
-  "Charlie",
-  "David",
-  "Eve",
-  "Fred",
-  "Ginny",
-  "Harriet",
-  "Ileana",
-  "Joseph",
-  "Kincaid",
-  "Larry"
+  'Alice',
+  'Bob',
+  'Charlie',
+  'David',
+  'Eve',
+  'Fred',
+  'Ginny',
+  'Harriet',
+  'Ileana',
+  'Joseph',
+  'Kincaid',
+  'Larry',
 ]
 
 interface Plants {
-  [code: string]: string;
+  [code: string]: string
 }
 
 const plants: Plants = {
-  G: "grass",
-  V: "violets",
-  R: "radishes",
-  C: "clover"
+  G: 'grass',
+  V: 'violets',
+  R: 'radishes',
+  C: 'clover',
 }
 
 interface Pots {
-  upper: string[];
-  lower: string[];
+  upper: string[]
+  lower: string[]
 }
 
 const converToPots = (pots: string[][]): Pots => {
   return {
     upper: pots[0],
-    lower: pots[1]
+    lower: pots[1],
   }
 }
 
@@ -47,11 +47,11 @@ const getPlants = (pots: Pots, index: number): string[] => {
 }
 
 const parse = (diagram: string): string[][] => {
-  return diagram.split("\n").map(row => [...row].map(sign => plants[sign]))
+  return diagram.split('\n').map((row) => [...row].map((sign) => plants[sign]))
 }
 
 export default class Garden {
-  private students: string[]
+  private students: string[];
   [student: string]: string[]
 
   constructor(diagrams: string, students?: string[]) {

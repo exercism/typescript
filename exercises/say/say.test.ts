@@ -47,8 +47,9 @@ describe('say', () => {
   })
 
   xit('one million two thousand three hundred forty-five', () => {
-    expect(say.inEnglish(1002345))
-      .toBe('one million two thousand three hundred forty-five')
+    expect(say.inEnglish(1002345)).toBe(
+      'one million two thousand three hundred forty-five'
+    )
   })
 
   xit('one billion', () => {
@@ -74,5 +75,4 @@ describe('say', () => {
       say.inEnglish(1000000000000)
     }).toThrowError('Number must be between 0 and 999,999,999,999.')
   })
-
 })

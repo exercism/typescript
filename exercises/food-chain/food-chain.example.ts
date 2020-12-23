@@ -1,42 +1,51 @@
-const animals = ["fly", "spider", "bird", "cat", "dog", "goat", "cow", "horse"] as const
+const animals = [
+  'fly',
+  'spider',
+  'bird',
+  'cat',
+  'dog',
+  'goat',
+  'cow',
+  'horse',
+] as const
 
 export default class FoodChain {
   public static verses(start = 1, end = 8): string {
     if (end < start) {
-      throw new Error("end should be smaller than the start")
+      throw new Error('end should be smaller than the start')
     }
-    let verses = ""
+    let verses = ''
 
     for (; start <= end; start += 1) {
       verses += FoodChain.verse(start)
       if (start !== end) {
-        verses += "\n"
+        verses += '\n'
       }
     }
     return verses
   }
 
   public static verse(num: number): string {
-    let result = ""
+    let result = ''
 
     let index = num - 1
     result += `I know an old lady who swallowed a ${animals[index]}.\n`
 
     switch (num) {
       case 2:
-        result += "It wriggled and jiggled and tickled inside her.\n"
+        result += 'It wriggled and jiggled and tickled inside her.\n'
         break
       case 3:
-        result += "How absurd to swallow a bird!\n"
+        result += 'How absurd to swallow a bird!\n'
         break
       case 4:
-        result += "Imagine that, to swallow a cat!\n"
+        result += 'Imagine that, to swallow a cat!\n'
         break
       case 5:
-        result += "What a hog, to swallow a dog!\n"
+        result += 'What a hog, to swallow a dog!\n'
         break
       case 6:
-        result += "Just opened her throat and swallowed a goat!\n"
+        result += 'Just opened her throat and swallowed a goat!\n'
         break
       case 7:
         result += "I don't know how she swallowed a cow!\n"
@@ -53,13 +62,13 @@ export default class FoodChain {
         animals[index - 1]
       }`
       if (index === 2) {
-        result += " that wriggled and jiggled and tickled inside her"
+        result += ' that wriggled and jiggled and tickled inside her'
       }
-      result += ".\n"
+      result += '.\n'
       index -= 1
     }
     result += "I don't know why she swallowed the fly. Perhaps she'll die."
 
-    return result + "\n"
+    return result + '\n'
   }
 }

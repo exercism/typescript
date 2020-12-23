@@ -54,7 +54,7 @@ export default class Clock {
     const currentMinutes = this.hour * minutesPerHour + this.minute
     let newMinutes = (currentMinutes + delta) % minutesPerDay
 
-    newMinutes = newMinutes < 0 ? newMinutes += minutesPerDay : newMinutes
+    newMinutes = newMinutes < 0 ? (newMinutes += minutesPerDay) : newMinutes
 
     this.hour = Math.floor(newMinutes / minutesPerHour) % hoursPerDay
     this.minute = newMinutes - this.hour * minutesPerHour

@@ -1,7 +1,6 @@
 import isLeapYear from './leap'
 
 describe('A leap year', () => {
-
   it('is not very common', () => {
     expect(isLeapYear(2015)).toBeFalsy()
   })
@@ -19,7 +18,6 @@ describe('A leap year', () => {
   })
 
   describe('Additional example of a leap year that', () => {
-
     xit('is not a leap year', () => {
       expect(isLeapYear(1978)).toBeFalsy()
     })

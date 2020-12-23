@@ -31,8 +31,8 @@ describe('Raindrops', () => {
 
   xit('converts 52', () => expect(drops.convert(52)).toEqual('52'))
 
-  xit('converts 105', () => expect(drops.convert(105)).toEqual('PlingPlangPlong'))
+  xit('converts 105', () =>
+    expect(drops.convert(105)).toEqual('PlingPlangPlong'))
 
   xit('converts 12121', () => expect(drops.convert(12121)).toEqual('12121'))
-
 })

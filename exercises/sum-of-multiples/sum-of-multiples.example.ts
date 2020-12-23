@@ -18,4 +18,5 @@ class SumOfMultiples {
   }
 }
 
-export default (numbers: number[]): SumOfMultiples => new SumOfMultiples(numbers)
+export default (numbers: number[]): SumOfMultiples =>
+  new SumOfMultiples(numbers)

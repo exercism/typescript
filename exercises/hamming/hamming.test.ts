@@ -32,8 +32,8 @@ describe('Hamming', () => {
   })
 
   xit('throws error when strands are not equal length', () => {
-    expect(() => { hamming.compute('GGACGGATTCTG', 'AGGAC') }
-    ).toThrowError('DNA strands must be of equal length.' )
+    expect(() => {
+      hamming.compute('GGACGGATTCTG', 'AGGAC')
+    }).toThrowError('DNA strands must be of equal length.')
   })
-
 })

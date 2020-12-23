@@ -2,7 +2,7 @@ class ISBN {
   private readonly isbn: string
 
   constructor(isbn: string) {
-    this.isbn = isbn.replace(/-/g, "")
+    this.isbn = isbn.replace(/-/g, '')
   }
 
   public isValid(): boolean {
@@ -12,7 +12,7 @@ class ISBN {
 
     const digits = [...this.isbn]
     if (digits[9].match(/[xX]/)) {
-      digits[9] = "10"
+      digits[9] = '10'
     }
 
     const sum = digits.reduce(

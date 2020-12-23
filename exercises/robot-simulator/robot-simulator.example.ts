@@ -2,7 +2,11 @@ export default class Robot {
   public coordinates: number[]
   public bearing: string
 
-  constructor(xcoord: number = 0, ycoord: number = 0, direction: string = 'north') {
+  constructor(
+    xcoord: number = 0,
+    ycoord: number = 0,
+    direction: string = 'north'
+  ) {
     this.coordinates = [xcoord, ycoord]
     this.bearing = direction
   }

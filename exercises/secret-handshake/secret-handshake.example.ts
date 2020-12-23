@@ -1,10 +1,16 @@
 class HandShake {
-  private readonly allCommands = ["wink", "double blink", "close your eyes", "jump", "REVERSE"] as const
+  private readonly allCommands = [
+    'wink',
+    'double blink',
+    'close your eyes',
+    'jump',
+    'REVERSE',
+  ] as const
   private readonly shakeWith: string[]
 
   constructor(handshake: number) {
-    if (typeof handshake !== "number") {
-      throw new Error("Handshake must be a number")
+    if (typeof handshake !== 'number') {
+      throw new Error('Handshake must be a number')
     }
 
     this.shakeWith = this.calculateHandshake(handshake)
@@ -22,7 +28,7 @@ class HandShake {
       const handshakeHasCommand = handshake & Math.pow(2, i)
 
       if (handshakeHasCommand) {
-        if (currentCommand === "REVERSE") {
+        if (currentCommand === 'REVERSE') {
           shakeWith.reverse()
         } else {
           shakeWith.push(this.allCommands[i])

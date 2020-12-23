@@ -6,7 +6,7 @@ class PerfectNumbers {
 
     // Check if the input is valid
     if (n <= 0) {
-      throw new Error("Classification is only possible for natural numbers.")
+      throw new Error('Classification is only possible for natural numbers.')
     }
 
     // Factorize the current number.
@@ -20,11 +20,11 @@ class PerfectNumbers {
 
     // Check if the number is perfect.
     if (sum === n) {
-      result = "perfect"
+      result = 'perfect'
     } else if (sum > n) {
-      result = "abundant"
+      result = 'abundant'
     } else {
-      result = "deficient"
+      result = 'deficient'
     }
 
     return result

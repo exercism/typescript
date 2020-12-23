@@ -1,1 +1,2 @@
-exercises/two-fer/two-fer.ts
+exercises/**/README.md
+!/README.md

@@ -1,5 +1,5 @@
 function sort(input: string): string {
-  return input.toString().toLowerCase().split("").sort().join("")
+  return input.toString().toLowerCase().split('').sort().join('')
 }
 
 class Anagram {
@@ -12,7 +12,9 @@ class Anagram {
     const result: string[] = []
     for (const each of input) {
       if (sort(each) === sort(this.value)) {
-        if (each.toLowerCase() === this.value.toLowerCase()) { continue }
+        if (each.toLowerCase() === this.value.toLowerCase()) {
+          continue
+        }
         result.push(each)
       }
     }

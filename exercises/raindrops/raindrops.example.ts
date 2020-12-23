@@ -1,15 +1,15 @@
 export default class Raindrops {
   public convert(drops: number): string {
-    let converted = ""
+    let converted = ''
 
     if (drops % 3 === 0) {
-      converted += "Pling"
+      converted += 'Pling'
     }
     if (drops % 5 === 0) {
-      converted += "Plang"
+      converted += 'Plang'
     }
     if (drops % 7 === 0) {
-      converted += "Plong"
+      converted += 'Plong'
     }
 
     return converted ? converted : drops.toString()

@@ -1,4 +1,4 @@
-const MINE = "*"
+const MINE = '*'
 
 const DELTAS = [
   [-1, -1],
@@ -8,7 +8,7 @@ const DELTAS = [
   [1, 0],
   [1, -1],
   [0, 1],
-  [0, -1]
+  [0, -1],
 ]
 
 class Minesweeper {
@@ -17,7 +17,7 @@ class Minesweeper {
       return rows
     }
 
-    const inputBoard = rows.map(row => [...row])
+    const inputBoard = rows.map((row) => [...row])
 
     const result = inputBoard.map((row, x) =>
       [...row].map((cell, y) => cellToMineOrCount(cell, inputBoard, x, y))
@@ -36,24 +36,28 @@ function cellToMineOrCount(
   if (cell === MINE) {
     return MINE
   }
-  return countAdjacentMines(inputBoard, x, y) || " "
+  return countAdjacentMines(inputBoard, x, y) || ' '
 }
 
 function countAdjacentMines(board: string[][], x: number, y: number): number {
-  return DELTAS.filter(d => adjacentSquareIsOnBoard(board, x, d)).filter(d =>
-    adjacentSquareHasMine(board, x, y, d)
-  ).length
+  return DELTAS.filter((d) =>
+    adjacentSquareIsOnBoard(board, x, d)
+  ).filter((d) => adjacentSquareHasMine(board, x, y, d)).length
 }
 
 function stringify(board: string[][]): string[] {
-  return board.map(row => row.join(""))
+  return board.map((row) => row.join(''))
 }
 
 function noDataPresent(rows: string[]): boolean {
   return rows.length === 0 || rows[0].length === 0
 }
 
-function adjacentSquareIsOnBoard(board: string[][], x: number, d: number[]): string[] {
+function adjacentSquareIsOnBoard(
+  board: string[][],
+  x: number,
+  d: number[]
+): string[] {
   return board[x + d[0]]
 }
 

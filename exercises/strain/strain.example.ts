@@ -1,5 +1,5 @@
 interface Predicate<T> {
-  (element: T): boolean;
+  (element: T): boolean
 }
 
 export function keep<T>(array: T[], predicate: Predicate<T>): T[] {

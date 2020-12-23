@@ -119,8 +119,12 @@ describe('Robot', () => {
   })
 
   xit('series of instructions', () => {
-    expect(robot.instructions('RAAL'))
-      .toEqual(['turnRight', 'advance', 'advance', 'turnLeft'])
+    expect(robot.instructions('RAAL')).toEqual([
+      'turnRight',
+      'advance',
+      'advance',
+      'turnLeft',
+    ])
   })
 
   xit('instruct robot', () => {

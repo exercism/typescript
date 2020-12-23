@@ -6,17 +6,17 @@ export default class ConnectBoard {
   private board: string[][]
 
   constructor(board: string[]) {
-    this.board = board.map(b => [...b])
+    this.board = board.map((b) => [...b])
   }
 
   public winner(): '' | 'X' | 'O' {
-    const players = ["X", "O"] as const
+    const players = ['X', 'O'] as const
     for (const player of players) {
       if (this.checkWin(player)) {
         return player
       }
     }
-    return ""
+    return ''
   }
 
   private checkWin(player: 'X' | 'O'): boolean {
@@ -45,16 +45,19 @@ export default class ConnectBoard {
     const matches = this.neighbors(pos).filter(
       ({ x, y }) =>
         this.matches({ x, y }, XorO) &&
-        checked.filter(spot => spot.x === x && spot.y === y).length === 0
+        checked.filter((spot) => spot.x === x && spot.y === y).length === 0
     )
     if (matches.length === 0) {
       return false
     }
 
-    return matches.filter(spot => this.search(spot, XorO, checked)).length > 0
+    return matches.filter((spot) => this.search(spot, XorO, checked)).length > 0
   }
 
-  private neighbors(pos: { x: number; y: number }): Array<{ x: number; y: number }> {
+  private neighbors(pos: {
+    x: number
+    y: number
+  }): Array<{ x: number; y: number }> {
     return [
       { x: pos.x, y: pos.y + 2 },
       { x: pos.x, y: pos.y - 2 },
@@ -63,18 +66,18 @@ export default class ConnectBoard {
       { x: pos.x - 1, y: pos.y + 1 },
 
       { x: pos.x + 1, y: pos.y - 1 },
-      { x: pos.x - 1, y: pos.y - 1 }
+      { x: pos.x - 1, y: pos.y - 1 },
     ]
   }
 
   private startPositions(XorO: 'X' | 'O'): Array<{ x: number; y: number }> {
-    return XorO === "X"
+    return XorO === 'X'
       ? this.board.map((_, i) => ({ x: i, y: i }))
       : this.board[0].map((_, i) => ({ x: 0, y: i }))
   }
 
   private winningSpot(pos: { x: number; y: number }, XorO: 'X' | 'O'): boolean {
-    return XorO === "X"
+    return XorO === 'X'
       ? pos.y === this.board[0].length - 1 + pos.x
       : pos.x === this.board.length - 1
   }

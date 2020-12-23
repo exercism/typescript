@@ -1,9 +1,6 @@
 class ReverseString {
   public static reverse(value: string): string {
-    return value
-      .split("")
-      .reverse()
-      .join("")
+    return value.split('').reverse().join('')
   }
 }
 
