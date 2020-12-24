@@ -1,27 +1,27 @@
-import Sieve from "./sieve"
+import Sieve from './sieve'
 
-describe("Sieve", () => {
-  it("no primes under two", () => {
+describe('Sieve', () => {
+  it('no primes under two', () => {
     const expected: number[] = []
     expect(Sieve.primes(1)).toEqual(expected)
   })
 
-  xit("find first prime", () => {
+  xit('find first prime', () => {
     const expected = [2]
     expect(Sieve.primes(2)).toEqual(expected)
   })
 
-  xit("find primes up to 10", () => {
+  xit('find primes up to 10', () => {
     const expected = [2, 3, 5, 7]
     expect(Sieve.primes(10)).toEqual(expected)
   })
 
-  xit("limit is prime", () => {
+  xit('limit is prime', () => {
     const expected = [2, 3, 5, 7, 11, 13]
     expect(Sieve.primes(13)).toEqual(expected)
   })
 
-  xit("find primes up to 1000", () => {
+  xit('find primes up to 1000', () => {
     const expected: number[] = [
       2,
       3,
@@ -190,7 +190,7 @@ describe("Sieve", () => {
       977,
       983,
       991,
-      997
+      997,
     ]
     expect(Sieve.primes(1000)).toEqual(expected)
   })

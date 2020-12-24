@@ -67,12 +67,35 @@ describe('VariableLengthQuantity', () => {
     })
 
     xit('two multi-byte values', () => {
-      expect(VLQ.encode([0x4000, 0x123456])).toEqual([0x81, 0x80, 0, 0xc8, 0xe8, 0x56])
+      expect(VLQ.encode([0x4000, 0x123456])).toEqual([
+        0x81,
+        0x80,
+        0,
+        0xc8,
+        0xe8,
+        0x56,
+      ])
     })
 
     xit('many multi-byte values', () => {
       const input = [0x2000, 0x123456, 0xfffffff, 0, 0x3fff, 0x4000]
-      const expected = [0xc0, 0, 0xc8, 0xe8, 0x56, 0xff, 0xff, 0xff, 0x7f, 0, 0xff, 0x7f, 0x81, 0x80, 0]
+      const expected = [
+        0xc0,
+        0,
+        0xc8,
+        0xe8,
+        0x56,
+        0xff,
+        0xff,
+        0xff,
+        0x7f,
+        0,
+        0xff,
+        0x7f,
+        0x81,
+        0x80,
+        0,
+      ]
       expect(VLQ.encode(input)).toEqual(expected)
     })
   })
@@ -99,15 +122,35 @@ describe('VariableLengthQuantity', () => {
     })
 
     xit('incomplete sequence causes error', () => {
-      expect(() => { VLQ.decode([0xff]) }).toThrowError('Incomplete sequence')
+      expect(() => {
+        VLQ.decode([0xff])
+      }).toThrowError('Incomplete sequence')
     })
 
     xit('incomplete sequence causes error, even if value is zero', () => {
-      expect(() => { VLQ.decode([0x80]) }).toThrowError('Incomplete sequence')
+      expect(() => {
+        VLQ.decode([0x80])
+      }).toThrowError('Incomplete sequence')
     })
 
     xit('multiple values', () => {
-      const input = [0xc0, 0, 0xc8, 0xe8, 0x56, 0xff, 0xff, 0xff, 0x7f, 0, 0xff, 0x7f, 0x81, 0x80, 0]
+      const input = [
+        0xc0,
+        0,
+        0xc8,
+        0xe8,
+        0x56,
+        0xff,
+        0xff,
+        0xff,
+        0x7f,
+        0,
+        0xff,
+        0x7f,
+        0x81,
+        0x80,
+        0,
+      ]
       const expected = [0x2000, 0x123456, 0xfffffff, 0, 0x3fff, 0x4000]
       expect(VLQ.decode(input)).toEqual(expected)
     })

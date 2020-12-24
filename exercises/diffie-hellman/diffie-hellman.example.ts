@@ -1,4 +1,3 @@
-
 // array of first 1000 primes.
 const PRIMES = [
   2,
@@ -1000,7 +999,7 @@ const PRIMES = [
   7883,
   7901,
   7907,
-  7919
+  7919,
 ]
 
 export default class DiffieHellman {
@@ -1009,7 +1008,7 @@ export default class DiffieHellman {
 
   constructor(p: number, g: number) {
     if (!this.validateInitialArguments(p, g)) {
-      throw Error("Constructor arguments are out of range or non-prime!")
+      throw Error('Constructor arguments are out of range or non-prime!')
     }
 
     this.p = p
@@ -1019,13 +1018,16 @@ export default class DiffieHellman {
   public getPublicKeyFromPrivateKey(privateKey: number): number {
     if (privateKey <= 1 || privateKey > this.p - 1) {
       throw Error(
-        "Private key a must be greater than one but less than modulus parameter p!"
+        'Private key a must be greater than one but less than modulus parameter p!'
       )
     }
     return this.g ** privateKey % this.p
   }
 
-  public getSharedSecret(ourPrivateKey: number, theirPublicKey: number): number {
+  public getSharedSecret(
+    ourPrivateKey: number,
+    theirPublicKey: number
+  ): number {
     return theirPublicKey ** ourPrivateKey % this.p
   }
 

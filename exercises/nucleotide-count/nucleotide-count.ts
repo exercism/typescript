@@ -1,5 +1,5 @@
 class NucleotideCount {
-  static nucleotideCounts( /* Parameters go here */ ) {
+  static nucleotideCounts(/* Parameters go here */) {
     // Your code here
   }
 }

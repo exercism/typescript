@@ -14,8 +14,8 @@ class Matrix {
   }
 
   private parseRows(): void {
-    this.rows = this.description.split("\n").map(row => {
-      return row.split(" ").map(char => {
+    this.rows = this.description.split('\n').map((row) => {
+      return row.split(' ').map((char) => {
         return parseInt(char, 10)
       })
     })

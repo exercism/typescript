@@ -4,7 +4,7 @@ const aToZ = [...Array<string>(26)].map((_, index) => {
 
 class Pangram {
   private readonly value: string
-  constructor(input: string = "") {
+  constructor(input: string = '') {
     this.value = input
   }
 

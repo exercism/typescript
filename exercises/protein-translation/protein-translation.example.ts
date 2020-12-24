@@ -1,22 +1,22 @@
 class ProteinTranslation {
   private static readonly translations = [
-    { codon: "AUG", protein: "Methionine" },
-    { codon: "UUU", protein: "Phenylalanine" },
-    { codon: "UUC", protein: "Phenylalanine" },
-    { codon: "UUA", protein: "Leucine" },
-    { codon: "UUG", protein: "Leucine" },
-    { codon: "UCU", protein: "Serine" },
-    { codon: "UCC", protein: "Serine" },
-    { codon: "UCA", protein: "Serine" },
-    { codon: "UCG", protein: "Serine" },
-    { codon: "UAU", protein: "Tyrosine" },
-    { codon: "UAC", protein: "Tyrosine" },
-    { codon: "UGU", protein: "Cysteine" },
-    { codon: "UGC", protein: "Cysteine" },
-    { codon: "UGG", protein: "Tryptophan" },
-    { codon: "UAA", protein: "STOP" },
-    { codon: "UAG", protein: "STOP" },
-    { codon: "UGA", protein: "STOP" }
+    { codon: 'AUG', protein: 'Methionine' },
+    { codon: 'UUU', protein: 'Phenylalanine' },
+    { codon: 'UUC', protein: 'Phenylalanine' },
+    { codon: 'UUA', protein: 'Leucine' },
+    { codon: 'UUG', protein: 'Leucine' },
+    { codon: 'UCU', protein: 'Serine' },
+    { codon: 'UCC', protein: 'Serine' },
+    { codon: 'UCA', protein: 'Serine' },
+    { codon: 'UCG', protein: 'Serine' },
+    { codon: 'UAU', protein: 'Tyrosine' },
+    { codon: 'UAC', protein: 'Tyrosine' },
+    { codon: 'UGU', protein: 'Cysteine' },
+    { codon: 'UGC', protein: 'Cysteine' },
+    { codon: 'UGG', protein: 'Tryptophan' },
+    { codon: 'UAA', protein: 'STOP' },
+    { codon: 'UAG', protein: 'STOP' },
+    { codon: 'UGA', protein: 'STOP' },
   ]
 
   public static proteins(strand: string): string[] {
@@ -37,7 +37,7 @@ class ProteinTranslation {
     const result: string[] = []
     for (const codon of codons) {
       const protein = this.getProteinFromCodon(codon)
-      if (protein !== "STOP") {
+      if (protein !== 'STOP') {
         result.push(protein)
       } else {
         break
@@ -47,7 +47,7 @@ class ProteinTranslation {
   }
 
   private static getProteinFromCodon(codon: string): string {
-    let result = ""
+    let result = ''
     for (const translation of this.translations) {
       if (translation.codon === codon) {
         result = translation.protein

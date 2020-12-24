@@ -1,26 +1,26 @@
 type colors =
-  | "black"
-  | "brown"
-  | "red"
-  | "orange"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "violet"
-  | "grey"
-  | "white"
+  | 'black'
+  | 'brown'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'blue'
+  | 'violet'
+  | 'grey'
+  | 'white'
 
 const COLORS = [
-  "black",
-  "brown",
-  "red",
-  "orange",
-  "yellow",
-  "green",
-  "blue",
-  "violet",
-  "grey",
-  "white"
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white',
 ]
 
 export class ResistorColor {
@@ -29,7 +29,7 @@ export class ResistorColor {
 
   constructor([tens, ones, ..._]: colors[]) {
     if (tens === undefined || ones === undefined) {
-      throw new Error("At least two colors need to be present")
+      throw new Error('At least two colors need to be present')
     }
     this.tens = tens
     this.ones = ones

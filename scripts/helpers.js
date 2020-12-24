@@ -158,7 +158,7 @@ export function prepare(assignment) {
   shell.cp(specFile, specFileDestination)
 
   // Enable tests
-  shell.sed('xit', 'it', specFileDestination).to(specFileDestination)
+  shell.sed(/x(test|it)\(/, 'it(', specFileDestination).to(specFileDestination)
   shell
     .sed('xdescribe', 'describe', specFileDestination)
     .to(specFileDestination)

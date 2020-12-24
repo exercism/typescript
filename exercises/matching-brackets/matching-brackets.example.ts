@@ -4,16 +4,16 @@ class MatchingBrackets {
 
   constructor(expression: string) {
     this.bracketPairs = new Map<string, string>()
-    this.bracketPairs.set("{", "}")
-    this.bracketPairs.set("[", "]")
-    this.bracketPairs.set("(", ")")
+    this.bracketPairs.set('{', '}')
+    this.bracketPairs.set('[', ']')
+    this.bracketPairs.set('(', ')')
 
     this.expression = expression
   }
 
   public isPaired(): boolean {
     const bracketStack: string[] = []
-    const expressionSplitted = this.expression.split("")
+    const expressionSplitted = this.expression.split('')
 
     for (let i = 0; i <= expressionSplitted.length - 1; i++) {
       const element = expressionSplitted[i]
@@ -39,7 +39,7 @@ class MatchingBrackets {
   }
 
   private isClosingBracket(bracket: string): boolean {
-    if (bracket === "}" || bracket === "]" || bracket === ")") {
+    if (bracket === '}' || bracket === ']' || bracket === ')') {
       return true
     } else {
       return false

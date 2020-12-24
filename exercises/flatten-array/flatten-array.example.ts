@@ -1,5 +1,5 @@
 class FlattenArray {
-  public static flatten<A, T extends Array<(A | A[])>>(arr: T): A[] {
+  public static flatten<A, T extends Array<A | A[]>>(arr: T): A[] {
     return arr
       .reduce(
         (acc: A[], el) =>

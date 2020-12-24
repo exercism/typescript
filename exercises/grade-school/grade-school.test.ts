@@ -31,7 +31,9 @@ describe('School', () => {
     gradeSchool.addStudent('James', 2)
     gradeSchool.addStudent('Paul', 2)
 
-    const expectedDb = new Map(Object.entries({ 2: ['Blair', 'James', 'Paul'] }))
+    const expectedDb = new Map(
+      Object.entries({ 2: ['Blair', 'James', 'Paul'] })
+    )
     expect(gradeSchool.studentRoster()).toEqual(expectedDb)
   })
 
@@ -62,11 +64,13 @@ describe('School', () => {
     gradeSchool.addStudent('Christopher', 4)
     gradeSchool.addStudent('Kyle', 3)
 
-    const expectedSortedStudents = new Map(Object.entries({
-      3: ['Kyle'],
-      4: ['Christopher', 'Jennifer'],
-      6: ['Kareem']
-    }))
+    const expectedSortedStudents = new Map(
+      Object.entries({
+        3: ['Kyle'],
+        4: ['Christopher', 'Jennifer'],
+        6: ['Kareem'],
+      })
+    )
     expect(gradeSchool.studentRoster()).toEqual(expectedSortedStudents)
   })
 
@@ -85,5 +89,4 @@ describe('School', () => {
     const expectedDb = new Map(Object.entries({ 2: ['Aimee'] }))
     expect(gradeSchool.studentRoster()).toEqual(expectedDb)
   })
-
 })

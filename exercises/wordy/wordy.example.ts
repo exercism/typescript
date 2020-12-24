@@ -21,14 +21,14 @@ class WordProblem {
       },
       divided: (a: number, b: number) => {
         return a / b
-      }
+      },
     }
 
     const querry = this.question
-      .replace(/by /g, "")
-      .replace("What is ", "")
-      .replace("?", "")
-    const array = querry.split(" ")
+      .replace(/by /g, '')
+      .replace('What is ', '')
+      .replace('?', '')
+    const array = querry.split(' ')
 
     let subtotal = 0
 

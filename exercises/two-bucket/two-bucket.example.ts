@@ -1,6 +1,6 @@
 export enum Bucket {
-  One = "one",
-  Two = "two"
+  One = 'one',
+  Two = 'two',
 }
 
 export class TwoBucket {
@@ -33,7 +33,11 @@ export class TwoBucket {
     return false
   }
 
-  private bigFirst(measurements: number[], moveCount: number, prBool: boolean): number {
+  private bigFirst(
+    measurements: number[],
+    moveCount: number,
+    prBool: boolean
+  ): number {
     let j = measurements[0],
       k = measurements[1]
     while (!this.reachedGoal(measurements)) {

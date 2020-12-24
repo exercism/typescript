@@ -1,11 +1,11 @@
 class Luhn {
   public static valid(value: string): boolean {
-    const numbers = value.replace(/\s/g, "")
+    const numbers = value.replace(/\s/g, '')
     const digits = [...numbers]
 
     const sum = digits
       // convert to integers
-      .map(d => parseInt(d, 10))
+      .map((d) => parseInt(d, 10))
       // double even positions (odd indexes)
       .map((d, i) => {
         if (i % 2 !== 0) {
@@ -14,7 +14,7 @@ class Luhn {
         return d
       })
       // limit to digits less than 10
-      .map(d => {
+      .map((d) => {
         if (d > 9) {
           return d - 9
         }

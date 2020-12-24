@@ -1,9 +1,9 @@
 class PigLatin {
   public static translate(phrase: string): string {
-    const words = phrase.split(" ")
+    const words = phrase.split(' ')
     const translated: string[] = []
 
-    words.forEach(word => {
+    words.forEach((word) => {
       const parts = word.match(/^([^aeiou]?qu|[^aeiou]*)(.+)/)
       const beginning = parts![1]
       const ending = parts![2]
@@ -15,7 +15,7 @@ class PigLatin {
       }
     })
 
-    return translated.join(" ")
+    return translated.join(' ')
   }
 }
 

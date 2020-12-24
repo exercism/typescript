@@ -1,18 +1,18 @@
 interface Buffer<T> {
-  read(): T | undefined;
-  write(value: T): void;
-  clear(): void;
+  read(): T | undefined
+  write(value: T): void
+  clear(): void
 }
 
 export class BufferOverflowError extends Error {
   constructor() {
-    super("Buffer is full.")
+    super('Buffer is full.')
   }
 }
 
 export class BufferEmptyError extends Error {
   constructor() {
-    super("Buffer is empty.")
+    super('Buffer is empty.')
   }
 }
 

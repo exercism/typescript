@@ -22,6 +22,8 @@ describe('Acronym are produced from', () => {
   })
 
   xit('phrases with punctuation and sentence casing', () => {
-    expect(Acronym.parse('Complementary metal-oxide semiconductor')).toEqual('CMOS')
+    expect(Acronym.parse('Complementary metal-oxide semiconductor')).toEqual(
+      'CMOS'
+    )
   })
 })

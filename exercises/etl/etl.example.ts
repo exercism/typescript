@@ -1,5 +1,5 @@
 function transform(input: {
-  [key: string]: string[];
+  [key: string]: string[]
 }): { [key: string]: number } {
   const phase1: { [key: string]: number } = {}
 

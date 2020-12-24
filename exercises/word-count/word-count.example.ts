@@ -2,13 +2,13 @@ class Words {
   public count(input: string): Map<string, number> {
     const inputArray = input
       .toLowerCase()
-      .replace(/\n/m, " ")
-      .replace(/\t/m, " ")
-      .split(" ")
+      .replace(/\n/m, ' ')
+      .replace(/\t/m, ' ')
+      .split(' ')
     const inputMap = new Map<string, number>()
 
     for (const each of inputArray) {
-      if (each === "") {
+      if (each === '') {
         continue
       }
       const value = inputMap.get(each) || 0

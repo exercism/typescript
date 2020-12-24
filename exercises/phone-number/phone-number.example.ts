@@ -2,8 +2,8 @@ class PhoneNumber {
   private value: string
 
   constructor(input: string) {
-    let cleanedUp = input.replace(/(\)|\(|\s|\.|-)/g, "")
-    if (cleanedUp.length === 11 && cleanedUp[0] === "1") {
+    let cleanedUp = input.replace(/(\)|\(|\s|\.|-)/g, '')
+    if (cleanedUp.length === 11 && cleanedUp[0] === '1') {
       cleanedUp = cleanedUp.slice(1, 11)
     }
     this.value = cleanedUp

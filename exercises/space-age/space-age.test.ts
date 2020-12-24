@@ -1,7 +1,6 @@
 import SpaceAge from './space-age'
 
 describe('Space Age', () => {
-
   it('age in seconds', () => {
     const age = new SpaceAge(1000000)
     expect(age.seconds).toEqual(1000000)

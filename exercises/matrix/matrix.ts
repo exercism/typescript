@@ -1,7 +1,7 @@
 class Matrix {
-    constructor( /* Parameters go here */ ) {
-        // Your code here
-    }
+  constructor(/* Parameters go here */) {
+    // Your code here
+  }
 }
 
 export default Matrix

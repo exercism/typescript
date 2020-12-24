@@ -7,15 +7,15 @@ class List {
 
   public compare(other: List): 'sublist' | 'superlist' | 'unequal' | 'equal' {
     switch (this.lengthDiff(this, other)) {
-      case "-1":
-        return this.isSublist(other.list, this.list) ? "sublist" : "unequal"
-      case "0":
-        return this.isSublist(other.list, this.list) ? "equal" : "unequal"
-      case "1":
-        return this.isSublist(this.list, other.list) ? "superlist" : "unequal"
+      case '-1':
+        return this.isSublist(other.list, this.list) ? 'sublist' : 'unequal'
+      case '0':
+        return this.isSublist(other.list, this.list) ? 'equal' : 'unequal'
+      case '1':
+        return this.isSublist(this.list, other.list) ? 'superlist' : 'unequal'
     }
 
-    return "unequal"
+    return 'unequal'
   }
 
   private lengthDiff(listOne: List, listTwo: List): string {

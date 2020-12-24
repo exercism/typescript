@@ -1,6 +1,6 @@
 class RunLengthEncoding {
   public static encode(plaintext: string): string {
-    return plaintext.replace(/([\w\s])\1*/g, match => {
+    return plaintext.replace(/([\w\s])\1*/g, (match) => {
       return match.length > 1 ? match.length + match[0] : match[0]
     })
   }

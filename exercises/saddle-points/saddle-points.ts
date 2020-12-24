@@ -1,7 +1,7 @@
 class SaddlePoints {
-    static saddlePoints( /* Parameters go here */ ) {
-        // Your code here
-    }
+  static saddlePoints(/* Parameters go here */) {
+    // Your code here
+  }
 }
 
 export default SaddlePoints

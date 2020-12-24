@@ -21,7 +21,7 @@ class Prime {
       throw new Error('Prime is not possible')
     }
 
-    return range(2, 2e+6).filter(isPrime)[nthPrime - 1]
+    return range(2, 2e6).filter(isPrime)[nthPrime - 1]
   }
 }
 
