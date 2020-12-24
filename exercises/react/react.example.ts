@@ -13,13 +13,28 @@ enum Status {
   Stale,
 }
 
+/**
+ * Type for the closure's value equality predicate.
+ *
+ * @typeParam T - Type of the values being compared for
+ *              equality.
+ *
+ * @remarks
+ * Conceptually this function should be equivalent
+ * to: `lhs === rhs`
+ *
+ * @param lhs   - left hand side value
+ * @param rhs   - right hand side value
+ * @returns     - `true` if values are considered
+ *                equal; `false` otherwise.
+ */
 type EqualFn<T> = (lhs: T, rhs: T) => boolean
 type GetterFn<T> = () => T
-type SetterFn<T> = (v: T) => T
+type SetterFn<T> = (value: T) => T
 type UnsubscribeFn = () => void
 type UpdateFn<T> = (value?: T) => T
 
-type InputCouple<T> = [GetterFn<T>, SetterFn<T>]
+type InputPair<T> = [GetterFn<T>, SetterFn<T>]
 
 type Options = {
   name: string
@@ -34,7 +49,7 @@ type ObserverR = {
 
 type ObserverV<T> = {
   value?: T
-  fn: UpdateFn<T>
+  updateFn: UpdateFn<T>
 }
 
 type Observer<T> = ObserverR & ObserverV<T>
@@ -46,7 +61,7 @@ type SubjectR = {
 
 type SubjectV<T> = {
   value?: T
-  equal?: EqualFn<T>
+  equalFn?: EqualFn<T>
 }
 
 type Subject<T> = SubjectR & SubjectV<T>
@@ -72,7 +87,7 @@ function isObserverComputed<T>(observer: Observer<T>): observer is Computed<T> {
 
 const defaultEqual = <T>(lhs: T, rhs: T): boolean => lhs === rhs
 
-function selectEqual<T>(
+function selectEqualFn<T>(
   equal: boolean | EqualFn<T> | undefined
 ): EqualFn<T> | undefined {
   if (typeof equal === 'function') return equal
@@ -82,7 +97,7 @@ function selectEqual<T>(
   return undefined
 }
 
-// module Context value
+// module context values
 let activeObserver: ObserverR
 let updateQueue: ObserverR[] | undefined
 let callbackQueue: ObserverR[] | undefined
@@ -92,8 +107,8 @@ function link(subject: SubjectR, observer: ObserverR): void {
   subject.observers.add(observer)
 }
 
-function unsubscribe(obs: ObserverR): void {
-  obs.subjects.forEach((sub) => sub.observers.delete(obs))
+function unsubscribe(observer: ObserverR): void {
+  observer.subjects.forEach((sub) => sub.observers.delete(observer))
 }
 
 function makeUnsubscribe(observer: ObserverR | undefined): UnsubscribeFn {
@@ -190,7 +205,7 @@ function updateObserver<T>(observer: Observer<T>): void {
   activeObserver = observer
 
   observer.status = Status.OK
-  const nextValue = observer.fn(observer.value)
+  const nextValue = observer.updateFn(observer.value)
   if (isObserverComputed(observer)) writeSubject(observer, nextValue)
   else observer.value = nextValue
 
@@ -210,7 +225,7 @@ function readSubject<T>(subject: Subject<T>): T {
 }
 
 function writeSubject<T>(subject: Subject<T>, value: T): T {
-  if (subject.equal && subject.value && subject.equal(subject.value, value))
+  if (subject.equalFn && subject.value && subject.equalFn(subject.value, value))
     return value
 
   subject.value = value
@@ -222,45 +237,151 @@ function writeSubject<T>(subject: Subject<T>, value: T): T {
   return subject.value
 }
 
+/**
+ * Creates an input closure. The value is accessed
+ * via the accessor and changed via the
+ * mutator returned as part an `InputPair<T>`.
+ *
+ * @typeParam T   - Type of the closure's value.
+ *                By extension the type of the return
+ *                value of the accessor and the type
+ *                of the mutator's single argument.
+ *
+ * @param value   - Input closure's initial value.
+ * @param equal   - By default the current and previous
+ *                values are not compared so invoking
+ *                the mutator with identical values
+ *                will trigger updates on any
+ *                subscribers. When `true` is
+ *                specified the
+ *                {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality | strict equality operator}
+ *                is used to compare values and
+ *                mutations with unchanging values
+ *                **are** suppressed.
+ *                When `T` is a structural type
+ *                it is necessary to provide a
+ *                `(a: T, b: T) => boolean` comparison
+ *                predicate instead.
+ * @param options - Holder object for relevant options.
+ *                Assigning a `name` to a subject can
+ *                be useful during debugging.
+ * @returns       - An `InputPair<T>`. The 1st
+ *                element is the accessor (getter
+ *                function), the 2nd element is
+ *                the mutator (setter function).
+ */
 function createInput<T>(
   value: T,
   equal?: boolean | EqualFn<T>,
   options?: { name?: string }
-): InputCouple<T> {
-  const s: Subject<T> = {
+): InputPair<T> {
+  const subject: Subject<T> = {
     name: options?.name,
     observers: new Set<ObserverR>(),
     value,
-    equal: selectEqual(equal),
+    equalFn: selectEqualFn(equal),
   }
 
-  return [(): T => readSubject(s), (value: T): T => writeSubject(s, value)]
+  return [
+    (): T => readSubject(subject),
+    (value: T): T => writeSubject(subject, value),
+  ]
 }
 
+/**
+ * Creates a computed (derived) closure with the
+ * supplied function which computes the current value
+ * of the closure.
+ *
+ * @typeParam T   - Type of the closure's value.
+ *                By extension the type of the value
+ *                returned by the update function and
+ *                of the value
+ *                accepted by the function.
+ *
+ * @param updateFn - Update function. This function
+ *                 references one or more accessors of
+ *                 other subjects. It **should not**
+ *                 perform side effects. It is expected
+ *                 to return a value which will be the
+ *                 value of the closure until the next
+ *                 update. The closure's value is
+ *                 supplied to this update function
+ *                 on the next update.
+ * @param value    - Initial value that is passed to
+ *                 `updateFn` when it executes for the
+ *                 first time.
+ * @param equal    - By default the current and previous
+ *                 values are not compared so updates
+ *                 will be triggered even if the value
+ *                 doesn't _change_. When `true` is
+ *                 specified the
+ *                 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality | strict equality operator}
+ *                 is used to compare values and updates
+ *                 with identical values **are**
+ *                 suppressed. When `T` is a structural
+ *                 type it is necessary to provide a
+ *                 `(a: T, b: T) => boolean` comparison
+ *                 predicate instead.
+ * @param options  - Holder object for relevant options.
+ *                 Assigning a `name` to a subject can
+ *                 be useful during debugging.
+ * @returns        - The accessor to the closure's
+ *                 value (getter function). Retrieves
+ *                 the closure's current value. Used by
+ *                 observers (or more accurately their
+ *                 update function) to obtain the
+ *                 value (and to subscribe for
+ *                 updates).
+ */
 function createComputed<T>(
-  fn: UpdateFn<T>,
+  updateFn: UpdateFn<T>,
   value?: T,
   equal?: boolean | EqualFn<T>,
   options?: { name?: string }
 ): GetterFn<T> {
-  const c: Computed<T> = {
+  const computed: Computed<T> = {
     name: options?.name,
     observers: new Set<ObserverR>(),
     value,
-    equal: selectEqual(equal),
-    fn,
+    equalFn: selectEqualFn(equal),
+    updateFn,
     status: Status.Stale,
     pure: true,
     subjects: new Set<SubjectR>(),
   }
-  updateObserver(c)
-  return (): T => readSubject(c)
+  updateObserver(computed)
+  return (): T => readSubject(computed)
 }
 
-function createCallback<T>(fn: UpdateFn<T>, value?: T): UnsubscribeFn {
+/**
+ * Creates a callback closure with the supplied
+ * function which is expected to perform side effects.
+ *
+ * @typeParam T    - Type of the closure's value.
+ *                 By extension the type of the value
+ *                 returned by the callback function
+ *                 and of the value accepted by the
+ *                 function.
+ *
+ * @param updateFn - Callback function. This function
+ *                 references one or more accessors of
+ *                 subjects. It may perform side effects.
+ *                 It will also be passed the
+ *                 value that it returned the last time it
+ *                 was invoked.
+ * @param value    - Initial value that is passed to
+ *                 `updateFn` when it executes for
+ *                  the first time.
+ * @returns        - The `unsubscribe` function. Once
+ *                 invoked the callback closure will
+ *                 stop receiving updates from the
+ *                 subjects it subscribed to.
+ */
+function createCallback<T>(updateFn: UpdateFn<T>, value?: T): UnsubscribeFn {
   const o: Observer<T> = {
     value,
-    fn,
+    updateFn,
     status: Status.Stale,
     pure: false,
     subjects: new Set<SubjectR>(),
@@ -357,7 +478,7 @@ export { createInput, createComputed, createCallback }
 // function that deactivates the callback when invoked.
 // There is no `GetterFn<T>` because the callbacks
 // act by _side effect_ - i.e. changing values that
-// exist in their enclosing scope (closure: 
+// exist in their enclosing scope (closure:
 // https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch7.md
 // ). Internally a callback is based on a `Observer<T>`.
 // The primary argument to
