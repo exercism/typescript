@@ -18,17 +18,16 @@ brown-green-violet should return 15 too, ignoring the third color.
 
 ## Setup
 
-Go through the setup instructions for Javascript to
-install the necessary dependencies:
+Go through the setup instructions for TypeScript to install the necessary dependencies:
 
-[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
+[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
 
 ## Requirements
 
 Install assignment dependencies:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ## Making the test suite pass
@@ -36,7 +35,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+$ yarn test
 ```
 
 In the test suites all tests but the first have been skipped.
