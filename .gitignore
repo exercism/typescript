@@ -5,6 +5,7 @@ npm-debug.log
 build
 babel-output
 lintreport.json
+debug.log
 
 # Binaries downloaded by binary download scripts
 bin/configlet
