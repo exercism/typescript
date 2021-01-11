@@ -16,7 +16,7 @@ describe('BinarySearchTree', () => {
     four.insert(2)
 
     expect(four.data).toEqual(4)
-    expect(four.left.data).toEqual(2)
+    expect(four.left!.data).toEqual(2)
   })
 
   xit('should insert the same number to the left', () => {
@@ -24,7 +24,7 @@ describe('BinarySearchTree', () => {
     four.insert(4)
 
     expect(four.data).toEqual(4)
-    expect(four.left.data).toEqual(4)
+    expect(four.left!.data).toEqual(4)
   })
 
   xit('should insert a greater number to the right', () => {
@@ -32,7 +32,7 @@ describe('BinarySearchTree', () => {
     four.insert(5)
 
     expect(four.data).toEqual(4)
-    expect(four.right.data).toEqual(5)
+    expect(four.right!.data).toEqual(5)
   })
 
   xit('should deal with a complex tree', () => {
@@ -45,12 +45,12 @@ describe('BinarySearchTree', () => {
     four.insert(5)
 
     expect(four.data).toEqual(4)
-    expect(four.left.data).toEqual(2)
-    expect(four.left.left.data).toEqual(1)
-    expect(four.left.right.data).toEqual(3)
-    expect(four.right.data).toEqual(6)
-    expect(four.right.left.data).toEqual(5)
-    expect(four.right.right.data).toEqual(7)
+    expect(four.left!.data).toEqual(2)
+    expect(four.left!.left!.data).toEqual(1)
+    expect(four.left!.right!.data).toEqual(3)
+    expect(four.right!.data).toEqual(6)
+    expect(four.right!.left!.data).toEqual(5)
+    expect(four.right!.right!.data).toEqual(7)
   })
 
   xit('should iterate over one element', () => {
