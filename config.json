@@ -1148,11 +1148,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": [
-        "algorithms",
-        "closures",
-        "reactive_programming"
-      ]
+      "topics": ["algorithms", "closures", "reactive_programming"]
     }
   ]
 }
