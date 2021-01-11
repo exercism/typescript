@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // Code style not forced upon the student
+    "@typescript-eslint/array-type": "off",
+
+    // Prevent bugs
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn", {
+        "allowExpressions": false,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true
+      }
+    ],
+
+    // Code style not forced upon the student
+    "@typescript-eslint/explicit-member-accessibility": "off",
+
+    // Code style not forced upon the student
+    "@typescript-eslint/indent": "off",
+
+    "@typescript-eslint/no-inferrable-types": [
+      "error", {
+        "ignoreParameters": true
+      }
+    ],
+
+    // Code style not forced upon the student
+    "@typescript-eslint/member-delimiter-style": "off",
+
+    // Code style not forced upon the student
+    "@typescript-eslint/no-non-null-assertion": "off",
+
+     // Only disallow readonly without an access modifier
+    "@typescript-eslint/no-parameter-properties": [
+      "warn", {
+        "allows": [
+          "private", "protected", "public",
+          "private readonly", "protected readonly", "public readonly"
+        ]
+      }
+    ],
+
+    // Covered by the tsc compiler (noUnusedLocals)
+    "@typescript-eslint/no-unused-vars": "off",
+
+     // Prevent bugs, not styling
+    "@typescript-eslint/no-use-before-define": [
+      "error", {
+        "functions": false,
+        "typedefs": false
+      }
+    ],
+
+     // Always disable base-rule
+    "semi": "off",
+
+     // Code style not forced upon student
+    "@typescript-eslint/semi": "off"
+  }
+}
