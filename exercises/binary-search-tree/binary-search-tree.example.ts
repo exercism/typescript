@@ -1,55 +1,44 @@
-export default class BinarySearchTree {
-  private _data: number
+type BinarySearchTreeMaybe = BinarySearchTree | undefined
+type EachFn = (data: number) => void
+
+class BinarySearchTree {
+  private readonly _data: number
   private _left?: BinarySearchTree
   private _right?: BinarySearchTree
 
-  constructor(_data: number) {
-    this._data = _data
+  constructor(data: number) {
+    this._data = data
   }
 
   public insert(value: number): this {
-    return value <= this._data
-      ? this.insertLeft(value)
-      : this.insertRight(value)
+    if (value <= this._data) {
+      if (this._left) this._left.insert(value)
+      else this._left = new BinarySearchTree(value)
+    } else {
+      if (this._right) this._right.insert(value)
+      else this._right = new BinarySearchTree(value)
+    }
+
+    return this
   }
 
-  public each(fn: (data: number) => void): void {
-    if (this._left) {
-      this._left.each(fn)
-    }
+  public each(fn: EachFn): void {
+    if (this._left) this._left.each(fn)
     fn(this._data)
-    if (this._right) {
-      this._right.each(fn)
-    }
+    if (this._right) this._right.each(fn)
   }
 
   public get data(): number {
     return this._data
   }
 
-  public get left(): BinarySearchTree {
-    return this._left!
+  public get left(): BinarySearchTreeMaybe {
+    return this._left
   }
 
-  public get right(): BinarySearchTree {
-    return this._right!
-  }
-
-  private insertLeft(value: number): this {
-    if (!this._left) {
-      this._left = new BinarySearchTree(value)
-    } else {
-      this._left.insert(value)
-    }
-    return this
-  }
-
-  private insertRight(value: number): this {
-    if (!this._right) {
-      this._right = new BinarySearchTree(value)
-    } else {
-      this._right.insert(value)
-    }
-    return this
+  public get right(): BinarySearchTreeMaybe {
+    return this._right
   }
 }
+
+export default BinarySearchTree
