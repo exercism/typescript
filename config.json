@@ -20,6 +20,7 @@
       "slug": "hello-world",
       "name": "Hello World",
       "uuid": "755f6f85-9ab3-4af6-9e35-dbb9d64be9c5",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "optional_values",
@@ -31,6 +32,7 @@
       "slug": "two-fer",
       "name": "Two Fer",
       "uuid": "f66508fe-4ddc-4bbd-b8e6-542d400e57e9",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "optional_values",
@@ -42,6 +44,7 @@
       "slug": "resistor-color-duo",
       "name": "Resistor Color Duo",
       "uuid": "78645d36-12be-11ea-8d71-362b9e155667",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "strings",
@@ -52,6 +55,7 @@
       "slug": "leap",
       "name": "Leap",
       "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "booleans",
@@ -63,6 +67,7 @@
       "slug": "resistor-color",
       "name": "Resistor Color",
       "uuid": "c6f41fd5-584c-46ca-b3c5-6a0825446bf4",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "arrays",
@@ -73,6 +78,7 @@
       "slug": "rna-transcription",
       "name": "Rna Transcription",
       "uuid": "b4db381f-1c99-44c6-948c-c8892d77823e",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "strings",
@@ -83,6 +89,7 @@
       "slug": "space-age",
       "name": "Space Age",
       "uuid": "8fe1e0ef-068e-4a53-a576-35be59f8152f",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "classes",
@@ -93,6 +100,7 @@
       "slug": "pangram",
       "name": "Pangram",
       "uuid": "721d9c74-cc16-4b32-8f0b-ffab75027539",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "algorithms",
@@ -108,6 +116,7 @@
       "slug": "bob",
       "name": "Bob",
       "uuid": "3977d4e5-82ca-4801-ae20-6682dda23506",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -122,6 +131,7 @@
       "slug": "matrix",
       "name": "Matrix",
       "uuid": "167ec8f2-a206-4a7e-999d-7dbfc136a9fe",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -136,6 +146,7 @@
       "slug": "robot-name",
       "name": "Robot Name",
       "uuid": "b00dd1af-f89c-4382-ab43-514651de6b20",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -149,6 +160,7 @@
       "slug": "grade-school",
       "name": "Grade School",
       "uuid": "32e79fd7-f002-4bdc-b6bd-7a91d8c1af61",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -160,6 +172,7 @@
       "slug": "clock",
       "name": "Clock",
       "uuid": "c6960d69-7794-4711-8891-9c5a63727112",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "integers",
@@ -171,6 +184,7 @@
       "slug": "secret-handshake",
       "name": "Secret Handshake",
       "uuid": "ac2ec51b-a2cd-4d8c-99e3-5bd6758b4e7b",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -185,6 +199,7 @@
       "slug": "binary-search",
       "name": "Binary Search",
       "uuid": "53584e8d-9b8d-4c0e-8ad8-4c228fcf6bcf",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -197,6 +212,7 @@
       "slug": "linked-list",
       "name": "Linked List",
       "uuid": "7d42dd76-a6cf-11e7-abc4-cec278b6b50a",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -212,6 +228,7 @@
       "slug": "rational-numbers",
       "name": "Rational Numbers",
       "uuid": "4439ab9d-266b-483b-b5ca-3920c478fd62",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -223,6 +240,7 @@
       "slug": "atbash-cipher",
       "name": "Atbash Cipher",
       "uuid": "04de61fb-9fde-461c-b306-0b4ce52e2169",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "algorithms",
@@ -236,6 +254,7 @@
       "slug": "simple-cipher",
       "name": "Simple Cipher",
       "uuid": "3ea9d03e-6d06-48e5-a4d3-6e1bb9367c2f",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -251,6 +270,7 @@
       "slug": "wordy",
       "name": "Wordy",
       "uuid": "269577e5-e782-4264-9ad9-9ad4b8bc0aab",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "control_flow_conditionals",
@@ -266,6 +286,7 @@
       "slug": "list-ops",
       "name": "List Ops",
       "uuid": "26787ded-0aa2-46f6-88dd-13a00cce9236",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "data_structures",
@@ -277,6 +298,7 @@
       "slug": "word-count",
       "name": "Word Count",
       "uuid": "5e5c48fb-91bb-495a-97f6-ec8642739a0a",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "control_flow_loops",
@@ -290,6 +312,7 @@
       "slug": "difference-of-squares",
       "name": "Difference Of Squares",
       "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "algorithms",
@@ -302,6 +325,7 @@
       "slug": "gigasecond",
       "name": "Gigasecond",
       "uuid": "9dfabc5c-d2a5-4896-9fc2-2b25b9a5f62f",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "time"
@@ -311,6 +335,7 @@
       "slug": "reverse-string",
       "name": "Reverse String",
       "uuid": "86d5a60a-fc44-443d-bc00-5c6265e736c4",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "for",
@@ -322,6 +347,7 @@
       "slug": "triangle",
       "name": "Triangle",
       "uuid": "0eb37e93-d191-4451-bd77-cd3681c91d94",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -334,6 +360,7 @@
       "slug": "collatz-conjecture",
       "name": "Collatz Conjecture",
       "uuid": "a701b4ca-55ea-4aa9-a607-2fe8a9828d9c",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "conditionals",
@@ -347,6 +374,7 @@
       "slug": "etl",
       "name": "Etl",
       "uuid": "ab027a47-d483-4011-aac4-564a6284e5b8",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "control_flow_loops",
@@ -359,6 +387,7 @@
       "slug": "protein-translation",
       "name": "Protein Translation",
       "uuid": "e18a436f-5d7b-4372-9f74-15e8e9a52d63",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "arrays",
@@ -371,6 +400,7 @@
       "slug": "raindrops",
       "name": "Raindrops",
       "uuid": "c8677318-ba6c-4e8c-83ec-513cc6530e7f",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
@@ -383,6 +413,7 @@
       "slug": "hamming",
       "name": "Hamming",
       "uuid": "18204e23-fca8-44dc-8d5c-abe66b87c640",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -395,6 +426,7 @@
       "slug": "nucleotide-count",
       "name": "Nucleotide Count",
       "uuid": "ef16d487-524e-4c5a-8311-9162babba181",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -408,6 +440,7 @@
       "slug": "scrabble-score",
       "name": "Scrabble Score",
       "uuid": "7c60f7c5-2922-4ce4-acbe-51c5ab654b4d",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -420,6 +453,7 @@
       "slug": "allergies",
       "name": "Allergies",
       "uuid": "9389fcb2-841a-42b6-8ece-f5a63f750273",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "arrays",
@@ -432,6 +466,7 @@
       "slug": "perfect-numbers",
       "name": "Perfect Numbers",
       "uuid": "53cc064f-35d2-4a0e-a915-6a25130252c3",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "arrays",
@@ -445,6 +480,7 @@
       "slug": "complex-numbers",
       "name": "Complex Numbers",
       "uuid": "59d842b4-a804-4cd5-a388-983a22a70c9e",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -457,6 +493,7 @@
       "slug": "luhn",
       "name": "Luhn",
       "uuid": "249365fb-145c-40e3-90ed-11f3f74a9df1",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -469,6 +506,7 @@
       "slug": "grains",
       "name": "Grains",
       "uuid": "5a04b3f8-99b6-4aec-8afd-0d54930e4aff",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -480,6 +518,7 @@
       "slug": "pythagorean-triplet",
       "name": "Pythagorean Triplet",
       "uuid": "85d74be3-8a54-4355-9ef8-0f13ed2a7683",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -493,6 +532,7 @@
       "slug": "sum-of-multiples",
       "name": "Sum Of Multiples",
       "uuid": "e431fb10-766a-4542-94ad-9c30224a3885",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -506,6 +546,7 @@
       "slug": "acronym",
       "name": "Acronym",
       "uuid": "f6631a0f-2da3-47a4-b46b-7a81fa0d4dfd",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "control_flow_loops",
@@ -518,6 +559,7 @@
       "slug": "anagram",
       "name": "Anagram",
       "uuid": "d3c93056-07b9-4d06-a681-1bb25db68c01",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "filtering",
@@ -528,6 +570,7 @@
       "slug": "isogram",
       "name": "Isogram",
       "uuid": "505eadfc-40df-476f-82d7-fe3b78b1f713",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "ascii",
@@ -542,6 +585,7 @@
       "slug": "roman-numerals",
       "name": "Roman Numerals",
       "uuid": "a4ea1a4d-d010-4039-a2b5-e3e748df7f8a",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -554,6 +598,7 @@
       "slug": "series",
       "name": "Series",
       "uuid": "dd332597-4924-48dc-abb3-1d3fde492777",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "control_flow_loops",
@@ -566,6 +611,7 @@
       "slug": "phone-number",
       "name": "Phone Number",
       "uuid": "bbd4665c-be4b-4d70-bc92-e91ce7a1d55f",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "parsing",
@@ -576,6 +622,7 @@
       "slug": "two-bucket",
       "name": "Two Bucket",
       "uuid": "7dd29a19-08f6-8480-2e01-1f7262d8860a",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "algorithms",
@@ -591,6 +638,7 @@
       "slug": "variable-length-quantity",
       "name": "Variable Length Quantity",
       "uuid": "50050198-b5a3-4ab1-8b4b-0eadc8007ebb",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "algorithms",
@@ -608,6 +656,7 @@
       "slug": "largest-series-product",
       "name": "Largest Series Product",
       "uuid": "b646dc26-59c1-436e-883a-20290de7a526",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "control_flow_conditionals",
@@ -623,6 +672,7 @@
       "slug": "food-chain",
       "name": "Food Chain",
       "uuid": "246129c9-83b5-43e0-beb6-8a2cea7e4e17",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -633,6 +683,7 @@
       "slug": "house",
       "name": "House",
       "uuid": "9850a74a-1842-4db0-b3ed-5a53b4f25050",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -646,6 +697,7 @@
       "slug": "isbn-verifier",
       "name": "Isbn Verifier",
       "uuid": "50447e18-cfe8-43fb-a791-e8a82483bef6",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -659,6 +711,7 @@
       "slug": "pig-latin",
       "name": "Pig Latin",
       "uuid": "38951bf1-6e7d-4d7d-9b7d-219471f17112",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -673,6 +726,7 @@
       "slug": "proverb",
       "name": "Proverb",
       "uuid": "b18876a7-f281-46e5-94b9-f805bb0d1fec",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -687,6 +741,7 @@
       "slug": "twelve-days",
       "name": "Twelve Days",
       "uuid": "cb04ab17-9611-44a1-8406-ed385da0044d",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "control_flow_conditionals",
@@ -700,6 +755,7 @@
       "slug": "beer-song",
       "name": "Beer Song",
       "uuid": "7a4fefd2-6e71-42d6-82fd-a25d2ef9eae9",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -711,6 +767,7 @@
       "slug": "say",
       "name": "Say",
       "uuid": "8e7b92f4-a508-4200-bd62-b36281dd9ed9",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "control_flow_conditionals",
@@ -725,6 +782,7 @@
       "slug": "rectangles",
       "name": "Rectangles",
       "uuid": "6d81d98f-afde-4aea-85ff-c7baef98fb7e",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -738,6 +796,7 @@
       "slug": "saddle-points",
       "name": "Saddle Points",
       "uuid": "d35da73a-5124-4911-a2c3-07c68d4b79c2",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -753,6 +812,7 @@
       "slug": "spiral-matrix",
       "name": "Spiral Matrix",
       "uuid": "702b1e87-55db-479f-9ef9-4ccdfe8849b1",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -766,6 +826,7 @@
       "slug": "transpose",
       "name": "Transpose",
       "uuid": "4e484e0f-0b24-4778-a949-224294735c23",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "arrays",
@@ -781,6 +842,7 @@
       "slug": "ocr-numbers",
       "name": "Ocr Numbers",
       "uuid": "61f0964f-0779-446d-bd6b-6bb988414302",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -796,6 +858,7 @@
       "slug": "nth-prime",
       "name": "Nth Prime",
       "uuid": "4c1392d7-8779-496f-b0bb-81605e777e3b",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -810,6 +873,7 @@
       "slug": "alphametics",
       "name": "Alphametics",
       "uuid": "7219275b-935b-48ac-8bed-3436221bf3f1",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -820,6 +884,7 @@
       "slug": "connect",
       "name": "Connect",
       "uuid": "69cbdc2a-50f4-4e14-b9f4-c1ddee021018",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "arrays",
@@ -834,6 +899,7 @@
       "slug": "bowling",
       "name": "Bowling",
       "uuid": "18376dda-8e8d-4cf7-a44a-db71da438e87",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "arrays",
@@ -849,6 +915,7 @@
       "slug": "prime-factors",
       "name": "Prime Factors",
       "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -862,6 +929,7 @@
       "slug": "diamond",
       "name": "Diamond",
       "uuid": "df7c1bff-2224-422b-9c34-64b28b09510e",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "arrays",
@@ -877,6 +945,7 @@
       "slug": "pascals-triangle",
       "name": "Pascals Triangle",
       "uuid": "10edb37d-cf5d-443a-bb4c-8831a3986b61",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -888,6 +957,7 @@
       "slug": "binary-search-tree",
       "name": "Binary Search Tree",
       "uuid": "b912fe4f-c505-4bac-8029-76412644375b",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "algorithms",
@@ -900,6 +970,7 @@
       "slug": "sublist",
       "name": "Sublist",
       "uuid": "c5ed4703-59cd-4e31-b109-ba5bfc48a578",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "arrays",
@@ -913,6 +984,7 @@
       "slug": "custom-set",
       "name": "Custom Set",
       "uuid": "e2cfc3b4-5c71-4344-a692-5d55609f097b",
+      "prerequisites": [],
       "difficulty": 6,
       "topics": [
         "arrays",
@@ -929,6 +1001,7 @@
       "slug": "circular-buffer",
       "name": "Circular Buffer",
       "uuid": "3cc210e8-b3bb-11e7-abc4-cec278b6b50a",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "arrays",
@@ -943,6 +1016,7 @@
       "slug": "word-search",
       "name": "Word Search",
       "uuid": "8ba2c83e-f544-11e9-802a-5aa538984bd8",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "arrays",
@@ -958,6 +1032,7 @@
       "slug": "sieve",
       "name": "Sieve",
       "uuid": "f3ad1525-c124-4b2f-b09f-4639eb4a6ad9",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -971,6 +1046,7 @@
       "slug": "palindrome-products",
       "name": "Palindrome Products",
       "uuid": "ffb0ad36-2cf5-46d4-9a5f-5bbdfb9691a7",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -984,6 +1060,7 @@
       "slug": "diffie-hellman",
       "name": "Diffie Hellman",
       "uuid": "1d12bce3-bfdc-4785-9dc7-0a496d2e6d38",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "algorithms",
@@ -998,6 +1075,7 @@
       "slug": "crypto-square",
       "name": "Crypto Square",
       "uuid": "e92b7444-a5c3-4452-82fd-8c70cf14085a",
+      "prerequisites": [],
       "difficulty": 9,
       "topics": [
         "algorithms",
@@ -1014,6 +1092,7 @@
       "slug": "robot-simulator",
       "name": "Robot Simulator",
       "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -1028,6 +1107,7 @@
       "slug": "kindergarten-garden",
       "name": "Kindergarten Garden",
       "uuid": "d70d3579-999c-452c-9243-98908e24b47e",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "arrays",
@@ -1041,6 +1121,7 @@
       "slug": "armstrong-numbers",
       "name": "Armstrong Numbers",
       "uuid": "31e1b8ba-a5dd-4806-9a4c-94f7550e25d5",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "algorithms",
@@ -1052,6 +1133,7 @@
       "slug": "run-length-encoding",
       "name": "Run Length Encoding",
       "uuid": "16c5cf98-c381-46bb-a439-78dbc847c0d0",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "control_flow_conditionals",
@@ -1067,6 +1149,7 @@
       "slug": "rotational-cipher",
       "name": "Rotational Cipher",
       "uuid": "dbe39983-5635-4369-89a3-fd549144259b",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "ascii",
@@ -1077,6 +1160,7 @@
       "slug": "strain",
       "name": "Strain",
       "uuid": "e16c3064-b2ef-11e7-abc4-cec278b6b50a",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "algorithms",
@@ -1092,6 +1176,7 @@
       "slug": "accumulate",
       "name": "Accumulate",
       "uuid": "32953258-d488-4761-9669-895a359a8b9a",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -1104,6 +1189,7 @@
       "slug": "all-your-base",
       "name": "All Your Base",
       "uuid": "0f4f98fe-245a-4842-b3cf-6581b89afd44",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "control_flow_conditionals",
@@ -1118,6 +1204,7 @@
       "slug": "flatten-array",
       "name": "Flatten Array",
       "uuid": "ebe8227e-f445-4387-bf9f-54d4d9730142",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "arrays",
@@ -1130,6 +1217,7 @@
       "slug": "matching-brackets",
       "name": "Matching Brackets",
       "uuid": "b455f96b-329d-4dec-ac31-599b02c0b2e5",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "parsing",
@@ -1141,6 +1229,7 @@
       "slug": "minesweeper",
       "name": "Minesweeper",
       "uuid": "f5b00e76-3015-444d-8012-9862990db08c",
+      "prerequisites": [],
       "difficulty": 7,
       "topics": [
         "algorithms",
@@ -1152,6 +1241,7 @@
       "slug": "queen-attack",
       "name": "Queen Attack",
       "uuid": "837fbe57-a567-4fc7-a7a2-8b63059ac8b7",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "control_flow_conditionals",
@@ -1167,6 +1257,7 @@
       "slug": "react",
       "name": "React",
       "uuid": "6ad78102-09cc-4aeb-bfa7-58ba3dba57f3",
+      "prerequisites": [],
       "difficulty": 8,
       "topics": [
         "algorithms",
