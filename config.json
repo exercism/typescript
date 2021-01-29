@@ -2,6 +2,7 @@
   "language": "TypeScript",
   "active": true,
   "blurb": "TypeScript is a language for writing more maintainable JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.",
+  "version": 3,
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
     {
@@ -11,7 +12,11 @@
       "auto_approve": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": ["optional_values", "strings", "text_formatting"]
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
     },
     {
       "slug": "two-fer",
@@ -19,7 +24,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": ["optional_values", "strings", "text_formatting"]
+      "topics": [
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
     },
     {
       "slug": "resistor-color-duo",
@@ -27,7 +36,10 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": ["strings", "arrays"]
+      "topics": [
+        "strings",
+        "arrays"
+      ]
     },
     {
       "slug": "leap",
@@ -35,7 +47,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": ["booleans", "integers", "logic"]
+      "topics": [
+        "booleans",
+        "integers",
+        "logic"
+      ]
     },
     {
       "slug": "resistor-color",
@@ -43,7 +59,10 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": ["arrays", "strings"]
+      "topics": [
+        "arrays",
+        "strings"
+      ]
     },
     {
       "slug": "rna-transcription",
@@ -51,7 +70,10 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": ["strings", "transforming"]
+      "topics": [
+        "strings",
+        "transforming"
+      ]
     },
     {
       "slug": "space-age",
@@ -59,7 +81,10 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": ["classes", "floating_point_numbers"]
+      "topics": [
+        "classes",
+        "floating_point_numbers"
+      ]
     },
     {
       "slug": "pangram",
@@ -127,7 +152,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": ["arrays", "maps", "sorting"]
+      "topics": [
+        "arrays",
+        "maps",
+        "sorting"
+      ]
     },
     {
       "slug": "clock",
@@ -135,7 +164,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": ["integers", "logic", "strings"]
+      "topics": [
+        "integers",
+        "logic",
+        "strings"
+      ]
     },
     {
       "slug": "secret-handshake",
@@ -187,7 +220,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": ["algorithms", "floating_point_numbers", "math"]
+      "topics": [
+        "algorithms",
+        "floating_point_numbers",
+        "math"
+      ]
     },
     {
       "slug": "atbash-cipher",
@@ -241,7 +278,11 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": ["data_structures", "lists", "recursion"]
+      "topics": [
+        "data_structures",
+        "lists",
+        "recursion"
+      ]
     },
     {
       "slug": "word-count",
@@ -279,7 +320,12 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 3,
-      "topics": ["algorithms", "control_flow_loops", "integers", "math"]
+      "topics": [
+        "algorithms",
+        "control_flow_loops",
+        "integers",
+        "math"
+      ]
     },
     {
       "slug": "gigasecond",
@@ -287,7 +333,9 @@
       "core": false,
       "unlocked_by": "hello-world",
       "difficulty": 3,
-      "topics": ["time"]
+      "topics": [
+        "time"
+      ]
     },
     {
       "slug": "reverse-string",
@@ -295,7 +343,11 @@
       "core": false,
       "unlocked_by": "two-fer",
       "difficulty": 2,
-      "topics": ["for", "loops", "strings"]
+      "topics": [
+        "for",
+        "loops",
+        "strings"
+      ]
     },
     {
       "slug": "triangle",
@@ -330,7 +382,12 @@
       "core": false,
       "unlocked_by": "rna-transcription",
       "difficulty": 2,
-      "topics": ["control_flow_loops", "integers", "maps", "transforming"]
+      "topics": [
+        "control_flow_loops",
+        "integers",
+        "maps",
+        "transforming"
+      ]
     },
     {
       "slug": "protein-translation",
@@ -457,7 +514,11 @@
       "core": false,
       "unlocked_by": "space-age",
       "difficulty": 5,
-      "topics": ["control_flow_conditionals", "control_flow_loops", "integers"]
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers"
+      ]
     },
     {
       "slug": "pythagorean-triplet",
@@ -506,7 +567,10 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 2,
-      "topics": ["filtering", "strings"]
+      "topics": [
+        "filtering",
+        "strings"
+      ]
     },
     {
       "slug": "isogram",
@@ -555,7 +619,10 @@
       "core": false,
       "unlocked_by": "pangram",
       "difficulty": 5,
-      "topics": ["parsing", "transforming"]
+      "topics": [
+        "parsing",
+        "transforming"
+      ]
     },
     {
       "slug": "two-bucket",
@@ -613,7 +680,10 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 4,
-      "topics": ["algorithms", "text_formatting"]
+      "topics": [
+        "algorithms",
+        "text_formatting"
+      ]
     },
     {
       "slug": "house",
@@ -693,7 +763,11 @@
       "core": false,
       "unlocked_by": "bob",
       "difficulty": 5,
-      "topics": ["control_flow_conditionals", "control_flow_loops", "strings"]
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "strings"
+      ]
     },
     {
       "slug": "say",
@@ -807,7 +881,10 @@
       "core": false,
       "unlocked_by": "grade-school",
       "difficulty": 7,
-      "topics": ["algorithms", "games"]
+      "topics": [
+        "algorithms",
+        "games"
+      ]
     },
     {
       "slug": "connect",
@@ -876,7 +953,11 @@
       "core": false,
       "unlocked_by": "secret-handshake",
       "difficulty": 5,
-      "topics": ["control_flow_conditionals", "control_flow_loops", "math"]
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "math"
+      ]
     },
     {
       "slug": "binary-search-tree",
@@ -1032,7 +1113,11 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": ["algorithms", "integers", "math"]
+      "topics": [
+        "algorithms",
+        "integers",
+        "math"
+      ]
     },
     {
       "slug": "run-length-encoding",
@@ -1056,7 +1141,10 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": ["ascii", "iterators"]
+      "topics": [
+        "ascii",
+        "iterators"
+      ]
     },
     {
       "slug": "strain",
@@ -1108,7 +1196,11 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": ["parsing", "stacks", "strings"]
+      "topics": [
+        "parsing",
+        "stacks",
+        "strings"
+      ]
     },
     {
       "slug": "flatten-array",
@@ -1116,7 +1208,12 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": ["arrays", "lists", "loops", "recursion"]
+      "topics": [
+        "arrays",
+        "lists",
+        "loops",
+        "recursion"
+      ]
     },
     {
       "slug": "minesweeper",
@@ -1124,7 +1221,11 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": ["algorithms", "arrays", "games"]
+      "topics": [
+        "algorithms",
+        "arrays",
+        "games"
+      ]
     },
     {
       "slug": "queen-attack",
@@ -1148,7 +1249,11 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": ["algorithms", "closures", "reactive_programming"]
+      "topics": [
+        "algorithms",
+        "closures",
+        "reactive_programming"
+      ]
     }
   ]
 }
