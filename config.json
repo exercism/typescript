@@ -1,5 +1,6 @@
 {
   "language": "TypeScript",
+  "slug": "typescript",
   "active": true,
   "status": {
     "concept_exercises": false,
