@@ -16,6 +16,7 @@
   },
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": {
+    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
