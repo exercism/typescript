@@ -10,6 +10,10 @@
   },
   "blurb": "TypeScript is a language for writing more maintainable JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.",
   "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 4
+  },
   "test_pattern": ".*[.]test[.]ts$",
   "exercises": [
     {
