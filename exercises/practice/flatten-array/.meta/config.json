@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/flatten-array.example.ts"
+    ]
   },
   "source": "Interview Question",
   "source_url": "https://reference.wolfram.com/language/ref/Flatten.html"

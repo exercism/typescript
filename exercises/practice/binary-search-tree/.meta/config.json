@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/binary-search-tree.example.ts"
+    ]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

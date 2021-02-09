@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/grade-school.example.ts"
+    ]
   },
   "source": "A pairing session with Phil Battos at gSchool",
   "source_url": "http://gschool.it"

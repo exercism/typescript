@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/protein-translation.example.ts"
+    ]
   },
   "source": "Tyler Long"
 }

@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/rna-transcription.example.ts"
+    ]
   },
   "source": "Hyperphysics",
   "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html"

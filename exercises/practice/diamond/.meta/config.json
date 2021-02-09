@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/diamond.example.ts"
+    ]
   },
   "source": "Seb Rose",
   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"

@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/linked-list.example.ts"
+    ]
   },
   "source": "Classic computer science topic"
 }

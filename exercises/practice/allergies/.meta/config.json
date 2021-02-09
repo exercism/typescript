@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/allergies.example.ts"
+    ]
   },
   "source": "Jumpstart Lab Warm-up",
   "source_url": "http://jumpstartlab.com"

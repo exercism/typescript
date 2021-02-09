@@ -3,6 +3,8 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/all-your-base.example.ts"
+    ]
   }
 }

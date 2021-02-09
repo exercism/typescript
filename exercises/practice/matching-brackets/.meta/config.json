@@ -3,7 +3,9 @@
   "files": {
     "solution": [],
     "test": [],
-    "example": []
+    "example": [
+      ".meta/matching-brackets.example.ts"
+    ]
   },
   "source": "Ginna Baker"
 }
