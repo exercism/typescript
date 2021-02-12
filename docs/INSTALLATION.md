@@ -1,3 +1,5 @@
+# Installation
+
 Install [Yarn](https://yarnpkg.com/lang/en/docs/install):
 
 - **OS X users**: can use `brew install yarn`
