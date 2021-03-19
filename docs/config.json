@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "c79ecacf-6b92-4033-9f25-1f86e7299760",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing TypeScript locally",
+      "blurb": "Learn how to install TypeScript locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "d5553e1b-8432-4b27-a855-d060e830636d",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn TypeScript",
+      "blurb": "An overview of how to get started from scratch with TypeScript"
+    },
+    {
+      "uuid": "bef8b724-0569-4ad9-8e00-5daff3c17057",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the TypeScript track",
+      "blurb": "Learn how to test your TypeScript exercises on Exercism"
+    },
+    {
+      "uuid": "4d00c4da-0f99-4d0c-9a43-aca47128e4fb",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful TypeScript resources",
+      "blurb": "A collection of useful resources to help you master TypeScript"
+    }
+  ]
+}
