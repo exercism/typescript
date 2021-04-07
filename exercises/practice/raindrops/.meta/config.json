@@ -1,6 +1,10 @@
 {
   "blurb": "Convert a number to a string, the content of which depends on the number's factors.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "raindrops.ts"

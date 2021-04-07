@@ -1,6 +1,13 @@
 {
   "blurb": "Detect palindrome products in a given range.",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "averaart",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "palindrome-products.ts"

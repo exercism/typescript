@@ -1,6 +1,11 @@
 {
   "blurb": "Convert a long phrase to its acronym",
   "authors": [],
+  "contributors": [
+    "lilislilit",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "acronym.ts"

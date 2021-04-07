@@ -1,6 +1,12 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "reverse-string.ts"

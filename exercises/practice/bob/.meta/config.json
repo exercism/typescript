@@ -1,6 +1,15 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "amscotti",
+    "DFXLuna",
+    "kytrinyx",
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "bob.ts"

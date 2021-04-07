@@ -1,6 +1,13 @@
 {
   "blurb": "Manage robot factory settings.",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "joshgoebel",
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "robot-name.ts"

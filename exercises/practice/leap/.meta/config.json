@@ -1,6 +1,13 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "DFXLuna",
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "leap.ts"

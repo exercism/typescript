@@ -1,6 +1,13 @@
 {
   "blurb": "Take input text and output it transposed.",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "peerreynders",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "transpose.ts"

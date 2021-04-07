@@ -1,6 +1,14 @@
 {
   "blurb": "Implement basic list operations",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "archanid",
+    "masters3d",
+    "paparomeo",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "list-ops.ts"

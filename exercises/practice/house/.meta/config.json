@@ -1,6 +1,12 @@
 {
   "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "house.ts"
