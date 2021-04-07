@@ -15,6 +15,20 @@
     "indent_size": 4
   },
   "test_pattern": ".*[.]test[.]ts$",
+  "files": {
+    "solution": [
+      "%{kebab_slug}.ts"
+    ],
+    "test": [
+      "%{kebab_slug}.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ts"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
