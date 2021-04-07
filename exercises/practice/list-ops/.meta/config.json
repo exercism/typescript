@@ -2,8 +2,14 @@
   "blurb": "Implement basic list operations",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "list-ops.ts"
+    ],
+    "test": [
+      "list-ops.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   }
 }
