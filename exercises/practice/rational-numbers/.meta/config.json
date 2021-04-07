@@ -1,6 +1,12 @@
 {
   "blurb": "Implement rational numbers.",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "rational-numbers.ts"

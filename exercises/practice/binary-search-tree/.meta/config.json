@@ -1,6 +1,13 @@
 {
   "blurb": "Insert and search for numbers in a binary tree.",
-  "authors": [],
+  "authors": [
+    "Sn0wFox"
+  ],
+  "contributors": [
+    "masters3d",
+    "peerreynders",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "binary-search-tree.ts"

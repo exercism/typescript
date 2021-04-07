@@ -1,6 +1,12 @@
 {
   "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "food-chain.ts"

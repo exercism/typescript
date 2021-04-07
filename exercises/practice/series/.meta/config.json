@@ -1,6 +1,12 @@
 {
   "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
-  "authors": [],
+  "authors": [
+    "foxfriends"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "series.ts"

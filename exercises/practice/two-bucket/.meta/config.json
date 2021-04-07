@@ -1,6 +1,10 @@
 {
   "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "two-bucket.ts"

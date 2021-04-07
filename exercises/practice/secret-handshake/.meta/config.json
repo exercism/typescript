@@ -1,6 +1,12 @@
 {
   "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "secret-handshake.ts"

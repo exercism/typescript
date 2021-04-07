@@ -1,6 +1,13 @@
 {
   "blurb": "Add the numbers to a minesweeper board",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "iignatov",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "minesweeper.ts"

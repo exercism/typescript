@@ -1,6 +1,12 @@
 {
   "blurb": "Score a bowling game",
-  "authors": [],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "bowling.ts"

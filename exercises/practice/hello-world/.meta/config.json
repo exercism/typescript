@@ -1,6 +1,16 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "DFXLuna",
+    "iHiD",
+    "kytrinyx",
+    "lukaszklis",
+    "porkostomus",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "hello-world.ts"

@@ -1,6 +1,12 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "word-count.ts"

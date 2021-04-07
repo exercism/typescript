@@ -1,6 +1,12 @@
 {
   "blurb": "Create a program to solve a word search puzzle.",
-  "authors": [],
+  "authors": [
+    "msomji"
+  ],
+  "contributors": [
+    "ErikSchierboom",
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "word-search.ts"
