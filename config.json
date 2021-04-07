@@ -23,7 +23,7 @@
       "%{kebab_slug}.test.ts"
     ],
     "example": [
-      "%{kebab_slug}.example.ts"
+      ".meta/proof.ci.ts"
     ],
     "exemplar": [
       ".meta/exemplar.ts"
