@@ -2,8 +2,14 @@
   "blurb": "Write a function to solve alphametics puzzles.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "alphametics.ts"
+    ],
+    "test": [
+      "alphametics.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   }
 }

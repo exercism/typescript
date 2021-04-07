@@ -2,9 +2,15 @@
   "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "two-fer.ts"
+    ],
+    "test": [
+      "two-fer.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"
 }

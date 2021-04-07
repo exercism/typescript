@@ -2,8 +2,14 @@
   "blurb": "Create a custom set type.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "custom-set.ts"
+    ],
+    "test": [
+      "custom-set.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   }
 }

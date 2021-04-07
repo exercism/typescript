@@ -2,9 +2,15 @@
   "blurb": "Convert a long phrase to its acronym",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "acronym.ts"
+    ],
+    "test": [
+      "acronym.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"

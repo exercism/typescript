@@ -2,8 +2,14 @@
   "blurb": "Count the rectangles in an ASCII diagram.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "rectangles.ts"
+    ],
+    "test": [
+      "rectangles.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   }
 }

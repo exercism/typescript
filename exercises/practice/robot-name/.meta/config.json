@@ -2,9 +2,15 @@
   "blurb": "Manage robot factory settings.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "robot-name.ts"
+    ],
+    "test": [
+      "robot-name.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

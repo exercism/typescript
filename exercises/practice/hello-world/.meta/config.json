@@ -2,9 +2,15 @@
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "hello-world.ts"
+    ],
+    "test": [
+      "hello-world.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"
