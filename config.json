@@ -1150,12 +1150,12 @@
     },
     {
       "title": "Widely used",
-      "content": "Typescript is used by many frontend frameworks, and can also be configured to be used with Javascript based frameworks on top of that."
+      "content": "Typescript is used by many frontend frameworks, and can be used in Javascript based ones as well."
     },
     {
       "icon": "features-oop",
       "title": "Strongly typed",
-      "content": "Typescript flexible typing systems lets you describe what to expect of your code with minimum overhead."
+      "content": "Typescript flexible typing system lets you describe what to expect of your code easily."
     },
     {
       "icon": "features-functional",
@@ -1165,11 +1165,11 @@
     {
       "icon": "features-generic",
       "title": "Library and tooling",
-      "content": "Typescript is able to use all of Javascript vast choice of library and tooling, plus its own, Typescript based, share."
+      "content": "Typescript is able to use all of Javascript vast choice of library and tooling, plus its own."
     },
     {
       "title": "Community",
-      "content": "The large number of users makes it easy to find answers, documentation or just that niche library you were looking for."
+      "content": "The large number of users makes it easy to find answers, documentation and libraries."
     }
   ],
   "tags": []
