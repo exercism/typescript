@@ -1149,28 +1149,56 @@
       "content": "Typescript is a modern and constantly evolving language supported by Microsoft."
     },
     {
+      "icon": "features-cross-platform",
       "title": "Widely used",
       "content": "Typescript is used by many frontend frameworks, and can be used in Javascript based ones as well."
     },
     {
-      "icon": "features-oop",
+      "icon": "features-strongly-typed",
       "title": "Strongly typed",
       "content": "Typescript flexible typing system lets you describe what to expect of your code easily."
     },
     {
-      "icon": "features-functional",
+      "icon": "features-multi-paradigm",
       "title": "Multi-paradigm",
       "content": "Mainly focused in OOP, it also has tools to support other paradigms like Functional Programming."
     },
     {
-      "icon": "features-generic",
+      "icon": "features-packages",
       "title": "Library and tooling",
       "content": "Typescript is able to use all of Javascript vast choice of library and tooling, plus its own."
     },
     {
+      "icon": "features-generic",
       "title": "Community",
       "content": "The large number of users makes it easy to find answers, documentation and libraries."
     }
   ],
-  "tags": []
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/dynamic",
+    "typing/strong",
+    "typing/weak",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "platform/ios",
+    "platform/android",
+    "platform/web",
+    "runtime/language_specific",
+    "runtime/wasmtime",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/mobile",
+    "used_for/web_development"
+  ]
 }
