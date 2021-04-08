@@ -1,4 +1,4 @@
-name: 'javascript / sync'
+name: 'typescript / sync'
 
 on:
   issue_comment:
