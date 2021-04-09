@@ -1249,7 +1249,7 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "ascii",
+          "strings",
           "iterators"
         ]
       },
