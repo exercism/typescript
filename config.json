@@ -128,8 +128,8 @@
         "difficulty": 3,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "lists",
           "maps",
           "searching",
@@ -144,7 +144,7 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "control_flow_conditionals",
+          "conditionals",
           "pattern_recognition",
           "polymorphism",
           "regular_expressions",
@@ -161,8 +161,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "matrices",
           "text_formatting"
@@ -176,7 +176,7 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "control_flow_conditionals",
+          "conditionals",
           "exception_handling",
           "randomness",
           "regular_expressions",
@@ -220,8 +220,8 @@
           "algorithms",
           "arrays",
           "bitwise_operations",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "games"
         ]
       },
@@ -235,8 +235,8 @@
         "topics": [
           "algorithms",
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops"
+          "conditionals",
+          "loops"
         ]
       },
       {
@@ -249,8 +249,8 @@
         "topics": [
           "algorithms",
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "lists",
           "optional_values"
@@ -279,8 +279,8 @@
         "topics": [
           "algorithms",
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "text_formatting"
         ]
       },
@@ -293,8 +293,8 @@
         "difficulty": 7,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "randomness",
           "strings",
           "text_formatting",
@@ -309,8 +309,8 @@
         "prerequisites": [],
         "difficulty": 7,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "parsing",
           "pattern_recognition",
@@ -339,7 +339,7 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
-          "control_flow_loops",
+          "loops",
           "lists",
           "regular_expressions",
           "strings",
@@ -355,7 +355,7 @@
         "difficulty": 3,
         "topics": [
           "algorithms",
-          "control_flow_loops",
+          "loops",
           "integers",
           "math"
         ]
@@ -379,7 +379,6 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-          "for",
           "loops",
           "strings"
         ]
@@ -392,8 +391,8 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "integers"
         ]
@@ -421,7 +420,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-          "control_flow_loops",
+          "loops",
           "integers",
           "maps",
           "transforming"
@@ -436,8 +435,8 @@
         "difficulty": 2,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "strings"
         ]
       },
@@ -449,7 +448,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-          "control_flow_conditionals",
+          "conditionals",
           "integers",
           "strings",
           "transforming"
@@ -463,8 +462,8 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "equality",
           "strings"
         ]
@@ -478,8 +477,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "strings",
           "text_formatting"
         ]
@@ -492,8 +491,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "maps",
           "strings"
         ]
@@ -508,8 +507,8 @@
         "topics": [
           "arrays",
           "bitwise_operations",
-          "control_flow_conditionals",
-          "control_flow_loops"
+          "conditionals",
+          "loops"
         ]
       },
       {
@@ -521,8 +520,8 @@
         "difficulty": 3,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "math"
         ]
@@ -536,8 +535,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "math"
         ]
       },
@@ -549,8 +548,8 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "strings"
         ]
@@ -563,8 +562,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers"
         ]
       },
@@ -577,8 +576,8 @@
         "difficulty": 5,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "math"
         ]
@@ -591,8 +590,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "lists",
           "math"
@@ -606,7 +605,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-          "control_flow_loops",
+          "loops",
           "regular_expressions",
           "strings",
           "transforming"
@@ -632,9 +631,8 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "ascii",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "filtering",
           "searching",
           "strings"
@@ -648,8 +646,8 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "pattern_recognition",
           "transforming"
         ]
@@ -662,7 +660,7 @@
         "prerequisites": [],
         "difficulty": 3,
         "topics": [
-          "control_flow_loops",
+          "loops",
           "exception_handling",
           "strings",
           "text_formatting"
@@ -724,8 +722,8 @@
         "prerequisites": [],
         "difficulty": 7,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "integers",
           "math",
@@ -754,8 +752,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "recursion",
           "strings"
         ]
@@ -768,8 +766,8 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "pattern_recognition",
           "regular_expressions",
           "strings"
@@ -783,8 +781,8 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "games",
           "regular_expressions",
           "strings",
@@ -800,8 +798,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "optional_values",
           "strings",
           "text_formatting"
@@ -815,8 +813,8 @@
         "prerequisites": [],
         "difficulty": 4,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "pattern_recognition",
           "polymorphism",
           "strings"
@@ -830,8 +828,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "strings"
         ]
       },
@@ -843,8 +841,8 @@
         "prerequisites": [],
         "difficulty": 6,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "integers",
           "strings",
@@ -860,8 +858,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "matrices",
           "strings"
         ]
@@ -875,8 +873,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "lists",
           "matrices",
@@ -892,8 +890,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "matrices"
         ]
@@ -907,8 +905,8 @@
         "difficulty": 4,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "lists",
           "matrices",
           "strings",
@@ -923,8 +921,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "equality",
           "exception_handling",
           "integers",
@@ -941,8 +939,8 @@
         "difficulty": 5,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "integers",
           "math"
@@ -969,8 +967,8 @@
         "difficulty": 7,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "games",
           "maps",
           "parsing"
@@ -985,8 +983,8 @@
         "difficulty": 8,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "games",
           "parsing",
@@ -1002,8 +1000,8 @@
         "difficulty": 4,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "math"
         ]
@@ -1033,8 +1031,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "math"
         ]
       },
@@ -1047,8 +1045,8 @@
         "difficulty": 6,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "recursion"
         ]
       },
@@ -1061,8 +1059,8 @@
         "difficulty": 5,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "lists"
         ]
@@ -1076,8 +1074,8 @@
         "difficulty": 6,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "equality",
           "lists",
@@ -1094,8 +1092,8 @@
         "difficulty": 8,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "data_structures",
           "exception_handling",
           "lists"
@@ -1126,8 +1124,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "math",
           "recursion"
@@ -1142,8 +1140,8 @@
         "difficulty": 7,
         "topics": [
           "algorithms",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "integers",
           "math"
         ]
@@ -1158,8 +1156,8 @@
         "topics": [
           "algorithms",
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "math"
         ]
@@ -1174,8 +1172,8 @@
         "topics": [
           "algorithms",
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "regular_expressions",
           "sorting",
           "text_formatting",
@@ -1190,8 +1188,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "games",
           "parsing",
@@ -1207,8 +1205,8 @@
         "difficulty": 7,
         "topics": [
           "arrays",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "strings",
           "text_formatting"
         ]
@@ -1234,7 +1232,7 @@
         "prerequisites": [],
         "difficulty": 2,
         "topics": [
-          "control_flow_conditionals",
+          "conditionals",
           "exception_handling",
           "parsing",
           "pattern_recognition",
@@ -1266,8 +1264,8 @@
           "algorithms",
           "arrays",
           "callbacks",
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "filtering",
           "lists"
         ]
@@ -1282,7 +1280,7 @@
         "topics": [
           "algorithms",
           "callbacks",
-          "control_flow_conditionals",
+          "conditionals",
           "lists"
         ]
       },
@@ -1294,8 +1292,8 @@
         "prerequisites": [],
         "difficulty": 5,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "exception_handling",
           "integers",
           "math",
@@ -1350,8 +1348,8 @@
         "prerequisites": [],
         "difficulty": 8,
         "topics": [
-          "control_flow_conditionals",
-          "control_flow_loops",
+          "conditionals",
+          "loops",
           "equality",
           "exception_handling",
           "optional_values",
