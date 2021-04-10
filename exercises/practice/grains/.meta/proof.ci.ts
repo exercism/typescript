@@ -10,7 +10,7 @@ export function total(): number {
   let total = 0
 
   for (let i = 1; i <= 64; i++) {
-    total += this.square(i)
+    total += square(i)
   }
 
   return total

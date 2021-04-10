@@ -89,9 +89,9 @@ function* generate(A: number[]): IterableIterator<number[]> {
   while (i < n) {
     if (c[i] < i) {
       if (i % 2 === 0) {
-        this.swap(A, 0, i)
+        swap(A, 0, i)
       } else {
-        this.swap(A, c[i], i)
+        swap(A, c[i], i)
       }
       yield A
       c[i] += 1
@@ -118,7 +118,7 @@ function getNumberCombinations(arr: number[], size: number): number[][] {
   }
 
   return arr.reduce((acc: number[][], val: number, i: number) => {
-    const res: number[][] = this.getNumberCombinations(
+    const res: number[][] = getNumberCombinations(
       arr.slice(i + 1),
       size - 1
     ).map((comb) => [val].concat(comb))

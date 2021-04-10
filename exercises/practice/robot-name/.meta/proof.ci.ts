@@ -48,7 +48,7 @@ class NameDatabase {
 
 const RobotsDB = new NameDatabase()
 
-export default class Robot {
+export class Robot {
   private _name!: string
 
   public get name(): string {

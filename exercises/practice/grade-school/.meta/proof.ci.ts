@@ -1,45 +1,34 @@
 type Student = string
 type Grade = number
-type StudentRooster = Map<string, Student[]>
+type StudentRooster = Record<string, Student[]>
 type StudentGrades = Map<Student, Grade>
-
-class GradeSchool {
-  private studentGrades: StudentGrades
+export class GradeSchool {
+  students: StudentGrades
 
   constructor() {
-    this.studentGrades = new Map()
+    this.students = new Map()
   }
 
-  private studentGradeEntries(): Array<[Student, Grade]> {
-    return Array.from(this.studentGrades.entries())
+  add(student: Student, level: Grade) {
+    this.students.set(student, level)
   }
 
-  public studentRoster(): StudentRooster {
-    const grades: Grade[] = Array.from(
-      new Set(this.studentGrades.values()).values()
-    ).sort()
-
-    const emptyStudentsRooster: StudentRooster = new Map()
-
-    const gradesReducer = (
-      rooster: StudentRooster,
-      grade: Grade
-    ): StudentRooster =>
-      rooster.set(grade.toString(), this.studentsInGrade(grade))
-
-    return grades.reduce(gradesReducer, emptyStudentsRooster)
-  }
-
-  public addStudent(s: Student, g: Grade): void {
-    this.studentGrades.set(s, g)
-  }
-
-  public studentsInGrade(g: Grade): Student[] {
-    return this.studentGradeEntries()
-      .filter(([_, sg]) => sg == g)
-      .map(([s, _]) => s)
+  grade(level: Grade) {
+    return Array.from(this.students.entries())
+      .filter(([, studentGrade]) => studentGrade === level)
+      .map(([student]) => student)
       .sort()
   }
-}
 
-export default GradeSchool
+  roster(): StudentRooster {
+    const result: StudentRooster = {}
+
+    Array.from(this.students.entries()).forEach(([, studentGrade]) => {
+      if (!result[studentGrade]) {
+        result[studentGrade] = this.grade(studentGrade)
+      }
+    })
+
+    return result
+  }
+}

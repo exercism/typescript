@@ -1,4 +1,4 @@
-export default class Clock {
+export class Clock {
   private hour!: number
   private minute!: number
 

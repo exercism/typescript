@@ -1,4 +1,4 @@
-export default class ComplexNumber {
+export class ComplexNumber {
   public readonly real: number
   public readonly imag: number
 

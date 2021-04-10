@@ -8,48 +8,72 @@ interface Palindrome {
   factors: Array<[number, number]>
 }
 
-interface Output {
-  largest: Palindrome
-  smallest: Palindrome
+const reverseString = (str: string) => str.split('').reverse().join('')
+
+export function generate(params: Input): Palindromes {
+  if ((params.minFactor || 1) > params.maxFactor) {
+    throw new Error('min must be <= max')
+  }
+  return new Palindromes(params.maxFactor, params.minFactor || 1)
 }
 
-export function generate({ maxFactor, minFactor = 1 }: Input): Output {
-  const factors = Array.from(
-    { length: maxFactor - minFactor + 1 },
-    (_, k) => k + minFactor
-  )
-  const products: Map<number, Array<[number, number]>> = new Map<
-    number,
-    Array<[number, number]>
-  >()
+class Palindrome {
+  constructor(factor1: number, factor2: number) {
+    this.value = factor1 * factor2
+    this.factors = [[factor1, factor2].sort() as [number, number]]
+  }
 
-  let min = Infinity
-  let max = 0
+  withFactors(factors) {
+    this.factors.push(factors.sort())
+    this.factors = this.factors.sort()
+    return this
+  }
 
-  factors.forEach((x: number, index: number) => {
-    factors.slice(index).forEach((y) => {
-      const product = x * y
-      if (isPalidrome(product)) {
-        const factorPair: [number, number] = [x, y]
-        const newFactors = products.get(product) || []
-        newFactors.push(factorPair)
-        products.set(product, newFactors)
+  valid() {
+    const s = `${this.value}`
+    return s === reverseString(s)
+  }
 
-        min = Math.min(min, product)
-        max = Math.max(max, product)
+  merge(other) {
+    other.factors.forEach((f) => this.factors.push(f))
+    this.factors = this.factors.sort()
+    return this
+  }
+}
+
+export class Palindromes {
+  constructor(public maxFactor: number, public minFactor = 1) {}
+
+  get largest() {
+    let best = new Palindrome(this.minFactor, this.minFactor)
+    for (let m = this.maxFactor; m >= this.minFactor; m -= 1) {
+      let p = null
+      for (let n = m; n >= this.minFactor && (!p || !p.valid()); n -= 1) {
+        p = new Palindrome(m, n)
+        if (p.valid()) {
+          if (best.value < p.value) {
+            best = p
+          } else if (best.value === p.value) {
+            best = p.merge(best)
+          }
+        }
       }
-    })
-  })
+    }
+    if (best.valid()) {
+      return best
+    }
+    return { value: null, factors: [] }
+  }
 
-  const largest: Palindrome = { value: max, factors: products.get(max) || [] }
-  const smallest: Palindrome = { value: min, factors: products.get(min) || [] }
-
-  return { largest, smallest }
-}
-
-function isPalidrome(x: number): boolean {
-  const a = x.toString()
-  const b = [...a].reverse().join('')
-
-  return a === b
+  get smallest() {
+    for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
+      for (let n = this.minFactor; n <= this.maxFactor; n += 1) {
+        const p = new Palindrome(m, n)
+        if (p.valid()) {
+          return p
+        }
+      }
+    }
+    return { value: null, factors: [] }
+  }
 }

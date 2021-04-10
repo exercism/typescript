@@ -1,13 +1,17 @@
 import { GradeSchool } from './grade-school'
 
 describe('School', () => {
+  let school
+
+  beforeEach(() => {
+    school = new GradeSchool()
+  })
+
   test('a new school has an empty roster', () => {
-    const school = new GradeSchool()
     expect(school.roster()).toEqual({})
   })
 
   xtest('adding a student adds them to the roster for the given grade', () => {
-    const school = new GradeSchool()
     school.add('Aimee', 2)
 
     const expectedDb = { 2: ['Aimee'] }
@@ -15,7 +19,6 @@ describe('School', () => {
   })
 
   xtest('adding more students to the same grade adds them to the roster', () => {
-    const school = new GradeSchool()
     school.add('Blair', 2)
     school.add('James', 2)
     school.add('Paul', 2)
@@ -25,7 +28,6 @@ describe('School', () => {
   })
 
   xtest('adding students to different grades adds them to the roster', () => {
-    const school = new GradeSchool()
     school.add('Chelsea', 3)
     school.add('Logan', 7)
 
@@ -34,7 +36,6 @@ describe('School', () => {
   })
 
   xtest('grade returns the students in that grade in alphabetical order', () => {
-    const school = new GradeSchool()
     school.add('Franklin', 5)
     school.add('Bradley', 5)
     school.add('Jeff', 1)
@@ -44,12 +45,10 @@ describe('School', () => {
   })
 
   xtest('grade returns an empty array if there are no students in that grade', () => {
-    const school = new GradeSchool()
     expect(school.grade(1)).toEqual([])
   })
 
   xtest('the students names in each grade in the roster are sorted', () => {
-    const school = new GradeSchool()
     school.add('Jennifer', 4)
     school.add('Kareem', 6)
     school.add('Christopher', 4)
@@ -64,7 +63,6 @@ describe('School', () => {
   })
 
   xtest('roster cannot be modified outside of module', () => {
-    const school = new GradeSchool()
     school.add('Aimee', 2)
     const roster = school.roster()
     roster[2].push('Oops.')
@@ -73,7 +71,6 @@ describe('School', () => {
   })
 
   xtest('roster cannot be modified outside of module using grade()', () => {
-    const school = new GradeSchool()
     school.add('Aimee', 2)
     school.grade(2).push('Oops.')
     const expectedDb = { 2: ['Aimee'] }
@@ -81,7 +78,6 @@ describe('School', () => {
   })
 
   xtest("a student can't be in two different grades", () => {
-    const school = new GradeSchool()
     school.add('Aimee', 2)
     school.add('Aimee', 1)
 

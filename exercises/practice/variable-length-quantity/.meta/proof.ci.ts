@@ -24,7 +24,7 @@ function decodeOne(buf: number[]): number {
   return val >>> 0 // convert to unsigned 32-bit
 }
 
-function encode(data: number[]): number[] {
+export function encode(data: number[]): number[] {
   let buf: number[] = []
 
   for (let i = 0; i <= data.length - 1; i++) {
@@ -33,7 +33,7 @@ function encode(data: number[]): number[] {
   return buf
 }
 
-function decode(data: number[]): number[] {
+export function decode(data: number[]): number[] {
   let start = 0
   const vals = []
 

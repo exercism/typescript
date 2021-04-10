@@ -3,16 +3,6 @@ interface Input {
   minFactor?: number
 }
 
-interface Palindrome {
-  value: number
-  factors: Array<[number, number]>
-}
-
-interface Output {
-  largest: Palindrome
-  smallest: Palindrome
-}
-
-export function generate(input: Input): Output {
+export function generate(params: Input): unknown {
   throw new Error('Remove this statement and implement this function')
 }
