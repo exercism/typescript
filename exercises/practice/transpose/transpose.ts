@@ -1,5 +1,3 @@
-function transpose(_lines: string[]): string[] {
-  return []
+export function transpose() {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default transpose

@@ -1,7 +1,3 @@
-class Transcriptor {
-  toRna(/* Parameters go here */) {
-    // Your code here
-  }
+export function toRna() {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default Transcriptor

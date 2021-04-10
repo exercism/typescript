@@ -1,4 +1,4 @@
-import ComplexNumber from './complex-numbers'
+import { ComplexNumber } from './complex-numbers'
 
 describe('Complex numbers', () => {
   it('Real part of a purely real number', () => {

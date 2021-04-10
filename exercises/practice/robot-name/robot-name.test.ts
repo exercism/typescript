@@ -1,4 +1,4 @@
-import Robot from './robot-name'
+import { Robot } from './robot-name'
 
 const areSequential = (name1: string, name2: string): boolean => {
   const alpha1 = name1.substr(0, 2)

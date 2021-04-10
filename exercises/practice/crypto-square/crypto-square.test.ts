@@ -1,59 +1,42 @@
-import Crypto from './crypto-square'
+import { Crypto } from './crypto-square'
 
 describe('Crypto', () => {
-  it('normalize strange characters', () => {
-    const crypto = new Crypto('s#$%^&plunk')
-    expect(crypto.normalizePlaintext()).toEqual('splunk')
+  test('empty plaintext results in an empty ciphertext', () => {
+    const crypto = new Crypto('')
+    expect(crypto.ciphertext).toEqual('')
   })
 
-  xit('normalize numbers', () => {
-    const crypto = new Crypto('1, 2, 3 GO!')
-    expect(crypto.normalizePlaintext()).toEqual('123go')
+  test('Lowercase', () => {
+    const crypto = new Crypto('A')
+    expect(crypto.ciphertext).toEqual('a')
   })
 
-  xit('size of small square', () => {
-    const crypto = new Crypto('1234')
-    expect(crypto.size()).toEqual(2)
+  test('Remove spaces', () => {
+    const crypto = new Crypto('  b ')
+    expect(crypto.ciphertext).toEqual('b')
   })
 
-  xit('size of small square with additional non-number chars', () => {
-    const crypto = new Crypto('1 2 3 4')
-    expect(crypto.size()).toEqual(2)
+  test('Remove punctuation', () => {
+    const crypto = new Crypto('@1,%!')
+    expect(crypto.ciphertext).toEqual('1')
   })
 
-  xit('size of slightly larger square', () => {
-    const crypto = new Crypto('123456789')
-    expect(crypto.size()).toEqual(3)
+  xtest('9 character plaintext results in 3 chunks of 3 characters', () => {
+    const crypto = new Crypto('This is fun!')
+    expect(crypto.ciphertext).toEqual('tsf hiu isn')
   })
 
-  xit('size of non-perfect square', () => {
-    const crypto = new Crypto('123456789abc')
-    expect(crypto.size()).toEqual(4)
+  xtest('8 character plaintext results in 3 chunks, the last one with a trailing space', () => {
+    const crypto = new Crypto('Chill out.')
+    expect(crypto.ciphertext).toEqual('clu hlt io ')
   })
 
-  xit('plain text segments', () => {
-    const crypto = new Crypto('Never vex thine heart with idle woes')
-    expect(crypto.plaintextSegments()).toEqual([
-      'neverv',
-      'exthin',
-      'eheart',
-      'withid',
-      'lewoes',
-    ])
-  })
-
-  xit('plain text segments', () => {
-    const crypto = new Crypto('ZOMG! ZOMBIES!!!')
-    expect(crypto.plaintextSegments()).toEqual(['zomg', 'zomb', 'ies'])
-  })
-
-  xit('cipher text', () => {
-    const crypto = new Crypto('Time is an illusion. Lunchtime doubly so.')
-    expect(crypto.ciphertext()).toEqual('tasneyinicdsmiohooelntuillibsuuml')
-  })
-
-  xit('cipher text', () => {
-    const crypto = new Crypto('We all know interspecies romance is weird.')
-    expect(crypto.ciphertext()).toEqual('wneiaweoreneawssciliprerlneoidktcms')
+  test.skip('54 character plaintext results in 7 chunks, the last two with trailing spaces', () => {
+    const crypto = new Crypto(
+      'If man was meant to stay on the ground, god would have given us roots.'
+    )
+    expect(crypto.ciphertext).toEqual(
+      'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau '
+    )
   })
 })

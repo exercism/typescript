@@ -1,55 +1,35 @@
-import SpaceAge from './space-age'
+import { age } from './space-age'
 
 describe('Space Age', () => {
-  it('age in seconds', () => {
-    const age = new SpaceAge(1000000)
-    expect(age.seconds).toEqual(1000000)
+  test('age on Earth', () => {
+    expect(age('earth', 1000000000)).toEqual(31.69)
   })
 
-  xit('age in earth years', () => {
-    const age = new SpaceAge(1000000000)
-    expect(age.onEarth()).toEqual(31.69)
+  xtest('age on Mercury', () => {
+    expect(age('mercury', 2134835688)).toEqual(280.88)
   })
 
-  xit('age in mercury years', () => {
-    const age = new SpaceAge(2134835688)
-    expect(age.onEarth()).toEqual(67.65)
-    expect(age.onMercury()).toEqual(280.88)
+  xtest('age on Venus', () => {
+    expect(age('venus', 189839836)).toEqual(9.78)
   })
 
-  xit('age in venus years', () => {
-    const age = new SpaceAge(189839836)
-    expect(age.onEarth()).toEqual(6.02)
-    expect(age.onVenus()).toEqual(9.78)
+  xtest('age on Mars', () => {
+    expect(age('mars', 2129871239)).toEqual(35.88)
   })
 
-  xit('age in mars years', () => {
-    const age = new SpaceAge(2329871239)
-    expect(age.onEarth()).toEqual(73.83)
-    expect(age.onMars()).toEqual(39.25)
+  xtest('age on Jupiter', () => {
+    expect(age('jupiter', 901876382)).toEqual(2.41)
   })
 
-  xit('age in jupiter years', () => {
-    const age = new SpaceAge(901876382)
-    expect(age.onEarth()).toEqual(28.58)
-    expect(age.onJupiter()).toEqual(2.41)
+  xtest('age on Saturn', () => {
+    expect(age('saturn', 2000000000)).toEqual(2.15)
   })
 
-  xit('age in saturn years', () => {
-    const age = new SpaceAge(3000000000)
-    expect(age.onEarth()).toEqual(95.06)
-    expect(age.onSaturn()).toEqual(3.23)
+  xtest('age on Uranus', () => {
+    expect(age('uranus', 1210123456)).toEqual(0.46)
   })
 
-  xit('age in uranus years', () => {
-    const age = new SpaceAge(3210123456)
-    expect(age.onEarth()).toEqual(101.72)
-    expect(age.onUranus()).toEqual(1.21)
-  })
-
-  xit('age in neptune year', () => {
-    const age = new SpaceAge(8210123456)
-    expect(age.onEarth()).toEqual(260.16)
-    expect(age.onNeptune()).toEqual(1.58)
+  xtest('age on Neptune', () => {
+    expect(age('neptune', 1821023456)).toEqual(0.35)
   })
 })

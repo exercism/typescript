@@ -1,4 +1,4 @@
-import Rational from './rational-numbers'
+import { Rational } from './rational-numbers'
 
 describe('Addition', () => {
   it('Add two positive rational numbers', () => {

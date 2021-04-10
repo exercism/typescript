@@ -1,7 +1,3 @@
-class ReverseString {
-  static reverse(/* Parameters go here */) {
-    // Your code here
-  }
+export function reverse(/* Parameters go here */) {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default ReverseString

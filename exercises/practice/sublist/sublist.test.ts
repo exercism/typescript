@@ -1,4 +1,4 @@
-import List from './sublist'
+import { List } from './sublist'
 
 describe('Sublist', () => {
   it('empty lists', () => {

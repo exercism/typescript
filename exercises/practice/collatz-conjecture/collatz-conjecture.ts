@@ -1,7 +1,3 @@
-class CollatzConjecture {
-  static steps(/* Parameters go here */) {
-    // Your code here
-  }
+export function steps(count: unknown): unknown {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default CollatzConjecture

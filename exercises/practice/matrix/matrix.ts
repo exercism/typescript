@@ -1,7 +1,13 @@
-class Matrix {
-  constructor(/* Parameters go here */) {
-    // Your code here
+export class Matrix {
+  constructor() {
+    throw new Error('Remove this statement and implement this function')
+  }
+
+  get rows(): unknown {
+    throw new Error('Remove this statement and implement this function')
+  }
+
+  get columns(): unknown {
+    throw new Error('Remove this statement and implement this function')
   }
 }
-
-export default Matrix

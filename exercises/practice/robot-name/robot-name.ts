@@ -1,4 +1,4 @@
-export default class Robot {
+export class Robot {
   constructor() {}
 
   public get name(): string {

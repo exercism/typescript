@@ -1,7 +1,3 @@
-class TwelveDays {
-  static recite(/* Parameters go here */) {
-    // Your code here
-  }
+export function recite() {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default TwelveDays

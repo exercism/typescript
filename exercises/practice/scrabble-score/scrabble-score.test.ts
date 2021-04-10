@@ -1,4 +1,4 @@
-import score from './scrabble-score'
+import { score } from './scrabble-score'
 
 describe('Scrabble', () => {
   it('scores an empty word as zero', () => expect(score('')).toEqual(0))

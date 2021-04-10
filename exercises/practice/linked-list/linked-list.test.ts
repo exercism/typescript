@@ -1,4 +1,4 @@
-import LinkedList from './linked-list'
+import { LinkedList } from './linked-list'
 
 describe('LinkedList', () => {
   it('add/extract elements to the end of the list with push/pop', () => {

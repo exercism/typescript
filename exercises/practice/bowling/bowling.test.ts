@@ -1,33 +1,53 @@
-import Bowling from './bowling'
+import { Bowling } from './bowling'
 
 describe('Bowling', () => {
   describe('Check game can be scored correctly.', () => {
-    it('should be able to score a game with all gutterballs', () => {
+    test('should be able to score a game with all zeros', () => {
       const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(0)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(0)
     })
 
-    xit('should be able to score a game with all open frames', () => {
+    xtest('should be able to score a game with no strikes or spares', () => {
       const rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]
-      expect(new Bowling(rolls).score()).toEqual(90)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(90)
     })
 
-    xit('a spare followed by zeros is worth ten points', () => {
+    xtest('a spare followed by zeros is worth ten points', () => {
       const rolls = [6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(10)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(10)
     })
 
-    xit('points scored in the roll after a spare are counted twice', () => {
+    xtest('points scored in the roll after a spare are counted twice', () => {
       const rolls = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(16)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(16)
     })
 
-    xit('consecutive spares each get a one roll bonus', () => {
+    xtest('consecutive spares each get a one roll bonus', () => {
       const rolls = [5, 5, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(31)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(31)
     })
 
-    xit('should allow fill ball when the last frame is a spare', () => {
+    xtest('a spare in the last frame gets a one roll bonus that is counted once', () => {
       const rolls = [
         0,
         0,
@@ -51,25 +71,41 @@ describe('Bowling', () => {
         3,
         7,
       ]
-      expect(new Bowling(rolls).score()).toEqual(17)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(17)
     })
 
-    xit('a strike earns ten points in a frame with a single roll', () => {
+    xtest('a strike earns ten points in a frame with a single roll', () => {
       const rolls = [10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(10)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(10)
     })
 
-    xit('points scored in the two rolls after a strike are counted twice as a bonus', () => {
+    xtest('points scored in the two rolls after a strike are counted twice as a bonus', () => {
       const rolls = [10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(26)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(26)
     })
 
-    xit('should be able to score multiple strikes in a row', () => {
+    xtest('consecutive strikes each get the two roll bonus', () => {
       const rolls = [10, 10, 10, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      expect(new Bowling(rolls).score()).toEqual(81)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(81)
     })
 
-    xit('should allow fill balls when the last frame is a strike', () => {
+    xtest('a strike in the last frame gets a two roll bonues that is counted once', () => {
       const rolls = [
         0,
         0,
@@ -93,10 +129,14 @@ describe('Bowling', () => {
         7,
         1,
       ]
-      expect(new Bowling(rolls).score()).toEqual(18)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(18)
     })
 
-    xit('rolling a spare with the two roll bonus does not get a bonus roll', () => {
+    xtest('rolling a spare with the two roll bonus does not get a bonus roll', () => {
       const rolls = [
         0,
         0,
@@ -120,10 +160,14 @@ describe('Bowling', () => {
         7,
         3,
       ]
-      expect(new Bowling(rolls).score()).toEqual(20)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(20)
     })
 
-    xit('strikes with the two roll bonus do not get bonus rolls', () => {
+    xtest('strikes with the two roll bonus do not get bonus rolls', () => {
       const rolls = [
         0,
         0,
@@ -147,10 +191,14 @@ describe('Bowling', () => {
         10,
         10,
       ]
-      expect(new Bowling(rolls).score()).toEqual(30)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(30)
     })
 
-    xit('a strike with the one roll bonus after a spare in the last frame does not get a bonus', () => {
+    xtest('a strike with the one roll bonus after a spare in the last frame does not get a bonus', () => {
       const rolls = [
         0,
         0,
@@ -174,80 +222,58 @@ describe('Bowling', () => {
         3,
         10,
       ]
-      expect(new Bowling(rolls).score()).toEqual(20)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(20)
     })
 
-    xit('should be able to score a perfect game', () => {
+    xtest('all strikes is a perfect game', () => {
       const rolls = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-      expect(new Bowling(rolls).score()).toEqual(300)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(300)
     })
   })
 
   describe('Check game rules.', () => {
-    xit('rolls can not score negative points', () => {
-      const rolls = [
-        -1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ]
+    xtest('rolls cannot score negative points', () => {
+      const bowling = new Bowling()
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Pins must have a value from 0 to 10')
+        bowling.roll(-1)
+      }).toThrow(new Error('Negative roll is invalid'))
     })
 
-    xit('a roll can not score more than 10 points', () => {
-      const rolls = [
-        11,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ]
+    xtest('a roll cannot score more than 10 points', () => {
+      const bowling = new Bowling()
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Pins must have a value from 0 to 10')
+        bowling.roll(11)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
     })
 
-    xit('two rolls in a frame can not score more than 10 points', () => {
-      const rolls = [5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    xtest('two rolls in a frame cannot score more than 10 points', () => {
+      const bowling = new Bowling()
+      bowling.roll(5)
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Pin count exceeds pins on the lane')
+        bowling.roll(6)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
     })
 
-    xit('two bonus rolls after a strike in the last frame can not score more than 10 points', () => {
+    xtest('bonus roll after a strike in the last frame cannot score more than 10 points', () => {
+      const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(() => {
+        bowling.roll(11)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
+    })
+
+    xtest('two bonus rolls after a strike in the last frame cannot score more than 10 points', () => {
       const rolls = [
         0,
         0,
@@ -269,14 +295,17 @@ describe('Bowling', () => {
         0,
         10,
         5,
-        6,
       ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Pin count exceeds pins on the lane')
+        bowling.roll(6)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
     })
 
-    xit('two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike', () => {
+    xtest('two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike', () => {
       const rolls = [
         0,
         0,
@@ -300,10 +329,14 @@ describe('Bowling', () => {
         10,
         6,
       ]
-      expect(new Bowling(rolls).score()).toEqual(26)
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(26)
     })
 
-    xit('the second bonus rolls after a strike in the last frame can not be a strike if the first one is not a strike', () => {
+    xtest('the second bonus rolls after a strike in the last frame cannot be a strike if the first one is not a strike', () => {
       const rolls = [
         0,
         0,
@@ -325,64 +358,89 @@ describe('Bowling', () => {
         0,
         10,
         6,
+      ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(() => {
+        bowling.roll(10)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
+    })
+
+    xtest('second bonus roll after a strike in the last frame cannot score more than 10 points', () => {
+      const rolls = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
         10,
       ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Pin count exceeds pins on the lane')
+        bowling.roll(11)
+      }).toThrow(new Error('Pin count exceeds pins on the lane'))
     })
 
-    xit('an unstarted game can not be scored', () => {
-      const rolls: number[] = []
+    xtest('an unstarted game cannot be scored', () => {
+      const bowling = new Bowling()
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Score cannot be taken until the end of the game')
+        bowling.score()
+      }).toThrow(new Error('Score cannot be taken until the end of the game'))
     })
 
-    xit('an incomplete game can not be scored', () => {
+    xtest('an incomplete game cannot be scored', () => {
       const rolls = [0, 0]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Score cannot be taken until the end of the game')
+        bowling.score()
+      }).toThrow(new Error('Score cannot be taken until the end of the game'))
     })
 
-    xit('a game with more than ten frames and no last frame spare or strike can not be scored', () => {
-      const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ]
+    xtest('cannot roll if game already has ten frames', () => {
+      const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Should not be able to roll after game is over')
+        bowling.roll(0)
+      }).toThrow(new Error('Cannot roll after game is over'))
     })
 
-    xit('bonus rolls for a strike in the last frame must be rolled before score can be calculated', () => {
+    xtest('bonus rolls for a strike in the last frame must be rolled before score can be calculated', () => {
       const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Score cannot be taken until the end of the game')
+        bowling.score()
+      }).toThrow(new Error('Score cannot be taken until the end of the game'))
     })
 
-    xit('both bonus rolls for a strike in the last frame must be rolled before score can be calculated', () => {
+    xtest('both bonus rolls for a strike in the last frame must be rolled before score can be calculated', () => {
       const rolls = [
         0,
         0,
@@ -405,16 +463,90 @@ describe('Bowling', () => {
         10,
         10,
       ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Score cannot be taken until the end of the game')
+        bowling.score()
+      }).toThrow(new Error('Score cannot be taken until the end of the game'))
     })
 
-    xit('bonus roll for a spare in the last frame must be rolled before score can be calculated', () => {
+    xtest('bonus roll for a spare in the last frame must be rolled before score can be calculated', () => {
       const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
       expect(() => {
-        new Bowling(rolls).score()
-      }).toThrowError('Score cannot be taken until the end of the game')
+        bowling.score()
+      }).toThrow(new Error('Score cannot be taken until the end of the game'))
+    })
+
+    xtest('cannot roll after bonus roll for spare', () => {
+      const rolls = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        3,
+        2,
+      ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(() => {
+        bowling.roll(2)
+      }).toThrow(new Error('Cannot roll after game is over'))
+    })
+
+    xtest('cannot roll after bonus rolls for strike', () => {
+      const rolls = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        3,
+        2,
+      ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(() => {
+        bowling.roll(2)
+      }).toThrow(new Error('Cannot roll after game is over'))
     })
   })
 })

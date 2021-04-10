@@ -1,8 +1,3 @@
-export class ResistorColor {
-  private colors: string[]
-
-  constructor(colors: string[]) {
-    this.colors = colors
-  }
-  value = (): number => 0
+export function decodedValue() {
+  throw new Error('Remove this statement and implement this function')
 }

@@ -1,11 +1,9 @@
-class SimpleCipher {
+export class SimpleCipher {
   encode(/* Parameters go here */) {
-    // Your code here
+    throw new Error('Remove this statement and implement this function')
   }
 
   decode(/* Parameters go here */) {
-    // Your code here
+    throw new Error('Remove this statement and implement this function')
   }
 }
-
-export default SimpleCipher

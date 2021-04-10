@@ -1,4 +1,4 @@
-import Matrix from './matrix'
+import { Matrix } from './matrix'
 
 describe('Matrix', () => {
   it('extract row from one number matrix', () => {

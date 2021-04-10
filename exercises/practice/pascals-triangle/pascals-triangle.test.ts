@@ -1,4 +1,4 @@
-import Triangle from './pascals-triangle'
+import { Triangle } from './pascals-triangle'
 
 describe('Triangle', () => {
   it('with one row', () => {

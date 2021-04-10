@@ -1,4 +1,4 @@
-import SimpleCipher from './simple-cipher'
+import { SimpleCipher } from './simple-cipher'
 
 describe('Random key generation', () => {
   xit('generates keys at random', () => {

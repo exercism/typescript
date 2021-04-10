@@ -1,29 +1,27 @@
-import Acronym from './acronym'
+import { parse } from './acronym'
 
 describe('Acronym are produced from', () => {
   it('title cased phrases', () => {
-    expect(Acronym.parse('Portable Network Graphics')).toEqual('PNG')
+    expect(parse('Portable Network Graphics')).toEqual('PNG')
   })
 
   xit('other title cased phrases', () => {
-    expect(Acronym.parse('Ruby on Rails')).toEqual('ROR')
+    expect(parse('Ruby on Rails')).toEqual('ROR')
   })
 
   xit('inconsistently cased phrases', () => {
-    expect(Acronym.parse('HyperText Markup Language')).toEqual('HTML')
+    expect(parse('HyperText Markup Language')).toEqual('HTML')
   })
 
   xit('phrases with punctuation', () => {
-    expect(Acronym.parse('First In, First Out')).toEqual('FIFO')
+    expect(parse('First In, First Out')).toEqual('FIFO')
   })
 
   xit('other phrases with punctuation', () => {
-    expect(Acronym.parse('PHP: Hypertext Preprocessor')).toEqual('PHP')
+    expect(parse('PHP: Hypertext Preprocessor')).toEqual('PHP')
   })
 
   xit('phrases with punctuation and sentence casing', () => {
-    expect(Acronym.parse('Complementary metal-oxide semiconductor')).toEqual(
-      'CMOS'
-    )
+    expect(parse('Complementary metal-oxide semiconductor')).toEqual('CMOS')
   })
 })
