@@ -22,7 +22,7 @@ It uses as a basis the JavaScript's [TAGS.md](https://github.com/exercism/javasc
 ## Execution mode
 
 - [x] `execution_mode/compiled`: TypeScript transpilation (transpilation via [`tsc`](https://www.typescriptlang.org/), or stripping types and then compiling using [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript)) compiles the code to a certain version of JavaScript. This includes in-memory compilation using tools such as [`ts-node`](https://github.com/TypeStrong/ts-node), however due to the in-line nature and REPL like support, it might be considered interpreted.
-- [x] `execution_mode/interpreted`: TypeScript _can_ be interpreted Just-In-Time by stripping types, for example using [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript). 
+- [x] `execution_mode/interpreted`: TypeScript _can_ be interpreted Just-In-Time by stripping types, for example using [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript).
 
 ## Platform
 
