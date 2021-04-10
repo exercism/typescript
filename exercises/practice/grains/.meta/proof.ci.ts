@@ -3,14 +3,14 @@ export function square(square: number): bigint {
     throw new Error()
   }
 
-  return BigInt(square) ** 2n
+  return 2n ** BigInt(square - 1)
 }
 
 export function total(): bigint {
   let total = 0n
 
   for (let i = 1; i <= 64; i++) {
-    total += this.square(i)
+    total += square(i)
   }
 
   return total
