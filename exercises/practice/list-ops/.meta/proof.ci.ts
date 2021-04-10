@@ -23,7 +23,7 @@ const Null: Cons = {
   concat(): Cons {
     return this
   },
-  forEach() {
+  forEach(): void {
     /* done */
   },
   foldl<TValue = unknown, TReturn = unknown>(
@@ -38,7 +38,7 @@ const Null: Cons = {
   ): TReturn {
     return initial as TReturn
   },
-  filter() {
+  filter(): Cons {
     return Null
   },
   reverse(): Cons {
