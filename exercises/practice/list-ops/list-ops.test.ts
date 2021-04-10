@@ -17,18 +17,17 @@ expect.extend({
     if (!('forEach' in received)) {
       return {
         pass: false,
-        message: () =>
-          `Implement .forEach(callback) on ${received.constructor.name}`,
+        message: (): string => `Implement .forEach(callback) on your list`,
       }
     }
 
-    const values = []
+    const values: unknown[] = []
     received.forEach((item) => values.push(item))
 
     const pass = JSON.stringify(values) === JSON.stringify(expected)
     return {
       pass,
-      message: () =>
+      message: (): string =>
         pass
           ? ''
           : `Expected to see the following values: ${JSON.stringify(
