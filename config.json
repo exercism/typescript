@@ -1143,6 +1143,63 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
-  "tags": []
+  "key_features": [
+    {
+      "icon": "features-evolving",
+      "title": "Evolving",
+      "content": "Typescript is a modern and constantly evolving open-source language supported by Microsoft."
+    },
+    {
+      "icon": "features-cross-platform",
+      "title": "Widely used",
+      "content": "TypeScript is used by many libraries and frameworks, and integrates with JavaScript code as well."
+    },
+    {
+      "icon": "features-strongly-typed",
+      "title": "Typed JavaScript",
+      "content": "Typescript flexible typing system lets you describe what to expect, supporting gradual adoption."
+    },
+    {
+      "icon": "features-multi-paradigm",
+      "title": "Use any programming style",
+      "content": "Use prototype-based, object-oriented, functional, or declarative programming styles, and more."
+    },
+    {
+      "icon": "features-packages",
+      "title": "Consistently Good Tooling",
+      "content": "TS's JavaScript integration is handled by the language itself, enabling its tools and features."
+    },
+    {
+      "icon": "features-generic",
+      "title": "Large Community",
+      "content": "The large number of users makes it easy to find answers, documentation, and libraries."
+    }
+  ],
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/dynamic",
+    "typing/strong",
+    "typing/weak",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "platform/ios",
+    "platform/android",
+    "platform/web",
+    "runtime/language_specific",
+    "runtime/wasmtime",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/mobile",
+    "used_for/web_development"
+  ]
 }
