@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * yarn babel-node scripts/pr
+ * yarn babel-node scripts/ci
  *
  * This will run following checks:
  *

@@ -1,21 +1,10 @@
 {
   "blurb": "Count the rectangles in an ASCII diagram.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "rectangles.ts"
-    ],
-    "test": [
-      "rectangles.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["rectangles.ts"],
+    "test": ["rectangles.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   }
 }

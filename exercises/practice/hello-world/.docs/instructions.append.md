@@ -109,7 +109,7 @@ Now we see that the function returns the incorrect string, which is the reason f
 
 ```typescript
 export function hello(): string {
-  return "Hello, World!"
+  return 'Hello, World!'
 }
 ```
 

@@ -12,7 +12,6 @@
  * - jest.config.js
  * - package.json
  * - tsconfig.json
- * - yarn.lock
  *
  * There is a CI step which checks that package.json in root & exercises match
  * (see checksum script for more info).

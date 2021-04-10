@@ -33,11 +33,13 @@ if (files.length === 0) {
   shell.exit(-1)
 }
 
+shell.echo('[Files] The files passed in are as follows:')
+files.forEach((file) => {
+  shell.echo(`[Files] ${file}`)
+})
+
 const _exercises = files
-  .map((file) => {
-    const directory = findExerciseDirectory(file)
-    return directory ? path.basename(directory) : null
-  })
+  .map(findExerciseDirectory)
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index)
 
@@ -92,7 +94,23 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     if (checkResult != 0) {
       shell.exit(checkResult)
     }
+
+    const nameCheckResult = shell.exec(
+      `yarn babel-node ${path.join('scripts', 'name-check')}`
+    ).code
+
+    if (nameCheckResult !== 0) {
+      shell.exit(nameCheckResult)
+    }
   })
+
+  const nameUniqResult = shell.exec(
+    `yarn babel-node ${path.join('scripts', 'name-uniq')}`
+  ).code
+
+  if (nameUniqResult !== 0) {
+    shell.exit(nameUniqResult)
+  }
 }
 
 // Cleanup tmp directory if any exists

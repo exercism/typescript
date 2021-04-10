@@ -1,8 +1,6 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [
-    "masters3d"
-  ],
+  "authors": ["masters3d"],
   "contributors": [
     "amscotti",
     "DFXLuna",
@@ -11,15 +9,9 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": [
-      "bob.ts"
-    ],
-    "test": [
-      "bob.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["bob.ts"],
+    "test": ["bob.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"

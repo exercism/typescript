@@ -1,8 +1,6 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [
-    "masters3d"
-  ],
+  "authors": ["masters3d"],
   "contributors": [
     "DFXLuna",
     "iHiD",
@@ -12,15 +10,9 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": [
-      "hello-world.ts"
-    ],
-    "test": [
-      "hello-world.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["hello-world.ts"],
+    "test": ["hello-world.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"

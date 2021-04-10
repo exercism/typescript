@@ -1,23 +1,11 @@
 {
   "blurb": "Detect palindrome products in a given range.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "averaart",
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["averaart", "masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "palindrome-products.ts"
-    ],
-    "test": [
-      "palindrome-products.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["palindrome-products.ts"],
+    "test": ["palindrome-products.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Problem 4 at Project Euler",
   "source_url": "http://projecteuler.net/problem=4"

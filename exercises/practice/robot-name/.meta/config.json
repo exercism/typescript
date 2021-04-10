@@ -1,23 +1,11 @@
 {
   "blurb": "Manage robot factory settings.",
-  "authors": [
-    "masters3d"
-  ],
-  "contributors": [
-    "joshgoebel",
-    "lukaszklis",
-    "SleeplessByte"
-  ],
+  "authors": ["masters3d"],
+  "contributors": ["joshgoebel", "lukaszklis", "SleeplessByte"],
   "files": {
-    "solution": [
-      "robot-name.ts"
-    ],
-    "test": [
-      "robot-name.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["robot-name.ts"],
+    "test": ["robot-name.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

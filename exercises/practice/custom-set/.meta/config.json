@@ -1,21 +1,10 @@
 {
   "blurb": "Create a custom set type.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "custom-set.ts"
-    ],
-    "test": [
-      "custom-set.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["custom-set.ts"],
+    "test": ["custom-set.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   }
 }

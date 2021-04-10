@@ -45,10 +45,15 @@ function checksumAssignment(assignment, filename, baseFile, expectedSha) {
 
     // prettier-ignore
     shell.echo(
+      `\n`,
       `[Failure] ${filename} did not match for ${assignment} (${chalk.red(expectedSha)} != ${chalk.green(fileSha)})\n`,
       `! Expected ${chalk.red(baseFile)} to match ${chalk.green(filePath)}\n`,
       `! Did you forget to run ${chalk.bold(`yarn babel-node scripts/sync`)}?\n`
     );
+
+    if (filename === 'package.json') {
+      shell.echo(helpers.prepareExercisePackageJson(filePath, false))
+    }
 
     if (chalk.supportsColor) {
       const diffParts = diff.diffLines(
@@ -116,9 +121,14 @@ function checkSumAll(filename, rootFileName = filename) {
 }
 
 helpers.registerExitHandler()
+helpers.createExercisePackageJson(true)
+
+checkSumAll('package.json', 'exercise-package.json')
 
 helpers.COMMON_FILES.forEach((file) => {
-  checkSumAll(file, path.join('common', file))
+  if (file !== 'package.json') {
+    checkSumAll(file, path.join('common', file))
+  }
 })
 
 shell.echo('All files passed the checksum test')

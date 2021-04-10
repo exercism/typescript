@@ -15,6 +15,7 @@ const path = require('path')
 
 const {
   assignments,
+  assertAssignment,
   registerExitHandler,
   envIsThruthy,
   hasStub,
@@ -26,6 +27,12 @@ const exercises = assignments
 if (exercises.length === 0) {
   shell.echo('[Skip] None of the files are inside an exercise directory.')
   shell.exit(0)
+}
+
+if (exercises.length === 1) {
+  if (!assertAssignment(exercises[0], true)) {
+    shell.exit(1)
+  }
 }
 
 registerExitHandler()
@@ -49,16 +56,53 @@ if (!envIsThruthy('SKIP_STUB', false)) {
 if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   shell.echo('\n==========\nCheck configuration and packages integrity\n')
 
-  exercises.forEach((exercise) => {
-    shell.env['ASSIGNMENT'] = exercise
-
+  // If > 8 exercises, checksum everything as its faster than subprocessing
+  // TODO: be able to pass in any amount of exercises at once
+  if (exercises.length >= 8) {
     const checkResult = shell.exec(
       `yarn babel-node ${path.join('scripts', 'checksum')}`
     ).code
-    if (checkResult != 0) {
+
+    if (checkResult !== 0) {
       shell.exit(checkResult)
     }
-  })
+
+    const nameCheckResult = shell.exec(
+      `yarn babel-node ${path.join('scripts', 'name-check')}`
+    ).code
+
+    if (nameCheckResult !== 0) {
+      shell.exit(nameCheckResult)
+    }
+  } else {
+    exercises.forEach((exercise) => {
+      shell.env['ASSIGNMENT'] = exercise
+
+      const checkResult = shell.exec(
+        `yarn babel-node ${path.join('scripts', 'checksum')}`
+      ).code
+
+      if (checkResult !== 0) {
+        shell.exit(checkResult)
+      }
+
+      const nameCheckResult = shell.exec(
+        `yarn babel-node ${path.join('scripts', 'name-check')}`
+      ).code
+
+      if (nameCheckResult !== 0) {
+        shell.exit(nameCheckResult)
+      }
+    })
+  }
+
+  const nameUniqResult = shell.exec(
+    `yarn babel-node ${path.join('scripts', 'name-uniq')}`
+  ).code
+
+  if (nameUniqResult !== 0) {
+    shell.exit(nameUniqResult)
+  }
 }
 
 // Cleanup tmp directory if any exists
