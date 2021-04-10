@@ -36,6 +36,7 @@ const _exercises = files
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index)
 
+const hasRootFile = files.some((file) => file === 'package.json')
 const hasCommonFile = files.some((file) => file.startsWith('common'))
 
 if (hasRootFile) {
