@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript",
+  "name": "@exercism/typescript-crypto-square",
   "description": "Exercism exercises in Typescript.",
   "private": true,
   "repository": {

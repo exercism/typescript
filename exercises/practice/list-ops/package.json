@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript",
+  "name": "@exercism/typescript-list-ops",
   "description": "Exercism exercises in Typescript.",
   "private": true,
   "repository": {

@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript",
+  "name": "@exercism/typescript-food-chain",
   "description": "Exercism exercises in Typescript.",
   "private": true,
   "repository": {
