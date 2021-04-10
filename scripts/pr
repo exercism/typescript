@@ -32,18 +32,19 @@ if (files.length === 0) {
 }
 
 const _exercises = files
-  .map((file) => {
-    const directory = findExerciseDirectory(file)
-    return directory ? path.basename(directory) : null
-  })
+  .map(findExerciseDirectory)
   .filter(Boolean)
   .filter((exercise, index, array) => array.indexOf(exercise) === index)
 
-const hasRootFile = files.some((file) => file === 'package.json')
+const hasCommonFile = files.some((file) => file.startsWith('common'))
 
 if (hasRootFile) {
   shell.echo(
     '[Root PR] When package.json is changed, all exercises need to be checked'
+  )
+} else if (hasCommonFile) {
+  shell.echo(
+    '[Common PR] When a file in common/ is changed, all exercises need to be checked'
   )
 } else if (_exercises.length > 8) {
   shell.echo(
@@ -53,7 +54,9 @@ if (hasRootFile) {
 }
 
 const exercises =
-  hasRootFile || _exercises.length > 8 ? assignments : _exercises
+  hasRootFile || hasCommonFile || _exercises.length > 8
+    ? assignments
+    : _exercises
 
 if (exercises.length === 0) {
   shell.echo('[Skip] None of the files are inside an exercise directory.')

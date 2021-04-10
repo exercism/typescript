@@ -86,6 +86,14 @@ export function sha(str) {
  * @returns {string | undefined}
  */
 export function findExerciseDirectory(input) {
+  // Normalize paths for shell.js
+  input = input.replace(/\\/g, '/')
+
+  // Remove .meta directory from path
+  if (input.includes('/.meta')) {
+    input = input.split('/.meta').shift()
+  }
+
   const directory = exerciseDirs.find((exerciseDir) => {
     return input.indexOf(exerciseDir) !== -1
   })
