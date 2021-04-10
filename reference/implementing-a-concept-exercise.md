@@ -41,15 +41,17 @@ languages
                 |   ├── introduction.md
                 |   ├── hints.md
                 |   └── source.md (required if there are third-party sources)
+                ├── .meta
+                |   ├── config.json
+                |   ├── design.md
+                |   └── exemplar.ts
                 ├── .eslintignore
                 ├── .gitignore
                 ├── .eslintrc
                 ├── jest.config.js
-                ├── exemplar.ts
                 ├── &lt;slug&gt;.ts
                 ├── &lt;slug&gt;.spec.ts
-                ├── package.json
-                └── yarn.lock
+                └── package.json
 </pre>
 
 ## Step 1: Add code files
@@ -84,8 +86,8 @@ The `package.json` file must be edited:
 Now create the following three files:
 
 - `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
-- `<slug>.spec.js`: the test suite.
-- `exemplar.js`: an exemplar implementation that passes all the tests.
+- `<slug>.test.ts`: the test suite.
+- `exemplar.ts`: an exemplar implementation that passes all the tests.
 
 ## Step 2: Add documentation files
 
