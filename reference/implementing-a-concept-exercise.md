@@ -61,7 +61,6 @@ The configuration files may be copied from another exercise. We aim to keep thes
 - `jest.config.js`
 - `package.json`
 - `tsconfig.json`
-- `yarn.lock`
 
 The `package.json` file must be edited:
 
