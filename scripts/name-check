@@ -13,7 +13,7 @@
 const shell = require('shelljs')
 const path = require('path')
 
-const { packageFiles, registerExitHandler } = require('./helpers')
+let { packageFiles, registerExitHandler } = require('./helpers')
 
 registerExitHandler()
 
