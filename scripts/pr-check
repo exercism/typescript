@@ -44,10 +44,15 @@ const _exercises = files
   .filter((exercise, index, array) => array.indexOf(exercise) === index)
 
 const hasRootFile = files.some((file) => file === 'package.json')
+const hasCommonFile = files.some((file) => file.startsWith('common'))
 
 if (hasRootFile) {
   shell.echo(
     '[Root PR] When package.json is changed, all exercises need to be checked'
+  )
+} else if (hasCommonFile) {
+  shell.echo(
+    '[Common PR] When a file in common/ is changed, all exercises need to be checked'
   )
 } else if (_exercises.length > 8) {
   shell.echo(
@@ -57,7 +62,9 @@ if (hasRootFile) {
 }
 
 const exercises =
-  hasRootFile || _exercises.length > 8 ? assignments : _exercises
+  hasRootFile || hasCommonFile || _exercises.length > 8
+    ? assignments
+    : _exercises
 
 if (exercises.length === 0) {
   shell.echo('[Skip] None of the files are inside an exercise directory.')
@@ -85,13 +92,14 @@ if (!envIsThruthy('SKIP_STUB', false)) {
 if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   shell.echo('\n==========\nCheck configuration and packages integrity\n')
 
-  exercises.forEach((exercise) => {
-    shell.env['ASSIGNMENT'] = exercise
-
+  // If > 8 exercises, checksum everything as its faster than subprocessing
+  // TODO: be able to pass in any amount of exercises at once
+  if (exercises.length >= 8) {
     const checkResult = shell.exec(
       `yarn babel-node ${path.join('scripts', 'checksum')}`
     ).code
-    if (checkResult != 0) {
+
+    if (checkResult !== 0) {
       shell.exit(checkResult)
     }
 
@@ -102,7 +110,26 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     if (nameCheckResult !== 0) {
       shell.exit(nameCheckResult)
     }
-  })
+  } else {
+    exercises.forEach((exercise) => {
+      shell.env['ASSIGNMENT'] = exercise
+
+      const checkResult = shell.exec(
+        `yarn babel-node ${path.join('scripts', 'checksum')}`
+      ).code
+      if (checkResult != 0) {
+        shell.exit(checkResult)
+      }
+
+      const nameCheckResult = shell.exec(
+        `yarn babel-node ${path.join('scripts', 'name-check')}`
+      ).code
+
+      if (nameCheckResult !== 0) {
+        shell.exit(nameCheckResult)
+      }
+    })
+  }
 
   const nameUniqResult = shell.exec(
     `yarn babel-node ${path.join('scripts', 'name-uniq')}`
