@@ -1,11 +1,11 @@
 export class Crypto {
   constructor(private readonly input: string) {}
 
-  get plaintext() {
+  private get plaintext(): string {
     return this.input.toLowerCase().replace(/[^a-zA-Z0-9]/g, '')
   }
 
-  get ciphertext() {
+  public get ciphertext(): string {
     const chunkSize = this.size
     if (chunkSize === 0) {
       return ''
@@ -19,18 +19,18 @@ export class Crypto {
       .join(' ')
   }
 
-  get size(): number {
+  public get size(): number {
     const realLength = Math.sqrt(this.plaintext.length)
     return Math.ceil(realLength)
   }
 
-  ciphertextSegments() {
+  private ciphertextSegments(): string[] {
     const textSegments = this.plaintextSegments()
-    const columns = []
-    let i
-    let j
-    let currentSegment
-    let currentLetter
+    const columns: string[][] = []
+    let i: number
+    let j: number
+    let currentSegment: RegExpMatchArray[number]
+    let currentLetter: RegExpMatchArray[number][number]
 
     for (i = 0; i < this.size; i += 1) {
       columns.push([])
@@ -45,14 +45,15 @@ export class Crypto {
       }
     }
 
+    const result: string[] = []
     for (i = 0; i < columns.length; i += 1) {
-      columns[i] = columns[i].join('')
+      result[i] = columns[i].join('')
     }
 
-    return columns
+    return result
   }
 
-  plaintextSegments() {
+  private plaintextSegments(): RegExpMatchArray {
     const plainText = this.plaintext
     const chunkSize = this.size
 

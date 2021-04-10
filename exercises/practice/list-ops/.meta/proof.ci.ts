@@ -5,15 +5,13 @@ const Null: Cons = {
   get next() {
     return this
   },
-  get values() {
-    return []
-  },
 
   get() {
     return this.value
   },
 
   push(item): Cons {
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     return new Cons(item, this)
   },
   length() {
@@ -25,16 +23,22 @@ const Null: Cons = {
   concat(): Cons {
     return this
   },
-  forEach() {
+  forEach(): void {
     /* done */
   },
-  foldl(_, initial): any {
-    return initial
+  foldl<TValue = unknown, TReturn = unknown>(
+    _: (initial: TReturn, value: TValue) => TReturn,
+    initial?: TReturn
+  ): TReturn {
+    return initial as TReturn
   },
-  foldr(_, initial) {
-    return initial
+  foldr<TValue = unknown, TReturn = unknown>(
+    _: (initial: TReturn, value: TValue) => TReturn,
+    initial?: TReturn
+  ): TReturn {
+    return initial as TReturn
   },
-  filter() {
+  filter(): Cons {
     return Null
   },
   reverse(): Cons {
@@ -44,79 +48,101 @@ const Null: Cons = {
     return this
   },
 }
-
 class Cons {
-  static fromArray([head, ...tail]: any[]) {
-    if (head === undefined) {
-      return Null
-    }
+  constructor(public readonly value: unknown, public next: Cons = Null) {}
 
-    return new Cons(head, Cons.fromArray(tail || []))
-  }
-
-  constructor(public readonly value: any, public next: Cons = Null) {}
-
-  get values() {
-    return [this.value, ...this.next.values]
-  }
-
-  get(i: number) {
+  public get(i: number): unknown {
     return i === 0 ? this.value : this.next.get(i - 1)
   }
 
-  push(item: any): this {
+  public push(item: unknown): this {
     this.next = this.next.push(item)
     return this
   }
 
-  length(): number {
+  public length(): number {
     return 1 + this.next.length()
   }
 
-  append(other: Cons): Cons {
+  public append(other: Cons): Cons {
     return other.foldl((result, item) => result.push(item), this)
   }
 
-  concat(others: Cons): Cons {
-    return others.foldl((result, other) => result.append(other), this)
+  public concat(others: Cons): Cons {
+    return others.foldl<Cons, Cons>(
+      (result, other) => result.append(other),
+      this
+    )
   }
 
-  foldl(
-    callback: (initial: any, value: any) => any,
-    initial: any = undefined
-  ): any {
-    return this.next.foldl(callback, callback(initial, this.value))
+  public foldl<TValue = unknown>(
+    callback: (initial: TValue, value: TValue) => TValue
+  ): TValue
+  public foldl<TValue = unknown, TReturn = unknown>(
+    callback: (initial: TReturn, value: TValue) => TReturn,
+    initial: TReturn
+  ): TReturn
+
+  public foldl<TValue = unknown, TReturn = unknown>(
+    callback: (initial: TReturn | undefined, value: TValue) => TReturn,
+    initial?: TReturn
+  ): TReturn {
+    return this.next.foldl<TValue, TReturn>(
+      callback,
+      callback(initial, this.value as TValue)
+    )
   }
 
-  forEach(callback: (value: any) => void): void {
+  public forEach(callback: (value: unknown) => void): void {
     this.foldl((_, item) => callback(item))
   }
 
-  foldr(
-    callback: (initial: any, value: any) => any,
-    initial: any = undefined
-  ): any {
-    return callback(this.next.foldr(callback, initial), this.value)
+  public foldr<TValue = unknown>(
+    callback: (initial: TValue, value: TValue) => TValue
+  ): TValue
+  public foldr<TValue = unknown, TReturn = unknown>(
+    callback: (initial: TReturn, value: TValue) => TReturn,
+    initial: TReturn
+  ): TReturn
+
+  public foldr<TValue = unknown, TReturn = unknown>(
+    callback: (initial: TReturn, value: TValue) => TReturn,
+    initial?: TReturn
+  ): TReturn {
+    return callback(
+      this.next.foldr<TValue, TReturn>(callback, initial as TReturn),
+      this.value as TValue
+    )
   }
 
-  filter(predicate: (value: any) => boolean): Cons {
-    return this.foldl(
+  public filter<TValue = unknown>(predicate: (value: TValue) => boolean): Cons {
+    return this.foldl<TValue, Cons>(
       (result, item) => (predicate(item) && result.push(item)) || result,
       Null
     )
   }
 
-  map(expression: (value: any) => any): Cons {
-    return this.foldl((result, item) => result.push(expression(item)), Null)
+  public map<TValue = unknown, TReturn = unknown>(
+    expression: (value: TValue) => TReturn
+  ): Cons {
+    return this.foldl<TValue, Cons>(
+      (result, item) => result.push(expression(item)),
+      Null
+    )
   }
 
-  reverse(): Cons {
+  public reverse(): Cons {
     return this.next.reverse().push(this.value)
   }
 }
-
 export class List {
-  constructor(values = []) {
-    return Cons.fromArray(values)
+  public static create(...values: unknown[]): Cons {
+    const [head, ...tail] = values
+
+    if (head === undefined) {
+      return Null
+    }
+
+    return new Cons(head, List.create(...tail))
   }
 }

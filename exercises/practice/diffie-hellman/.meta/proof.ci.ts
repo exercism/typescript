@@ -76,7 +76,7 @@ const PRIMES = [
   7591, 7603, 7607, 7621, 7639, 7643, 7649, 7669, 7673, 7681, 7687, 7691, 7699,
   7703, 7717, 7723, 7727, 7741, 7753, 7757, 7759, 7789, 7793, 7817, 7823, 7829,
   7841, 7853, 7867, 7873, 7877, 7879, 7883, 7901, 7907, 7919,
-];
+]
 
 export class DiffieHellman {
   constructor(private readonly p: number, private readonly g: number) {

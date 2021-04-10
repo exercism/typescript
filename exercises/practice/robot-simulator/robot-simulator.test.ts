@@ -1,14 +1,14 @@
 import { Robot, InvalidInputError } from './robot-simulator'
 
-function turnRight(robot: Robot) {
+function turnRight(robot: Robot): void {
   robot.evaluate('R')
 }
 
-function turnLeft(robot: Robot) {
+function turnLeft(robot: Robot): void {
   robot.evaluate('L')
 }
 
-function advance(robot: Robot) {
+function advance(robot: Robot): void {
   robot.evaluate('A')
 }
 

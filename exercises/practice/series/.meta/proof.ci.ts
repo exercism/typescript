@@ -1,6 +1,6 @@
 export class Series {
-  numberString: string
-  digits: number[]
+  private readonly numberString: string
+  private readonly digits: number[]
 
   constructor(numberString: string) {
     if (!numberString) {
@@ -11,11 +11,11 @@ export class Series {
     this.digits = this.getDigits()
   }
 
-  getDigits(): number[] {
+  private getDigits(): number[] {
     return [...this.numberString].map((digit) => parseInt(digit, 10))
   }
 
-  slices(sliceSize: number): number[][] {
+  public slices(sliceSize: number): number[][] {
     const result: number[][] = []
     let slice: number[] = []
 

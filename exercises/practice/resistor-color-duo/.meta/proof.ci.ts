@@ -12,8 +12,8 @@ const COLORS = [
   'white',
 ]
 
-const colorCode = (color: string) => COLORS.indexOf(color)
+const colorCode = (color: string): number => COLORS.indexOf(color)
 // resistor-color solution END
 
-export const decodedValue = ([tens, ones]: string[]) =>
+export const decodedValue = ([tens, ones]: string[]): number =>
   colorCode(tens) * 10 + colorCode(ones)

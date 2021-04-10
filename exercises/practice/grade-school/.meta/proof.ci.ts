@@ -3,24 +3,24 @@ type Grade = number
 type StudentRooster = Record<string, Student[]>
 type StudentGrades = Map<Student, Grade>
 export class GradeSchool {
-  students: StudentGrades
+  private students: StudentGrades
 
   constructor() {
     this.students = new Map()
   }
 
-  add(student: Student, level: Grade) {
+  public add(student: Student, level: Grade): void {
     this.students.set(student, level)
   }
 
-  grade(level: Grade) {
+  public grade(level: Grade): Student[] {
     return Array.from(this.students.entries())
       .filter(([, studentGrade]) => studentGrade === level)
       .map(([student]) => student)
       .sort()
   }
 
-  roster(): StudentRooster {
+  public roster(): StudentRooster {
     const result: StudentRooster = {}
 
     Array.from(this.students.entries()).forEach(([, studentGrade]) => {

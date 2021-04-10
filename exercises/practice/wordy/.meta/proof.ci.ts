@@ -15,7 +15,7 @@ const compute = (
   }
 }
 
-export const answer = (question: string) => {
+export const answer = (question: string): number => {
   const operationsPattern = new RegExp(/plus|minus|divided by|multiplied by/g)
   if (
     !operationsPattern.test(question) &&

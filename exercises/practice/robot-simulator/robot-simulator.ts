@@ -6,17 +6,18 @@ export class InvalidInputError extends Error {
 }
 
 type Direction = 'north' | 'east' | 'south' | 'west'
+type Coordinates = [number, number]
 
 export class Robot {
-  get bearing() {
+  get bearing(): Direction {
     throw new Error('Remove this statement and implement this function')
   }
 
-  get coordinates() {
+  get coordinates(): Coordinates {
     throw new Error('Remove this statement and implement this function')
   }
 
-  place({}: { x: number; y: number; direction: Direction }) {
+  place({}: { x: number; y: number; direction: string }) {
     throw new Error('Remove this statement and implement this function')
   }
 

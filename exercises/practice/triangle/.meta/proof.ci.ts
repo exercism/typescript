@@ -1,11 +1,11 @@
 export class Triangle {
-  sides: number[]
+  private readonly sides: number[]
 
   constructor(...sides: number[]) {
     this.sides = sides
   }
 
-  get isValid() {
+  public get isValid(): boolean {
     const [s1, s2, s3] = this.sides
     const sidesArePositive = s1 > 0 && s2 > 0 && s3 > 0
     const validatesTriangleInequality =
@@ -13,7 +13,7 @@ export class Triangle {
     return sidesArePositive && validatesTriangleInequality
   }
 
-  get isEquilateral() {
+  public get isEquilateral(): boolean {
     if (!this.isValid) {
       return false
     }
@@ -21,7 +21,7 @@ export class Triangle {
     return s1 === s2 && s2 === s3 && s1 === s3
   }
 
-  get isIsosceles() {
+  public get isIsosceles(): boolean {
     if (!this.isValid) {
       return false
     }
@@ -29,7 +29,7 @@ export class Triangle {
     return s1 === s2 || s1 === s3 || s2 === s3
   }
 
-  get isScalene() {
+  public get isScalene(): boolean {
     if (!this.isValid) {
       return false
     }

@@ -1,4 +1,4 @@
-export const largestProduct = (digits: string, seriesLength: number) => {
+export function largestProduct(digits: string, seriesLength: number): number {
   if (seriesLength === 0) {
     return 1
   }

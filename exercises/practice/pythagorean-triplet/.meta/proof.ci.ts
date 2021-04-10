@@ -4,35 +4,37 @@ type Options = {
   sum: number
 }
 
+type TripletArray = [number, number, number]
+
 class Triplet {
   constructor(
-    private readonly a: number,
-    private readonly b: number,
-    private readonly c: number
+    private readonly a: TripletArray[0],
+    private readonly b: TripletArray[1],
+    private readonly c: TripletArray[2]
   ) {}
 
-  toArray() {
+  public toArray(): TripletArray {
     return [this.a, this.b, this.c]
   }
 
-  get pythagorean() {
+  public get pythagorean(): boolean {
     return this.a * this.a + this.b * this.b === this.c * this.c
   }
 
-  get sum() {
+  public get sum(): number {
     return this.a + this.b + this.c
   }
 }
 
-export function triplets({ minFactor, maxFactor, sum }: Options) {
+export function triplets({ minFactor, maxFactor, sum }: Options): Triplet[] {
   const min = minFactor || 1
   const max = maxFactor || sum - 1
 
-  const isDesired = (triplet: Triplet) => {
+  const isDesired = (triplet: Triplet): boolean => {
     return triplet.pythagorean && (!sum || triplet.sum === sum)
   }
 
-  const triplets = []
+  const triplets: Triplet[] = []
 
   for (let a = min; a < max - 1; a += 1) {
     for (let b = a + 1; b < max; b += 1) {

@@ -1,6 +1,8 @@
 import { triplets } from './pythagorean-triplet'
 
-function tripletsWithSum(sum: number, options = {}) {
+type Triplet = [number, number, number]
+
+function tripletsWithSum(sum: number, options = {}): Triplet[] {
   return triplets({ ...options, sum }).map((triplet) =>
     triplet.toArray().sort((a, b) => a - b)
   )
