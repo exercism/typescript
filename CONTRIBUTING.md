@@ -8,28 +8,32 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
 
 ## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [Exercises](#exercises)
-  - [New exercise](#new-exercise)
-    - [Implementing existing exercise](#implementing-existing-exercise)
-    - [ Creating a track-specific exercise](#creating-a-track-specific-exercise)
-  - [Existing exercises](#existing-exercises)
-    - [Improving the README.md](#improving-the-readmemd)
-    - [Syncing the exercise](#syncing-the-exercise)
-    - [Improving or adding mentor notes](#improving-or-adding-mentor-notes)
-    - [Improving or adding automated test analyzers](#improving-or-adding-automated-test-analyzers)
-- [Documentation](#documentation)
-- [Tools](#tools)
-  - [Fetch `configlet`](#fetch-configlet)
-  - [Fetch `canonical_data_syncer`](#fetch-canonical-data-syncer)
-  - [Scripts](#scripts)
-    - [`format`](#format)
-    - [`lint`](#lint)
-    - [`test`](#test)
-    - [`sync`](#sync)
-    - [`checksum`](#checksum)
-    - [`ci-check`](#ci-check)
-    - [`ci`](#ci)
+- [Contributing](#contributing)
+  - [Table of Contents](#table-of-contents)
+  - [Code of Conduct](#code-of-conduct)
+  - [Exercises](#exercises)
+    - [New exercise](#new-exercise)
+      - [Implementing existing exercise](#implementing-existing-exercise)
+      - [Creating a track-specific exercise](#creating-a-track-specific-exercise)
+    - [Existing exercises](#existing-exercises)
+      - [Improving the README.md](#improving-the-readmemd)
+      - [Syncing the exercise](#syncing-the-exercise)
+      - [Improving or adding mentor notes](#improving-or-adding-mentor-notes)
+      - [Improving or adding automated test analyzers](#improving-or-adding-automated-test-analyzers)
+  - [Documentation](#documentation)
+  - [Tools](#tools)
+    - [Fetch configlet](#fetch-configlet)
+    - [Fetch canonical data syncer](#fetch-canonical-data-syncer)
+    - [Scripts](#scripts)
+      - [`format`](#format)
+      - [`lint`](#lint)
+      - [`test`](#test)
+      - [`sync`](#sync)
+      - [`checksum`](#checksum)
+      - [`ci-check`](#ci-check)
+      - [`ci`](#ci)
+      - [`name-check`](#name-check)
+      - [`name-uniq`](#name-uniq)
 
 ---
 
@@ -59,7 +63,7 @@ There are two ways to implement new exercises (exercises that don't exist in thi
 
 #### Implementing existing exercise
 
-Let's say you want to implement a new exercise, from the list of exercises, because you've noticed that this track could benefit from this exercise, really liked it in another track, or just because you find this interesting; the first step is to [check for an open issue][issue-new-exercise]. If it's there, make sure no one is working on it, and most of all that there is not an open Pull Request towards this exercise.
+Let's say you want to implement a new exercise, from the list of (practice) exercises, because you've noticed that this track could benefit from this exercise, really liked it in another track, or just because you find this interesting; the first step is to [check for an open issue][issue-new-exercise]. If it's there, make sure no one is working on it, and most of all that there is not an open Pull Request towards this exercise.
 
 If there is no such issue, you may open one. The baseline of work is as follows:
 
@@ -69,7 +73,7 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. You'll need to sync this folder with the matching config files. You can use `sync` to do this: `ASSIGNMENT=slug yarn babel-node scripts/sync`.
 1. Create a `<slug>.ts` stub file.
 1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible (more on canonical data below).
-1. Create a `<slug>.example.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
+1. Create a `.meta/proof.ci.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
 1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the canonical data syncer which aids generating this file _interactively_.
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug yarn babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug yarn babel-node scripts/lint`.
@@ -110,7 +114,7 @@ Syncing an exercise with _canonical data_: There is a [problem-specifications][p
 - updating `tests.toml`;
 - updating the `<slug>.test.ts` file;
 - updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications]. The contents of this file can be updated using the canonical data syncer, interactively;
-- match the `example.js` file to still work with the new tests; and
+- match the `proof.ci.ts` file to still work with the new tests; and
 - regenerate the [`README.md`][doc-readme], should there be any changes.
 
 #### Improving or adding mentor notes
@@ -134,7 +138,7 @@ You'll need LTS or higher NodeJS in order to contribute to the _code_ in this re
 - `jest` to run all the test files on all example implementations
 - `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
-We also use `prettier` to format the files. **Prettier is _NOT_ installed when using `npm install`**, because the CI will enforce a certain version. Instead use `npx babel-node scripts/format` to run prettier. If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
+We also use `prettier` to format the files. **Prettier is _NOT_ installed when using `yarn install`**, because the CI will enforce a certain version. Instead use `npx babel-node scripts/format` to run prettier. If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
 
 ### Fetch configlet
 
@@ -148,12 +152,18 @@ A `tests.toml` file for a track's `two-fer` exercise looks like this:
 
 ```toml
 [canonical-tests]
-# no name given
-"19709124-b82e-4e86-a722-9e5c5ebf3952" = true
-# a name given
-"3451eebd-123f-4256-b667-7b109affce32" = true
-# another name given
-"653611c6-be9f-4935-ab42-978e25fe9a10" = false
+
+[19709124-b82e-4e86-a722-9e5c5ebf3952]
+description = "no name given"
+include = true
+
+[3451eebd-123f-4256-b667-7b109affce32]
+description = "a name given"
+include = true
+
+[653611c6-be9f-4935-ab42-978e25fe9a10]
+description = "another name given"
+include = false
 ```
 
 To make it easy to keep the tests.toml up to date, contributors can use the `canonical_data_syncer` application. This application is a small, standalone binary that will compare the tests specified in the tests.toml files against the tests that are defined in the exercise's canonical data. It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the tests.toml file accordingly.
@@ -172,7 +182,7 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 > yarn format
 > ```
 
-```js
+```ts
 /*
  * Run this script (from root directory): yarn babel-node scripts/format
  *
@@ -191,9 +201,9 @@ Use this action to format all the files using the correct version of prettier. I
 > yarn lint
 > ```
 
-```js
+```ts
 /*
- * Run this script (from root directory): yarn babel/node scripts/lint
+ * Run this script (from root directory): yarn babel-node scripts/lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
@@ -213,9 +223,9 @@ ASSIGNMENT=two-fer yarn babel/node scripts/lint
 > yarn test
 > ```
 
-```js
+```ts
 /**
- * Run this script (from root directory): yarn babel/node scripts/test
+ * Run this script (from root directory): yarn babel-node scripts/test
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -235,9 +245,9 @@ ASSIGNMENT=two-fer yarn babel/node scripts/test
 > yarn sync
 > ```
 
-```js
+```ts
 /**
- * Run this script (from root directory): yarn babel/node scripts/sync
+ * Run this script (from root directory): yarn babel-node scripts/sync
  *
  * This script is used to propagate any change to root package.json to
  * all exercises and keep them in sync.
@@ -254,9 +264,9 @@ ASSIGNMENT=two-fer yarn babel/node scripts/sync
 
 #### `checksum`
 
-```js
+```ts
 /*
- * Run this script (from root directory): yarn babel/node scripts/checksum
+ * Run this script (from root directory): yarn babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -273,7 +283,7 @@ ASSIGNMENT=two-fer yarn babel/node scripts/sync
 > yarn ci:check
 > ```
 
-```js
+```ts
 /**
  * Run this script (from root directory): yarn babel-node scripts/ci-check
  *
@@ -297,9 +307,9 @@ Run this script to check stubs, configuration integrity and lint the code.
 
 This script is _almost_ the same as `test`. You may use them interchangeably at moment of writing
 
-```js
+```ts
 /**
- * Run this script (from root directory): yarn babel/node scripts/ci
+ * Run this script (from root directory): yarn babel-node scripts/ci
  *
  * This will run following checks:
  *
@@ -309,6 +319,37 @@ This script is _almost_ the same as `test`. You may use them interchangeably at 
 ```
 
 Run this script to test all exercises.
+
+#### `name-check`
+
+```ts
+/**
+ * Run this script (from root directory): yarn babel-node scripts/name-check
+ *
+ * This will run following checks:
+ *
+ * 1. Package name is of the format "@exercism/typescript-<exercise>"
+ *
+ * This script also allows fixing these names: yarn babel-node scripts/name-check --fix
+ */
+```
+
+Run this script to check if package name in package.json of exercises is in expected format.
+Run this script with the `--fix` flag to automatically fix the names.
+
+#### `name-uniq`
+
+```ts
+/**
+ * Run this script (from root directory): yarn babel-node scripts/name-uniq
+ *
+ * This will run following checks:
+ *
+ * 1. All exercises have unique package names in their package.json files.
+ */
+```
+
+Run this script to check if there is any duplicate package name.
 
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [canonical-data-syncer]: https://github.com/exercism/canonical-data-syncer

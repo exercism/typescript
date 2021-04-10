@@ -87,7 +87,7 @@ Now create the following three files:
 
 - `<slug>.cs`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `<slug>.test.ts`: the test suite.
-- `exemplar.ts`: an exemplar implementation that passes all the tests.
+- `.meta/exemplar.ts`: an exemplar implementation that passes all the tests.
 
 ## Step 2: Add documentation files
 
