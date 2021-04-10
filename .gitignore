@@ -22,3 +22,4 @@ bin/canonical_data_syncer.exe
 /exercises/**/yarn.lock
 /tmp_exercises
 /tmp
+exercise-package.json
