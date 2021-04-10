@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript",
+  "name": "@exercism/typescript-pig-latin",
   "description": "Exercism exercises in Typescript.",
   "private": true,
   "repository": {
