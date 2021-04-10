@@ -1,15 +1,13 @@
-const handshakeCommands = ['wink', 'double blink', 'close your eyes', 'jump']
+const COMMANDS = ['wink', 'double blink', 'close your eyes', 'jump'] as const
+type Command = typeof COMMANDS[number]
+type Commands = Command[]
 
-export const commands = (handshake: string) => {
-  if (typeof handshake !== 'number') {
-    throw new Error('Handshake must be a number')
+export const commands = (handshake: number): Commands => {
+  const shakeWith = COMMANDS.filter((_, i) => handshake & Math.pow(2, i))
+
+  if (handshake & Math.pow(2, 4)) {
+    shakeWith.reverse()
   }
-
-  const shakeWith = handshakeCommands.filter(
-    (_, i) => handshake & Math.pow(2, i)
-  )
-
-  if (handshake & Math.pow(2, 4)) shakeWith.reverse()
 
   return shakeWith
 }

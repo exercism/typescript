@@ -1,37 +1,10 @@
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function')
-  }
+  public static create(...values: unknown[]): unknown {
+    // Do *not* construct any array literal ([]) in your solution.
+    // Do *not* construct any arrays through new Array in your solution.
+    // DO *not* use any of the Array.prototype methods in your solution.
 
-  append() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  concat() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  filter() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  map() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  length() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  foldl() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  foldr() {
-    throw new Error('Remove this statement and implement this function')
-  }
-
-  reverse() {
+    // You may use the destructuring and spreading (...) syntax from Iterable.
     throw new Error('Remove this statement and implement this function')
   }
 }

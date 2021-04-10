@@ -16,11 +16,15 @@ const ACID_PROTEIN_MAP = {
   UAA: 'STOP',
   UAG: 'STOP',
   UGA: 'STOP',
-}
+} as const
 
-const getProtein = (codon: string) => ACID_PROTEIN_MAP[codon] || 'INVALID'
+type Codon = keyof typeof ACID_PROTEIN_MAP
+type Protein = typeof ACID_PROTEIN_MAP[Codon]
 
-export const translate = (rnaStrand: string) => {
+const getProtein = (codon: string): Protein | 'INVALID' =>
+  ACID_PROTEIN_MAP[codon] || 'INVALID'
+
+export const translate = (rnaStrand: string): Protein[] => {
   const proteins: typeof ACID_PROTEIN_MAP[keyof typeof ACID_PROTEIN_MAP][] = []
 
   if (rnaStrand) {

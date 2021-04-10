@@ -3,48 +3,46 @@ interface Input {
   minFactor?: number
 }
 
-interface Palindrome {
+type Factors = [number, number][]
+interface PalindromeShape {
   value: number
-  factors: Array<[number, number]>
+  factors: Factors
 }
 
-const reverseString = (str: string) => str.split('').reverse().join('')
+const reverseString = (str: string): string => str.split('').reverse().join('')
 
-export function generate(params: Input): Palindromes {
-  if ((params.minFactor || 1) > params.maxFactor) {
-    throw new Error('min must be <= max')
-  }
-  return new Palindromes(params.maxFactor, params.minFactor || 1)
-}
+class Palindrome implements PalindromeShape {
+  public readonly value: number
+  public readonly factors: Factors
 
-class Palindrome {
   constructor(factor1: number, factor2: number) {
     this.value = factor1 * factor2
     this.factors = [[factor1, factor2].sort() as [number, number]]
   }
 
-  withFactors(factors) {
+  public withFactors(factors: Factors[number]): this {
     this.factors.push(factors.sort())
-    this.factors = this.factors.sort()
+    this.factors.sort()
+
     return this
   }
 
-  valid() {
+  public valid(): boolean {
     const s = `${this.value}`
     return s === reverseString(s)
   }
 
-  merge(other) {
+  public merge(other: Palindrome): this {
     other.factors.forEach((f) => this.factors.push(f))
-    this.factors = this.factors.sort()
+    this.factors.sort()
+
     return this
   }
 }
-
-export class Palindromes {
+class Palindromes {
   constructor(public maxFactor: number, public minFactor = 1) {}
 
-  get largest() {
+  public get largest(): PalindromeShape {
     let best = new Palindrome(this.minFactor, this.minFactor)
     for (let m = this.maxFactor; m >= this.minFactor; m -= 1) {
       let p = null
@@ -62,10 +60,11 @@ export class Palindromes {
     if (best.valid()) {
       return best
     }
+
     return { value: null, factors: [] }
   }
 
-  get smallest() {
+  public get smallest(): PalindromeShape {
     for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
       for (let n = this.minFactor; n <= this.maxFactor; n += 1) {
         const p = new Palindrome(m, n)
@@ -76,4 +75,11 @@ export class Palindromes {
     }
     return { value: null, factors: [] }
   }
+}
+
+export function generate(params: Input): Palindromes {
+  if ((params.minFactor || 1) > params.maxFactor) {
+    throw new Error('min must be <= max')
+  }
+  return new Palindromes(params.maxFactor, params.minFactor || 1)
 }

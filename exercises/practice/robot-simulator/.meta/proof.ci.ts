@@ -5,11 +5,19 @@ export class InvalidInputError extends Error {
   }
 }
 
-export class Robot {
-  coordinates: number[]
-  bearing: string
+type Bearing = 'north' | 'south' | 'east' | 'west'
+type Instruction = 'turnLeft' | 'turnRight' | 'advance'
 
-  static instructions(s: string) {
+const validDirections: Bearing[] = ['north', 'south', 'east', 'west']
+
+function isValidBearing(next: string): next is Bearing {
+  return validDirections.includes(next as Bearing)
+}
+export class Robot {
+  public coordinates: [number, number]
+  public bearing: Bearing
+
+  private static instructions(s: string): Instruction[] {
     return [...s].map((character) => {
       switch (character) {
         case 'L':
@@ -31,16 +39,15 @@ export class Robot {
     this.bearing = 'north'
   }
 
-  set direction(next: string) {
-    const validDirections = ['north', 'south', 'east', 'west']
-    if (!validDirections.includes(next)) {
+  private set direction(next: string) {
+    if (!isValidBearing(next)) {
       throw new InvalidInputError('Invalid Robot Bearing')
     }
 
     this.bearing = next
   }
 
-  advance() {
+  private advance(): void {
     if (this.bearing === 'north') {
       this.coordinates[1] += 1
     } else if (this.bearing === 'south') {
@@ -52,7 +59,7 @@ export class Robot {
     }
   }
 
-  turnLeft() {
+  private turnLeft(): void {
     if (this.bearing === 'north') {
       this.direction = 'west'
     } else if (this.bearing === 'south') {
@@ -64,7 +71,7 @@ export class Robot {
     }
   }
 
-  turnRight() {
+  private turnRight(): void {
     if (this.bearing === 'north') {
       this.direction = 'east'
     } else if (this.bearing === 'south') {
@@ -76,12 +83,12 @@ export class Robot {
     }
   }
 
-  place(args: { x: number; y: number; direction: string }) {
+  public place(args: { x: number; y: number; direction: string }): void {
     this.coordinates = [args.x, args.y]
     this.direction = args.direction
   }
 
-  evaluate(s: string) {
+  public evaluate(s: string): void {
     Robot.instructions(s).forEach((instruction) => {
       this[instruction]()
     })

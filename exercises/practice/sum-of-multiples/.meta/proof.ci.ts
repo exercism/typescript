@@ -1,4 +1,4 @@
-export const sum = (multiples: number[], limit: number) => {
+export const sum = (multiples: number[], limit: number): number => {
   let sum = 0
   for (let i = 1; i < limit; i++) {
     if (multiples.some((multiple) => i % multiple === 0)) {

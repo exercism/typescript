@@ -12,7 +12,7 @@ const EARTH_TO_OTHER_PLANETS = {
 export const age = (
   planet: keyof typeof EARTH_TO_OTHER_PLANETS,
   seconds: number
-) => {
+): number => {
   const earthYears = seconds / 31557600
   const years = earthYears / EARTH_TO_OTHER_PLANETS[planet]
 

@@ -6,14 +6,15 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "env": {
-    "browser": true,
+    "browser": false,
     "es6": true,
     "jest": true,
-    "node": true
+    "node": true,
+    "shelljs": true
   },
   "extends": [
     "eslint:recommended",
@@ -29,7 +30,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+    "@typescript-eslint/array-type": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "warn",
       {

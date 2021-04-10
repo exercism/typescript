@@ -128,8 +128,7 @@ describe('Palindromes', () => {
   })
 })
 
-function sortFactors(
-  factors: ReturnType<typeof generate>['smallest']['factors']
-) {
+type Factors = ReturnType<typeof generate>['smallest']['factors']
+function sortFactors(factors: Factors): Factors {
   return factors.map((f) => f.sort()).sort()
 }
