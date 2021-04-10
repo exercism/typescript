@@ -1,22 +1,11 @@
 {
   "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "secret-handshake.ts"
-    ],
-    "test": [
-      "secret-handshake.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["secret-handshake.ts"],
+    "test": ["secret-handshake.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Bert, in Mary Poppins",
   "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047"

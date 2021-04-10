@@ -1,22 +1,11 @@
 {
   "blurb": "Write a robot simulator.",
-  "authors": [
-    "deyshin"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["deyshin"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "robot-simulator.ts"
-    ],
-    "test": [
-      "robot-simulator.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["robot-simulator.ts"],
+    "test": ["robot-simulator.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Inspired by an interview question at a famous company.",
   "source_url": ""

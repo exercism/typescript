@@ -1,23 +1,11 @@
 {
   "blurb": "Insert and search for numbers in a binary tree.",
-  "authors": [
-    "Sn0wFox"
-  ],
-  "contributors": [
-    "masters3d",
-    "peerreynders",
-    "SleeplessByte"
-  ],
+  "authors": ["Sn0wFox"],
+  "contributors": ["masters3d", "peerreynders", "SleeplessByte"],
   "files": {
-    "solution": [
-      "binary-search-tree.ts"
-    ],
-    "test": [
-      "binary-search-tree.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["binary-search-tree.ts"],
+    "test": ["binary-search-tree.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

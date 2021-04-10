@@ -22,16 +22,15 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     // Code style not forced upon the student
     "@typescript-eslint/array-type": "off",
 
     // Prevent bugs
     "@typescript-eslint/explicit-function-return-type": [
-      "warn", {
+      "warn",
+      {
         "allowExpressions": false,
         "allowTypedFunctionExpressions": true,
         "allowHigherOrderFunctions": true
@@ -45,7 +44,8 @@
     "@typescript-eslint/indent": "off",
 
     "@typescript-eslint/no-inferrable-types": [
-      "error", {
+      "error",
+      {
         "ignoreParameters": true
       }
     ],
@@ -56,12 +56,17 @@
     // Code style not forced upon the student
     "@typescript-eslint/no-non-null-assertion": "off",
 
-     // Only disallow readonly without an access modifier
+    // Only disallow readonly without an access modifier
     "@typescript-eslint/no-parameter-properties": [
-      "warn", {
+      "warn",
+      {
         "allows": [
-          "private", "protected", "public",
-          "private readonly", "protected readonly", "public readonly"
+          "private",
+          "protected",
+          "public",
+          "private readonly",
+          "protected readonly",
+          "public readonly"
         ]
       }
     ],
@@ -69,18 +74,19 @@
     // Covered by the tsc compiler (noUnusedLocals)
     "@typescript-eslint/no-unused-vars": "off",
 
-     // Prevent bugs, not styling
+    // Prevent bugs, not styling
     "@typescript-eslint/no-use-before-define": [
-      "error", {
+      "error",
+      {
         "functions": false,
         "typedefs": false
       }
     ],
 
-     // Always disable base-rule
+    // Always disable base-rule
     "semi": "off",
 
-     // Code style not forced upon student
+    // Code style not forced upon student
     "@typescript-eslint/semi": "off"
   }
 }

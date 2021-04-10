@@ -1,23 +1,11 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
-  "authors": [
-    "masters3d"
-  ],
-  "contributors": [
-    "DFXLuna",
-    "lukaszklis",
-    "SleeplessByte"
-  ],
+  "authors": ["masters3d"],
+  "contributors": ["DFXLuna", "lukaszklis", "SleeplessByte"],
   "files": {
-    "solution": [
-      "leap.ts"
-    ],
-    "test": [
-      "leap.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["leap.ts"],
+    "test": ["leap.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
   "source_url": "http://www.javaranch.com/leap.jsp"

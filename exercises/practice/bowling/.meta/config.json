@@ -1,22 +1,11 @@
 {
   "blurb": "Score a bowling game",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "bowling.ts"
-    ],
-    "test": [
-      "bowling.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["bowling.ts"],
+    "test": ["bowling.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "The Bowling Game Kata at but UncleBob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata"

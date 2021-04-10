@@ -1,23 +1,11 @@
 {
   "blurb": "Take input text and output it transposed.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "peerreynders",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "peerreynders", "SleeplessByte"],
   "files": {
-    "solution": [
-      "transpose.ts"
-    ],
-    "test": [
-      "transpose.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["transpose.ts"],
+    "test": ["transpose.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Reddit r/dailyprogrammer challenge #270 [Easy].",
   "source_url": "https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text"

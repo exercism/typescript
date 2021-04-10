@@ -1,22 +1,11 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [
-    "CRivasGomez"
-  ],
-  "contributors": [
-    "masters3d",
-    "SleeplessByte"
-  ],
+  "authors": ["CRivasGomez"],
+  "contributors": ["masters3d", "SleeplessByte"],
   "files": {
-    "solution": [
-      "matching-brackets.ts"
-    ],
-    "test": [
-      "matching-brackets.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ]
+    "solution": ["matching-brackets.ts"],
+    "test": ["matching-brackets.test.ts"],
+    "example": [".meta/proof.ci.ts"]
   },
   "source": "Ginna Baker"
 }
