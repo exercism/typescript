@@ -249,9 +249,6 @@ export function createExercisePackageJson(writeSha = false) {
   const packageFile = shell.cat(path.join('common', 'package.json')).toString()
   const packageJson = JSON.parse(packageFile)
 
-  console.log({ packageFile })
-  console.warn({ packageJson })
-
   // Filter out some unwanted packages and create package.json for exercises
   SKIP_PACKAGES_FOR_CHECKSUM.forEach(
     (pkg) => delete packageJson['devDependencies'][pkg]
