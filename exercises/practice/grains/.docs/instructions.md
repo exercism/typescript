@@ -16,6 +16,8 @@ Write code that shows:
 - how many grains were on a given square, and
 - the total number of grains on the chessboard
 
+You will need to use the [bigint](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-2.html#bigint) type in this problem, as the usual `number` type loses precision when on big numbers, being a floating point based storage.
+
 ## For bonus points
 
 Did you get the tests passing and the code clean? If you want to, these
