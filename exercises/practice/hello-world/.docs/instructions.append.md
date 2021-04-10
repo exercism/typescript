@@ -49,8 +49,8 @@ Open up the test file, hello-world.test.ts.
 There is a single test inside:
 
 ```typescript
-it('says hello world with no name', () => {
-  expect(HelloWorld.hello()).toEqual('Hello, World!')
+it('says hello world', () => {
+  expect(hello()).toEqual('Hello, World!')
 })
 ```
 
@@ -65,19 +65,19 @@ The test fails, which makes sense since you've not written any code yet.
 The failure looks like this:
 
 ```
-    × says hello world with no name (5ms)
+    × says hello world (5ms)
 
-  ● Hello World › says hello world with no name
+  ● Hello World › says hello world
 
     expect(received).toEqual(expected) // deep equality
 
     Expected: "Hello, World!"
-    Received: undefined
+    Received: "What's up doc 👋🏽?"
 
       4 |
-      5 |   it('says hello world with no name', () => {
-    > 6 |     expect(HelloWorld.hello()).toEqual('Hello, World!')
-        |                                ^
+      5 |   it('says hello world', () => {
+    > 6 |     expect(hello()).toEqual('Hello, World!')
+        |                     ^
       7 |   })
       8 |
       9 | })
@@ -89,36 +89,28 @@ And these are those code lines with probable defects in the `hello-world.test.ts
 
 the 6th line:
 
-```
-    expect(HelloWorld.hello)).toEqual('Hello, World!')
-                              ^
+```typescript
+    expect(hello()).toEqual('Hello, World!')
+                    ^
 ```
 
-Hence the problem is with the `HelloWorld.hello()` call where we are calling the `hello` static method from the `HelloWorld` class.
-We can see that the test is expecting `'Hello, World!'` as output, but instead is getting `undefined`.
+Hence the problem is with the `hello()` function call.
+We can see that the test is expecting `'Hello, World!'` as output, but instead is getting `"What's up doc 👋🏽?"`.
 
-So let's check now this method in the `hello-worlds.ts` file:
+So let's check now this function in the `hello-worlds.ts` file:
 
 ```typescript
-class HelloWorld {
-  static hello() {
-    // Your code here
-  }
+export function hello(): string {
+  return "What's up doc 👋🏽?"
 }
-
-export default HelloWorld
 ```
 
-Now we see that the method doesn't return anything, which is the reason for our failure. Let's fix this by adding a return value:
+Now we see that the function returns the incorrect string, which is the reason for our failure. Let's fix this by changing the returned value:
 
 ```typescript
-class HelloWorld {
-  static hello(message: string) {
-    return 'Hello, World!'
-  }
+export function hello(): string {
+  return "Hello, World!"
 }
-
-export default HelloWorld
 ```
 
 Run the test again:
@@ -126,7 +118,7 @@ Run the test again:
 ```bash
  PASS  ./hello-world.test.ts
   Hello World
-    √ says hello world with no name (4ms)
+    √ says hello world (4ms)
 ```
 
 And it passes!
