@@ -1,5 +1,3 @@
-export default class Acronym {
-  public static parse(phrase: string): string {
-    return ''
-  }
+export function parse(phrase: unknown): unknown {
+  throw new Error('Remove this statement and implement this function')
 }

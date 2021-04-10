@@ -1,4 +1,4 @@
-import Alphametics from './alphametics'
+import { solve } from './alphametics'
 
 describe('Solve the alphametics puzzle', () => {
   it('puzzle with three letters', () => {
@@ -8,17 +8,17 @@ describe('Solve the alphametics puzzle', () => {
       B: 9,
       L: 0,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 
   xit('solution must have unique value for each letter', () => {
     const puzzle = 'A == B'
-    expect(new Alphametics(puzzle).solve()).toBeUndefined()
+    expect(solve(puzzle)).toBeUndefined()
   })
 
   xit('leading zero solution is invalid', () => {
     const puzzle = 'ACA + DD == BD'
-    expect(new Alphametics(puzzle).solve()).toBeUndefined()
+    expect(solve(puzzle)).toBeUndefined()
   })
 
   xit('puzzle with four letters', () => {
@@ -29,7 +29,7 @@ describe('Solve the alphametics puzzle', () => {
       M: 1,
       O: 0,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 
   xit('puzzle with six letters', () => {
@@ -42,7 +42,7 @@ describe('Solve the alphametics puzzle', () => {
       A: 0,
       E: 2,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 
   xit('puzzle with seven letters', () => {
@@ -56,7 +56,7 @@ describe('Solve the alphametics puzzle', () => {
       S: 9,
       T: 7,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 
   xit('puzzle with eight letters', () => {
@@ -71,7 +71,7 @@ describe('Solve the alphametics puzzle', () => {
       R: 8,
       Y: 2,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 
   xit('puzzle with ten letters', () => {
@@ -88,6 +88,6 @@ describe('Solve the alphametics puzzle', () => {
       S: 6,
       T: 9,
     }
-    expect(new Alphametics(puzzle).solve()).toEqual(expected)
+    expect(solve(puzzle)).toEqual(expected)
   })
 })

@@ -1,9 +1,9 @@
-import House from './house'
+import { verse, verses } from './house'
 
 describe('House', () => {
   it('verse one - the house that jack built', () => {
     const lyrics = ['This is the house that Jack built.']
-    expect(House.verse(1)).toEqual(lyrics)
+    expect(verse(1)).toEqual(lyrics)
   })
 
   xit('verse two - the malt that lay', () => {
@@ -11,7 +11,7 @@ describe('House', () => {
       'This is the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(2)).toEqual(lyrics)
+    expect(verse(2)).toEqual(lyrics)
   })
 
   xit('verse three - the rat that ate', () => {
@@ -20,7 +20,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(3)).toEqual(lyrics)
+    expect(verse(3)).toEqual(lyrics)
   })
 
   xit('verse four - the cat that killed', () => {
@@ -30,7 +30,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(4)).toEqual(lyrics)
+    expect(verse(4)).toEqual(lyrics)
   })
 
   xit('verse five - the dog that worried', () => {
@@ -41,7 +41,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(5)).toEqual(lyrics)
+    expect(verse(5)).toEqual(lyrics)
   })
 
   xit('verse six - the cow with the crumpled horn', () => {
@@ -53,7 +53,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(6)).toEqual(lyrics)
+    expect(verse(6)).toEqual(lyrics)
   })
 
   xit('verse seven - the maiden all forlorn', () => {
@@ -66,7 +66,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(7)).toEqual(lyrics)
+    expect(verse(7)).toEqual(lyrics)
   })
 
   xit('verse eight - the man all tattered and torn', () => {
@@ -80,7 +80,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(8)).toEqual(lyrics)
+    expect(verse(8)).toEqual(lyrics)
   })
 
   xit('verse nine - the priest all shaven and shorn', () => {
@@ -95,7 +95,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(9)).toEqual(lyrics)
+    expect(verse(9)).toEqual(lyrics)
   })
 
   xit('verse ten - the rooster that crowed in the morn', () => {
@@ -111,7 +111,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(10)).toEqual(lyrics)
+    expect(verse(10)).toEqual(lyrics)
   })
 
   xit('verse eleven - the farmer sowing his corn', () => {
@@ -128,7 +128,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(11)).toEqual(lyrics)
+    expect(verse(11)).toEqual(lyrics)
   })
 
   xit('verse twelve - the horse and the hound and the horn', () => {
@@ -146,7 +146,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verse(12)).toEqual(lyrics)
+    expect(verse(12)).toEqual(lyrics)
   })
 
   xit('multiple verses', () => {
@@ -188,7 +188,7 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verses(startVerse, endVerse)).toEqual(lyrics)
+    expect(verses(startVerse, endVerse)).toEqual(lyrics)
   })
 
   xit('full rhyme', () => {
@@ -285,6 +285,6 @@ describe('House', () => {
       'that ate the malt',
       'that lay in the house that Jack built.',
     ]
-    expect(House.verses(startVerse, endVerse)).toEqual(lyrics)
+    expect(verses(startVerse, endVerse)).toEqual(lyrics)
   })
 })

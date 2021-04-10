@@ -1,4 +1,4 @@
-import Gigasecond from './gigasecond'
+import { Gigasecond } from './gigasecond'
 
 describe('Gigasecond', () => {
   it('tells a gigasecond anniversary since midnight', () => {

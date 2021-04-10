@@ -1,4 +1,4 @@
-import FoodChain from './food-chain'
+import { verse, verses } from './food-chain'
 
 describe('Food Chain', () => {
   it('fly', () => {
@@ -6,7 +6,7 @@ describe('Food Chain', () => {
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(1)).toEqual(expected)
+    expect(verse(1)).toEqual(expected)
   })
 
   xit('spider', () => {
@@ -16,7 +16,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(2)).toEqual(expected)
+    expect(verse(2)).toEqual(expected)
   })
 
   xit('bird', () => {
@@ -27,7 +27,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(3)).toEqual(expected)
+    expect(verse(3)).toEqual(expected)
   })
 
   xit('cat', () => {
@@ -39,7 +39,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(4)).toEqual(expected)
+    expect(verse(4)).toEqual(expected)
   })
 
   xit('dog', () => {
@@ -52,7 +52,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(5)).toEqual(expected)
+    expect(verse(5)).toEqual(expected)
   })
 
   xit('goat', () => {
@@ -66,7 +66,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(6)).toEqual(expected)
+    expect(verse(6)).toEqual(expected)
   })
 
   xit('cow', () => {
@@ -81,7 +81,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verse(7)).toEqual(expected)
+    expect(verse(7)).toEqual(expected)
   })
 
   xit('horse', () => {
@@ -89,7 +89,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 She's dead, of course!
 `
 
-    expect(FoodChain.verse(8)).toEqual(expected)
+    expect(verse(8)).toEqual(expected)
   })
 
   xit('multiple verses', () => {
@@ -102,7 +102,7 @@ She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die.
 `
 
-    expect(FoodChain.verses(1, 2)).toEqual(expected)
+    expect(verses(1, 2)).toEqual(expected)
   })
 
   xit('the whole song', () => {
@@ -157,6 +157,6 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 I know an old lady who swallowed a horse.
 She's dead, of course!
 `
-    expect(FoodChain.verses(1, 8)).toEqual(expected)
+    expect(verses(1, 8)).toEqual(expected)
   })
 })

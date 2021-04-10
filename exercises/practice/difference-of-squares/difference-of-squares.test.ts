@@ -1,4 +1,4 @@
-import Squares from './difference-of-squares'
+import { Squares } from './difference-of-squares'
 
 describe('Squares', () => {
   describe('up to 5', () => {

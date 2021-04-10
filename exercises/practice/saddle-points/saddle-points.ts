@@ -1,7 +1,3 @@
-class SaddlePoints {
-  static saddlePoints(/* Parameters go here */) {
-    // Your code here
-  }
+export function saddlePoints(/* Parameters go here */) {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default SaddlePoints

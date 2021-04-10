@@ -1,7 +1,3 @@
-class Bob {
-  hey(/* Parameters go here */) {
-    // Your code here
-  }
+export function hey(message: unknown): unknown {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default Bob

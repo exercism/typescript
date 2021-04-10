@@ -1,69 +1,59 @@
-import HandShake from './secret-handshake'
+import { commands } from './secret-handshake'
 
-describe('Create a handshake for a number', () => {
-  it('wink for 1', () => {
-    const handshake = new HandShake(1)
-    const expected = ['wink']
-    expect(handshake.commands()).toEqual(expected)
-  })
+describe('Secret Handshake', () => {
+  describe('Create A Handshake For A Number', () => {
+    test('wink for 1', () => {
+      expect(commands(1)).toEqual(['wink'])
+    })
 
-  xit('double blink for 10', () => {
-    const handshake = new HandShake(2)
-    const expected = ['double blink']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('double blink for 10', () => {
+      expect(commands(2)).toEqual(['double blink'])
+    })
 
-  xit('close your eyes for 100', () => {
-    const handshake = new HandShake(4)
-    const expected = ['close your eyes']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('close your eyes for 100', () => {
+      expect(commands(4)).toEqual(['close your eyes'])
+    })
 
-  xit('jump for 1000', () => {
-    const handshake = new HandShake(8)
-    const expected = ['jump']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('jump for 1000', () => {
+      expect(commands(8)).toEqual(['jump'])
+    })
 
-  xit('combine two actions', () => {
-    const handshake = new HandShake(3)
-    const expected = ['wink', 'double blink']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('combine two actions', () => {
+      expect(commands(3)).toEqual(['wink', 'double blink'])
+    })
 
-  xit('reverse two actions', () => {
-    const handshake = new HandShake(19)
-    const expected = ['double blink', 'wink']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('reverse two actions', () => {
+      expect(commands(19)).toEqual(['double blink', 'wink'])
+    })
 
-  xit('reversing one action gives the same action', () => {
-    const handshake = new HandShake(24)
-    const expected = ['jump']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('reversing one action gives the same action', () => {
+      expect(commands(24)).toEqual(['jump'])
+    })
 
-  xit('reversing no actions still gives no actions', () => {
-    const handshake = new HandShake(16)
-    const expected: string[] = []
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('reversing no actions still gives no actions', () => {
+      expect(commands(16)).toEqual([])
+    })
 
-  xit('all possible actions', () => {
-    const handshake = new HandShake(15)
-    const expected = ['wink', 'double blink', 'close your eyes', 'jump']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('all possible actions', () => {
+      expect(commands(15)).toEqual([
+        'wink',
+        'double blink',
+        'close your eyes',
+        'jump',
+      ])
+    })
 
-  xit('reverse all possible actions', () => {
-    const handshake = new HandShake(31)
-    const expected = ['jump', 'close your eyes', 'double blink', 'wink']
-    expect(handshake.commands()).toEqual(expected)
-  })
+    xtest('reverse all possible actions', () => {
+      expect(commands(31)).toEqual([
+        'jump',
+        'close your eyes',
+        'double blink',
+        'wink',
+      ])
+    })
 
-  xit('do nothing for zero', () => {
-    const handshake = new HandShake(0)
-    const expected: string[] = []
-    expect(handshake.commands()).toEqual(expected)
+    xtest('do nothing for zero', () => {
+      expect(commands(0)).toEqual([])
+    })
   })
 })

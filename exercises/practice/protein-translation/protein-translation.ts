@@ -1,7 +1,3 @@
-class ProteinTranslation {
-  static proteins(/* Parameters go here */) {
-    // Your code here
-  }
+export function translate() {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default ProteinTranslation

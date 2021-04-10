@@ -1,7 +1,3 @@
-class NucleotideCount {
-  static nucleotideCounts(/* Parameters go here */) {
-    // Your code here
-  }
+export function nucleotideCounts(/* Parameters go here */) {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default NucleotideCount

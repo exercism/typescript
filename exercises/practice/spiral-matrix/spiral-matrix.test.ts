@@ -1,15 +1,15 @@
-import SpiralMatrix from './spiral-matrix'
+import { ofSize } from './spiral-matrix'
 
 describe('Spiral Matrix', () => {
   it('empty spiral', () => {
     const expected: number[][] = []
-    const actual = SpiralMatrix.ofSize(0)
+    const actual = ofSize(0)
     expect(actual).toEqual(expected)
   })
 
   xit('trivial spiral', () => {
     const expected = [[1]]
-    const actual = SpiralMatrix.ofSize(1)
+    const actual = ofSize(1)
     expect(actual).toEqual(expected)
   })
 
@@ -18,7 +18,7 @@ describe('Spiral Matrix', () => {
       [1, 2],
       [4, 3],
     ]
-    const actual = SpiralMatrix.ofSize(2)
+    const actual = ofSize(2)
     expect(actual).toEqual(expected)
   })
 
@@ -28,7 +28,7 @@ describe('Spiral Matrix', () => {
       [8, 9, 4],
       [7, 6, 5],
     ]
-    const actual = SpiralMatrix.ofSize(3)
+    const actual = ofSize(3)
     expect(actual).toEqual(expected)
   })
 
@@ -39,7 +39,7 @@ describe('Spiral Matrix', () => {
       [11, 16, 15, 6],
       [10, 9, 8, 7],
     ]
-    const actual = SpiralMatrix.ofSize(4)
+    const actual = ofSize(4)
     expect(actual).toEqual(expected)
   })
 
@@ -51,7 +51,7 @@ describe('Spiral Matrix', () => {
       [14, 23, 22, 21, 8],
       [13, 12, 11, 10, 9],
     ]
-    const actual = SpiralMatrix.ofSize(5)
+    const actual = ofSize(5)
     expect(expected).toEqual(actual)
   })
 })

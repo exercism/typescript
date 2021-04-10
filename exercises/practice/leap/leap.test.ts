@@ -1,37 +1,39 @@
-import isLeapYear from './leap'
+import { isLeap } from './leap'
 
 describe('A leap year', () => {
-  it('is not very common', () => {
-    expect(isLeapYear(2015)).toBeFalsy()
+  test('year not divisible by 4 in common year', () => {
+    expect(isLeap(2015)).toBe(false)
   })
 
-  xit('is introduced every 4 years to adjust about a day', () => {
-    expect(isLeapYear(2016)).toBeTruthy()
+  xtest('year divisible by 2, not divisible by 4 in common year', () => {
+    expect(isLeap(1970)).toBe(false)
   })
 
-  xit('is skipped every 100 years to remove an extra day', () => {
-    expect(isLeapYear(1900)).toBeFalsy()
+  xtest('year divisible by 4, not divisible by 100 in leap year', () => {
+    expect(isLeap(1996)).toBe(true)
   })
 
-  xit('is reintroduced every 400 years to adjust another day', () => {
-    expect(isLeapYear(2000)).toBeTruthy()
+  xtest('year divisible by 4 and 5 is still a leap year', () => {
+    expect(isLeap(1960)).toBe(true)
   })
 
-  describe('Additional example of a leap year that', () => {
-    xit('is not a leap year', () => {
-      expect(isLeapYear(1978)).toBeFalsy()
-    })
+  xtest('year divisible by 100, not divisible by 400 in common year', () => {
+    expect(isLeap(2100)).toBe(false)
+  })
 
-    xit('is a common leap year', () => {
-      expect(isLeapYear(1992)).toBeTruthy()
-    })
+  xtest('year divisible by 100 but not by 3 is still not a leap year', () => {
+    expect(isLeap(1900)).toBe(false)
+  })
 
-    xit('is skipped every 100 years', () => {
-      expect(isLeapYear(2100)).toBeFalsy()
-    })
+  xtest('year divisible by 400 in leap year', () => {
+    expect(isLeap(2000)).toBe(true)
+  })
 
-    xit('is reintroduced every 400 years', () => {
-      expect(isLeapYear(2400)).toBeTruthy()
-    })
+  xtest('year divisible by 400 but not by 125 is still a leap year', () => {
+    expect(isLeap(2400)).toBe(true)
+  })
+
+  xtest('year divisible by 200, not divisible by 400 in common year', () => {
+    expect(isLeap(1800)).toBe(false)
   })
 })

@@ -1,7 +1,3 @@
-class RomanNumerals {
-  static roman(/* Parameters go here */) {
-    // Your code here
-  }
+export const toRoman = () => {
+  throw new Error('Remove this statement and implement this function')
 }
-
-export default RomanNumerals

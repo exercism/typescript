@@ -1,4 +1,4 @@
-import calculatePrimeFactors from './prime-factors'
+import { calculatePrimeFactors } from './prime-factors'
 
 describe('calculatePrimeFactors', () => {
   it('returns an empty array for 1', () =>

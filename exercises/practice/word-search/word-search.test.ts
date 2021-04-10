@@ -1,4 +1,4 @@
-import WordSearch from './word-search'
+import { WordSearch } from './word-search'
 
 describe('single line grids', () => {
   test('Should accept an initial game grid', () => {

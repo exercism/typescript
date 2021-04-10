@@ -1,92 +1,90 @@
-import GradeSchool from './grade-school'
+import { GradeSchool } from './grade-school'
 
 describe('School', () => {
-  let gradeSchool: GradeSchool
-
-  beforeEach(() => {
-    gradeSchool = new GradeSchool()
+  test('a new school has an empty roster', () => {
+    const school = new GradeSchool()
+    expect(school.roster()).toEqual({})
   })
 
-  it('a new school has an empty roster', () => {
-    expect(gradeSchool.studentRoster().size === 0).toEqual(true)
+  xtest('adding a student adds them to the roster for the given grade', () => {
+    const school = new GradeSchool()
+    school.add('Aimee', 2)
+
+    const expectedDb = { 2: ['Aimee'] }
+    expect(school.roster()).toEqual(expectedDb)
   })
 
-  xit("A student can't be in two different grades", () => {
-    gradeSchool.addStudent('Aimee', 2)
-    gradeSchool.addStudent('Aimee', 1)
+  xtest('adding more students to the same grade adds them to the roster', () => {
+    const school = new GradeSchool()
+    school.add('Blair', 2)
+    school.add('James', 2)
+    school.add('Paul', 2)
 
-    const emptyGrade = gradeSchool.studentsInGrade(2)
-    expect(emptyGrade).toEqual([])
+    const expectedDb = { 2: ['Blair', 'James', 'Paul'] }
+    expect(school.roster()).toEqual(expectedDb)
   })
 
-  xit('adding a student adds them to the roster for the given grade', () => {
-    gradeSchool.addStudent('Aimee', 2)
+  xtest('adding students to different grades adds them to the roster', () => {
+    const school = new GradeSchool()
+    school.add('Chelsea', 3)
+    school.add('Logan', 7)
 
-    const expectedDb = new Map(Object.entries({ 2: ['Aimee'] }))
-    expect(gradeSchool.studentRoster()).toEqual(expectedDb)
+    const expectedDb = { 3: ['Chelsea'], 7: ['Logan'] }
+    expect(school.roster()).toEqual(expectedDb)
   })
 
-  xit('adding more students to the same grade adds them to the roster', () => {
-    gradeSchool.addStudent('Blair', 2)
-    gradeSchool.addStudent('James', 2)
-    gradeSchool.addStudent('Paul', 2)
-
-    const expectedDb = new Map(
-      Object.entries({ 2: ['Blair', 'James', 'Paul'] })
-    )
-    expect(gradeSchool.studentRoster()).toEqual(expectedDb)
-  })
-
-  xit('adding students to different grades adds them to the roster', () => {
-    gradeSchool.addStudent('Chelsea', 3)
-    gradeSchool.addStudent('Logan', 7)
-
-    const expectedDb = new Map(Object.entries({ 3: ['Chelsea'], 7: ['Logan'] }))
-    expect(gradeSchool.studentRoster()).toEqual(expectedDb)
-  })
-
-  xit('grade returns the students in that grade in alphabetical order', () => {
-    gradeSchool.addStudent('Franklin', 5)
-    gradeSchool.addStudent('Bradley', 5)
-    gradeSchool.addStudent('Jeff', 1)
+  xtest('grade returns the students in that grade in alphabetical order', () => {
+    const school = new GradeSchool()
+    school.add('Franklin', 5)
+    school.add('Bradley', 5)
+    school.add('Jeff', 1)
 
     const expectedStudents = ['Bradley', 'Franklin']
-    expect(gradeSchool.studentsInGrade(5)).toEqual(expectedStudents)
+    expect(school.grade(5)).toEqual(expectedStudents)
   })
 
-  xit('grade returns an empty array if there are no students in that grade', () => {
-    expect(gradeSchool.studentsInGrade(1)).toEqual([])
+  xtest('grade returns an empty array if there are no students in that grade', () => {
+    const school = new GradeSchool()
+    expect(school.grade(1)).toEqual([])
   })
 
-  xit('the students names in each grade in the roster are sorted', () => {
-    gradeSchool.addStudent('Jennifer', 4)
-    gradeSchool.addStudent('Kareem', 6)
-    gradeSchool.addStudent('Christopher', 4)
-    gradeSchool.addStudent('Kyle', 3)
+  xtest('the students names in each grade in the roster are sorted', () => {
+    const school = new GradeSchool()
+    school.add('Jennifer', 4)
+    school.add('Kareem', 6)
+    school.add('Christopher', 4)
+    school.add('Kyle', 3)
 
-    const expectedSortedStudents = new Map(
-      Object.entries({
-        3: ['Kyle'],
-        4: ['Christopher', 'Jennifer'],
-        6: ['Kareem'],
-      })
-    )
-    expect(gradeSchool.studentRoster()).toEqual(expectedSortedStudents)
+    const expectedSortedStudents = {
+      3: ['Kyle'],
+      4: ['Christopher', 'Jennifer'],
+      6: ['Kareem'],
+    }
+    expect(school.roster()).toEqual(expectedSortedStudents)
   })
 
-  xit('roster cannot be modified outside of module', () => {
-    gradeSchool.addStudent('Aimee', 2)
-    const roster = gradeSchool.studentRoster()
-    const result = roster.get('2') || []
-    result.push('Oops.')
-    const expectedDb = new Map(Object.entries({ 2: ['Aimee'] }))
-    expect(gradeSchool.studentRoster()).toEqual(expectedDb)
+  xtest('roster cannot be modified outside of module', () => {
+    const school = new GradeSchool()
+    school.add('Aimee', 2)
+    const roster = school.roster()
+    roster[2].push('Oops.')
+    const expectedDb = { 2: ['Aimee'] }
+    expect(school.roster()).toEqual(expectedDb)
   })
 
-  xit('roster cannot be modified outside of module using studentsInGrade()', () => {
-    gradeSchool.addStudent('Aimee', 2)
-    gradeSchool.studentsInGrade(2).push('Oops.')
-    const expectedDb = new Map(Object.entries({ 2: ['Aimee'] }))
-    expect(gradeSchool.studentRoster()).toEqual(expectedDb)
+  xtest('roster cannot be modified outside of module using grade()', () => {
+    const school = new GradeSchool()
+    school.add('Aimee', 2)
+    school.grade(2).push('Oops.')
+    const expectedDb = { 2: ['Aimee'] }
+    expect(school.roster()).toEqual(expectedDb)
+  })
+
+  xtest("a student can't be in two different grades", () => {
+    const school = new GradeSchool()
+    school.add('Aimee', 2)
+    school.add('Aimee', 1)
+
+    expect(school.grade(2)).toEqual([])
   })
 })

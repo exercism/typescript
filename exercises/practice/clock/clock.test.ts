@@ -1,4 +1,4 @@
-import Clock from './clock'
+import { Clock } from './clock'
 
 describe('Clock', () => {
   describe('Creating a new clock with an initial time', () => {
