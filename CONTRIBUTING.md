@@ -212,7 +212,7 @@ Use this action to format all the files using the correct version of prettier. I
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to lint `two-fer`, you may, depending on your environment use:
 
 ```shell
-ASSIGNMENT=two-fer yarn babel/node scripts/lint
+ASSIGNMENT=two-fer yarn babel-node scripts/lint
 ```
 
 #### `test`
@@ -234,7 +234,7 @@ ASSIGNMENT=two-fer yarn babel/node scripts/lint
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer yarn babel/node scripts/test
+ASSIGNMENT=two-fer yarn babel-node scripts/test
 ```
 
 #### `sync`
@@ -259,7 +259,7 @@ ASSIGNMENT=two-fer yarn babel/node scripts/test
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer yarn babel/node scripts/sync
+ASSIGNMENT=two-fer yarn babel-node scripts/sync
 ```
 
 #### `checksum`
