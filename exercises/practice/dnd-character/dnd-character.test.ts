@@ -1,7 +1,6 @@
 import { DnDCharacter } from './dnd-character'
 
 describe('Ability modifier', () => {
-
   test('Ability modifier for score 3 is -4', () => {
     expect(DnDCharacter.getModifierFor(3)).toEqual(-4)
   })
@@ -68,7 +67,6 @@ describe('Ability modifier', () => {
 })
 
 describe('Ability generator', () => {
-
   test('Random ability is within range', () => {
     const abilityScore = DnDCharacter.generateAbilityScore()
     expect(abilityScore).toBeGreaterThanOrEqual(3)
@@ -77,15 +75,16 @@ describe('Ability generator', () => {
 })
 
 describe('Character creation', () => {
-
   test('Random character is valid', () => {
     const character = new DnDCharacter()
 
-    expect(character.getHitpoints()).toEqual(10 + DnDCharacter.getModifierFor(character.getConstitution()))
-    
+    expect(character.getHitpoints()).toEqual(
+      10 + DnDCharacter.getModifierFor(character.getConstitution())
+    )
+
     expect(character.getStrength()).toBeGreaterThanOrEqual(3)
     expect(character.getStrength()).toBeLessThanOrEqual(18)
-    
+
     expect(character.getDexterity()).toBeGreaterThanOrEqual(3)
     expect(character.getDexterity()).toBeLessThanOrEqual(18)
 
@@ -108,4 +107,3 @@ describe('Character creation', () => {
     expect(character.getStrength() == character.getStrength()).toBeTruthy()
   })
 })
-

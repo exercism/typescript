@@ -88,6 +88,15 @@
         "topics": ["classes", "floating_point_numbers"]
       },
       {
+        "slug": "dnd-character",
+        "name": "DnD Character",
+        "uuid": "6f34eb4d-4028-4f89-9965-c9a887f416a0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": ["classes"]
+      },
+      {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "721d9c74-cc16-4b32-8f0b-ffab75027539",
