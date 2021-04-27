@@ -75,6 +75,9 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible (more on canonical data below).
 1. Create a `.meta/proof.ci.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
 1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the canonical data syncer which aids generating this file _interactively_.
+1. Create a `.meta/config.json`. Copy the structure from any other `.meta/config.json`. Fill the `blurb`, `source` and `source_url` according
+   to the `metadata.yml` in the [problem specifications repository]. Add yourself as author.
+1. Create a `.docs/instructions.md` file. Copy the instructions from the [problem specifications repository]
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=slug yarn babel-node scripts/test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=slug yarn babel-node scripts/lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
