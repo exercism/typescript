@@ -1,38 +1,38 @@
 export class DnDCharacter {
 
-  static generateAbilityScore() : number {
+  public static generateAbilityScore() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  static getModifierFor(abilityValue : number) : number {
+  public static getModifierFor(abilityValue : number) : number {
       throw new Error('Remove this statement and implement this function')
   }
 
-  getHitpoints() : number {
+  public getHitpoints() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  getStrength() : number {
+  public getStrength() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  getDexterity() : number {
+  public getDexterity() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  getConstitution() : number {
+  public getConstitution() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  getIntelligence() : number {
+  public getIntelligence() : number {
     throw new Error('Remove this statement and implement this function')
   }
 
-  getWisdom() : number {
+  public getWisdom() : number {
       throw new Error('Remove this statement and implement this function')
   }
 
-  getCharisma() : number {
+  public getCharisma() : number {
     throw new Error('Remove this statement and implement this function')
   }
 }

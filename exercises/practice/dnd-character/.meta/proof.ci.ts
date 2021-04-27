@@ -21,39 +21,39 @@ export class DnDCharacter {
     this.hitpoints = 10 + DnDCharacter.getModifierFor(this.getConstitution())
   }
 
-  static generateAbilityScore() : number {
+  public static generateAbilityScore() : number {
     return this.rollDice(4).sort().slice(1,4).reduce((acu, act) => acu + act, 0)
   }
 
-  static getModifierFor(abilityValue : number) : number {
+  public static getModifierFor(abilityValue : number) : number {
     return Math.floor((abilityValue - 10) / 2)
   }
 
-  getHitpoints() : number {
+  public getHitpoints() : number {
     return this.hitpoints
   }
 
-  getStrength() : number {
+  public getStrength() : number {
     return this.str
   }
 
-  getDexterity() : number {
+  public getDexterity() : number {
     return this.dex
   }
 
-  getConstitution() : number {
+  public getConstitution() : number {
     return this.con
   }
 
-  getIntelligence() : number {
+  public getIntelligence() : number {
     return this.int
   }
 
-  getWisdom() : number {
+  public getWisdom() : number {
       return this.wis
   }
 
-  getCharisma() : number {
+  public getCharisma() : number {
     return this.cha
   }
 
@@ -64,8 +64,8 @@ export class DnDCharacter {
       .map(() => this.rollDie())
   }
 
-  private static rollDie() {
+  private static rollDie() : number {
 
-    return Math.floor(Math.random() * (6)) + 1;
+    return Math.floor(Math.random() * (6)) + 1
   }
 }
