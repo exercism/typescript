@@ -4,9 +4,9 @@ describe('Check if max carriable value is returned', () => {
   it('No items', () => {
     const input = {
         'maximumWeight': 100, 
-        'items': []};
-    const expected = 0;
-    expect(maximumValue(input)).toEqual(expected);
+        'items': []}
+    const expected = 0
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('One item, but too heavy', () => {
@@ -14,9 +14,9 @@ describe('Check if max carriable value is returned', () => {
         'maximumWeight': 10, 
         'items': [
             {'weight': 100, 'value': 1}
-        ]};
-    const expected = 0;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 0
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('Five items. Can\'t be greedy by weight', () => {
@@ -28,9 +28,9 @@ describe('Check if max carriable value is returned', () => {
             {'weight': 2, 'value': 5},
             {'weight': 2, 'value': 5},
             {'weight': 10, 'value': 21},
-        ]};
-    const expected = 21;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 21
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('Five items. Can\'t be greedy by value', () => {
@@ -42,9 +42,9 @@ describe('Check if max carriable value is returned', () => {
             {'weight': 2, 'value': 20},
             {'weight': 2, 'value': 20},
             {'weight': 10, 'value': 50},
-        ]};
-    const expected = 80;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 80
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('Example knapsack', () => {
@@ -55,9 +55,9 @@ describe('Check if max carriable value is returned', () => {
             {'weight': 4, 'value': 40},
             {'weight': 6, 'value': 30},
             {'weight': 4, 'value': 50},
-        ]};
-    const expected = 90;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 90
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('8 items', () => {
@@ -72,9 +72,9 @@ describe('Check if max carriable value is returned', () => {
             {'weight': 3, 'value': 8},
             {'weight': 2, 'value': 5},
             {'weight': 2, 'value': 5},
-        ]};
-    const expected = 900;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 900
+    expect(maximumValue(input)).toEqual(expected)
   })
 
   it('15 items', () => {
@@ -96,8 +96,8 @@ describe('Check if max carriable value is returned', () => {
             {'weight': 115, 'value': 221},
             {'weight': 118, 'value': 229},
             {'weight': 120, 'value': 240},
-        ]};
-    const expected = 1458;
-    expect(maximumValue(input)).toEqual(expected);
+        ]}
+    const expected = 1458
+    expect(maximumValue(input)).toEqual(expected)
   })
-})
+ })
