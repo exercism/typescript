@@ -10,5 +10,5 @@ export function maximumValue({
   maximumWeight: number
   items: Item[]
 }): number {
-    //Implement this function
+  //Implement this function
 }
