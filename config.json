@@ -18,18 +18,10 @@
   },
   "test_pattern": ".*[.]test[.]ts$",
   "files": {
-    "solution": [
-      "%{kebab_slug}.ts"
-    ],
-    "test": [
-      "%{kebab_slug}.test.ts"
-    ],
-    "example": [
-      ".meta/proof.ci.ts"
-    ],
-    "exemplar": [
-      ".meta/exemplar.ts"
-    ]
+    "solution": ["%{kebab_slug}.ts"],
+    "test": ["%{kebab_slug}.test.ts"],
+    "example": [".meta/proof.ci.ts"],
+    "exemplar": [".meta/exemplar.ts"]
   },
   "exercises": {
     "concept": [],
@@ -41,11 +33,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "optional_values",
-          "strings",
-          "text_formatting"
-        ]
+        "topics": ["optional_values", "strings", "text_formatting"]
       },
       {
         "slug": "two-fer",
@@ -54,11 +42,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "optional_values",
-          "strings",
-          "text_formatting"
-        ]
+        "topics": ["optional_values", "strings", "text_formatting"]
       },
       {
         "slug": "resistor-color-duo",
@@ -67,10 +51,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "strings",
-          "arrays"
-        ]
+        "topics": ["strings", "arrays"]
       },
       {
         "slug": "leap",
@@ -79,11 +60,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "booleans",
-          "integers",
-          "logic"
-        ]
+        "topics": ["booleans", "integers", "logic"]
       },
       {
         "slug": "resistor-color",
@@ -92,10 +69,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": [
-          "arrays",
-          "strings"
-        ]
+        "topics": ["arrays", "strings"]
       },
       {
         "slug": "rna-transcription",
@@ -104,10 +78,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "strings",
-          "transforming"
-        ]
+        "topics": ["strings", "transforming"]
       },
       {
         "slug": "space-age",
@@ -116,10 +87,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "classes",
-          "floating_point_numbers"
-        ]
+        "topics": ["classes", "floating_point_numbers"]
       },
       {
         "slug": "pangram",
@@ -192,11 +160,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "arrays",
-          "maps",
-          "sorting"
-        ]
+        "topics": ["arrays", "maps", "sorting"]
       },
       {
         "slug": "clock",
@@ -205,11 +169,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "integers",
-          "logic",
-          "strings"
-        ]
+        "topics": ["integers", "logic", "strings"]
       },
       {
         "slug": "secret-handshake",
@@ -234,12 +194,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "algorithms",
-          "arrays",
-          "conditionals",
-          "loops"
-        ]
+        "topics": ["algorithms", "arrays", "conditionals", "loops"]
       },
       {
         "slug": "linked-list",
@@ -265,11 +220,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "algorithms",
-          "floating_point_numbers",
-          "math"
-        ]
+        "topics": ["algorithms", "floating_point_numbers", "math"]
       },
       {
         "slug": "atbash-cipher",
@@ -327,11 +278,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8,
-        "topics": [
-          "data_structures",
-          "lists",
-          "recursion"
-        ]
+        "topics": ["data_structures", "lists", "recursion"]
       },
       {
         "slug": "word-count",
@@ -355,12 +302,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "algorithms",
-          "loops",
-          "integers",
-          "math"
-        ]
+        "topics": ["algorithms", "loops", "integers", "math"]
       },
       {
         "slug": "gigasecond",
@@ -369,9 +311,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "time"
-        ]
+        "topics": ["time"]
       },
       {
         "slug": "reverse-string",
@@ -380,10 +320,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "loops",
-          "strings"
-        ]
+        "topics": ["loops", "strings"]
       },
       {
         "slug": "triangle",
@@ -392,12 +329,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "conditionals",
-          "loops",
-          "exception_handling",
-          "integers"
-        ]
+        "topics": ["conditionals", "loops", "exception_handling", "integers"]
       },
       {
         "slug": "collatz-conjecture",
@@ -421,12 +353,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "loops",
-          "integers",
-          "maps",
-          "transforming"
-        ]
+        "topics": ["loops", "integers", "maps", "transforming"]
       },
       {
         "slug": "protein-translation",
@@ -435,12 +362,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "strings"
-        ]
+        "topics": ["arrays", "conditionals", "loops", "strings"]
       },
       {
         "slug": "raindrops",
@@ -449,12 +371,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "conditionals",
-          "integers",
-          "strings",
-          "transforming"
-        ]
+        "topics": ["conditionals", "integers", "strings", "transforming"]
       },
       {
         "slug": "hamming",
@@ -463,12 +380,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "conditionals",
-          "loops",
-          "equality",
-          "strings"
-        ]
+        "topics": ["conditionals", "loops", "equality", "strings"]
       },
       {
         "slug": "nucleotide-count",
@@ -492,12 +404,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "maps",
-          "strings"
-        ]
+        "topics": ["conditionals", "loops", "maps", "strings"]
       },
       {
         "slug": "allergies",
@@ -506,12 +413,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6,
-        "topics": [
-          "arrays",
-          "bitwise_operations",
-          "conditionals",
-          "loops"
-        ]
+        "topics": ["arrays", "bitwise_operations", "conditionals", "loops"]
       },
       {
         "slug": "perfect-numbers",
@@ -520,13 +422,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "integers",
-          "math"
-        ]
+        "topics": ["arrays", "conditionals", "loops", "integers", "math"]
       },
       {
         "slug": "complex-numbers",
@@ -535,12 +431,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "math"
-        ]
+        "topics": ["arrays", "conditionals", "loops", "math"]
       },
       {
         "slug": "luhn",
@@ -549,12 +440,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "conditionals",
-          "loops",
-          "integers",
-          "strings"
-        ]
+        "topics": ["conditionals", "loops", "integers", "strings"]
       },
       {
         "slug": "grains",
@@ -563,11 +449,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "integers"
-        ]
+        "topics": ["conditionals", "loops", "integers"]
       },
       {
         "slug": "pythagorean-triplet",
@@ -576,13 +458,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "algorithms",
-          "conditionals",
-          "loops",
-          "integers",
-          "math"
-        ]
+        "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
       {
         "slug": "sum-of-multiples",
@@ -591,13 +467,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "integers",
-          "lists",
-          "math"
-        ]
+        "topics": ["conditionals", "loops", "integers", "lists", "math"]
       },
       {
         "slug": "acronym",
@@ -606,12 +476,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "loops",
-          "regular_expressions",
-          "strings",
-          "transforming"
-        ]
+        "topics": ["loops", "regular_expressions", "strings", "transforming"]
       },
       {
         "slug": "anagram",
@@ -620,10 +485,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "filtering",
-          "strings"
-        ]
+        "topics": ["filtering", "strings"]
       },
       {
         "slug": "isogram",
@@ -632,13 +494,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "conditionals",
-          "loops",
-          "filtering",
-          "searching",
-          "strings"
-        ]
+        "topics": ["conditionals", "loops", "filtering", "searching", "strings"]
       },
       {
         "slug": "roman-numerals",
@@ -661,12 +517,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
-        "topics": [
-          "loops",
-          "exception_handling",
-          "strings",
-          "text_formatting"
-        ]
+        "topics": ["loops", "exception_handling", "strings", "text_formatting"]
       },
       {
         "slug": "phone-number",
@@ -675,10 +526,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "parsing",
-          "transforming"
-        ]
+        "topics": ["parsing", "transforming"]
       },
       {
         "slug": "two-bucket",
@@ -740,10 +588,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "algorithms",
-          "text_formatting"
-        ]
+        "topics": ["algorithms", "text_formatting"]
       },
       {
         "slug": "house",
@@ -752,13 +597,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "recursion",
-          "strings"
-        ]
+        "topics": ["arrays", "conditionals", "loops", "recursion", "strings"]
       },
       {
         "slug": "isbn-verifier",
@@ -829,11 +668,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "strings"
-        ]
+        "topics": ["conditionals", "loops", "strings"]
       },
       {
         "slug": "say",
@@ -858,13 +693,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "matrices",
-          "strings"
-        ]
+        "topics": ["arrays", "conditionals", "loops", "matrices", "strings"]
       },
       {
         "slug": "saddle-points",
@@ -955,10 +784,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
-        "topics": [
-          "algorithms",
-          "games"
-        ]
+        "topics": ["algorithms", "games"]
       },
       {
         "slug": "connect",
@@ -1000,13 +826,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "algorithms",
-          "conditionals",
-          "loops",
-          "integers",
-          "math"
-        ]
+        "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
       {
         "slug": "diamond",
@@ -1032,11 +852,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "math"
-        ]
+        "topics": ["conditionals", "loops", "math"]
       },
       {
         "slug": "binary-search-tree",
@@ -1045,12 +861,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6,
-        "topics": [
-          "algorithms",
-          "conditionals",
-          "loops",
-          "recursion"
-        ]
+        "topics": ["algorithms", "conditionals", "loops", "recursion"]
       },
       {
         "slug": "sublist",
@@ -1125,13 +936,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "loops",
-          "integers",
-          "math",
-          "recursion"
-        ]
+        "topics": ["conditionals", "loops", "integers", "math", "recursion"]
       },
       {
         "slug": "palindrome-products",
@@ -1140,13 +945,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
-        "topics": [
-          "algorithms",
-          "conditionals",
-          "loops",
-          "integers",
-          "math"
-        ]
+        "topics": ["algorithms", "conditionals", "loops", "integers", "math"]
       },
       {
         "slug": "diffie-hellman",
@@ -1220,11 +1019,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
-        "topics": [
-          "algorithms",
-          "integers",
-          "math"
-        ]
+        "topics": ["algorithms", "integers", "math"]
       },
       {
         "slug": "run-length-encoding",
@@ -1250,10 +1045,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": [
-          "strings",
-          "iterators"
-        ]
+        "topics": ["strings", "iterators"]
       },
       {
         "slug": "strain",
@@ -1279,12 +1071,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "algorithms",
-          "callbacks",
-          "conditionals",
-          "lists"
-        ]
+        "topics": ["algorithms", "callbacks", "conditionals", "lists"]
       },
       {
         "slug": "all-your-base",
@@ -1309,12 +1096,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "arrays",
-          "lists",
-          "loops",
-          "recursion"
-        ]
+        "topics": ["arrays", "lists", "loops", "recursion"]
       },
       {
         "slug": "matching-brackets",
@@ -1323,11 +1105,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": [
-          "parsing",
-          "stacks",
-          "strings"
-        ]
+        "topics": ["parsing", "stacks", "strings"]
       },
       {
         "slug": "minesweeper",
@@ -1336,11 +1114,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
-        "topics": [
-          "algorithms",
-          "arrays",
-          "games"
-        ]
+        "topics": ["algorithms", "arrays", "games"]
       },
       {
         "slug": "queen-attack",
@@ -1366,11 +1140,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8,
-        "topics": [
-          "algorithms",
-          "closures",
-          "reactive_programming"
-        ]
+        "topics": ["algorithms", "closures", "reactive_programming"]
       }
     ]
   },
