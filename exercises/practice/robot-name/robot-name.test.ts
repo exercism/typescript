@@ -91,38 +91,38 @@ describe('Robot', () => {
     expect(areSequential(name3, name3)).toBe(true)
   })
 
-  xit("uses all letters", () => {
-    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  xit('uses all letters', () => {
+    let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     for (let i = 0; i < 1000 - 1; i += 1) {
-      const newRobot = new Robot();
+      const newRobot = new Robot()
       for (let j = 0; j < 2; j += 1) {
-        const foundLetter = newRobot.name.charAt(j);
+        const foundLetter = newRobot.name.charAt(j)
         if (letters.includes(foundLetter)) {
-          letters = letters.replace(foundLetter, "");
+          letters = letters.replace(foundLetter, '')
         }
       }
-      if (letters.length == 0) break;
+      if (letters.length == 0) break
     }
 
-    expect(letters).toEqual("");
-  });
+    expect(letters).toEqual('')
+  })
 
-  xit("uses all numbers", () => {
-    let numbers = "0123456789";
+  xit('uses all numbers', () => {
+    let numbers = '0123456789'
     for (let i = 0; i < 1000 - 1; i += 1) {
-      const newRobot = new Robot();
+      const newRobot = new Robot()
       for (let j = 2; j < 5; j += 1) {
-        const foundNumber = newRobot.name.charAt(j);
+        const foundNumber = newRobot.name.charAt(j)
         if (numbers.includes(foundNumber)) {
-          numbers = numbers.replace(foundNumber, "");
+          numbers = numbers.replace(foundNumber, '')
         }
       }
-      if (numbers.length == 0) break;
+      if (numbers.length == 0) break
     }
 
-    expect(numbers).toEqual("");
-  });
-  
+    expect(numbers).toEqual('')
+  })
+
   // This test is optional.
   xit('all the names can be generated', () => {
     const usedNames = new Set()
@@ -135,5 +135,4 @@ describe('Robot', () => {
 
     expect(usedNames.size).toEqual(TOTAL_NUMBER_OF_NAMES)
   })
-  
 })
