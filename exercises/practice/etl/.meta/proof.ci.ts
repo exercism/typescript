@@ -1,6 +1,6 @@
-export function transform(input: {
-  [key: string]: string[]
-}): { [key: string]: number } {
+export function transform(input: { [key: string]: string[] }): {
+  [key: string]: number
+} {
   const phase1: { [key: string]: number } = {}
 
   for (const key in input) {
