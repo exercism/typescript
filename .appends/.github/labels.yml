@@ -1,0 +1,108 @@
+- name: "breaking :boom:"
+  description: ""
+  color: "fca708"
+
+- name: "bug :bug:"
+  description: "Something isn't working"
+  color: "b60205"
+
+- name: "chore :wrench:"
+  description: "Meta related task such as build, test, linting, maintainers.json etc."
+  color: "000000"
+
+- name: "ci :gear:"
+  description: "Continuous integration related"
+  color: "000000"
+
+- name: "dependencies"
+  description: "Pull requests that update a dependency file"
+  color: "0366d6"
+
+- name: "discussion :speech_balloon:"
+  description: ""
+  color: "fbca04"
+
+- name: "do not merge :construction:"
+  description: ""
+  color: "fbca04"
+
+- name: "documentation :book:"
+  description: "Documentation changes"
+  color: "1d76db"
+
+- name: "duplicate  :repeat:"
+  description: "This issue or pull request already exists"
+  color: "ffffff"
+
+- name: "enhancement :unicorn:"
+  description: "Changing current behaviour, enhancing what's already there"
+  color: "a2eeef"
+
+- name: "github_actions"
+  description: "Pull requests that update Github_actions code"
+  color: "000000"
+
+- name: "good first issue"
+  description: "First-time contributors preferred"
+  color: "b1db51"
+
+- name: "hackertoberfest-accepted"
+  description: ""
+  color: "474747"
+
+- name: "help wanted"
+  description: ""
+  color: "b1db51"
+
+- name: "invalid"
+  description: ""
+  color: "ffffff"
+
+- name: "javascript"
+  description: "Pull requests that update Javascript code"
+  color: "168700"
+
+- name: "new exercise :sparkles:"
+  description: "Adding an exercise from the canonical data"
+  color: "1105b7"
+
+- name: "question :thinking:"
+  description: ""
+  color: "ffffff"
+
+- name: "reputation/contributed_code/major"
+  description: ""
+  color: "34FBF8"
+
+- name: "reputation/contributed_code/minor"
+  description: ""
+  color: "EF6513"
+
+- name: "rfc :speech_balloon:"
+  description: "Request for Comments"
+  color: "fbca04"
+
+- name: "security :rotating_light:"
+  description: "Security related issue or change"
+  color: "b60205"
+
+- name: "sync :arrows_counterclockwise:"
+  description: "Sync an exercise with the canonical data"
+  color: "1105b7"
+
+- name: "track-anatomy"
+  description: "config.json, new exercises"
+  color: "000000"
+
+- name: "upstream ⬆"
+  description: ""
+  color: "ffffff"
+
+- name: "v3-migration 🤖"
+  description: "Preparing for Exercism v3"
+  color: "E99695"
+
+- name: "wontfix :no_good_woman:"
+  description: ""
+  color: "ffffff"
+
