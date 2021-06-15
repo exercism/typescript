@@ -1218,10 +1218,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@exercism/eslint-config-typescript@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@exercism/eslint-config-typescript/-/eslint-config-typescript-0.1.0.tgz#230324067723346ea90b929dae359fd9569a7780"
-  integrity sha512-1sPDwYzXJzN2f5b/GIPdOfvhWcUPyN+ZhEgewUDZ7TkACxGld0h/a9Jk8J0sNloc/5rS9YwGfgpf6IEdUOTh4w==
+"@exercism/eslint-config-typescript@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@exercism/eslint-config-typescript/-/eslint-config-typescript-0.2.1.tgz#5941422337498874ae81ea48e89452c80d474cfb"
+  integrity sha512-d+ZhiFp1mzYa0/OX3pcYhjOarHIxrrnk7g99fXoRjMmoAJzRK/Jh0ByQVwOMFvoIn5h2TeceSr6eSVtEUZ5fCQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.27.0"
     "@typescript-eslint/parser" "^4.27.0"

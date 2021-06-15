@@ -6,87 +6,18 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
+  "extends": "@exercism/eslint-config-typescript",
   "env": {
-    "browser": true,
-    "es6": true
+    "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    // Code style not forced upon the student
-    "@typescript-eslint/array-type": "off",
-
-    // Prevent bugs
-    "@typescript-eslint/explicit-function-return-type": [
-      "warn",
-      {
-        "allowExpressions": false,
-        "allowTypedFunctionExpressions": true,
-        "allowHigherOrderFunctions": true
-      }
-    ],
-
-    // Code style not forced upon the student
-    "@typescript-eslint/explicit-member-accessibility": "off",
-
-    // Code style not forced upon the student
-    "@typescript-eslint/indent": "off",
-
-    "@typescript-eslint/no-inferrable-types": [
-      "error",
-      {
-        "ignoreParameters": true
-      }
-    ],
-
-    // Code style not forced upon the student
-    "@typescript-eslint/member-delimiter-style": "off",
-
-    // Code style not forced upon the student
-    "@typescript-eslint/no-non-null-assertion": "off",
-
-    // Only disallow readonly without an access modifier
-    "@typescript-eslint/no-parameter-properties": [
-      "warn",
-      {
-        "allows": [
-          "private",
-          "protected",
-          "public",
-          "private readonly",
-          "protected readonly",
-          "public readonly"
-        ]
-      }
-    ],
-
-    // Covered by the tsc compiler (noUnusedLocals)
-    "@typescript-eslint/no-unused-vars": "off",
-
-    // Prevent bugs, not styling
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "typedefs": false
-      }
-    ],
-
-    // Always disable base-rule
-    "semi": "off",
-
-    // Code style not forced upon student
-    "@typescript-eslint/semi": "off"
-  }
+  "overrides": [
+    {
+      "files": [".meta/proof.ci.ts", ".meta/exemplar.ts", "*.test.ts"],
+      "excludedFiles": ["custom.test.ts"],
+      "extends": "@exercism/eslint-config-typescript/maintainers"
+    }
+  ]
 }
