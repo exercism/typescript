@@ -1,3 +1,8 @@
+# ----------------------------------------------------------------------------------------- #
+# These are the repository-specific labels that augment the Exercise-wide labels defined in #
+# https://github.com/exercism/org-wide-files/blob/main/global-files/.github/labels.yml.     #
+# ----------------------------------------------------------------------------------------- #
+
 - name: 'breaking :boom:'
   description: ''
   color: 'fca708'
@@ -46,9 +51,13 @@
   description: 'First-time contributors preferred'
   color: 'b1db51'
 
+- name: 'hacktoberfest'
+  description: 'Hacktoberfest issues! Everyone allowed <3'
+  color: '000000'
+
 - name: 'hackertoberfest-accepted'
   description: ''
-  color: '474747'
+  color: '4a4a4a'
 
 - name: 'help wanted'
   description: ''

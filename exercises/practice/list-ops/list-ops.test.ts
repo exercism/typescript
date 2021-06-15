@@ -22,7 +22,9 @@ expect.extend({
     }
 
     const values: unknown[] = []
-    received.forEach((item) => values.push(item))
+    received.forEach((item) => {
+      values.push(item)
+    })
 
     const pass = JSON.stringify(values) === JSON.stringify(expected)
     return {

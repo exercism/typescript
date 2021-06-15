@@ -1,17 +1,17 @@
-export function square(square: number): bigint {
-  if (square <= 0 || square >= 65) {
+export function square(n: number): bigint {
+  if (n <= 0 || n >= 65) {
     throw new Error()
   }
 
-  return 2n ** BigInt(square - 1)
+  return 2n ** BigInt(n - 1)
 }
 
 export function total(): bigint {
-  let total = 0n
+  let result = 0n
 
   for (let i = 1; i <= 64; i++) {
-    total += square(i)
+    result += square(i)
   }
 
-  return total
+  return result
 }

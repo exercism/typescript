@@ -108,7 +108,9 @@ function link(subject: SubjectR, observer: ObserverR): void {
 }
 
 function unsubscribe(observer: ObserverR): void {
-  observer.subjects.forEach((sub) => sub.observers.delete(observer))
+  observer.subjects.forEach((sub) => {
+    sub.observers.delete(observer)
+  })
 }
 
 function makeUnsubscribe(observer: ObserverR | undefined): UnsubscribeFn {
@@ -284,7 +286,7 @@ function createInput<T>(
 
   return [
     (): T => readSubject(subject),
-    (value: T): T => writeSubject(subject, value),
+    (next: T): T => writeSubject(subject, next),
   ]
 }
 

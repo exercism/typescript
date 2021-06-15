@@ -1,7 +1,4 @@
-export enum Bucket {
-  One = 'one',
-  Two = 'two',
-}
+type Bucket = 'one' | 'two'
 
 export class TwoBucket {
   private readonly starter: Bucket
@@ -22,10 +19,10 @@ export class TwoBucket {
   private reachedGoal(measurements: number[]): boolean {
     if (measurements[0] === this.z || measurements[1] === this.z) {
       if (measurements[0] === this.z) {
-        this.goalBucket = Bucket.One
+        this.goalBucket = 'one'
         this.otherBucket = measurements[1]
       } else {
-        this.goalBucket = Bucket.Two
+        this.goalBucket = 'two'
         this.otherBucket = measurements[0]
       }
       return true
@@ -95,11 +92,11 @@ export class TwoBucket {
   public moves(): number {
     let j = 0
     let k = 0 // j will be running val of bucket one, k = running val of bucket two
-    this.starter === Bucket.One ? (j = this.x) : (k = this.y)
+    this.starter === 'one' ? (j = this.x) : (k = this.y)
     const measurements = [j, k]
     let moveCount = 0
     const prBool = true // pour / receive boolean - need to pour or receive every other turn
-    if (this.starter === Bucket.One) {
+    if (this.starter === 'one') {
       moveCount = this.smallFirst(measurements, moveCount, prBool)
     } else {
       moveCount = this.bigFirst(measurements, moveCount, prBool)
