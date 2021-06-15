@@ -15,7 +15,7 @@
   },
   "overrides": [
     {
-      "files": [".meta/proof.ci.ts", ".meta/exemplar.ts", "*.test.ts"],
+      "files": ["**/.meta/proof.ci.ts", "**/.meta/exemplar.ts", "**/*.test.ts"],
       "excludedFiles": ["custom.test.ts"],
       "extends": "@exercism/eslint-config-typescript/maintainers"
     }

@@ -146,15 +146,15 @@ export class WordSearch {
       })
 
     const validPaths: number[][][] = allPossiblePaths.reduce(
-      (validPaths: number[][][], path: number[][]) =>
+      (result: number[][][], path: number[][]) =>
         word
           .split('')
           .map((letter, index) =>
             this.matchingValues(board, path[index], letter)
           )
           .includes(false)
-          ? validPaths
-          : [...validPaths, path],
+          ? result
+          : [...result, path],
       [] as number[][][]
     )
 
@@ -176,7 +176,7 @@ export class WordSearch {
         word
       ) => {
         const result = this.findOne(word, this.grid)
-        accum[word] = Object.keys(result).length == 0 ? undefined : result
+        accum[word] = Object.keys(result).length === 0 ? undefined : result
 
         return accum
       },

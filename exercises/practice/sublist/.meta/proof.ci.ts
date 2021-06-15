@@ -23,6 +23,6 @@ export class List {
   }
 
   private isSublist(listOne: number[], listTwo: number[]): boolean {
-    return !!listOne.join().match(listTwo.join())
+    return Boolean(listOne.join().match(listTwo.join()))
   }
 }
