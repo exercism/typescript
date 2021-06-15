@@ -1,14 +1,19 @@
-bin/*
-dist/*
-docs/*
-node_modules/*
-production_node_modules/*
-test/fixtures/*
-tmp/*
+!.meta
+
+# Protected or generated
+/.appends
+/.github
+/.vscode
+
+# Binaries
+/bin
+
+# Configuration
+/config
 
 # These have their own config files (not overrides)
-common/*
-exercises/*
+/common/*
+/exercises/*
 
 # typescript-eslint can't lint correctly files in a project without extension
-scripts/*
+/scripts/*
