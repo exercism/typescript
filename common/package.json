@@ -26,7 +26,7 @@
     "eslint": "^7.28.0",
     "eslint-plugin-import": "^2.23.4",
     "jest": "^26.6.3",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.4"
   },
   "scripts": {
     "test": "yarn lint:types && jest --no-cache",
