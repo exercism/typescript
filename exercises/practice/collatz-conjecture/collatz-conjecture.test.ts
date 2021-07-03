@@ -22,16 +22,23 @@ describe('CollatzConjecture', () => {
   })
 
   xit('zero is an error', () => {
-    const expected = 'Only positive numbers are allowed'
+    const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(0)
     }).toThrowError(expected)
   })
 
   xit('negative value is an error', () => {
-    const expected = 'Only positive numbers are allowed'
+    const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(-15)
+    }).toThrowError(expected)
+  })
+
+  xit('negative value is an error', () => {
+    const expected = 'Only positive integers are allowed'
+    expect(() => {
+      steps(3.1415)
     }).toThrowError(expected)
   })
 })
