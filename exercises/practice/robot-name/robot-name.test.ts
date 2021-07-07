@@ -91,6 +91,39 @@ describe('Robot', () => {
     expect(areSequential(name3, name3)).toBe(true)
   })
 
+  xit('uses all letters', () => {
+    let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    for (let i = 0; i < 1000 - 1; i += 1) {
+      const newRobot = new Robot()
+      const lettersInName = newRobot.name.slice(0, 2)
+      letters = letters.replace(lettersInName[0], '')
+      letters = letters.replace(lettersInName[1], '')
+
+      if (letters.length === 0) {
+        break
+      }
+    }
+    expect(letters).toEqual('')
+  })
+
+  xit('uses all numbers', () => {
+    let numbers = '0123456789'
+
+    for (let i = 0; i < 1000 - 1; i += 1) {
+      const newRobot = new Robot()
+      const digitsInName = newRobot.name.slice(2, 5)
+      numbers = numbers.replace(digitsInName[0], '')
+      numbers = numbers.replace(digitsInName[1], '')
+      numbers = numbers.replace(digitsInName[2], '')
+
+      if (numbers.length === 0) {
+        break
+      }
+    }
+    expect(numbers).toEqual('')
+  })
+
   // This test is optional.
   xit('all the names can be generated', () => {
     const usedNames = new Set()
