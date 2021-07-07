@@ -93,15 +93,15 @@ describe('Robot', () => {
 
   xit('uses all letters', () => {
     let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    
+
     for (let i = 0; i < 1000 - 1; i += 1) {
       const newRobot = new Robot()
       const lettersInName = newRobot.name.slice(0, 2)
       letters = letters.replace(lettersInName[0], '')
       letters = letters.replace(lettersInName[1], '')
-      
+
       if (letters.length === 0) {
-        break;
+        break
       }
     }
     expect(letters).toEqual('')
@@ -109,16 +109,16 @@ describe('Robot', () => {
 
   xit('uses all numbers', () => {
     let numbers = '0123456789'
-    
+
     for (let i = 0; i < 1000 - 1; i += 1) {
       const newRobot = new Robot()
       const digitsInName = newRobot.name.slice(2, 5)
       numbers = numbers.replace(digitsInName[0], '')
       numbers = numbers.replace(digitsInName[1], '')
       numbers = numbers.replace(digitsInName[2], '')
-      
+
       if (numbers.length === 0) {
-        break;
+        break
       }
     }
     expect(numbers).toEqual('')

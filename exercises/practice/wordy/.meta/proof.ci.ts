@@ -24,7 +24,8 @@ export const answer = (question: string): number => {
     throw new Error('Unknown operation')
   }
 
-  const generalPattern = /^What is -?\d+( (plus|minus|multiplied by|divided by) -?\d+)*\?$/g
+  const generalPattern =
+    /^What is -?\d+( (plus|minus|multiplied by|divided by) -?\d+)*\?$/g
   if (!generalPattern.test(question)) {
     throw new Error('Syntax error')
   }
