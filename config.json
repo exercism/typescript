@@ -18,7 +18,6 @@
   "test_runner": {
     "average_run_time": 4.0
   },
-  "test_pattern": ".*[.]test[.]ts$",
   "files": {
     "solution": ["%{kebab_slug}.ts"],
     "test": ["%{kebab_slug}.test.ts"],
