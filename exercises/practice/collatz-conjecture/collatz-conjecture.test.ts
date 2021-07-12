@@ -35,7 +35,7 @@ describe('CollatzConjecture', () => {
     }).toThrowError(expected)
   })
 
-  xit('negative value is an error', () => {
+  xit('non-integer value is an error', () => {
     const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(3.1415)
