@@ -1,6 +1,6 @@
 export function steps(n: number): number {
-  if (n <= 0) {
-    throw new Error('Only positive numbers are allowed')
+  if (n <= 0 || !Number.isInteger(n)) {
+    throw new Error('Only positive integers are allowed')
   }
   return calculateStepsRecursively(n, 0)
 }
