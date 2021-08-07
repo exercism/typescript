@@ -14,7 +14,7 @@
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-typescript": "^7.15.0",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "@types/node": "^16.4.13",
     "@exercism/eslint-config-typescript": "^0.2.3",
     "babel-jest": "^27.0.6",
