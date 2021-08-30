@@ -22,7 +22,7 @@
     "@types/node": "^16.4.13",
     "@exercism/eslint-config-typescript": "^0.2.3",
     "babel-jest": "^27.0.6",
-    "core-js": "^3.15.2",
+    "core-js": "^3.16.4",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.23.4",
     "jest": "^27.0.6",
