@@ -7,6 +7,5 @@
     "test": ["robot-simulator.test.ts"],
     "example": [".meta/proof.ci.ts"]
   },
-  "source": "Inspired by an interview question at a famous company.",
-  "source_url": ""
+  "source": "Inspired by an interview question at a famous company."
 }
