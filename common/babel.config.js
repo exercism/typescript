@@ -7,7 +7,7 @@ module.exports = {
           node: 'current',
         },
         useBuiltIns: 'entry',
-        corejs: '3.15',
+        corejs: '3.17',
       },
     ],
     '@babel/preset-typescript',
