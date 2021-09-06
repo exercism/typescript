@@ -1,7 +1,7 @@
 {
   "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
   "authors": ["JoshiRaez"],
-  "contributors": [],
+  "contributors": ["SleeplessByte"],
   "files": {
     "solution": ["knapsack.ts"],
     "test": ["knapsack.test.ts"],
