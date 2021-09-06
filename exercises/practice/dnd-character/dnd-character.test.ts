@@ -104,6 +104,6 @@ describe('Character creation', () => {
   test('Each ability is only calculated once', () => {
     const character = new DnDCharacter()
 
-    expect(character.strength == character.strength).toBeTruthy()
+    expect(character.strength === character.strength).toBeTruthy()
   })
 })
