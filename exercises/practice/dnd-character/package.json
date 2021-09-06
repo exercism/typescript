@@ -1,0 +1,33 @@
+{
+  "name": "@exercism/typescript-dnd-character",
+  "version": "1.0.0",
+  "description": "Exercism practice exercise on dnd-character",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/typescript"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/plugin-syntax-bigint": "^7.8.3",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^14.17.14",
+    "@exercism/eslint-config-typescript": "^0.3.0",
+    "babel-jest": "^26.6.3",
+    "core-js": "^3.17.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^26.6.3",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "test": "yarn lint:types && jest --no-cache",
+    "lint": "yarn lint:types && yarn lint:ci",
+    "lint:types": "yarn tsc --noEmit -p .",
+    "lint:ci": "eslint . --ext .tsx,.ts"
+  }
+}
