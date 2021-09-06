@@ -1,6 +1,6 @@
 {
   "blurb": "Randomly generate Dungeons & Dragons characters.",
-  "authors": ["JoshiRaez"],
+  "authors": ["JoshiRaez", "SleeplessByte"],
   "contributors": [],
   "files": {
     "solution": ["dnd-character.ts"],

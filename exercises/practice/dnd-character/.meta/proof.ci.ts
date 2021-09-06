@@ -1,22 +1,22 @@
 export class DnDCharacter {
-  private hitpoints: number
+  public readonly hitpoints: number
 
-  private str: number
-  private dex: number
-  private con: number
-  private int: number
-  private wis: number
-  private cha: number
+  public readonly strength: number
+  public readonly dexterity: number
+  public readonly constitution: number
+  public readonly intelligence: number
+  public readonly wisdom: number
+  public readonly charisma: number
 
   constructor() {
-    this.str = DnDCharacter.generateAbilityScore()
-    this.dex = DnDCharacter.generateAbilityScore()
-    this.con = DnDCharacter.generateAbilityScore()
-    this.int = DnDCharacter.generateAbilityScore()
-    this.wis = DnDCharacter.generateAbilityScore()
-    this.cha = DnDCharacter.generateAbilityScore()
+    this.strength = DnDCharacter.generateAbilityScore()
+    this.dexterity = DnDCharacter.generateAbilityScore()
+    this.constitution = DnDCharacter.generateAbilityScore()
+    this.intelligence = DnDCharacter.generateAbilityScore()
+    this.wisdom = DnDCharacter.generateAbilityScore()
+    this.charisma = DnDCharacter.generateAbilityScore()
 
-    this.hitpoints = 10 + DnDCharacter.getModifierFor(this.getConstitution())
+    this.hitpoints = 10 + DnDCharacter.getModifierFor(this.constitution)
   }
 
   public static generateAbilityScore(): number {
@@ -28,34 +28,6 @@ export class DnDCharacter {
 
   public static getModifierFor(abilityValue: number): number {
     return Math.floor((abilityValue - 10) / 2)
-  }
-
-  public getHitpoints(): number {
-    return this.hitpoints
-  }
-
-  public getStrength(): number {
-    return this.str
-  }
-
-  public getDexterity(): number {
-    return this.dex
-  }
-
-  public getConstitution(): number {
-    return this.con
-  }
-
-  public getIntelligence(): number {
-    return this.int
-  }
-
-  public getWisdom(): number {
-    return this.wis
-  }
-
-  public getCharisma(): number {
-    return this.cha
   }
 
   private static rollDice(quantity: number): number[] {

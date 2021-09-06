@@ -78,32 +78,32 @@ describe('Character creation', () => {
   test('Random character is valid', () => {
     const character = new DnDCharacter()
 
-    expect(character.getHitpoints()).toEqual(
-      10 + DnDCharacter.getModifierFor(character.getConstitution())
+    expect(character.hitpoints).toEqual(
+      10 + DnDCharacter.getModifierFor(character.constitution)
     )
 
-    expect(character.getStrength()).toBeGreaterThanOrEqual(3)
-    expect(character.getStrength()).toBeLessThanOrEqual(18)
+    expect(character.strength).toBeGreaterThanOrEqual(3)
+    expect(character.strength).toBeLessThanOrEqual(18)
 
-    expect(character.getDexterity()).toBeGreaterThanOrEqual(3)
-    expect(character.getDexterity()).toBeLessThanOrEqual(18)
+    expect(character.dexterity).toBeGreaterThanOrEqual(3)
+    expect(character.dexterity).toBeLessThanOrEqual(18)
 
-    expect(character.getConstitution()).toBeGreaterThanOrEqual(3)
-    expect(character.getConstitution()).toBeLessThanOrEqual(18)
+    expect(character.constitution).toBeGreaterThanOrEqual(3)
+    expect(character.constitution).toBeLessThanOrEqual(18)
 
-    expect(character.getIntelligence()).toBeGreaterThanOrEqual(3)
-    expect(character.getIntelligence()).toBeLessThanOrEqual(18)
+    expect(character.intelligence).toBeGreaterThanOrEqual(3)
+    expect(character.intelligence).toBeLessThanOrEqual(18)
 
-    expect(character.getWisdom()).toBeGreaterThanOrEqual(3)
-    expect(character.getWisdom()).toBeLessThanOrEqual(18)
+    expect(character.wisdom).toBeGreaterThanOrEqual(3)
+    expect(character.wisdom).toBeLessThanOrEqual(18)
 
-    expect(character.getCharisma()).toBeGreaterThanOrEqual(3)
-    expect(character.getCharisma()).toBeLessThanOrEqual(18)
+    expect(character.charisma).toBeGreaterThanOrEqual(3)
+    expect(character.charisma).toBeLessThanOrEqual(18)
   })
 
   test('Each ability is only calculated once', () => {
     const character = new DnDCharacter()
 
-    expect(character.getStrength() == character.getStrength()).toBeTruthy()
+    expect(character.strength == character.strength).toBeTruthy()
   })
 })
