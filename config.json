@@ -974,24 +974,6 @@
         ]
       },
       {
-        "slug": "crypto-square",
-        "name": "Crypto Square",
-        "uuid": "e92b7444-a5c3-4452-82fd-8c70cf14085a",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 9,
-        "topics": [
-          "algorithms",
-          "arrays",
-          "conditionals",
-          "loops",
-          "regular_expressions",
-          "sorting",
-          "text_formatting",
-          "transforming"
-        ]
-      },
-      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "abe907d0-7ca0-4fe5-83fd-72a4d2acab66",
@@ -1007,21 +989,7 @@
           "strings"
         ]
       },
-      {
-        "slug": "kindergarten-garden",
-        "name": "Kindergarten Garden",
-        "uuid": "d70d3579-999c-452c-9243-98908e24b47e",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 7,
-        "topics": [
-          "arrays",
-          "conditionals",
-          "loops",
-          "strings",
-          "text_formatting"
-        ]
-      },
+
       {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
@@ -1127,6 +1095,21 @@
         "topics": ["algorithms", "arrays", "games"]
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "d70d3579-999c-452c-9243-98908e24b47e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "loops",
+          "strings",
+          "text_formatting"
+        ]
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "837fbe57-a567-4fc7-a7a2-8b63059ac8b7",
@@ -1151,6 +1134,33 @@
         "prerequisites": [],
         "difficulty": 8,
         "topics": ["algorithms", "closures", "reactive_programming"]
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "e92b7444-a5c3-4452-82fd-8c70cf14085a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "topics": [
+          "algorithms",
+          "arrays",
+          "conditionals",
+          "loops",
+          "regular_expressions",
+          "sorting",
+          "text_formatting",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "b80ebb8d-9416-4fc8-91ee-3db99411810c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9,
+        "topics": ["algorithms"]
       }
     ]
   },

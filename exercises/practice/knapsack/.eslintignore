@@ -1,0 +1,12 @@
+!.meta
+
+# Protected or generated
+.git
+.vscode
+
+# When using npm
+node_modules/*
+
+# Configuration files
+babel.config.js
+jest.config.js
