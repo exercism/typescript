@@ -49,27 +49,7 @@ describe('Bowling', () => {
 
     xtest('a spare in the last frame gets a one roll bonus that is counted once', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        7,
-        3,
-        7,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 7,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -107,27 +87,7 @@ describe('Bowling', () => {
 
     xtest('a strike in the last frame gets a two roll bonues that is counted once', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        7,
-        1,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -138,27 +98,7 @@ describe('Bowling', () => {
 
     xtest('rolling a spare with the two roll bonus does not get a bonus roll', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        7,
-        3,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -169,27 +109,7 @@ describe('Bowling', () => {
 
     xtest('strikes with the two roll bonus do not get bonus rolls', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        10,
-        10,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -200,27 +120,7 @@ describe('Bowling', () => {
 
     xtest('a strike with the one roll bonus after a spare in the last frame does not get a bonus', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        7,
-        3,
-        10,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -275,26 +175,7 @@ describe('Bowling', () => {
 
     xtest('two bonus rolls after a strike in the last frame cannot score more than 10 points', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        5,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -307,27 +188,7 @@ describe('Bowling', () => {
 
     xtest('two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        10,
-        6,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 6,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -338,26 +199,7 @@ describe('Bowling', () => {
 
     xtest('the second bonus rolls after a strike in the last frame cannot be a strike if the first one is not a strike', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        6,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -370,26 +212,7 @@ describe('Bowling', () => {
 
     xtest('second bonus roll after a strike in the last frame cannot score more than 10 points', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        10,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -442,26 +265,7 @@ describe('Bowling', () => {
 
     xtest('both bonus rolls for a strike in the last frame must be rolled before score can be calculated', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        10,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -485,27 +289,7 @@ describe('Bowling', () => {
 
     xtest('cannot roll after bonus roll for spare', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        7,
-        3,
-        2,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {
@@ -518,27 +302,7 @@ describe('Bowling', () => {
 
     xtest('cannot roll after bonus rolls for strike', () => {
       const rolls = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        10,
-        3,
-        2,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2,
       ]
       const bowling = new Bowling()
       rolls.forEach((roll) => {

@@ -9,95 +9,15 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
+  "extends": "@exercism/eslint-config-typescript",
   "env": {
-    "browser": false,
-    "es6": true,
-    "jest": true,
-    "node": true,
-    "shelljs": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "warn",
-      {
-        "allowExpressions": false,
-        "allowTypedFunctionExpressions": true,
-        "allowHigherOrderFunctions": true
-      }
-    ],
-    "@typescript-eslint/explicit-member-accessibility": [
-      "warn",
-      {
-        "accessibility": "no-public",
-        "overrides": {
-          "accessors": "explicit",
-          "constructors": "no-public",
-          "methods": "explicit",
-          "properties": "explicit",
-          "parameterProperties": "off"
-        }
-      }
-    ],
-    "@typescript-eslint/indent": 0,
-    "@typescript-eslint/no-inferrable-types": [
-      "error",
-      {
-        "ignoreParameters": true
-      }
-    ],
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-parameter-properties": [
-      "warn",
-      {
-        "allows": [
-          "private",
-          "protected",
-          "public",
-          "private readonly",
-          "protected readonly",
-          "public readonly"
-        ]
-      }
-    ],
-    // Covered by the tsc compiler (noUnusedLocals)
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "typedefs": false
-      }
-    ],
-    "semi": "off",
-    "@typescript-eslint/semi": ["error", "never"],
-
-    // disable the rule for all files
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-
-    // disable rule because typescript takes care of this
-    "import/no-unresolved": "off"
+    "jest": true
   },
   "overrides": [
     {
-      // enable the rule specifically for TypeScript files
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": ["error"]
-      }
+      "files": ["**/.meta/proof.ci.ts", "**/.meta/exemplar.ts", "**/*.test.ts"],
+      "excludedFiles": ["custom.test.ts"],
+      "extends": "@exercism/eslint-config-typescript/maintainers"
     }
   ]
 }

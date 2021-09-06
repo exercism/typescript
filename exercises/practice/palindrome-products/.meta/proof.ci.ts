@@ -5,7 +5,7 @@ interface Input {
 
 type Factors = [number, number][]
 interface PalindromeShape {
-  value: number
+  value: number | null
   factors: Factors
 }
 
@@ -33,7 +33,9 @@ class Palindrome implements PalindromeShape {
   }
 
   public merge(other: Palindrome): this {
-    other.factors.forEach((f) => this.factors.push(f))
+    other.factors.forEach((f) => {
+      this.factors.push(f)
+    })
     this.factors.sort()
 
     return this
