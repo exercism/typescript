@@ -39,7 +39,7 @@ function memoizedMax(
 ): number {
   const alreadyKnownMaxValue =
     maxValueForItemsSizeToWeight[setItemsSize][maxWeight]
-  if (alreadyKnownMaxValue || alreadyKnownMaxValue == 0)
+  if (alreadyKnownMaxValue || alreadyKnownMaxValue === 0)
     return alreadyKnownMaxValue
 
   const max = calculateMax(
