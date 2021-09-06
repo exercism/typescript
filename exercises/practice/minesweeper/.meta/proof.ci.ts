@@ -38,9 +38,9 @@ function cellToMineOrCount(
 }
 
 function countAdjacentMines(board: string[][], x: number, y: number): number {
-  return DELTAS.filter((d) =>
-    adjacentSquareIsOnBoard(board, x, d)
-  ).filter((d) => adjacentSquareHasMine(board, x, y, d)).length
+  return DELTAS.filter((d) => adjacentSquareIsOnBoard(board, x, d)).filter(
+    (d) => adjacentSquareHasMine(board, x, y, d)
+  ).length
 }
 
 function stringify(board: string[][]): string[] {

@@ -13,15 +13,15 @@ export function verses(start = 1, end = 8): string {
   if (end < start) {
     throw new Error('end should be smaller than the start')
   }
-  let verses = ''
+  let result = ''
 
   for (; start <= end; start += 1) {
-    verses += verse(start)
+    result += verse(start)
     if (start !== end) {
-      verses += '\n'
+      result += '\n'
     }
   }
-  return verses
+  return result
 }
 
 export function verse(num: number): string {

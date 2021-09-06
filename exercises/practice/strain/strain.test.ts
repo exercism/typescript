@@ -15,8 +15,7 @@ describe('strain', () => {
 
   xit('keeps neither first nor last', () => {
     expect(keep<number>([1, 2, 3, 4, 5], (e: number) => e % 2 === 0)).toEqual([
-      2,
-      4,
+      2, 4,
     ])
   })
 

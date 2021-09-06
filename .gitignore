@@ -10,8 +10,6 @@ debug.log
 # Binaries downloaded by binary download scripts
 bin/configlet
 bin/configlet.exe
-bin/canonical_data_syncer
-bin/canonical_data_syncer.exe
 
 # Node modules
 /exercises/**/node_modules

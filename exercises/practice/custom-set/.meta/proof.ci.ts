@@ -3,7 +3,9 @@ export class CustomSet<T> {
 
   constructor(data: T[] = []) {
     this.data = new Set<T>()
-    data.forEach((el) => this.add(el))
+    data.forEach((el) => {
+      this.add(el)
+    })
   }
 
   public add(el: T): this {

@@ -8,14 +8,14 @@ export function primes(limit: number): number[] {
     sieve[i] = true
   }
 
-  const primes: number[] = []
+  const found: number[] = []
   const maxCandidate = Math.floor(Math.sqrt(limit))
   for (let candidate = 2; candidate <= maxCandidate + 1; candidate++) {
     if (!sieve[candidate - 1]) {
       continue
     }
 
-    primes.push(candidate)
+    found.push(candidate)
     let multiple = candidate * candidate
     while (multiple <= limit) {
       sieve[multiple - 1] = false
@@ -25,9 +25,9 @@ export function primes(limit: number): number[] {
 
   for (let i = maxCandidate + 1; i <= limit; i++) {
     if (sieve[i - 1]) {
-      primes.push(i)
+      found.push(i)
     }
   }
 
-  return primes
+  return found
 }

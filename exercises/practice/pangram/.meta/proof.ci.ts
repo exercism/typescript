@@ -9,8 +9,8 @@ export function isPangram(value: string): boolean {
   })
 
   for (const each of value) {
-    const value = myMap.get(each) || 0
-    myMap.set(each.toLowerCase(), value + 1)
+    const item = myMap.get(each) || 0
+    myMap.set(each.toLowerCase(), item + 1)
   }
 
   for (const each of myMap.values()) {

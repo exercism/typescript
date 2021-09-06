@@ -12,9 +12,12 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "highlightjs_language": "typescript"
   },
-  "test_pattern": ".*[.]test[.]ts$",
+  "test_runner": {
+    "average_run_time": 4.0
+  },
   "files": {
     "solution": ["%{kebab_slug}.ts"],
     "test": ["%{kebab_slug}.test.ts"],
@@ -45,7 +48,7 @@
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
-        "uuid": "78645d36-12be-11ea-8d71-362b9e155667",
+        "uuid": "fd677d24-72eb-46d9-bfa4-8013e96fa71f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
@@ -197,7 +200,7 @@
       {
         "slug": "linked-list",
         "name": "Linked List",
-        "uuid": "7d42dd76-a6cf-11e7-abc4-cec278b6b50a",
+        "uuid": "5b7ab927-6e4d-480f-b005-d23091e579d6",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
@@ -529,7 +532,7 @@
       {
         "slug": "two-bucket",
         "name": "Two Bucket",
-        "uuid": "7dd29a19-08f6-8480-2e01-1f7262d8860a",
+        "uuid": "6d187289-27b2-4630-b37b-58553271188a",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6,
@@ -820,7 +823,7 @@
       {
         "slug": "prime-factors",
         "name": "Prime Factors",
-        "uuid": "4ecf9470-a959-11e7-abc4-cec278b6b50a",
+        "uuid": "ef38ee9b-39b7-4bb8-9a34-2e19eba92260",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -897,7 +900,7 @@
       {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
-        "uuid": "3cc210e8-b3bb-11e7-abc4-cec278b6b50a",
+        "uuid": "759aa79d-975a-4b54-b306-618caba8f201",
         "practices": [],
         "prerequisites": [],
         "difficulty": 8,
@@ -913,7 +916,7 @@
       {
         "slug": "word-search",
         "name": "Word Search",
-        "uuid": "8ba2c83e-f544-11e9-802a-5aa538984bd8",
+        "uuid": "ab16bfad-960d-405b-aba4-afd142330663",
         "practices": [],
         "prerequisites": [],
         "difficulty": 8,
@@ -1016,7 +1019,7 @@
       {
         "slug": "strain",
         "name": "Strain",
-        "uuid": "e16c3064-b2ef-11e7-abc4-cec278b6b50a",
+        "uuid": "160c31bd-814c-4de7-8af5-7cd223763da8",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
@@ -1155,32 +1158,32 @@
   "concepts": [],
   "key_features": [
     {
-      "icon": "features-evolving",
+      "icon": "evolving",
       "title": "Evolving",
       "content": "Typescript is a modern and constantly evolving open-source language supported by Microsoft."
     },
     {
-      "icon": "features-cross-platform",
+      "icon": "widely-used",
       "title": "Widely used",
       "content": "TypeScript is used by many libraries and frameworks, and integrates with JavaScript code as well."
     },
     {
-      "icon": "features-strongly-typed",
+      "icon": "dynamically-typed",
       "title": "Typed JavaScript",
       "content": "Typescript flexible typing system lets you describe what to expect, supporting gradual adoption."
     },
     {
-      "icon": "features-multi-paradigm",
+      "icon": "multi-paradigm",
       "title": "Use any programming style",
       "content": "Use prototype-based, object-oriented, functional, or declarative programming styles, and more."
     },
     {
-      "icon": "features-packages",
+      "icon": "tooling",
       "title": "Consistently Good Tooling",
       "content": "TS's JavaScript integration is handled by the language itself, enabling its tools and features."
     },
     {
-      "icon": "features-generic",
+      "icon": "community",
       "title": "Large Community",
       "content": "The large number of users makes it easy to find answers, documentation, and libraries."
     }

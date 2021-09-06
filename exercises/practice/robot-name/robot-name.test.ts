@@ -3,8 +3,8 @@ import { Robot } from './robot-name'
 const areSequential = (name1: string, name2: string): boolean => {
   const alpha1 = name1.substr(0, 2)
   const alpha2 = name2.substr(0, 2)
-  const num1 = +name1.substr(2, 3)
-  const num2 = +name2.substr(2, 3)
+  const num1 = Number(name1.substr(2, 3))
+  const num2 = Number(name2.substr(2, 3))
 
   const numDiff = num2 - num1
   const alphaDiff =
@@ -89,6 +89,39 @@ describe('Robot', () => {
     expect(areSequential(name1, name2)).toBe(false)
     expect(areSequential(name2, name3)).toBe(false)
     expect(areSequential(name3, name3)).toBe(true)
+  })
+
+  xit('uses all letters', () => {
+    let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    for (let i = 0; i < 1000 - 1; i += 1) {
+      const newRobot = new Robot()
+      const lettersInName = newRobot.name.slice(0, 2)
+      letters = letters.replace(lettersInName[0], '')
+      letters = letters.replace(lettersInName[1], '')
+
+      if (letters.length === 0) {
+        break
+      }
+    }
+    expect(letters).toEqual('')
+  })
+
+  xit('uses all numbers', () => {
+    let numbers = '0123456789'
+
+    for (let i = 0; i < 1000 - 1; i += 1) {
+      const newRobot = new Robot()
+      const digitsInName = newRobot.name.slice(2, 5)
+      numbers = numbers.replace(digitsInName[0], '')
+      numbers = numbers.replace(digitsInName[1], '')
+      numbers = numbers.replace(digitsInName[2], '')
+
+      if (numbers.length === 0) {
+        break
+      }
+    }
+    expect(numbers).toEqual('')
   })
 
   // This test is optional.
