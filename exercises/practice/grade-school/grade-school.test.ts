@@ -1,7 +1,7 @@
 import { GradeSchool } from './grade-school'
 
 describe('School', () => {
-  let school: GradeSchool;
+  let school: GradeSchool
 
   beforeEach(() => {
     school = new GradeSchool()
