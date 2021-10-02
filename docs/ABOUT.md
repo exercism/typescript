@@ -1,7 +1,7 @@
 # About
 
 [TypeScript](https://www.typescriptlang.org/) (TS) is a superset of JavaScript (JS), created at Microsoft
-in response to frustration developing large-scale applictions in JS. In a large JS project, knowing
+in response to frustration developing large-scale applications in JS. In a large JS project, knowing
 what properties your own objects have, what arguments your functions take (and what type they need to be)
 can become difficult. Similarly, since there is no ability to intelligently inspect JS code, when you include
 a package (like from `npm`), you have to keep the documentation up so you know what methods are available and
