@@ -3,6 +3,7 @@
 ## Recommended References
 
 - [TypeScript QuickStart](https://www.typescriptlang.org/docs/handbook/release-notes/overview.html)
+- [TypeScript Playground](https://www.typescriptlang.org/play)
 
 - [ECMAScript 2015 Language Specification](https://www.ecma-international.org/wp-content/uploads/ECMA-262_6th_edition_june_2015.pdf) (pdf)
 - [Mozilla JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
