@@ -13,7 +13,7 @@ TS adds a flexible type system to JS, in addition to interfaces (custom types) a
 some ECMAScript features such as classes. Types are optional and flexible (for example, you can specify an
 argument is a string OR a number). Types allow tooling available in most code editors that improve the
 development experience such as code completion and method detection, both in your own code and in packages
-you use. It supports many upcoming ECMASCript features (such as async/await). TS can be written in OO or functional
+you use. It supports many upcoming ECMAScript features (such as async/await). TS can be written in Object Oriented or Functional
 styles. It is compatible with all existing JS packages. TS transpiles to clean, readable JS.
 
-Try it out at the [playground](https://www.typescriptlang.org/play), and stay up to date via [the Typescript blog](https://devblogs.microsoft.com/typescript/) and [Twitter account](https://twitter.com/typescriptlang).
+Try it out at the [playground](https://www.typescriptlang.org/play), and stay up to date via [the Typescript blog](https://devblogs.microsoft.com/typescript/) and [Twitter account](https://twitter.com/typescript).
