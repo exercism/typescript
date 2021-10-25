@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "extends": "@exercism/eslint-config-typescript",
+  "env": {
+    "jest": true
+  },
+  "overrides": [
+    {
+      "files": [".meta/proof.ci.ts", ".meta/exemplar.ts", "*.test.ts"],
+      "excludedFiles": ["custom.test.ts"],
+      "extends": "@exercism/eslint-config-typescript/maintainers"
+    }
+  ]
+}
