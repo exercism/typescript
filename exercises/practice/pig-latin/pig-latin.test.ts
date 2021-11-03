@@ -96,6 +96,11 @@ describe('position of y in a word determines if it is a consonant or a vowel', (
     const expected = 'ymay'
     expect(translate('my')).toEqual(expected)
   })
+
+  xit('y after consonant cluster', () => {
+    const expected = 'ythmrhay';
+    expect(translate('rhythm')).toEqual(expected);
+  });
 })
 
 describe('phrases are translated', () => {
