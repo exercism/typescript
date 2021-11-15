@@ -72,7 +72,7 @@ The failure looks like this:
     expect(received).toEqual(expected) // deep equality
 
     Expected: "Hello, World!"
-    Received: "What's up doc 👋🏽?"
+    Received: "Goodbye, Mars!"
 
       4 |
       5 |   it('says hello world', () => {
@@ -95,13 +95,13 @@ the 6th line:
 ```
 
 Hence the problem is with the `hello()` function call.
-We can see that the test is expecting `'Hello, World!'` as output, but instead is getting `"What's up doc 👋🏽?"`.
+We can see that the test is expecting `'Hello, World!'` as output, but instead is getting `"Goodbye, Mars!"`.
 
 So let's check now this function in the `hello-worlds.ts` file:
 
 ```typescript
 export function hello(): string {
-  return "What's up doc 👋🏽?"
+  return "Goodbye, Mars!"
 }
 ```
 
