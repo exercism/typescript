@@ -1,3 +1,3 @@
 export function decodedResistorValue() {
-  throw new Error('Delete this and implement the function.')
+  throw new Error('Remove this statement and implement this function')
 }
