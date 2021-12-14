@@ -26,12 +26,12 @@ describe('Random key cipher', () => {
   // characters will always output the key verbatim.
   xit('can encode', () => {
     expect(simpleCipher.encode('aaaaaaaaaa')).toEqual(
-      simpleCipher.key.substr(0, 10)
+      simpleCipher.key.substring(0, 10)
     )
   })
 
   xit('can decode', () => {
-    expect(simpleCipher.decode(simpleCipher.key.substr(0, 10))).toEqual(
+    expect(simpleCipher.decode(simpleCipher.key.substring(0, 10))).toEqual(
       'aaaaaaaaaa'
     )
   })
