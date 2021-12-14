@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
 
       - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458
         with:
           node-version: 16.x
 
@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@46071b5c7a2e0c34e49c3cb8a0e792e86e18d5ea
+        uses: actions/setup-node@04c56d2f954f1e4c69436aa54cfef261a018f458
         with:
           node-version: ${{ matrix.node-version }}
 
