@@ -1,7 +1,15 @@
 {
-  "endOfLine": "lf",
+  "trailingComma": "es5",
+  "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
   "arrowParens": "always",
-  "trailingComma": "es5"
+  "printWidth": 80,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": { "parser": "typescript" }
+    }
+  ]
 }
