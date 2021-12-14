@@ -8,21 +8,21 @@
     "url": "https://github.com/exercism/typescript"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
     "@babel/plugin-syntax-bigint": "^7.8.3",
-    "@babel/preset-env": "^7.15.4",
-    "@babel/preset-typescript": "^7.15.0",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
     "@types/jest": "^26.0.24",
-    "@types/node": "^14.17.14",
-    "@exercism/eslint-config-typescript": "^0.3.0",
+    "@types/node": "^16.11.13",
+    "@exercism/eslint-config-typescript": "^0.4.0",
     "babel-jest": "^26.6.3",
-    "core-js": "^3.17.2",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.2",
+    "core-js": "^3.19.3",
+    "eslint": "^8.4.1",
+    "eslint-plugin-import": "^2.25.3",
     "jest": "^26.6.3",
-    "typescript": "^4.4.2"
+    "typescript": "^4.5.4"
   },
   "scripts": {
     "test": "yarn lint:types && jest --no-cache",
