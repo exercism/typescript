@@ -1,0 +1,12 @@
+{
+  "blurb": "Convert color codes, as used on resistors, to a human-readable label.",
+  "authors": ["rodmagaldi"],
+  "contributors": ["SleeplessByte"],
+  "files": {
+    "solution": ["resistor-color-trio.ts"],
+    "test": ["resistor-color-trio.test.ts"],
+    "example": [".meta/proof.ci.ts"]
+  },
+  "source": "Maud de Vries, Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/1549"
+}

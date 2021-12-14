@@ -55,6 +55,15 @@
         "topics": ["strings", "arrays"]
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "9316fc6a-42d2-4b12-85e1-e8abd9ce3ae2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": ["strings", "arrays"]
+      },
+      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "fb80f76c-42da-4f62-9f0f-8c85d984908b",
