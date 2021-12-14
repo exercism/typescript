@@ -101,7 +101,7 @@ So let's check now this function in the `hello-worlds.ts` file:
 
 ```typescript
 export function hello(): string {
-  return "Goodbye, Mars!"
+  return 'Goodbye, Mars!'
 }
 ```
 
