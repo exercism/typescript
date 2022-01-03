@@ -19,7 +19,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.16.5",
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.7",
     "@exercism/eslint-config-typescript": "^0.4.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.11.17",
