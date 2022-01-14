@@ -38,5 +38,6 @@ export class BinarySearchTree {
 
   public get right(): BinarySearchTreeMaybe {
     return this._right
+
   }
 }
