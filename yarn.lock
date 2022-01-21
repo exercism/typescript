@@ -303,14 +303,14 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@^7.16.5":
-  version "7.16.5"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.16.5.tgz#1a3783bbc7250a2a6d53bf4eb1611c7484679b37"
-  integrity sha512-NUzl2ILzKE7lu5yj4pFLeOmREwOq6//8bFBB3m7XXz73INCSI1rjQJbUYLwZrpZWlt6RY536nDJFqo2MnY43nA==
+"@babel/node@^7.16.8":
+  version "7.16.8"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.16.8.tgz#57ba1dfa63dbcc72d477f05597ce07f1c4f8b558"
+  integrity sha512-V2dopEtPUL4LD+e8UtMIZB6BbsmMsS/7E1ZAvWNINzBfi7Cf3X9MLCpzHVZT4HeeF1lQl72IRtqqVt2RUImwyA==
   dependencies:
-    "@babel/register" "^7.16.5"
+    "@babel/register" "^7.16.8"
     commander "^4.0.1"
-    core-js "^3.19.0"
+    core-js "^3.20.2"
     node-environment-flags "^1.0.5"
     regenerator-runtime "^0.13.4"
     v8flags "^3.1.1"
@@ -947,10 +947,10 @@
     "@babel/helper-validator-option" "^7.16.7"
     "@babel/plugin-transform-typescript" "^7.16.7"
 
-"@babel/register@^7.16.5":
-  version "7.16.5"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.16.5.tgz#657d28b7ca68190de8f6159245b5ed1cfa181640"
-  integrity sha512-NpluD+cToBiZiDsG3y9rtIcqDyivsahpaM9csfyfiq1qQWduSmihUZ+ruIqqSDGjZKZMJfgAElo9x2YWlOQuRw==
+"@babel/register@^7.16.8":
+  version "7.16.8"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.16.8.tgz#bb688b9dc127d98bb54e37e1d817aed1165833b8"
+  integrity sha512-aoUj2ocH92k7qyyA59y07sUaCVxxS7VjNul/jR0mpAyYvpo6n5HELZmyUGtrgFm7/1b0UutT7I1w/4bAkXxCHA==
   dependencies:
     clone-deep "^4.0.1"
     find-cache-dir "^2.0.0"
@@ -2026,10 +2026,10 @@ core-js-compat@^3.20.0, core-js-compat@^3.20.2:
     browserslist "^4.19.1"
     semver "7.0.0"
 
-core-js@^3.19.0, core-js@^3.19.3:
-  version "3.19.3"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.3.tgz#6df8142a996337503019ff3235a7022d7cdf4559"
-  integrity sha512-LeLBMgEGSsG7giquSzvgBrTS7V5UL6ks3eQlUSbN8dJStlLFiRzUm5iqsRyzUB8carhfKjkJ2vzKqE6z1Vga9g==
+core-js@^3.19.3, core-js@^3.20.2:
+  version "3.20.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.20.2.tgz#46468d8601eafc8b266bd2dd6bf9dee622779581"
+  integrity sha512-nuqhq11DcOAbFBV4zCbKeGbKQsUDRqTX0oqx7AttUBuqe3h20ixsE039QHelbL6P4h+9kytVqyEtyZ6gsiwEYw==
 
 core-util-is@1.0.2:
   version "1.0.2"
