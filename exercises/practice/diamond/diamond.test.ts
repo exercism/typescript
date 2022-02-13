@@ -18,12 +18,12 @@ function diamondify(parts: TemplateStringsArray): string {
 }
 
 describe('Make diamond function', () => {
-  test('test letter A', () => {
+  it('test letter A', () => {
     const result = 'A\n'
     expect(makeDiamond('A')).toEqual(result)
   })
 
-  test('test letter C', () => {
+  it('test letter C', () => {
     const result = diamondify`
       ··A··
       ·B·B·
@@ -34,7 +34,7 @@ describe('Make diamond function', () => {
     expect(makeDiamond('C')).toEqual(result)
   })
 
-  test('test letter E', () => {
+  it('test letter E', () => {
     const result = diamondify`
       ····A····
       ···B·B···

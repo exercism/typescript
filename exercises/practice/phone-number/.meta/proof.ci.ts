@@ -1,7 +1,7 @@
 export const clean = (number: string): string => {
-  if (/[a-zA-Z]/.test(number)) {
+  if (/[a-zA-Z]/.it(number)) {
     throw new Error('Letters not permitted')
-  } else if (/[@:!]/.test(number)) {
+  } else if (/[@:!]/.it(number)) {
     throw new Error('Punctuations not permitted')
   }
 

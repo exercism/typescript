@@ -1,71 +1,71 @@
 import { isPaired } from './matching-brackets'
 
 describe('Matching Brackets', () => {
-  test('paired square brackets', () => {
+  it('paired square brackets', () => {
     expect(isPaired('[]')).toEqual(true)
   })
 
-  xtest('empty string', () => {
+  xit('empty string', () => {
     expect(isPaired('')).toEqual(true)
   })
 
-  xtest('unpaired brackets', () => {
+  xit('unpaired brackets', () => {
     expect(isPaired('[[')).toEqual(false)
   })
 
-  xtest('wrong ordered brackets', () => {
+  xit('wrong ordered brackets', () => {
     expect(isPaired('}{')).toEqual(false)
   })
 
-  xtest('wrong closing bracket', () => {
+  xit('wrong closing bracket', () => {
     expect(isPaired('{]')).toEqual(false)
   })
 
-  xtest('paired with whitespace', () => {
+  xit('paired with whitespace', () => {
     expect(isPaired('{ }')).toEqual(true)
   })
 
-  xtest('partially paired brackets', () => {
+  xit('partially paired brackets', () => {
     expect(isPaired('{[])')).toEqual(false)
   })
 
-  xtest('simple nested brackets', () => {
+  xit('simple nested brackets', () => {
     expect(isPaired('{[]}')).toEqual(true)
   })
 
-  xtest('several paired brackets', () => {
+  xit('several paired brackets', () => {
     expect(isPaired('{}[]')).toEqual(true)
   })
 
-  xtest('paired and nested brackets', () => {
+  xit('paired and nested brackets', () => {
     expect(isPaired('([{}({}[])])')).toEqual(true)
   })
 
-  xtest('unopened closing brackets', () => {
+  xit('unopened closing brackets', () => {
     expect(isPaired('{[)][]}')).toEqual(false)
   })
 
-  xtest('unpaired and nested brackets', () => {
+  xit('unpaired and nested brackets', () => {
     expect(isPaired('([{])')).toEqual(false)
   })
 
-  xtest('paired and wrong nested brackets', () => {
+  xit('paired and wrong nested brackets', () => {
     expect(isPaired('[({]})')).toEqual(false)
   })
 
-  xtest('paired and incomplete brackets', () => {
+  xit('paired and incomplete brackets', () => {
     expect(isPaired('{}[')).toEqual(false)
   })
 
-  xtest('too many closing brackets', () => {
+  xit('too many closing brackets', () => {
     expect(isPaired('[]]')).toEqual(false)
   })
 
-  xtest('math expression', () => {
+  xit('math expression', () => {
     expect(isPaired('(((185 + 223.85) * 15) - 543)/2')).toEqual(true)
   })
 
-  xtest('complex latex expression', () => {
+  xit('complex latex expression', () => {
     expect(
       isPaired(
         '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'

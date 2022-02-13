@@ -9,30 +9,30 @@ function tripletsWithSum(sum: number, options = {}): Triplet[] {
 }
 
 describe('Triplet', () => {
-  test('triplets whose sum is 12', () => {
+  it('triplets whose sum is 12', () => {
     expect(tripletsWithSum(12)).toEqual([[3, 4, 5]])
   })
 
-  xtest('triplets whose sum is 108', () => {
+  xit('triplets whose sum is 108', () => {
     expect(tripletsWithSum(108)).toEqual([[27, 36, 45]])
   })
 
-  xtest('triplets whose sum is 1000', () => {
+  xit('triplets whose sum is 1000', () => {
     expect(tripletsWithSum(1000)).toEqual([[200, 375, 425]])
   })
 
-  xtest('no matching triplets for 1001', () => {
+  xit('no matching triplets for 1001', () => {
     expect(tripletsWithSum(1001)).toEqual([])
   })
 
-  xtest('returns all matching triplets', () => {
+  xit('returns all matching triplets', () => {
     expect(tripletsWithSum(90)).toEqual([
       [9, 40, 41],
       [15, 36, 39],
     ])
   })
 
-  xtest('several matching triplets', () => {
+  xit('several matching triplets', () => {
     expect(tripletsWithSum(840)).toEqual([
       [40, 399, 401],
       [56, 390, 394],
@@ -45,22 +45,22 @@ describe('Triplet', () => {
     ])
   })
 
-  xtest('returns triplets with no factor smaller than minimum factor', () => {
+  xit('returns triplets with no factor smaller than minimum factor', () => {
     expect(tripletsWithSum(90, { minFactor: 10 })).toEqual([[15, 36, 39]])
   })
 
-  xtest('returns triplets with no factor larger than maximum factor', () => {
+  xit('returns triplets with no factor larger than maximum factor', () => {
     expect(tripletsWithSum(840, { maxFactor: 349 })).toEqual([[240, 252, 348]])
   })
 
-  xtest('returns triplets with factors in range', () => {
+  xit('returns triplets with factors in range', () => {
     expect(tripletsWithSum(840, { maxFactor: 352, minFactor: 150 })).toEqual([
       [210, 280, 350],
       [240, 252, 348],
     ])
   })
 
-  test.skip('triplets for large number', () => {
+  it.skip('triplets for large number', () => {
     expect(tripletsWithSum(30000)).toEqual([
       [1200, 14375, 14425],
       [1875, 14000, 14125],

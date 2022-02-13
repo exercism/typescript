@@ -356,13 +356,13 @@ export function prepare(assignment) {
 
     // Enable tests
     //
-    // This purposefully does not replace describe.skip or test.skip, so we can
+    // This purposefully does not replace describe.skip or it.skip, so we can
     // have test cases that are _always_ skipped, including CI. Use case?
     // - platform dependent tests
     // - test cases that don't yet work with our solution
     //
     shell
-      .sed(/x(test|it)\(/, 'test(', specFileDestination)
+      .sed(/x(test|it)\(/, 'it(', specFileDestination)
       .to(specFileDestination)
     shell
       .sed('xdescribe', 'describe', specFileDestination)

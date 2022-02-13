@@ -8,7 +8,7 @@ export class SimpleCipher {
       for (let i = 0; i < 100; i++) {
         this.key += String.fromCharCode(Math.random() * 26 + 97)
       }
-    } else if (!/^[a-z]+$/.test(key)) {
+    } else if (!/^[a-z]+$/.it(key)) {
       throw new Error('Bad key')
     } else {
       this.key = key
