@@ -47,8 +47,8 @@ languages
                 |   └── exemplar.ts
                 ├── .eslintignore
                 ├── .gitignore
-                ├── .eslintrc
-                ├── jest.config.js
+                ├── .eslintrc.cjs
+                ├── jest.config.cjs
                 ├── &lt;slug&gt;.ts
                 ├── &lt;slug&gt;.spec.ts
                 └── package.json
@@ -59,8 +59,8 @@ languages
 The configuration files may be copied from another exercise. We aim to keep these in sync:
 
 - `.eslintignore`
-- `.eslintrc`
-- `jest.config.js`
+- `.eslintrc.cjs`
+- `jest.config.cjs`
 - `package.json`
 - `tsconfig.json`
 
