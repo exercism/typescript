@@ -17,13 +17,16 @@ const compute = (
 
 export const answer = (question: string): number => {
   const operationsPattern = new RegExp(/plus|minus|divided by|multiplied by/g)
-  if (!operationsPattern.it(question) && !/^What is ?-?\d*\?$/.it(question)) {
+  if (
+    !operationsPattern.test(question) &&
+    !/^What is ?-?\d*\?$/.test(question)
+  ) {
     throw new Error('Unknown operation')
   }
 
   const generalPattern =
     /^What is -?\d+( (plus|minus|multiplied by|divided by) -?\d+)*\?$/g
-  if (!generalPattern.it(question)) {
+  if (!generalPattern.test(question)) {
     throw new Error('Syntax error')
   }
 

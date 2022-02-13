@@ -9,7 +9,7 @@ export function largestProduct(digits: string, seriesLength: number): number {
     throw new Error('Span must be greater than zero')
   }
 
-  if (!/^[0-9]+$/g.it(digits)) {
+  if (!/^[0-9]+$/g.test(digits)) {
     throw new Error('Digits input must only contain digits')
   }
 
