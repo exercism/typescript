@@ -1,19 +1,19 @@
 import { Series } from './series'
 
 describe('Series', () => {
-  xtest('slices of one from one', () => {
+  xit('slices of one from one', () => {
     expect(new Series('1').slices(1)).toEqual([[1]])
   })
 
-  xtest('slices of one from two', () => {
+  xit('slices of one from two', () => {
     expect(new Series('12').slices(1)).toEqual([[1], [2]])
   })
 
-  xtest('slices of two', () => {
+  xit('slices of two', () => {
     expect(new Series('35').slices(2)).toEqual([[3, 5]])
   })
 
-  xtest('slices of two overlap', () => {
+  xit('slices of two overlap', () => {
     expect(new Series('9142').slices(2)).toEqual([
       [9, 1],
       [1, 4],
@@ -21,7 +21,7 @@ describe('Series', () => {
     ])
   })
 
-  xtest('slices can include duplicates', () => {
+  xit('slices can include duplicates', () => {
     expect(new Series('777777').slices(3)).toEqual([
       [7, 7, 7],
       [7, 7, 7],
@@ -30,7 +30,7 @@ describe('Series', () => {
     ])
   })
 
-  xtest('slices of long series', () => {
+  xit('slices of long series', () => {
     expect(new Series('918493904243').slices(5)).toEqual([
       [9, 1, 8, 4, 9],
       [1, 8, 4, 9, 3],
@@ -43,25 +43,25 @@ describe('Series', () => {
     ])
   })
 
-  xtest('slice length is too large', () => {
+  xit('slice length is too large', () => {
     expect(() => {
       new Series('12345').slices(6)
     }).toThrow(new Error('slice length cannot be greater than series length'))
   })
 
-  xtest('slice length cannot be zero', () => {
+  xit('slice length cannot be zero', () => {
     expect(() => {
       new Series('12345').slices(0)
     }).toThrow(new Error('slice length cannot be zero'))
   })
 
-  xtest('slice length cannot be negative', () => {
+  xit('slice length cannot be negative', () => {
     expect(() => {
       new Series('123').slices(-1)
     }).toThrow(new Error('slice length cannot be negative'))
   })
 
-  xtest('empty series is invalid', () => {
+  xit('empty series is invalid', () => {
     expect(() => {
       new Series('').slices(1)
     }).toThrow(new Error('series cannot be empty'))
