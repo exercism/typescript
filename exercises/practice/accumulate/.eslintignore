@@ -8,5 +8,6 @@
 node_modules/*
 
 # Configuration files
-babel.config.js
-jest.config.js
+.eslintrc.cjs
+babel.config.cjs
+jest.config.cjs

@@ -11,9 +11,3 @@
 # Configuration
 /config
 
-# These have their own config files (not overrides)
-/common/*
-/exercises/*
-
-# typescript-eslint can't lint correctly files in a project without extension
-/scripts/*
