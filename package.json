@@ -21,7 +21,7 @@
     "@exercism/eslint-config-typescript": "^0.4.0",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.24",
+    "@types/node": "^16.11.25",
     "babel-jest": "^27.5.1",
     "chalk": "^5.0.0",
     "core-js": "^3.21.0",
