@@ -5,10 +5,10 @@ class TeamStats {
   public played = 0
 
   public get points(): number {
-    return (this.won * 3) + this.drawn
+    return this.won * 3 + this.drawn
   }
 
-  constructor(public name: string) { }
+  constructor(public name: string) {}
 
   public getStatTableRow(): string {
     const { name, won, lost, played, drawn } = this
@@ -16,14 +16,19 @@ class TeamStats {
     const wonPad = won.toString().padStart(3 - won.toString().length, ' ')
     const lostPad = lost.toString().padStart(3 - lost.toString().length, ' ')
     const drawnPad = drawn.toString().padStart(3 - drawn.toString().length, ' ')
-    const playedPad = played.toString().padStart(3 - played.toString().length, ' ')
-    const poinntsPad = this.points.toString().padStart(3 - this.points.toString().length, ' ')
+    const playedPad = played
+      .toString()
+      .padStart(3 - played.toString().length, ' ')
+    const poinntsPad = this.points
+      .toString()
+      .padStart(3 - this.points.toString().length, ' ')
     return `${namePad}| ${playedPad} | ${wonPad} | ${drawnPad} | ${lostPad} | ${poinntsPad}`
   }
 }
 
 export class Tournament {
-  private tableHeader = "Team                           | MP |  W |  D |  L |  P"
+  private tableHeader =
+    'Team                           | MP |  W |  D |  L |  P'
 
   private teams: { [key: string]: TeamStats } = {}
 
@@ -46,7 +51,10 @@ export class Tournament {
 
     return Object.keys(this.teams)
       .sort(this.sortByPointsAlphabetically)
-      .reduce((acc, team) => acc + this.teams[team].getStatTableRow() + '\n', this.tableHeader + '\n')
+      .reduce(
+        (acc, team) => acc + this.teams[team].getStatTableRow() + '\n',
+        this.tableHeader + '\n'
+      )
       .trimEnd()
   }
 
@@ -59,7 +67,11 @@ export class Tournament {
     return teamB.points - teamA.points
   }
 
-  private applyResult(teamA: TeamStats, teamB: TeamStats, result: string): void {
+  private applyResult(
+    teamA: TeamStats,
+    teamB: TeamStats,
+    result: string
+  ): void {
     if (result === 'draw') {
       teamA.drawn++
       teamB.drawn++

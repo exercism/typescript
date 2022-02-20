@@ -1095,6 +1095,14 @@
         "topics": ["parsing", "stacks", "strings"]
       },
       {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "d9359f25-dc94-496c-adc3-57fe541857fe",
+        "practices": ["string-formatting"],
+        "prerequisites": ["strings", "string-formatting"],
+        "difficulty": 6
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "f5b00e76-3015-444d-8012-9862990db08c",
