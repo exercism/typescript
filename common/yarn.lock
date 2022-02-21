@@ -1266,10 +1266,10 @@
     "@babel/preset-typescript" "^7.16.7"
     core-js "^3.21.0"
 
-"@exercism/eslint-config-typescript@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@exercism/eslint-config-typescript/-/eslint-config-typescript-0.4.0.tgz#ae26073ca4eca1473fe912d57a2e538db97cf363"
-  integrity sha512-QRIOxNI38QQiQrHLNcompUQDy05yho+DcXfzsUoNXRmKB6IY0s4Muqm9+RCxI3LqLXKFYe4mUIdKbdFIxJ16Pg==
+"@exercism/eslint-config-typescript@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@exercism/eslint-config-typescript/-/eslint-config-typescript-0.4.1.tgz#c2a8be9ecb4f9cc32adf963b562d69cb8cbc1eb0"
+  integrity sha512-w+qL/0h9WlYmGiXs1qVOwo9Yxwz5SNI5QM1UNPkNQLpEfI4orhBcg3ypfWwyYhSof4G0SnQ21iXUXXsemufc1g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.7.0"
     "@typescript-eslint/parser" "^5.7.0"
