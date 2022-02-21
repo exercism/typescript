@@ -2,8 +2,8 @@
 
 Tally the results of a small football competition.
 
-Based on an input file containing which team played against which and what the
-outcome was, create a file with a table like this:
+Based on an input string containing which team played against which and what the
+outcome was, create a string table like this:
 
 ```text
 Team                           | MP |  W |  D |  L |  P
