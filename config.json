@@ -1097,7 +1097,7 @@
       {
         "slug": "tournament",
         "name": "Tournament",
-        "uuid": "d9359f25-dc94-496c-adc3-57fe541857fe",
+        "uuid": "f4634d37-2357-4b54-8cd8-ad450234537a",
         "practices": ["string-formatting"],
         "prerequisites": ["strings", "string-formatting"],
         "difficulty": 6
