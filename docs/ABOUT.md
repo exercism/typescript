@@ -6,7 +6,7 @@ what properties your own objects have, what arguments your functions take (and w
 can become difficult. Similarly, since there is no ability to intelligently inspect JS code, when you include
 a package (like from `npm`), you have to keep the documentation up so you know what methods are available and
 what arguments they take. TS solves these issues. It is currently an open-source project hosted on Github.
-It supports tools for any browser as well as Node, for any host, on any OS. TTS compiles to readable,
+It supports tools for any browser as well as Node, for any host, on any OS. TS compiles to readable,
 standards-based JavaScript.
 
 TS adds a flexible type system to JS, in addition to interfaces (custom types) and modifying the syntax of
