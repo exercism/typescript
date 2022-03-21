@@ -1,0 +1,10 @@
+{
+  "blurb": "Tally the results of a small football competition.",
+  "authors": ["BrianDGLS"],
+  "contributors": [],
+  "files": {
+    "solution": ["tournament.ts"],
+    "test": ["tournament.test.ts"],
+    "example": [".meta/proof.ci.ts"]
+  }
+}
