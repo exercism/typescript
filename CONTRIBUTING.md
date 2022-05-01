@@ -350,13 +350,13 @@ Run this script to check if there is any duplicate package name.
 
 [configlet]: https://github.com/exercism/docs/blob/master/language-tracks/configuration/configlet.md
 [bin-fetch-configlet]: https://github.com/exercism/javascript/blob/master/bin/fetch-configlet
-[web-exercism]: https://exercism.io
+[web-exercism]: https://exercism.org
 [file-config]: https://github.com/exercism/javascript/blob/master/config.json
 [file-docs]: https://github.com/exercism/javascript/blob/master/docs
 [issue-open]: https://github.com/exercism/javascript/issues
 [issue-discussion]: https://github.com/exercism/javascript/labels/discussion%20%3Aspeech_balloon%3A
 [issue-new-exercise]: https://github.com/exercism/javascript/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Asparkles%3A+new+exercise%22
-[list-of-exercises]: https://tracks.exercism.io/typescript/master/unimplemented
+[list-of-exercises]: https://tracks.exercism.org/typescript/master/unimplemented
 [contributing-generic]: https://github.com/exercism/docs/tree/master/contributing-to-language-tracks
 [contributing-javascript]: https://github.com/exercism/javascript/blob/master/CONTRIBUTING.md
 [contributing-javascript-analyzer]: https://github.com/exercism/javascript-analyzer/blob/master/CONTRIBUTING.md
@@ -367,5 +367,5 @@ Run this script to check if there is any duplicate package name.
 [contributing-website-copy]: https://github.com/exercism/website-copy#contributing
 [doc-readme]: https://github.com/exercism/docs/blob/master/language-tracks/exercises/anatomy/readmes.md
 [problem-specifications]: https://github.com/exercism/problem-specifications
-[coc]: https://exercism.io/code-of-conduct
+[coc]: https://exercism.org/code-of-conduct
 [mentor-notes]: https://github.com/exercism/website-copy/tree/master/tracks/javascript/exercises

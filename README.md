@@ -55,7 +55,7 @@ A lot of the improvements made to this track and tooling, is also made to the Ja
 - [The JavaScript Representer][git-javascript-representer]
 - [The JavaScript Test Runner][git-javascript-test-runner]
 
-[web-exercism]: https://exercism.io
+[web-exercism]: https://exercism.org
 [file-config]: https://github.com/exercism/typescript/blob/master/config.json
 [file-contributing]: https://github.com/exercism/typescript/blob/master/CONTRIBUTING.md
 [git-javascript]: https://github.com/exercism/javascript
