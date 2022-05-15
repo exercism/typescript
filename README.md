@@ -1,4 +1,4 @@
-# TypeScript
+# Exercism TypeScript Track
 
 [![configlet](https://github.com/exercism/typescript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/typescript/actions/workflows/configlet.yml) [![typescript / ci](https://github.com/exercism/typescript/workflows/typescript%20/%20main/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3A%22typescript+%2F+main%22)
 
