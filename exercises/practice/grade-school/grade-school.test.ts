@@ -73,7 +73,7 @@ describe('School', () => {
   xit('a grade within the roster cannot be modified', () => {
     school.add('Aimee', 2)
     const roster = school.roster()
-    roster[2] = ['Oops.']
+    try { roster[2] = ['Oops.'] } catch {}
     const expectedDb = { 2: ['Aimee'] }
     expect(school.roster()).toEqual(expectedDb)
   })
