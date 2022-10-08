@@ -5,7 +5,7 @@
 Go through the setup instructions for TypeScript to
 install the necessary dependencies:
 
-http://exercism.org/languages/typescript
+[https://exercism.org/docs/tracks/typescript/installation](https://exercism.org/docs/tracks/typescript/installation)
 
 ## Requirements
 
