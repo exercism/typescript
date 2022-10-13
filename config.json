@@ -83,7 +83,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "b4db381f-1c99-44c6-948c-c8892d77823e",
         "practices": [],
         "prerequisites": [],
@@ -101,7 +101,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "DnD Character",
+        "name": "D&D Character",
         "uuid": "6f34eb4d-4028-4f89-9965-c9a887f416a0",
         "practices": [],
         "prerequisites": [],
@@ -316,7 +316,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "3f649490-dc7d-4a77-a2a0-2ae71ae834a9",
         "practices": [],
         "prerequisites": [],
@@ -367,7 +367,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "ab027a47-d483-4011-aac4-564a6284e5b8",
         "practices": [],
         "prerequisites": [],
@@ -481,7 +481,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "e431fb10-766a-4542-94ad-9c30224a3885",
         "practices": [],
         "prerequisites": [],
@@ -620,7 +620,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "50447e18-cfe8-43fb-a791-e8a82483bef6",
         "practices": [],
         "prerequisites": [],
@@ -765,7 +765,7 @@
       },
       {
         "slug": "ocr-numbers",
-        "name": "Ocr Numbers",
+        "name": "OCR Numbers",
         "uuid": "61f0964f-0779-446d-bd6b-6bb988414302",
         "practices": [],
         "prerequisites": [],
@@ -866,7 +866,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "10edb37d-cf5d-443a-bb4c-8831a3986b61",
         "practices": [],
         "prerequisites": [],
@@ -968,7 +968,7 @@
       },
       {
         "slug": "diffie-hellman",
-        "name": "Diffie Hellman",
+        "name": "Diffie-Hellman",
         "uuid": "1d12bce3-bfdc-4785-9dc7-0a496d2e6d38",
         "practices": [],
         "prerequisites": [],
@@ -1010,7 +1010,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "16c5cf98-c381-46bb-a439-78dbc847c0d0",
         "practices": [],
         "prerequisites": [],
