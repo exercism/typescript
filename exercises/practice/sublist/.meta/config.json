@@ -1,10 +1,21 @@
 {
-  "blurb": "Write a function to determine if a list is a sublist of another list.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["sublist.ts"],
-    "test": ["sublist.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "sublist.ts"
+    ],
+    "test": [
+      "sublist.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Write a function to determine if a list is a sublist of another list."
 }

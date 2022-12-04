@@ -1,11 +1,22 @@
 {
-  "blurb": "Implement a doubly linked list",
-  "authors": ["jspengeman"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "jspengeman"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["linked-list.ts"],
-    "test": ["linked-list.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "linked-list.ts"
+    ],
+    "test": [
+      "linked-list.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Implement a doubly linked list",
   "source": "Classic computer science topic"
 }

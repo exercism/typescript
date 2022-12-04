@@ -1,12 +1,24 @@
 {
-  "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
-  "authors": ["masters3d"],
-  "contributors": ["lukaszklis", "pranasziaukas", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "pranasziaukas",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["etl.ts"],
-    "test": ["etl.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "etl.ts"
+    ],
+    "test": [
+      "etl.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"
 }

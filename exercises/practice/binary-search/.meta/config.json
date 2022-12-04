@@ -1,12 +1,23 @@
 {
-  "blurb": "Implement a binary search algorithm.",
-  "authors": ["anuragsoni"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "anuragsoni"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["binary-search.ts"],
-    "test": ["binary-search.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "binary-search.ts"
+    ],
+    "test": [
+      "binary-search.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Implement a binary search algorithm.",
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
 }

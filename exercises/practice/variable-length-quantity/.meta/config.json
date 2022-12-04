@@ -1,12 +1,23 @@
 {
-  "blurb": "Implement variable length quantity encoding and decoding.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["variable-length-quantity.ts"],
-    "test": ["variable-length-quantity.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "variable-length-quantity.ts"
+    ],
+    "test": [
+      "variable-length-quantity.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Implement variable length quantity encoding and decoding.",
   "source": "A poor Splice developer having to implement MIDI encoding/decoding.",
   "source_url": "https://splice.com"
 }

@@ -1,12 +1,23 @@
 {
-  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["nucleotide-count.ts"],
-    "test": ["nucleotide-count.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "nucleotide-count.ts"
+    ],
+    "test": [
+      "nucleotide-count.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
   "source": "The Calculating DNA Nucleotides_problem at Rosalind",
   "source_url": "http://rosalind.info/problems/dna/"
 }

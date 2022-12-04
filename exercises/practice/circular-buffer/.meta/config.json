@@ -1,12 +1,23 @@
 {
-  "blurb": "A data structure that uses a single, fixed-size buffer as if it were connected end-to-end.",
-  "authors": ["jspengeman"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "jspengeman"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["circular-buffer.ts"],
-    "test": ["circular-buffer.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "circular-buffer.ts"
+    ],
+    "test": [
+      "circular-buffer.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "A data structure that uses a single, fixed-size buffer as if it were connected end-to-end.",
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Circular_buffer"
 }

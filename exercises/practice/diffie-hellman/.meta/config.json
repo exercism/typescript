@@ -1,12 +1,23 @@
 {
-  "blurb": "Diffie-Hellman key exchange.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["diffie-hellman.ts"],
-    "test": ["diffie-hellman.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "diffie-hellman.ts"
+    ],
+    "test": [
+      "diffie-hellman.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Diffie-Hellman key exchange.",
   "source": "Wikipedia, 1024 bit key from www.cryptopp.com/wiki.",
   "source_url": "http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
 }

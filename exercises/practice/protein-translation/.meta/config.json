@@ -1,11 +1,22 @@
 {
-  "blurb": "Translate RNA sequences into proteins.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["protein-translation.ts"],
-    "test": ["protein-translation.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "protein-translation.ts"
+    ],
+    "test": [
+      "protein-translation.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Translate RNA sequences into proteins.",
   "source": "Tyler Long"
 }
