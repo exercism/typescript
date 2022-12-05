@@ -1,10 +1,21 @@
 {
-  "blurb": "Write a function to solve alphametics puzzles.",
-  "authors": ["W0lfw00d"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "W0lfw00d"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["alphametics.ts"],
-    "test": ["alphametics.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "alphametics.ts"
+    ],
+    "test": [
+      "alphametics.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Write a function to solve alphametics puzzles."
 }

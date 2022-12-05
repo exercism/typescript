@@ -1,9 +1,17 @@
 {
-  "blurb": "Implement a basic reactive system.",
-  "authors": ["peerreynders"],
+  "authors": [
+    "peerreynders"
+  ],
   "files": {
-    "solution": ["react.ts"],
-    "test": ["react.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "react.ts"
+    ],
+    "test": [
+      "react.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement a basic reactive system."
 }

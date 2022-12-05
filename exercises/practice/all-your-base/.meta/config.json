@@ -1,10 +1,21 @@
 {
-  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["all-your-base.ts"],
-    "test": ["all-your-base.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "all-your-base.ts"
+    ],
+    "test": [
+      "all-your-base.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
 }

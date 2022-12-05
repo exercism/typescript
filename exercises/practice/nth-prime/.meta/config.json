@@ -1,12 +1,21 @@
 {
-  "blurb": "Given a number n, determine what the nth prime is.",
   "authors": [],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["nth-prime.ts"],
-    "test": ["nth-prime.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "nth-prime.ts"
+    ],
+    "test": [
+      "nth-prime.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Given a number n, determine what the nth prime is.",
   "source": "A variation on Problem 7 at Project Euler",
   "source_url": "http://projecteuler.net/problem=7"
 }

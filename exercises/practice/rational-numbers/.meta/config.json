@@ -1,12 +1,23 @@
 {
-  "blurb": "Implement rational numbers.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["rational-numbers.ts"],
-    "test": ["rational-numbers.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "rational-numbers.ts"
+    ],
+    "test": [
+      "rational-numbers.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Implement rational numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number"
 }

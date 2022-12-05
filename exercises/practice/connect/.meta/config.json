@@ -1,10 +1,21 @@
 {
-  "blurb": "Compute the result for a game of Hex / Polygon",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["connect.ts"],
-    "test": ["connect.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "connect.ts"
+    ],
+    "test": [
+      "connect.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Compute the result for a game of Hex / Polygon"
 }

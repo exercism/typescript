@@ -1,12 +1,22 @@
 {
-  "blurb": "Convert a long phrase to its acronym",
   "authors": [],
-  "contributors": ["lilislilit", "masters3d", "SleeplessByte"],
+  "contributors": [
+    "lilislilit",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["acronym.ts"],
-    "test": ["acronym.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "acronym.ts"
+    ],
+    "test": [
+      "acronym.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Convert a long phrase to its acronym",
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"
 }
