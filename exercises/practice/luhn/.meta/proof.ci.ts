@@ -1,10 +1,11 @@
 export function valid(value: string): boolean {
-  const numbers = value.replace(/\s/g, '')
-  const digits = [...numbers]
+  const valueWithoutSpaces = value.replace(/\s/g, '')
+  const digits = [...valueWithoutSpaces]
 
   const sum = digits
     // convert to integers
     .map((d) => parseInt(d, 10))
+    .reverse()
     // double even positions (odd indexes)
     .map((d, i) => {
       if (i % 2 !== 0) {
@@ -22,5 +23,5 @@ export function valid(value: string): boolean {
     // sum all digits
     .reduce((d, acc) => d + acc, 0)
 
-  return sum > 0 && sum % 10 === 0
+  return valueWithoutSpaces.length > 1 && sum % 10 === 0
 }
