@@ -1,10 +1,21 @@
 {
-  "blurb": "Create a program to solve a word search puzzle.",
-  "authors": ["msomji"],
-  "contributors": ["ErikSchierboom", "SleeplessByte"],
+  "authors": [
+    "msomji"
+  ],
+  "contributors": [
+    "ErikSchierboom",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["word-search.ts"],
-    "test": ["word-search.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "word-search.ts"
+    ],
+    "test": [
+      "word-search.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Create a program to solve a word search puzzle."
 }

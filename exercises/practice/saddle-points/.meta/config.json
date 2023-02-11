@@ -1,12 +1,23 @@
 {
-  "blurb": "Detect saddle points in a matrix.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["saddle-points.ts"],
-    "test": ["saddle-points.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "saddle-points.ts"
+    ],
+    "test": [
+      "saddle-points.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Detect saddle points in a matrix.",
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
 }

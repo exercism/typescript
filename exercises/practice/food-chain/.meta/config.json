@@ -1,12 +1,23 @@
 {
-  "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'",
-  "authors": ["masters3d"],
-  "contributors": ["lukaszklis", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["food-chain.ts"],
-    "test": ["food-chain.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "food-chain.ts"
+    ],
+    "test": [
+      "food-chain.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'",
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly"
 }

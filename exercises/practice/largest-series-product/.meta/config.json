@@ -17,7 +17,7 @@
     "example": [
       ".meta/proof.ci.ts"
     ]
-  },
+  }
   "source": "A variation on Problem 8 at Project Euler",
   "source_url": "https://projecteuler.net/problem=8"
 }

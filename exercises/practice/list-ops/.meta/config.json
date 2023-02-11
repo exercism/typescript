@@ -1,10 +1,23 @@
 {
-  "blurb": "Implement basic list operations",
-  "authors": ["CRivasGomez"],
-  "contributors": ["archanid", "masters3d", "paparomeo", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "archanid",
+    "masters3d",
+    "paparomeo",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["list-ops.ts"],
-    "test": ["list-ops.test.ts"],
-    "example": [".meta/proof.ci.ts"]
-  }
+    "solution": [
+      "list-ops.ts"
+    ],
+    "test": [
+      "list-ops.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement basic list operations"
 }

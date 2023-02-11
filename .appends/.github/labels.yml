@@ -55,10 +55,6 @@
   description: 'Hacktoberfest issues! Everyone allowed <3'
   color: '000000'
 
-- name: 'hackertoberfest-accepted'
-  description: ''
-  color: '4a4a4a'
-
 - name: 'help wanted'
   description: ''
   color: 'b1db51'

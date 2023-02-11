@@ -1,12 +1,23 @@
 {
-  "blurb": "Compute the prime factors of a given natural number.",
-  "authors": ["jspengeman"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "jspengeman"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["prime-factors.ts"],
-    "test": ["prime-factors.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "prime-factors.ts"
+    ],
+    "test": [
+      "prime-factors.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
+  "blurb": "Compute the prime factors of a given natural number.",
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
 }
