@@ -67,7 +67,7 @@ describe('Largest Series Product', () => {
 
   xit('rejects negative span', () => {
     expect(() => largestProduct('12345', -1)).toThrow(
-      new Error('Span must be greater than zero')
+      new Error('Span must not be negative')
     )
   })
 })
