@@ -99,4 +99,18 @@ describe('Rectangles', () => {
     ])
     expect(actual).toEqual(expected)
   })
+
+  xit('rectangles must have four sides', () => {
+    const expected = 5
+    const actual = count([
+      '+-+ +-+',
+      '| | | |',
+      '+-+-+-+',
+      '  | |  ',
+      '+-+-+-+',
+      '| | | |',
+      '+-+ +-+',
+    ])
+    expect(actual).toEqual(expected)
+  })
 })
