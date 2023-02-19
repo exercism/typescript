@@ -1,6 +1,6 @@
 export class Rational {
-  private numerator: number
-  private denominator: number
+  public numerator: number
+  public denominator: number
 
   constructor(numerator: number, denominator: number) {
     if (denominator === 0) {
