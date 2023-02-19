@@ -5,7 +5,7 @@ function assertSameRational(r1: Rational, r2: Rational): void {
   expect(r1.denominator).toEqual(r2.denominator)
 }
 
-describe ('Constructor', () => {
+describe('Constructor', () => {
   it('Assigns public fields numerator and denominator', () => {
     const rational = new Rational(5, 7)
     expect(rational.numerator).toEqual(5)
