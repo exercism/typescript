@@ -1,14 +1,14 @@
 import { WordSearch } from './word-search'
 
 describe('single line grids', () => {
-  it('Should accept an initial game grid', () => {
+  it('should accept an initial game grid', () => {
     const grid = ['jefblpepre']
     const wordSearch = new WordSearch(grid)
 
     expect(wordSearch instanceof WordSearch).toEqual(true)
   })
 
-  xit('can accept a target search word', () => {
+  xit('should accept a target search word', () => {
     const grid = ['jefblpepre']
     const wordSearch = new WordSearch(grid)
 
@@ -28,7 +28,7 @@ describe('single line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
 
-  xit('can locate a left to right word in a different position', () => {
+  xit('should locate the same word written left to right in a different position', () => {
     const grid = ['mtclojurer']
     const expectedResults = {
       clojure: {
@@ -41,7 +41,7 @@ describe('single line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
 
-  xit('can locate a different left to right word', () => {
+  xit('should locate a different left to right word', () => {
     const grid = ['coffeelplx']
     const expectedResults = {
       coffee: {
@@ -53,7 +53,7 @@ describe('single line grids', () => {
 
     expect(wordSearch.find(['coffee'])).toEqual(expectedResults)
   })
-  xit('can locate that different left to right word in a different position', () => {
+  xit('should locate that different left to right word in a different position', () => {
     const grid = ['xcoffeezlp']
     const expectedResults = {
       coffee: {
@@ -68,7 +68,7 @@ describe('single line grids', () => {
 })
 
 describe('multi line grids', () => {
-  xit('can locate a left to right word in a two line grid', () => {
+  xit('should locate a left to right word in a two line grid', () => {
     const grid = ['jefblpepre', 'clojurermt']
 
     const expectedResults = {
@@ -82,7 +82,7 @@ describe('multi line grids', () => {
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
-  xit('can locate a left to right word in a different position in a two line grid', () => {
+  xit('should locate a left to right word in a different position in a two line grid', () => {
     const grid = ['jefblpepre', 'tclojurerm']
     const expectedResults = {
       clojure: {
@@ -94,7 +94,7 @@ describe('multi line grids', () => {
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
-  xit('can locate a left to right word in a three line grid', () => {
+  xit('should locate a left to right word in a three line grid', () => {
     const grid = ['camdcimgtc', 'jefblpepre', 'clojurermt']
     const expectedResults = {
       clojure: {
@@ -107,7 +107,7 @@ describe('multi line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
 
-  xit('can locate a left to right word in a ten line grid', () => {
+  xit('should locate a left to right word in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -132,7 +132,7 @@ describe('multi line grids', () => {
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
 
-  xit('can locate a left to right word in a different position in a ten line grid', () => {
+  xit('should locate a left to right word in a different position in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -156,7 +156,7 @@ describe('multi line grids', () => {
 
     expect(wordSearch.find(['clojure'])).toEqual(expectedResults)
   })
-  xit('can locate a different left to right word in a ten line grid', () => {
+  xit('should locate a different left to right word in a ten line grid', () => {
     const grid = [
       'jefblpepre',
       'camdcimgtc',
@@ -181,8 +181,8 @@ describe('multi line grids', () => {
   })
 })
 
-describe('can find multiple words', () => {
-  xit('can find two words written left to right', () => {
+describe('multiple words', () => {
+  xit('should locate two words written left to right', () => {
     const grid = [
       'aefblpepre',
       'camdcimgtc',
