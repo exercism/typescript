@@ -21,12 +21,28 @@ describe('say', () => {
     expect(sayInEnglish(22)).toBe('twenty-two')
   })
 
+  xit('thirty', () => {
+    expect(sayInEnglish(30)).toBe('thirty')
+  })
+
+  xit('ninety-nine', () => {
+    expect(sayInEnglish(99)).toBe('ninety-nine')
+  })
+
   xit('one hundred', () => {
     expect(sayInEnglish(100)).toBe('one hundred')
   })
 
   xit('one hundred twenty-three', () => {
     expect(sayInEnglish(123)).toBe('one hundred twenty-three')
+  })
+
+  xit('two hundred', () => {
+    expect(sayInEnglish(200)).toBe('two hundred')
+  })
+
+  xit('nine hundred ninety-nine', () => {
+    expect(sayInEnglish(999)).toBe('nine hundred ninety-nine')
   })
 
   xit('one thousand', () => {
