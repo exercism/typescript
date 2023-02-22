@@ -1,6 +1,6 @@
 export class Rational {
-  private numerator: number
-  private denominator: number
+  public numerator: number
+  public denominator: number
 
   constructor(numerator: number, denominator: number) {
     if (denominator === 0) {
@@ -49,10 +49,17 @@ export class Rational {
   }
 
   public exprational(n: number): Rational {
-    return new Rational(
-      Math.pow(this.numerator, n),
-      Math.pow(this.denominator, n)
-    )
+    if (n > 0) {
+      return new Rational(
+        Math.pow(this.numerator, n),
+        Math.pow(this.denominator, n)
+      )
+    } else {
+      return new Rational(
+        Math.pow(this.denominator, Math.abs(n)),
+        Math.pow(this.numerator, Math.abs(n))
+      )
+    }
   }
 
   public expreal(base: number): number {
