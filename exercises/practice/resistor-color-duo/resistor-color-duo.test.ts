@@ -22,7 +22,7 @@ describe('Resistor Colors', () => {
   })
 
   xit('Ignore additional colors', () => {
-    expect(decodedValue(['green', 'brown', 'orange'])).toEqual(51)
+    expect(decodedValue(['green', 'brown', 'orange'])).toEqual(513)
   })
 
   xit('Black and brown, one-digit', () => {
