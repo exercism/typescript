@@ -23,6 +23,11 @@ export class List {
   }
 
   private isSublist(listOne: number[], listTwo: number[]): boolean {
-    return Boolean(listOne.join().match(listTwo.join()))
+    const join = (list: number[]): string => {
+      const joiner = ','
+      return list.join(joiner) + joiner
+    }
+
+    return Boolean(join(listOne).match(join(listTwo)))
   }
 }
