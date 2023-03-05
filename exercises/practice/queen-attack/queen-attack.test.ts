@@ -83,6 +83,11 @@ describe('Queens', () => {
       const queens = new QueenAttack({ white: [2, 6], black: [5, 3] })
       expect(queens.canAttack).toEqual(true)
     })
+
+    xit('queens cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal', () => {
+      const queens = new QueenAttack({ white: [4, 1], black: [2, 5] })
+      expect(queens.canAttack).toEqual(false)
+    })
   })
 
   describe('Test the board visualisation', () => {
