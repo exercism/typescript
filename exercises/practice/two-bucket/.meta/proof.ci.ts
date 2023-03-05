@@ -71,11 +71,7 @@ export class TwoBucket {
     }
   }
 
-  private moves(): {
-    moves: string[]
-    goalBucket: string
-    otherBucket: number
-  } {
+  private moves(): number {
     this.validate()
 
     this.first.empty()
