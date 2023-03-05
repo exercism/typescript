@@ -86,6 +86,16 @@ describe('Translate input RNA sequences into proteins', () => {
     expect(translate('UGA')).toEqual(expected)
   })
 
+  xit('Sequence of two protein codons translates into proteins', () => {
+    const expected = ['Phenylalanine', 'Phenylalanine']
+    expect(translate('UUUUUU')).toEqual(expected)
+  })
+
+  xit('Sequence of two different protein codons translates into proteins', () => {
+    const expected = ['Leucine', 'Leucine']
+    expect(translate('UUAUUG')).toEqual(expected)
+  })
+
   xit('Translate RNA strand into correct protein list', () => {
     const expected = ['Methionine', 'Phenylalanine', 'Tryptophan']
     expect(translate('AUGUUUUGG')).toEqual(expected)
@@ -114,5 +124,28 @@ describe('Translate input RNA sequences into proteins', () => {
   xit('Translation stops if STOP codon in middle of six-codon sequence', () => {
     const expected = ['Tryptophan', 'Cysteine', 'Tyrosine']
     expect(translate('UGGUGUUAUUAAUGGUUU')).toEqual(expected)
+  })
+
+  xit("Non-existing codon can't translate", () => {
+    expect(() => {
+      translate('AAA')
+    }).toThrowError('Invalid codon')
+  })
+
+  xit("Unknown amino acids, not part of a codon, can't translate", () => {
+    expect(() => {
+      translate('XYZ')
+    }).toThrowError('Invalid codon')
+  })
+
+  xit("Incomplete RNA sequence can't translate", () => {
+    expect(() => {
+      translate('AUGU')
+    }).toThrowError('Invalid codon')
+  })
+
+  xit('Incomplete RNA sequence can translate if valid until a STOP codon', () => {
+    const expected = ['Phenylalanine', 'Phenylalanine']
+    expect(translate('UUCUUCUAAUGGU')).toEqual(expected)
   })
 })
