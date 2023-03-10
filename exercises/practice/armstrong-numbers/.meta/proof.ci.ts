@@ -4,5 +4,6 @@ export function isArmstrongNumber(input: number | bigint): boolean {
     return total + BigInt(parseInt(current, 10)) ** BigInt(digits.length)
   }, BigInt(0))
 
+  // eslint-disable-next-line eqeqeq
   return sum == input
 }
