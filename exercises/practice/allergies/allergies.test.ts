@@ -104,4 +104,11 @@ describe('list', () => {
 
     expect(allergies.list()).toEqual(expected)
   })
+
+  xit('ignore non allergen score parts, without highest valid score', () => {
+    const allergies = new Allergies(257)
+    const expected = ['eggs']
+
+    expect(allergies.list()).toEqual(expected)
+  })
 })
