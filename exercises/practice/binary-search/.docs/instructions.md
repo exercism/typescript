@@ -5,6 +5,7 @@ Your task is to implement a binary search algorithm.
 A binary search algorithm finds an item in a list by repeatedly splitting it in half, only keeping the half which contains the item we're looking for.
 It allows us to quickly narrow down the possible locations of our item until we find it, or until we've eliminated all possible locations.
 
+<!-- prettier-ignore -->
 ~~~~exercism/caution
 Binary search only works when a list has been sorted.
 ~~~~
