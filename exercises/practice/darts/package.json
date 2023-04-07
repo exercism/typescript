@@ -1,0 +1,31 @@
+{
+  "name": "@exercism/typescript-darts",
+  "version": "1.0.0",
+  "description": "Exercism exercises in Typescript.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/typescript"
+  },
+  "type": "module",
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
+  "devDependencies": {
+    "@exercism/babel-preset-typescript": "^0.1.0",
+    "@exercism/eslint-config-typescript": "^0.4.1",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.24",
+    "babel-jest": "^27.5.1",
+    "core-js": "^3.21.0",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "test": "yarn lint:types && jest --no-cache",
+    "lint": "yarn lint:types && yarn lint:ci",
+    "lint:types": "yarn tsc --noEmit -p .",
+    "lint:ci": "eslint . --ext .tsx,.ts"
+  }
+}
