@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/sync
+ * Run this script (from root directory): yarn sync
  *
  * This script is used to copy the following files to all exercises and keep
  * them in sync:
@@ -23,14 +23,19 @@ import path from 'node:path'
 
 const assignment = shell.env['ASSIGNMENT']
 
-function copyConfigForAssignment(assignment) {
-  const destination = path.join('exercises', assignment)
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+function copyConfigForAssignment(name) {
+  const destination = path.join('exercises', name)
   const assignmentPackageFilename = path.join(destination, 'package.json')
 
   // First copy over all the common files
   helpers.COMMON_FILES.forEach((file) => {
     if (file !== 'package.json') {
-      shell.cp(path.join('common', file), path.join(destination, file))
+      const source = path.join('common', file)
+      const copy = path.join(destination, file)
+
+      shell.mkdir('-p', path.dirname(copy))
+      shell.cp(source, copy)
     }
   })
 
@@ -50,6 +55,7 @@ function copyConfigForAssignment(assignment) {
     .to(assignmentPackageFilename)
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function getCurrentPackageJson(assignmentPackageFilename) {
   const packageFile = shell.cat(assignmentPackageFilename).toString()
   if (!packageFile) {

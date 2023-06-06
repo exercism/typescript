@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/checksum
+ * Run this script (from root directory): babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -21,6 +21,7 @@ import path from 'node:path'
  * @param baseFile the file path that {filename} must be compared against
  * @param expectedSha known value of {baseFile}
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
   if (!assignment) {
     return
@@ -50,7 +51,7 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
           `\n`,
           `[Failure] ${filename} did not match for ${assignment} (${chalk.red(expectedSha)} != ${chalk.green(fileSha)})\n`,
           `! Expected ${chalk.red(baseFile)} to match ${chalk.green(filePath)}\n`,
-          `! Did you forget to run ${chalk.bold(`yarn babel-node scripts/sync`)}?\n`
+          `! Did you forget to run ${chalk.bold(`yarn sync`)}?\n`
         );
 
     if (filename === 'package.json') {
@@ -88,6 +89,7 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
  * @param filename filename in the exercise directory
  * @param rootFileName filename in the root directory
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checkSumAll(filename, rootFileName = filename) {
   const assignments = [shell.env['ASSIGNMENT']].filter(Boolean)
 

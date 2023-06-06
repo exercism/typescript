@@ -19,8 +19,10 @@ const exerciseDirs = shell.ls(
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
 export const COMMON_FILES = [
+  path.join('.yarn', 'releases', 'yarn-3.6.0.cjs'),
   '.eslintignore',
   '.eslintrc.cjs',
+  '.yarnrc.yml',
   'babel.config.cjs',
   'jest.config.cjs',
   'package.json',
@@ -196,7 +198,11 @@ export function prepareAndRun(command, infoStr, failureStr) {
     shell.mkdir('-p', 'tmp_exercises')
 
     COMMON_FILES.forEach((file) => {
-      shell.cp(path.join('common', file), path.join('tmp_exercises', file))
+      const source = path.join('common', file)
+      const destination = path.join('tmp_exercises', file)
+
+      shell.mkdir('-p', path.dirname(destination))
+      shell.cp(source, destination)
     })
 
     if (assignment) {

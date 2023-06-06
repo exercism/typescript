@@ -22,21 +22,21 @@ This runs `jest` tests for all sample solutions.
 This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
-yarn babel-node scripts/test
+yarn test
 ```
 
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `two-fer.example.ts` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn babel-node scripts/test
+ASSIGNMENT=practice/two-fer yarn test
 ```
 
 > Running on Windows? Depending on your shell, environment variables are set differently.
 > You can use `cross-env` to normalize this. The following should work across environments:
 >
 > ```bash
-> yarn cross-env ASSIGNMENT=practice/two-fer babel-node scripts/test
+> cross-env ASSIGNMENT=practice/two-fer babel-node scripts/test
 > ```
 
 ## Related repositories

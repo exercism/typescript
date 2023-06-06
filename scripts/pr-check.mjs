@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * yarn babel-node scripts/pr-check path/1 path/2 path/3
+ * babel-node scripts/pr-check path/1 path/2 path/3
  *
  * This will run following checks:
  * 1. Find the exercises at all the paths provided
@@ -96,7 +96,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `yarn babel-node ${path.join('scripts', 'checksum')}`
+      `babel-node ${path.join('scripts', 'checksum')}`
     ).code
 
     if (checkResult !== 0) {
@@ -104,7 +104,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = shell.exec(
-      `yarn babel-node ${path.join('scripts', 'name-check')}`
+      `babel-node ${path.join('scripts', 'name-check')}`
     ).code
 
     if (nameCheckResult !== 0) {
@@ -115,14 +115,14 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       shell.env['ASSIGNMENT'] = exercise
 
       const checkResult = shell.exec(
-        `yarn babel-node ${path.join('scripts', 'checksum')}`
+        `babel-node ${path.join('scripts', 'checksum')}`
       ).code
-      if (checkResult != 0) {
+      if (checkResult !== 0) {
         shell.exit(checkResult)
       }
 
       const nameCheckResult = shell.exec(
-        `yarn babel-node ${path.join('scripts', 'name-check')}`
+        `babel-node ${path.join('scripts', 'name-check')}`
       ).code
 
       if (nameCheckResult !== 0) {
@@ -132,7 +132,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = shell.exec(
-    `yarn babel-node ${path.join('scripts', 'name-uniq')}`
+    `babel-node ${path.join('scripts', 'name-uniq')}`
   ).code
 
   if (nameUniqResult !== 0) {
@@ -159,9 +159,7 @@ exercises.forEach(prepare)
 
 shell.env['CLEANUP'] = true
 
-const checkResult = shell.exec(
-  `yarn babel-node ${path.join('scripts', 'lint')}`
-).code
-if (checkResult != 0) {
+const checkResult = shell.exec(`yarn lint`).code
+if (checkResult !== 0) {
   shell.exit(checkResult)
 }

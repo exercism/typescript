@@ -69,17 +69,17 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. Open a new issue, we'll label it with `new exercise ✨`
 1. We'll assign the issue to you, so you get to work on this exercise
 1. Create a new folder in `/exercises`
-1. You'll need to sync this folder with the matching config files. You can use `sync` to do this: `ASSIGNMENT=practice/slug yarn babel-node scripts/sync`.
+1. You'll need to sync this folder with the matching config files. You can use `sync` to do this: `ASSIGNMENT=practice/slug yarn sync`.
 1. Create a `<slug>.ts` stub file.
 1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible (more on canonical data below).
 1. Create a `.meta/proof.ci.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
 1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the configlet application which aids generating this file _interactively_.
 1. Create a `.meta/config.json`. Copy the structure from any other `.meta/config.json`. Fill the `blurb`, `source` and `source_url` according to the `metadata.yml` in the [problem specifications repository][problem-specifications]. Add yourself as author.
 1. Create a `.docs/instructions.md` file. Copy the instructions from the [problem specifications repository][problem-specifications]
-1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=practice/slug yarn babel-node scripts/test`.
-1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=practice/slug yarn babel-node scripts/lint`.
+1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=practice/slug yarn test`.
+1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=practice/slug yarn lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
-1. Format the files, using `scripts/format`: `yarn babel-node scripts/format`.
+1. Format the files, using `scripts/format`: `yarn format`.
 
 The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
 
@@ -181,7 +181,7 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 
 ```ts
 /*
- * Run this script (from root directory): yarn babel-node scripts/format
+ * Run this script (from root directory): yarn format
  *
  * This runs `prettier` on all applicable files, FORCES using the same version
  * as the CI uses to check if the files have been formatted.
@@ -200,7 +200,7 @@ Use this action to format all the files using the correct version of prettier. I
 
 ```ts
 /*
- * Run this script (from root directory): yarn babel-node scripts/lint
+ * Run this script (from root directory): yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
@@ -209,7 +209,7 @@ Use this action to format all the files using the correct version of prettier. I
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to lint `two-fer`, you may, depending on your environment use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn babel-node scripts/lint
+ASSIGNMENT=practice/two-fer yarn lint
 ```
 
 #### `test`
@@ -222,7 +222,7 @@ ASSIGNMENT=practice/two-fer yarn babel-node scripts/lint
 
 ```ts
 /**
- * Run this script (from root directory): yarn babel-node scripts/test
+ * Run this script (from root directory): yarn test
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -231,7 +231,7 @@ ASSIGNMENT=practice/two-fer yarn babel-node scripts/lint
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn babel-node scripts/test
+ASSIGNMENT=practice/two-fer yarn test
 ```
 
 #### `sync`
@@ -244,7 +244,7 @@ ASSIGNMENT=practice/two-fer yarn babel-node scripts/test
 
 ```ts
 /**
- * Run this script (from root directory): yarn babel-node scripts/sync
+ * Run this script (from root directory): yarn sync
  *
  * This script is used to propagate any change to root package.json to
  * all exercises and keep them in sync.
@@ -256,14 +256,14 @@ ASSIGNMENT=practice/two-fer yarn babel-node scripts/test
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn babel-node scripts/sync
+ASSIGNMENT=practice/two-fer yarn sync
 ```
 
 #### `checksum`
 
 ```ts
 /*
- * Run this script (from root directory): yarn babel-node scripts/checksum
+ * Run this script (from root directory): babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -282,7 +282,7 @@ ASSIGNMENT=practice/two-fer yarn babel-node scripts/sync
 
 ```ts
 /**
- * Run this script (from root directory): yarn babel-node scripts/ci-check
+ * Run this script (from root directory): yarn ci:check
  *
  * This will run following checks:
  *
@@ -306,7 +306,7 @@ This script is _almost_ the same as `test`. You may use them interchangeably at 
 
 ```ts
 /**
- * Run this script (from root directory): yarn babel-node scripts/ci
+ * Run this script (from root directory): yarn ci
  *
  * This will run following checks:
  *
