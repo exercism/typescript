@@ -2,7 +2,9 @@
   "authors": [
     "angelikatyborska"
   ],
-  "contributors": [],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "darts.ts"
