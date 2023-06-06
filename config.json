@@ -109,6 +109,14 @@
         "topics": ["classes"]
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "5697c090-4ab3-4f76-b9d2-a82330a27a91",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "721d9c74-cc16-4b32-8f0b-ffab75027539",
