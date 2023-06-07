@@ -13,10 +13,10 @@ jobs:
       - name: Checkout PR
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
-      - name: Use Node.js LTS (16.x)
+      - name: Use Node.js LTS (18.x)
         uses: actions/setup-node@56337c425554a6be30cdef71bf441f15be286854
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Install project dependencies
         run: yarn install --frozen-lockfile
@@ -26,14 +26,14 @@ jobs:
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn babel-node scripts/pr-check
+            xargs -r babel-node scripts/pr-check
 
   ci:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [18.x, 20.x]
 
     steps:
       - name: Checkout PR
@@ -52,4 +52,4 @@ jobs:
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn babel-node scripts/pr
+            xargs -r babel-node scripts/pr
