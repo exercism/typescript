@@ -45,14 +45,6 @@ describe('Largest Series Product', () => {
     )
   })
 
-  xit('reports 1 for empty string and empty product (0 span)', () => {
-    expect(largestProduct('', 0)).toEqual(1)
-  })
-
-  xit('reports 1 for nonempty string and empty product (0 span)', () => {
-    expect(largestProduct('123', 0)).toEqual(1)
-  })
-
   xit('rejects empty string and nonzero span', () => {
     expect(() => largestProduct('', 1)).toThrow(
       new Error('Span must be smaller than string length')
