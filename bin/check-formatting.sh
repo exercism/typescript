@@ -10,6 +10,8 @@ if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "This script requires the EXERCISM_PRETTIER_VERSION variable to work."
   echo "Please see https://exercism.org/docs/building/markdown/style-guide for guidance."
   echo "---------------------------------------------------"
+  echo "$(yarn -v)"
+  echo ""
   echo "This is what yarn why reports:"
   echo "$ yarn why prettier"
   echo "└─ $(yarn why prettier)"
