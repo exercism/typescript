@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /*
- * Run this script (from root directory): npx babel-node scripts/format
+ * Run this script (from root directory):
+ *
+ * $ yarn format
  *
  * This runs `prettier` on all applicable files, FORCES using the same version
  * as the CI uses to check if the files have been formatted.
@@ -33,14 +35,14 @@ const versionLine = shell
 
 if (!versionLine) {
   const { stdout: versionFromPackage } = shell.exec(
-    "yarn list --pattern prettier | sed -n -e 's/^.* prettier@//p'"
+    "yarn why prettier | sed -n -e 's/^.* prettier@//p'"
   )
   EXERCISM_PRETTIER_VERSION = versionFromPackage.trim()
 } else {
   EXERCISM_PRETTIER_VERSION = versionLine.split(':')[1].trim().replace(/'/g, '')
 }
 
-const command = `npx "prettier@${EXERCISM_PRETTIER_VERSION}" --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"`
+const command = `yarn dlx prettier@${EXERCISM_PRETTIER_VERSION} --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"`
 shell.echo(`[format] ${command}`)
 
 const result = shell.exec(command)

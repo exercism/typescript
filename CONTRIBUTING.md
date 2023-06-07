@@ -1,6 +1,9 @@
 # Contributing
 
-This is the TypeScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete. The track consists of various **core** exercises, the ones a student _must_ complete, and each **core** exercise may unlock various _side_ exercises. You can find this in the [`config.json`][file-config]. It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
+This is the TypeScript track, one of the many tracks on [exercism][web-exercism]. It holds all the _exercises_ that are currently implemented and available for students to complete.
+The track consists of various **core** exercises, the ones a student _must_ complete, and each **core** exercise may unlock various _side_ exercises.
+You can find this in the [`config.json`][file-config].
+It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
@@ -36,7 +39,8 @@ We welcome contributions of all sorts and sizes, from reporting issues to submit
 
 ---
 
-This guide covers several common scenarios pertaining to **improving the TypeScript track**. There are several other guides about contributing to other parts of the Exercism ecosystem, that are similar to this repository.
+This guide covers several common scenarios pertaining to **improving the TypeScript track**.
+There are several other guides about contributing to other parts of the Exercism ecosystem, that are similar to this repository.
 
 - [Generic information about track-contributing][contributing-generic]
 - [The JavaScript track][contributing-javascript]
@@ -62,26 +66,38 @@ There are two ways to implement new exercises (exercises that don't exist in thi
 
 #### Implementing existing exercise
 
-Let's say you want to implement a new exercise, from the list of (practice) exercises, because you've noticed that this track could benefit from this exercise, really liked it in another track, or just because you find this interesting; the first step is to [check for an open issue][issue-new-exercise]. If it's there, make sure no one is working on it, and most of all that there is not an open Pull Request towards this exercise.
+Let's say you want to implement a new exercise, from the list of (practice) exercises, because you've noticed that this track could benefit from this exercise, really liked it in another track, or just because you find this interesting; the first step is to [check for an open issue][issue-new-exercise].
+If it's there, make sure no one is working on it, and most of all that there is not an open Pull Request towards this exercise.
 
 If there is no such issue, you may open one. The baseline of work is as follows:
 
 1. Open a new issue, we'll label it with `new exercise ✨`
 1. We'll assign the issue to you, so you get to work on this exercise
 1. Create a new folder in `/exercises`
-1. You'll need to sync this folder with the matching config files. You can use `sync` to do this: `ASSIGNMENT=practice/slug yarn sync`.
+1. You'll need to sync this folder with the matching config files.
+   You can use `sync` to do this: `ASSIGNMENT=practice/slug yarn sync`.
 1. Create a `<slug>.ts` stub file.
-1. Create a `<slug>.test.ts` test file. Here add the tests, per canonical data if possible (more on canonical data below).
-1. Create a `.meta/proof.ci.ts` file. Place a working implementation, assuming it's renamed to `<slug>.ts`
-1. Create `.meta/tests.toml`. If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented. Scroll down to [tools](#tools) to find the configlet application which aids generating this file _interactively_.
-1. Create a `.meta/config.json`. Copy the structure from any other `.meta/config.json`. Fill the `blurb`, `source` and `source_url` according to the `metadata.yml` in the [problem specifications repository][problem-specifications]. Add yourself as author.
-1. Create a `.docs/instructions.md` file. Copy the instructions from the [problem specifications repository][problem-specifications]
+1. Create a `<slug>.test.ts` test file.
+   Here add the tests, per canonical data if possible (more on canonical data below).
+1. Create a `.meta/proof.ci.ts` file.
+   Place a working implementation, assuming it's renamed to `<slug>.ts`
+1. Create `.meta/tests.toml`.
+   If the exercise that is being implemented has test data in the [problem specifications repository][problem-specifications], the contents of this file **must** be a list of UUIDs of the tests that are implemented or not implemented.
+   Scroll down to [tools](#tools) to find the configlet application which aids generating this file _interactively_.
+1. Create a `.meta/config.json`.
+   Copy the structure from any other `.meta/config.json`. Fill the `blurb`, `source` and `source_url` according to the `metadata.yml` in the [problem specifications repository][problem-specifications].
+   Add yourself as author.
+1. Create a `.docs/instructions.md` file.
+   Copy the instructions from the [problem specifications repository][problem-specifications]
 1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=practice/slug yarn test`.
 1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=practice/slug yarn lint`.
-1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane. Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
+1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane.
+   Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
 1. Format the files, using `scripts/format`: `yarn format`.
 
-The final step is opening a Pull Request, with these items all checked off. Make sure the tests run and the linter is happy. It will run automatically on your PR.
+The final step is opening a Pull Request, with these items all checked off.
+Make sure the tests run and the linter is happy.
+It will run automatically on your PR.
 
 #### Creating a track-specific exercise
 
@@ -92,7 +108,8 @@ The steps for a track-specific exercise are similar to those of implementing an 
 - We need to require an icon for it.
 - Generate a UUID, for example using [configlet][configlet].
 
-Open a new issue with your proposal, and we'll make sure all these steps are correctly taken. Don't worry! You're not alone in this.
+Open a new issue with your proposal, and we'll make sure all these steps are correctly taken.
+Don't worry! You're not alone in this.
 
 ### Existing exercises
 
@@ -100,7 +117,11 @@ There are always improvements possible on existing exercises.
 
 #### Improving the README.md
 
-`README.md`: the description that shows up on the student's exercise page, when they are ready to start. It's also downloaded as part of the exercise's data. The `README.md`, together with the `<slug>.test.ts` file form the contract for the implementation of the exercise. No test should _force_ a specific implementation, no `README.md` explanation should _give away_ a certain implementation. The `README.md` files are [generated][doc-readme], which is explains [here][doc-readme].
+`README.md`: the description that shows up on the student's exercise page, when they are ready to start.
+It's also downloaded as part of the exercise's data.
+he `README.md`, together with the `<slug>.test.ts` file form the contract for the implementation of the exercise.
+No test should _force_ a specific implementation, no `README.md` explanation should _give away_ a certain implementation.
+The `README.md` files are [generated][doc-readme], which is explains [here][doc-readme].
 
 - This file may need to be _regenerated_ in order to sync with the latest canonical data.
 - You may contribute track specific `hints.md`, as listed in that [document][doc-readme]
@@ -110,42 +131,56 @@ There are always improvements possible on existing exercises.
 
 #### Syncing the exercise
 
-Syncing an exercise with _canonical data_: There is a [problem-specifications][problem-specifications] repository that holds test data in a standardised format. These tests are occasionally fixed, improved, added, removed or otherwise changed. Syncing an exercise consists of:
+Syncing an exercise with _canonical data_: There is a [problem-specifications][problem-specifications] repository that holds test data in a standardised format.
+These tests are occasionally fixed, improved, added, removed or otherwise changed.
+Syncing an exercise consists of:
 
 - updating `tests.toml`;
 - updating the `<slug>.test.ts` file;
-- updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications]. The contents of this file can be updated using configlet, interactively;
+- updating the `.meta/tests.toml` file, if the exercise that is being updated has test data in the [problem specifications repository][problem-specifications].
+  The contents of this file can be updated using configlet, interactively;
 - match the `proof.ci.ts` file to still work with the new tests; and
 - regenerate the [`README.md`][doc-readme], should there be any changes.
 
 #### Improving or adding mentor notes
 
-[Mentor notes][mentor-notes] are the notes that are given to the mentors to guide them with mentoring. These notes _do not live in this repository_, but instead in the `website-copy` repository. Find their [contributing guidelines][contributing-website-copy] [here][contributing-website-copy].
+[Mentor notes][mentor-notes] are the notes that are given to the mentors to guide them with mentoring.
+These notes _do not live in this repository_, but instead in the `website-copy` repository.
+Find their [contributing guidelines][contributing-website-copy] [here][contributing-website-copy].
 
 #### Improving or adding automated test analyzers
 
-Some exercises already have automated mentoring support. These automations don't live in this repository, but instead in the `typescript-analyzer` repository. Find their [contributing guidelines][contributing-typescript-analyzer] [here][contributing-typescript-analyzer].
+Some exercises already have automated mentoring support.
+These automations don't live in this repository, but instead in the `typescript-analyzer` repository.
+Find their [contributing guidelines][contributing-typescript-analyzer] [here][contributing-typescript-analyzer].
 
 ## Documentation
 
-There is quite a bit of student-facing documentation, which can be found in the [`docs`][file-docs] folder. You may improve these files by making the required changes and opening a new Pull Request.
+There is quite a bit of student-facing documentation, which can be found in the [`docs`][file-docs] folder.
+You may improve these files by making the required changes and opening a new Pull Request.
 
 ## Tools
 
-You'll need LTS or higher NodeJS in order to contribute to the _code_ in this respository. Run `yarn` in the root in order to be able to run the scripts as listed below. We use the following dependencies:
+You'll need LTS or higher NodeJS in order to contribute to the _code_ in this respository. Run `yarn` in the root in order to be able to run the scripts as listed below.
+We use the following dependencies:
 
 - `shelljs` in order to provide shell interface to scripts
 - `eslint` for linting all code in the stub, test file and example file
 - `jest` to run all the test files on all example implementations
 - `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
-We also use `prettier` to format the files. **Prettier is _NOT_ installed when using `yarn install`**, because the CI will enforce a certain version. Instead use `npx babel-node scripts/format` to run prettier. If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
+We also use `prettier` to format the files. When possible, use `yarn format` to run prettier.
+If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
 
 ### Fetch configlet
 
-If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary. It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive. Find more information about [configlet][configlet] [here][configlet].
+If you'd like to download [configlet][configlet], you can use the [`fetch-configlet`][bin-fetch-configlet] binary.
+It will run on Linux, Mac OSX and Windows, and download `configlet` to your local drive.
+Find more information about [configlet][configlet] [here][configlet].
 
-> If a track implements an exercise for which test data exists, the exercise _must_ contain a `.meta/tests.toml` file. The goal of the `tests.toml` file is to keep track of which tests are implemented by the exercise. Tests in this file are identified by their UUID and each test has a boolean value that indicates if it is implemented by that exercise.
+> If a track implements an exercise for which test data exists, the exercise _must_ contain a `.meta/tests.toml` file.
+> The goal of the `tests.toml` file is to keep track of which tests are implemented by the exercise.
+> Tests in this file are identified by their UUID and each test has a boolean value that indicates if it is implemented by that exercise.
 
 A `tests.toml` file for a track's `two-fer` exercise looks like this:
 
@@ -165,7 +200,9 @@ description = "another name given"
 include = false
 ```
 
-To make it easy to keep the `tests.toml` files up to date, contributors can use the `configlet` application's `sync` command. This command will compare the tests specified in the `tests.toml` files against the tests that are defined in the exercise's canonical data. It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the `tests.toml` file accordingly.
+To make it easy to keep the `tests.toml` files up to date, contributors can use the `configlet` application's `sync` command.
+This command will compare the tests specified in the `tests.toml` files against the tests that are defined in the exercise's canonical data.
+It then interactively gives the maintainer the option to include or exclude test cases that are currently missing, updating the `tests.toml` file accordingly.
 
 ### Scripts
 
@@ -179,16 +216,19 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 > yarn format
 > ```
 
-```ts
+```typescript
 /*
- * Run this script (from root directory): yarn format
+ * Run this script (from root directory):
+ *
+ * $ yarn format
  *
  * This runs `prettier` on all applicable files, FORCES using the same version
  * as the CI uses to check if the files have been formatted.
  */
 ```
 
-Use this action to format all the files using the correct version of prettier. If you want your editor to do this automatically, make sure you install `prettier` (e.g. `npm install prettier@2.2.1`), where the version matches `.github/workflows/verify-code-formatting.yml`.
+Use this action to format all the files using the correct version of prettier.
+If you want your editor to do this automatically, make sure you install `yarn install`.
 
 #### `lint`
 
@@ -198,15 +238,18 @@ Use this action to format all the files using the correct version of prettier. I
 > yarn lint
 > ```
 
-```ts
+```typescript
 /*
- * Run this script (from root directory): yarn lint
+ * Run this script (from root directory):
+ *
+ * $ yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
 ```
 
-If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to lint `two-fer`, you may, depending on your environment use:
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
+For example, if you only want to lint `two-fer`, you may, depending on your environment use:
 
 ```shell
 ASSIGNMENT=practice/two-fer yarn lint
@@ -220,15 +263,18 @@ ASSIGNMENT=practice/two-fer yarn lint
 > yarn test
 > ```
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn test
+ * Run this script (from root directory):
+ *
+ * $ yarn test
  *
  * This runs `jest` tests for all sample solutions
  */
 ```
 
-If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
+For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
 ASSIGNMENT=practice/two-fer yarn test
@@ -242,9 +288,11 @@ ASSIGNMENT=practice/two-fer yarn test
 > yarn sync
 > ```
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn sync
+ * Run this script (from root directory):
+ *
+ * $ yarn sync
  *
  * This script is used to propagate any change to root package.json to
  * all exercises and keep them in sync.
@@ -253,7 +301,8 @@ ASSIGNMENT=practice/two-fer yarn test
  */
 ```
 
-If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested. For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
+If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
+For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
 
 ```shell
 ASSIGNMENT=practice/two-fer yarn sync
@@ -261,9 +310,11 @@ ASSIGNMENT=practice/two-fer yarn sync
 
 #### `checksum`
 
-```ts
+```typescript
 /*
- * Run this script (from root directory): babel-node scripts/checksum
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -280,9 +331,11 @@ ASSIGNMENT=practice/two-fer yarn sync
 > yarn ci:check
 > ```
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn ci:check
+ * Run this script (from root directory):
+ *
+ * $ yarn ci:check
  *
  * This will run following checks:
  *
@@ -304,9 +357,11 @@ Run this script to check stubs, configuration integrity and lint the code.
 
 This script is _almost_ the same as `test`. You may use them interchangeably at moment of writing
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn ci
+ * Run this script (from root directory):
+ *
+ * $ yarn ci
  *
  * This will run following checks:
  *
@@ -319,15 +374,19 @@ Run this script to test all exercises.
 
 #### `name-check`
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn babel-node scripts/name-check
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check
  *
  * This will run following checks:
  *
  * 1. Package name is of the format "@exercism/typescript-<exercise>"
  *
- * This script also allows fixing these names: yarn babel-node scripts/name-check --fix
+ * This script also allows fixing these names:
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check --fix
  */
 ```
 
@@ -336,9 +395,11 @@ Run this script with the `--fix` flag to automatically fix the names.
 
 #### `name-uniq`
 
-```ts
+```typescript
 /**
- * Run this script (from root directory): yarn babel-node scripts/name-uniq
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-uniq
  *
  * This will run following checks:
  *

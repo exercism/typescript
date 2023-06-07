@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/name-uniq
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-uniq
  *
  * This will run following checks:
  *

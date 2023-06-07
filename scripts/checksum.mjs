@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): babel-node scripts/checksum
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/checksum
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users

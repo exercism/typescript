@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): babel-node scripts/stub-check
+ * Run this script (from root directory):
+ *
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/stub-check
  *
  * This script checks that all exercises have a stub file.
  * Ref: https://github.com/exercism/javascript/issues/705

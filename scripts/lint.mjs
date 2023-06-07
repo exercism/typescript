@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn lint
+ * Run this script (from root directory):
+ *
+ * $ yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */

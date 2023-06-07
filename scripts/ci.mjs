@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * yarn ci
+ * $ yarn ci
  *
  * This will run following checks:
  *

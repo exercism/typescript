@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn sync
+ * Run this script (from root directory):
+ *
+ * $ yarn sync
  *
  * This script is used to copy the following files to all exercises and keep
  * them in sync:
  *
+ * - <local yarn installation>
  * - .eslintignore
  * - .eslintrc
+ * - .yarnrc.yml
  * - babel.config.cjs
  * - jest.config.cjs
  * - package.json

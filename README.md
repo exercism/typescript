@@ -36,7 +36,7 @@ ASSIGNMENT=practice/two-fer yarn test
 > You can use `cross-env` to normalize this. The following should work across environments:
 >
 > ```bash
-> cross-env ASSIGNMENT=practice/two-fer babel-node scripts/test
+> yarn dlx cross-env ASSIGNMENT=practice/two-fer yarn test
 > ```
 
 ## Related repositories

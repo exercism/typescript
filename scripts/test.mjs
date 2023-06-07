@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn test
+ * Run this script (from root directory):
+ *
+ * $ yarn test
  *
  * This runs `jest` tests for all sample solutions
  */

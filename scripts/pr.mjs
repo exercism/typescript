@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * babel-node scripts/pr path/1 path/2 path/3
+ * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/pr path/1 path/2 path/3
  *
  * This will run following checks:
  *

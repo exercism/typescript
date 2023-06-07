@@ -33,12 +33,12 @@
     "typescript": "~5.0.4"
   },
   "scripts": {
-    "ci": "babel-node scripts/ci",
-    "ci:check": "babel-node scripts/ci-check",
-    "lint": "babel-node scripts/lint",
-    "sync": "babel-node scripts/sync",
-    "test": "babel-node scripts/test",
-    "format": "babel-node scripts/format"
+    "ci": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/ci",
+    "ci:check": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/ci-check",
+    "lint": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/lint",
+    "sync": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/sync",
+    "test": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/test",
+    "format": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/format"
   },
   "packageManager": "yarn@3.6.0"
 }
