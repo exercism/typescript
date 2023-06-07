@@ -2,6 +2,8 @@
 
 set -uo pipefail
 
+FORCE_COLOR=0
+yarn info prettier --name-only
 FORCE_COLOR=0 yarn info prettier --name-only
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
@@ -27,15 +29,15 @@ if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "$(yarn -v)"
   echo ""
   echo "This is what yarn why reports:"
-  echo "$ yarn why prettier"
-  echo "$(yarn why prettier)"
+  echo "$ FORCE_COLOR=0 yarn why prettier"
+  echo "$(FORCE_COLOR=0 yarn why prettier)"
   echo ""
   echo "And yarn info reports the following:"
-  echo "$ yarn info prettier --name-only"
-  echo "$(yarn info prettier --name-only)"
+  echo "$ FORCE_COLOR=0 yarn info prettier --name-only"
+  echo "$(FORCE_COLOR=0 yarn info prettier --name-only)"
   echo ""
   echo "This is the version that can be extracted using grep:"
-  echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+'"
+  echo "$ FORCE_COLOR=0 yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+'"
   echo "└─ $(FORCE_COLOR=0 yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo ""
   echo "This is the version that can be extracted using sed:"
