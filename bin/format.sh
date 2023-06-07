@@ -1,20 +1,22 @@
 #!/usr/bin/env bash
 
-set -eo pipefail
+set -uo pipefail
 
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
-  echo "[format] pulling prettier version from yarn.lock using grep"
-  EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')
-fi
-
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
-  echo "Version could not be pulled using grep" >&2
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using sed"
-  EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')
+  EXERCISM_PRETTIER_VERSION="$(yarn info prettier --json --name-only | sed -n -e 's/^"prettier@npm://' -e 's/"//p')"
+  echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
 fi
 
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "Version could not be pulled using sed" >&2
+  echo "[format] pulling prettier version from yarn.lock using grep"
+  EXERCISM_PRETTIER_VERSION="$(yarn info prettier --json --name-only | grep -Po '"prettier@npm:\K[^"]+')"
+  echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
+fi
+
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
+  echo "Version could not be pulled using grep or sed" >&2
   echo ""
   echo "---------------------------------------------------"
   echo "This script requires the EXERCISM_PRETTIER_VERSION variable to work."
@@ -31,12 +33,12 @@ if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "$(yarn info prettier --name-only)"
   echo ""
   echo "This is the version that can be extracted using grep:"
-  echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+'"
-  echo "└─ $(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  echo "$ yarn info prettier --json --name-only | grep -Po '"prettier@npm:\K[^"]+'"
+  echo "└─ $(yarn info prettier --json --name-only | grep -Po '"prettier@npm:\K[^"]+')"
   echo ""
   echo "This is the version that can be extracted using sed:"
-  echo "$ yarn why prettier | sed -n -e 's/^.* prettier@npm://p'"
-  echo "└─ $(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
+  echo "$ yarn info prettier --json --name-only | sed -n -e 's/^"prettier@npm://' -e 's/"//p'"
+  echo "└─ $(yarn info prettier --json --name-only | sed -n -e 's/^"prettier@npm://' -e 's/"//p')"
   echo ""
   echo "These files are found in the repo root:"
   echo "$(ls -p | grep -v /)"

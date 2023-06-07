@@ -35,7 +35,7 @@ const versionLine = shell
 
 if (!versionLine) {
   const { stdout: versionFromPackage } = shell.exec(
-    "yarn why prettier | sed -n -e 's/^.* prettier@npm://m' -e 's/ (via npm.*)//p'"
+    "yarn info prettier --json --name-only | sed -n -e 's/^\"prettier@npm://' -e 's/\"//p'"
   )
   EXERCISM_PRETTIER_VERSION = versionFromPackage.trim()
 } else {
