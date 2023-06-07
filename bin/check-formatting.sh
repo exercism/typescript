@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "[format] pulling prettier version from yarn.lock using grep"
@@ -30,11 +31,11 @@ if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "$(yarn info prettier --name-only)"
   echo ""
   echo "This is the version that can be extracted using grep:"
-  echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+'"
   echo "└─ $(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo ""
   echo "This is the version that can be extracted using sed:"
-  echo "$ yarn why prettier | sed -n -e 's/^.* prettier@npm://p')"
+  echo "$ yarn why prettier | sed -n -e 's/^.* prettier@npm://p'"
   echo "└─ $(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
   echo ""
   echo "These files are found in the repo root:"
