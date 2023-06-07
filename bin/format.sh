@@ -2,16 +2,19 @@
 
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
-  echo "Pulling prettier version from yarn.lock using grep"
-  EXERCISM_PRETTIER_VERSION=$(yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')
+  echo "[format] pulling prettier version from yarn.lock using grep"
+  EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
-  echo "Pulling prettier version from yarn.lock using sed"
-  EXERCISM_PRETTIER_VERSION=$(yarn why prettier | sed -n -e 's/^.* prettier@npm://m' -e 's/ (via npm.*)//p')
+  echo "Version could not be pulled using grep" >&2
+  echo "[format] pulling prettier version from yarn.lock using sed"
+  EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
+  echo "Version could not be pulled using sed" >&2
+  echo ""
   echo "---------------------------------------------------"
   echo "This script requires the EXERCISM_PRETTIER_VERSION variable to work."
   echo "Please see https://exercism.org/docs/building/markdown/style-guide for guidance."
@@ -22,20 +25,24 @@ if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "$ yarn why prettier"
   echo "$(yarn why prettier)"
   echo ""
+  echo "And yarn info reports the following:"
+  echo "$ yarn info prettier --name-only"
+  echo "$(yarn info prettier --name-only)"
+  echo ""
   echo "This is the version that can be extracted using grep:"
-  echo "$ yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')"
-  echo "└─ $(yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  echo "└─ $(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo ""
   echo "This is the version that can be extracted using sed:"
-  echo "$ yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')"
-  echo "└─ $(yarn why prettier | sed -n -e 's/^.* prettier@npm://m' -e 's/ (via npm.*)//p')"
+  echo "$ yarn why prettier | sed -n -e 's/^.* prettier@npm://p')"
+  echo "└─ $(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
   echo ""
   echo "These files are found in the repo root:"
   echo "$(ls -p | grep -v /)"
   echo "---------------------------------------------------"
   exit 1
 else
- echo "Running format with prettier@$EXERCISM_PRETTIER_VERSION"
+ echo "[format] running with prettier@$EXERCISM_PRETTIER_VERSION"
 fi
 
-npx "prettier@$EXERCISM_PRETTIER_VERSION" --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"
+yarn dlx "prettier@$EXERCISM_PRETTIER_VERSION" --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"
