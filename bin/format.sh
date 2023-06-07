@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "[format] pulling prettier version from yarn.lock using grep"
