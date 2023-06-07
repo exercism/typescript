@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-set -uxo pipefail
+set -uo pipefail
+
+FORCE_COLOR=0 yarn info prettier --name-only
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using sed"
