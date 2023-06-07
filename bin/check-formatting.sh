@@ -5,12 +5,14 @@ set -euxo pipefail
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using grep"
   EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')
+  echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
 fi
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "Version could not be pulled using grep" >&2
   echo "[format] pulling prettier version from yarn.lock using sed"
   EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')
+  echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
 fi
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
