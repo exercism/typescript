@@ -2,7 +2,7 @@
 
 set -uo pipefail
 
-FORCE_COLOR=0
+export FORCE_COLOR=0
 yarn info prettier --name-only
 FORCE_COLOR=0 yarn info prettier --name-only
 
