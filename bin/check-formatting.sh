@@ -2,7 +2,7 @@
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "Pulling prettier version from package.json"
-  EXERCISM_PRETTIER_VERSION=$(yarn why prettier | grep -Po '.*\sprettier@\K.*')
+  EXERCISM_PRETTIER_VERSION=$(yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
@@ -14,7 +14,7 @@ if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "$(yarn why prettier)"
   echo ""
   echo "This is the version that can be extracted:"
-  echo "$(yarn why prettier | grep -Po '.*\sprettier@\K.*')"
+  echo "$(yarn why prettier | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo ""
   echo "These files are found in the repo root:"
   echo "$(ls -p | grep -v /)"
