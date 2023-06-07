@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-set -eo pipefail
+set -euxo pipefail
 
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using grep"
   EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')
 fi
 
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "Version could not be pulled using grep" >&2
   echo "[format] pulling prettier version from yarn.lock using sed"
   EXERCISM_PRETTIER_VERSION=$(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')
 fi
 
-if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
+if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "Version could not be pulled using sed" >&2
   echo ""
   echo "---------------------------------------------------"
