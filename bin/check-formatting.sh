@@ -2,9 +2,10 @@
 
 set -uo pipefail
 
-export FORCE_COLOR=0
+apt-get install ansi2txt -y
+
 yarn info prettier --name-only
-FORCE_COLOR=0 yarn info prettier --name-only
+yarn info prettier --name-only | ansi2txt
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using sed"
