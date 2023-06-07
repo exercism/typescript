@@ -3,6 +3,7 @@
 set -euxo pipefail
 
 yarn info prettier --name-only 2>/dev/null
+yarn info prettier --name-only
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using sed"
