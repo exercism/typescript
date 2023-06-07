@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
-
-yarn info prettier --name-only 2>/dev/null
-yarn info prettier --name-only
+set -uxo pipefail
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "[format] pulling prettier version from yarn.lock using sed"
-  EXERCISM_PRETTIER_VERSION="$(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
+  EXERCISM_PRETTIER_VERSION="$(FORCE_COLOR=0 yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
   echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
 fi
 
 if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo "Version could not be pulled using sed" >&2
   echo "[format] pulling prettier version from yarn.lock using grep"
-  EXERCISM_PRETTIER_VERSION="$(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  EXERCISM_PRETTIER_VERSION="$(FORCE_COLOR=0 yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo "[format] expected version is now ${EXERCISM_PRETTIER_VERSION:-}"
 fi
 
@@ -37,11 +34,11 @@ if [ -z "${EXERCISM_PRETTIER_VERSION:-}" ]; then
   echo ""
   echo "This is the version that can be extracted using grep:"
   echo "$ yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+'"
-  echo "└─ $(yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
+  echo "└─ $(FORCE_COLOR=0 yarn info prettier --name-only | grep -Po '.*\sprettier@npm:\K[^\s]+')"
   echo ""
   echo "This is the version that can be extracted using sed:"
   echo "$ yarn why prettier | sed -n -e 's/^.* prettier@npm://p'"
-  echo "└─ $(yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
+  echo "└─ $(FORCE_COLOR=0 yarn info prettier --name-only | sed -n -e 's/^.* prettier@npm://p')"
   echo ""
   echo "These files are found in the repo root:"
   echo "$(ls -p | grep -v /)"
