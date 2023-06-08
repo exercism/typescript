@@ -63,7 +63,7 @@ jobs:
       - name: 'Install dependencies'
         run: yarn install
       - name: 'Sync exercises'
-        run: npx babel-node scripts/sync
+        run: yarn sync
 
       - name: 'Commit changes'
         run: |

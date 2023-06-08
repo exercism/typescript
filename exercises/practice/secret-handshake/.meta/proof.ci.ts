@@ -1,5 +1,5 @@
 const COMMANDS = ['wink', 'double blink', 'close your eyes', 'jump'] as const
-type Command = typeof COMMANDS[number]
+type Command = (typeof COMMANDS)[number]
 type Commands = Command[]
 
 export const commands = (handshake: number): Commands => {

@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/ci-check
+ * Run this script (from root directory):
+ *
+ * $ yarn ci:check
  *
  * This will run following checks:
  *
@@ -59,7 +61,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `yarn babel-node ${path.join('scripts', 'checksum')}`
+      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
     ).code
 
     if (checkResult !== 0) {
@@ -67,7 +69,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = shell.exec(
-      `yarn babel-node ${path.join('scripts', 'name-check')}`
+      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
     ).code
 
     if (nameCheckResult !== 0) {
@@ -78,7 +80,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       shell.env['ASSIGNMENT'] = exercise
 
       const checkResult = shell.exec(
-        `yarn babel-node ${path.join('scripts', 'checksum')}`
+        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
       ).code
 
       if (checkResult !== 0) {
@@ -86,7 +88,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       }
 
       const nameCheckResult = shell.exec(
-        `yarn babel-node ${path.join('scripts', 'name-check')}`
+        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
       ).code
 
       if (nameCheckResult !== 0) {
@@ -96,7 +98,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = shell.exec(
-    `yarn babel-node ${path.join('scripts', 'name-uniq')}`
+    `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-uniq')}`
   ).code
 
   if (nameUniqResult !== 0) {
@@ -122,9 +124,7 @@ exercises.forEach(prepare)
 
 shell.env['CLEANUP'] = true
 
-const checkResult = shell.exec(
-  `yarn babel-node ${path.join('scripts', 'lint')}`
-).code
-if (checkResult != 0) {
+const checkResult = shell.exec(`yarn lint`).code
+if (checkResult !== 0) {
   shell.exit(checkResult)
 }

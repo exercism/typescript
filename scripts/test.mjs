@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/test
+ * Run this script (from root directory):
+ *
+ * $ yarn test
  *
  * This runs `jest` tests for all sample solutions
  */

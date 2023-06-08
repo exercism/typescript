@@ -18,10 +18,6 @@
 
   A common issue with VS Code and TS is when your editor and project versions are different, which can cause VS Code to display a possibly confusing error message. Instructions on how to handle this error are [here](https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions)
 
-- [Atom](https://atom.io)
-
-  Atom is an open-source code editor maintained by a team at Github. Atom uses packages to add features, and there is an [atom-typescript](https://atom.io/packages/atom-typescript) package available. To install it, you install Atom from the link above, and when you open Atom you will be prompted on the introduction page to look at popular packages. You can search for atom-typescript there.
-
 ### Licensed
 
 - [Sublime Text](https://www.sublimetext.com)

@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: 'Post acknowledgement that it will format code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -60,6 +60,12 @@ jobs:
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
+      - name: Use Node.js LTS (18.x)
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
+        with:
+          node-version: '18'
+      - name: Install project development dependencies
+        run: npm install --no-save
       - name: 'Format code'
         run: ./bin/format.sh
 
@@ -82,7 +88,7 @@ jobs:
 
       - name: 'Post acknowledgement that it has formatted the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -96,7 +102,7 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |

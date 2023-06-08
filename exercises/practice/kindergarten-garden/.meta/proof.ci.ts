@@ -21,7 +21,7 @@ const PLANT_CODES = {
 } as const
 
 type Student = string
-type Plant = typeof PLANT_CODES[keyof typeof PLANT_CODES]
+type Plant = (typeof PLANT_CODES)[keyof typeof PLANT_CODES]
 type Plants = Plant[]
 type Pots = Plants[]
 
