@@ -1066,7 +1066,8 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
-        "topics": ["algorithms", "callbacks", "conditionals", "lists"]
+        "topics": ["algorithms", "callbacks", "conditionals", "lists"],
+        "status": "deprecated"
       },
       {
         "slug": "all-your-base",

@@ -46,6 +46,12 @@ describe('append entries to a list and return the new list', () => {
     expect(list1.append(list2)).toEqual(List.create())
   })
 
+  xit('list to empty list', () => {
+    const list1 = List.create()
+    const list2 = List.create(1, 2, 3, 4)
+    expect(list1.append(list2)).toEqual(list2)
+  })
+
   xit('empty list to list', () => {
     const list1 = List.create(1, 2, 3, 4)
     const list2 = List.create()
