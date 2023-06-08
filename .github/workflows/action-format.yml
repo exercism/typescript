@@ -34,7 +34,7 @@ jobs:
         id: fork_status
         run: |
           IS_FORK="$(jq '.head.repo.fork' "/tmp/pr.json")"
-          echo "::set-output name=fork::$IS_FORK"
+          echo "fork=$IS_FORK" >> "$GITHUB_OUTPUT"
 
       - name: 'Setup SSH deploy key'
         if: steps.fork_status.outputs.fork == 'false'
