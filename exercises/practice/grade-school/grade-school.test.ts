@@ -67,7 +67,9 @@ describe('School', () => {
     const roster = school.roster()
     try {
       roster[2].push('Oops.')
-    } catch {}
+    } catch {
+      /* empty */
+    }
     const expectedDb = { 2: ['Aimee'] }
     expect(school.roster()).toEqual(expectedDb)
   })
@@ -76,7 +78,9 @@ describe('School', () => {
     school.add('Aimee', 2)
     try {
       school.grade(2).push('Oops.')
-    } catch {}
+    } catch {
+      /* empty */
+    }
     const expectedDb = { 2: ['Aimee'] }
     expect(school.roster()).toEqual(expectedDb)
   })
