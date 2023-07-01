@@ -117,7 +117,7 @@ describe('count()', () => {
         constructor: 1,
         and: 1,
         tostring: 1,
-        'ok?': 1,
+        ok: 1,
       })
     )
     expect(count('reserved words like constructor and toString ok?')).toEqual(

@@ -6,7 +6,7 @@ export function count(input: string): Map<string, number> {
   const inputMap = new Map<string, number>()
 
   for (const each of inputArray) {
-    const word = each.replace(/[.,!:"&@$%^]|^'|'$/g, '')
+    const word = each.replace(/[.,!:"&@$%^?]|^'|'$/g, '')
 
     if (word === '') {
       continue
