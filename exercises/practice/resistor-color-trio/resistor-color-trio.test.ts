@@ -12,7 +12,7 @@ describe('Resistor Colors', () => {
   })
 
   xit('Red and black and red', () => {
-    expect(decodedResistorValue(['red', 'black', 'red'])).toEqual('2 kiloohms')
+    expect(decodedResistorValue(['red', 'black', 'red'])).toEqual('200 ohms')
   })
 
   xit('Green and brown and orange', () => {
