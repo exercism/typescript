@@ -85,7 +85,7 @@ describe('Bowling', () => {
       expect(bowling.score()).toEqual(81)
     })
 
-    xit('a strike in the last frame gets a two roll bonues that is counted once', () => {
+    xit('a strike in the last frame gets a two roll bonus that is counted once', () => {
       const rolls = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1,
       ]
