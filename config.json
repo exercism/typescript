@@ -46,6 +46,15 @@
         "topics": ["optional_values", "strings", "text_formatting"]
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "c6f41fd5-584c-46ca-b3c5-6a0825446bf4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": ["arrays", "strings"]
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "fd677d24-72eb-46d9-bfa4-8013e96fa71f",
@@ -71,15 +80,6 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": ["booleans", "integers", "logic"]
-      },
-      {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "c6f41fd5-584c-46ca-b3c5-6a0825446bf4",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": ["arrays", "strings"]
       },
       {
         "slug": "rna-transcription",
