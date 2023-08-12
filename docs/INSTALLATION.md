@@ -16,7 +16,7 @@ corepack enable
 
 ## Checking your installation
 
-You generally to to open a new terminal in order to use binaries just installed.
+You generally need to open a new terminal in order to use binaries just installed.
 
 ```shell
 $ node -v
