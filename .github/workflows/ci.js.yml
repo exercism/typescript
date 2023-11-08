@@ -43,3 +43,34 @@ jobs:
 
       - name: Run exercism/typescript ci (checks config, lint code, and runs tests) for all exercises
         run: yarn ci
+
+  impersonate:
+    # This job tries to run tests for the 'hello-world' exercise, but
+    # simulating what would happen if a student runs the tests standalone.
+    # We do this by removing all project files in the root.
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
+        with:
+          node-version: 20.x
+
+      - name: Remove root project files
+        run: rm -f package.json yarn.lock .yarnrc.yml
+
+      - name: Move solution file so that tests pass
+        working-directory: exercises/practice/hello-world
+        run: |
+          rm -f hello-world.ts
+          cp ./.meta/proof.ci.ts hello-world.ts
+
+      - name: Install project dependencies
+        working-directory: exercises/practice/hello-world
+        run: yarn install --no-immutable
+
+      - name: Run tests
+        working-directory: exercises/practice/hello-world
+        run: yarn test
