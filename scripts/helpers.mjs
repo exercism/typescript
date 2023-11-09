@@ -18,8 +18,11 @@ const exerciseDirs = shell.ls(
 
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
+export const COMMON_DIRS = [
+  '.yarn',
+]
 export const COMMON_FILES = [
-  path.join('.yarn', 'releases', 'yarn-3.6.0.cjs'),
+  path.join('.yarn', 'releases', 'yarn-3.6.4.cjs'),
   '.eslintignore',
   '.eslintrc.cjs',
   '.yarnrc.yml',
