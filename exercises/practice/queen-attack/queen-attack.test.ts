@@ -2,9 +2,24 @@ import { QueenAttack } from './queen-attack'
 
 describe('Queens', () => {
   describe('Test creation of Queens with valid and invalid positions', () => {
-    it('queen with a valid position', () => {
+    it('white queen with a valid position', () => {
       const queens = new QueenAttack({ white: [2, 2] })
       expect(queens.white).toEqual([2, 2])
+    })
+
+    xit('black queen with a valid position', () => {
+      const queens = new QueenAttack({ black: [2, 2] })
+      expect(queens.black).toEqual([2, 2])
+    })
+
+    xit('white queen must default to its valid starting position', () => {
+      const queens = new QueenAttack()
+      expect(queens.white).toEqual([0, 3])
+    })
+
+    xit('black queen must default to its valid starting position', () => {
+      const queens = new QueenAttack()
+      expect(queens.black).toEqual([7, 3])
     })
 
     xit('queen must have positive row', () => {
@@ -91,22 +106,6 @@ describe('Queens', () => {
   })
 
   describe('Test the board visualisation', () => {
-    xit('board', () => {
-      const positioning = { white: [3, 2], black: [6, 5] } as const
-      const queens = new QueenAttack(positioning)
-      const board = [
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ W _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ B _ _',
-        '_ _ _ _ _ _ _ _',
-      ].join('\n')
-      expect(queens.toString()).toEqual(board)
-    })
-
     xit('board with queens at their starting positions', () => {
       const queens = new QueenAttack()
       const board = [
@@ -122,14 +121,15 @@ describe('Queens', () => {
       expect(queens.toString()).toEqual(board)
     })
 
-    xit('board with the black queen at her starting positions', () => {
-      const queens = new QueenAttack({ white: [1, 6] })
+    xit('board with specified positions', () => {
+      const positioning = { white: [3, 2], black: [6, 5] } as const
+      const queens = new QueenAttack(positioning)
       const board = [
-        '_ _ _ B _ _ _ _',
-        '_ _ _ _ _ _ W _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ B _ _',
         '_ _ _ _ _ _ _ _',
         '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
+        '_ _ W _ _ _ _ _',
         '_ _ _ _ _ _ _ _',
         '_ _ _ _ _ _ _ _',
         '_ _ _ _ _ _ _ _',
@@ -137,18 +137,32 @@ describe('Queens', () => {
       expect(queens.toString()).toEqual(board)
     })
 
+    xit('board with the black queen at her starting position and white specified', () => {
+      const queens = new QueenAttack({ white: [1, 6] })
+      const board = [
+        '_ _ _ B _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ W _',
+        '_ _ _ _ _ _ _ _',
+      ].join('\n')
+    })
+
     xit('board with queens at the edges', () => {
       const positioning = { white: [0, 0], black: [7, 7] } as const
       const queens = new QueenAttack(positioning)
       const board = [
-        'W _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
-        '_ _ _ _ _ _ _ _',
         '_ _ _ _ _ _ _ B',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        '_ _ _ _ _ _ _ _',
+        'W _ _ _ _ _ _ _',
       ].join('\n')
       expect(queens.toString()).toEqual(board)
     })
