@@ -40,5 +40,5 @@
     "test": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/test",
     "format": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/format"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.4"
 }

@@ -32,7 +32,14 @@ function copyConfigForAssignment(name) {
   const destination = path.join('exercises', name)
   const assignmentPackageFilename = path.join(destination, 'package.json')
 
-  // First copy over all the common files
+  // First delete any common directories (they'll be recreated when copying files)
+  helpers.COMMON_DIRS.forEach((dir) => {
+    const copy = path.join(destination, dir)
+
+    shell.rm('-rf', copy)
+  })
+
+  // Next copy over all the common files
   helpers.COMMON_FILES.forEach((file) => {
     if (file !== 'package.json') {
       const source = path.join('common', file)
