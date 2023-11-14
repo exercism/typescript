@@ -32,5 +32,5 @@
     "lint:types": "yarn tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.4"
 }
