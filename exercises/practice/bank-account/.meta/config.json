@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "therealowenrees"
+  ],
+  "files": {
+    "solution": [
+      "bank-account.ts"
+    ],
+    "test": [
+      "bank-account.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!"
+}
