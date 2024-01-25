@@ -122,4 +122,3 @@ describe('Bank Account', () => {
     }).toThrow(Error)
   })
 })
-
