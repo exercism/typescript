@@ -1040,6 +1040,14 @@
         "topics": ["classes", "conditionals"]
       },
       {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "2cdf947c-34ed-4ecf-92dd-4c4e6c21f9f3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "dbe39983-5635-4369-89a3-fd549144259b",
