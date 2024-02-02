@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "xavdid"
+  ],
   "files": {
     "solution": [
       "yacht.ts"
