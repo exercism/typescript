@@ -1,6 +1,6 @@
-import { eggCount } from './pop-count'
+import { eggCount } from './eliuds-eggs'
 
-describe('PopCount', () => {
+describe('EliudsEggs', () => {
   it('0 eggs', () => {
     const expected = 0
     const actual = eggCount(0)
