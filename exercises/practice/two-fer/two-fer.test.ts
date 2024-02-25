@@ -15,4 +15,9 @@ describe('TwoFer', () => {
     const expected = 'One for Bob, one for me.'
     expect(twoFer('Bob')).toEqual(expected)
   })
+
+  xit('empty name given', () => {
+    const expected = 'One for you, one for me.'
+    expect(twoFer('')).toEqual(expected)
+  })
 })
