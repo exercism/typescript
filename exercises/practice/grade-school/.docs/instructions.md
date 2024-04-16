@@ -18,4 +18,4 @@ In the end, you should be able to:
     So the answer is: Anna, Barb, Charlie, Alex, Peter, Zoe and Jim"
 
 Note that all our students only have one name (It's a small town, what do you want?) and each student cannot be added more than once to a grade or the roster.
-In fact, when a test attempts to add the same student more than once, your implementation should indicate that this is incorrect.
+In case someone attempts to add the same student more than once, this student's grade should be updated.
