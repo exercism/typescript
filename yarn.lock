@@ -2007,7 +2007,7 @@ __metadata:
   dependencies:
     "@exercism/babel-preset-typescript": ^0.4.0
     "@exercism/eslint-config-typescript": ^0.5.0
-    "@tsconfig/node18": ^2.0.1
+    "@tsconfig/node18": ^18.2.4
     "@types/jest": ^29.5.2
     "@types/node": ~18.16.16
     babel-jest: ^29.5.0
@@ -2510,10 +2510,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node18@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@tsconfig/node18@npm:2.0.1"
-  checksum: a7bf667fadf3825c5c476d33b054e363b10156f764b649d9d6f8ffa1613c13f539be2b09812e1e86bc5b81df3bac02ea76b0c8779dc285cf4a2044fdbdae0180
+"@tsconfig/node18@npm:^18.2.4":
+  version: 18.2.4
+  resolution: "@tsconfig/node18@npm:18.2.4"
+  checksum: 80623cb9c129c78d51fe6c4a256ba986f12f02ff02dc2a1e5b33dd13a7983f767b6792cfcd51b3dd1c8256ea105f1fea31f64a2070564e37787ab3d9a1a1e7e3
   languageName: node
   linkType: hard
 
