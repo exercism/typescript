@@ -16,7 +16,7 @@ describe('color code', () => {
 
 describe('Colors', () => {
   xit('returns all colors', () => {
-    expect(COLORS).toEqual([
+    expect(colorCode(undefined)).toEqual([
       'black',
       'brown',
       'red',
