@@ -35,4 +35,13 @@ module.exports = {
       extends: '@exercism/eslint-config-typescript/maintainers',
     },
   ],
+  ignores: [
+    "!.meta",
+    ".git",
+    ".vscode",
+    "node_modules/*",
+    ".eslintrc.cjs",
+    "babel.config.cjs",
+    "jest.config.cjs",
+  ],
 }

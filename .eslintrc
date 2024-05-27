@@ -10,5 +10,13 @@
       "excludedFiles": ["custom.test.ts"],
       "extends": "@exercism/eslint-config-typescript/maintainers"
     }
+  ],
+  "ignores": [
+    "!.meta",
+    ".appends",
+    ".git",
+    ".vscode",
+    "/bin",
+    "/config"
   ]
 }
