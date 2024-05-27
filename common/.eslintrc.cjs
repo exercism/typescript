@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parserOptions: {
+  languageOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
