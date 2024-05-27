@@ -23,7 +23,6 @@ export const COMMON_DIRS = [
 ]
 export const COMMON_FILES = [
   path.join('.yarn', 'releases', 'yarn-3.6.4.cjs'),
-  '.eslintignore',
   '.eslintrc.cjs',
   '.yarnrc.yml',
   'babel.config.cjs',
