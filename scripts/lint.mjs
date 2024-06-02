@@ -35,7 +35,7 @@ const failureStr = '[Failure] Lint check failed!'
 
 // Run lint all at once
 prepareAndRun(
-  'yarn eslint tmp_exercises --ext .ts --ext .tsx -c node_modules/@exercism/eslint-config-typescript/maintainers.js',
+  'yarn eslint tmp_exercises -c node_modules/@exercism/eslint-config-typescript/maintainers.js',
   infoStr,
   failureStr
 )

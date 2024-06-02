@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parserOptions: {
+  languageOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
@@ -34,5 +34,14 @@ module.exports = {
       excludedFiles: ['custom.test.ts'],
       extends: '@exercism/eslint-config-typescript/maintainers',
     },
+  ],
+  ignores: [
+    "!.meta",
+    ".git",
+    ".vscode",
+    "node_modules/*",
+    ".eslintrc.cjs",
+    "babel.config.cjs",
+    "jest.config.cjs",
   ],
 }

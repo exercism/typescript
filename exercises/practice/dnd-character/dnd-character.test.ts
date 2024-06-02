@@ -75,27 +75,51 @@ describe('Ability generator', () => {
 })
 
 describe('Character creation', () => {
-  xit('Random character is valid', () => {
+  xit('Random character is valid - hitpoints', () => {
     const character = new DnDCharacter()
 
     expect(character.hitpoints).toEqual(
       10 + DnDCharacter.getModifierFor(character.constitution)
     )
+  })
+
+  xit('Random character is valid - strength', () => {
+    const character = new DnDCharacter()
 
     expect(character.strength).toBeGreaterThanOrEqual(3)
     expect(character.strength).toBeLessThanOrEqual(18)
+  })
+
+  xit('Random character is valid - dexterity', () => {
+    const character = new DnDCharacter()
 
     expect(character.dexterity).toBeGreaterThanOrEqual(3)
     expect(character.dexterity).toBeLessThanOrEqual(18)
+  })
+
+  xit('Random character is valid - constitution', () => {
+    const character = new DnDCharacter()
 
     expect(character.constitution).toBeGreaterThanOrEqual(3)
     expect(character.constitution).toBeLessThanOrEqual(18)
+  })
+
+  xit('Random character is valid - intelligence', () => {
+    const character = new DnDCharacter()
 
     expect(character.intelligence).toBeGreaterThanOrEqual(3)
     expect(character.intelligence).toBeLessThanOrEqual(18)
+  })
+
+  xit('Random character is valid - wisdom', () => {
+    const character = new DnDCharacter()
 
     expect(character.wisdom).toBeGreaterThanOrEqual(3)
     expect(character.wisdom).toBeLessThanOrEqual(18)
+  })
+
+  xit('Random character is valid - charisma', () => {
+    const character = new DnDCharacter()
 
     expect(character.charisma).toBeGreaterThanOrEqual(3)
     expect(character.charisma).toBeLessThanOrEqual(18)
