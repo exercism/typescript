@@ -98,4 +98,24 @@ describe('LinkedList', () => {
     list.delete(20)
     expect(list.count()).toBe(1)
   })
+
+  xit('deletes the first element', () => {
+    const list = new LinkedList<number>()
+    list.push(10)
+    list.push(20)
+    list.push(30)
+    list.delete(10)
+    expect(list.count()).toBe(2)
+    expect(list.shift()).toBe(20)
+  })
+
+  xit('deletes the last element', () => {
+    const list = new LinkedList<number>()
+    list.push(10)
+    list.push(20)
+    list.push(30)
+    list.delete(30)
+    expect(list.count()).toBe(2)
+    expect(list.pop()).toBe(20)
+  })
 })
