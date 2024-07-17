@@ -217,4 +217,26 @@ describe('React module', () => {
 
     expect(values).toEqual([])
   })
+
+  xit("callbacks should not be called if dependencies change but output value doesn't change, even if equality check is enabled on multiple computed", () => {
+    const [input, setInput] = createInput(1)
+    const plusOne = createComputed(() => input() + 1, undefined, true)
+    const minusOne = createComputed(() => input() - 1, undefined, true)
+    const alwaysTwo = createComputed(
+      () => plusOne() - minusOne(),
+      undefined,
+      true // i.e. equality check - don't propagate if value doesn't change
+    )
+
+    const values: number[] = []
+    createCallback(() => values.push(alwaysTwo()))
+    values.pop() // discard initial value from registration
+
+    setInput(2)
+    setInput(3)
+    setInput(4)
+    setInput(5)
+
+    expect(values).toEqual([])
+  })
 })
