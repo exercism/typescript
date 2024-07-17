@@ -239,4 +239,26 @@ describe('React module', () => {
 
     expect(values).toEqual([])
   })
+
+  xit('callbacks only fire if related dependencies change', () => {
+    const [input, setInput] = createInput(1)
+    const plusOne = createComputed(() => input() + 1)
+
+    const [input2, _setInput2] = createInput(10)
+    const minusOne = createComputed(() => input2() - 1)
+
+    const plusOneValues: number[] = []
+    createCallback(() => plusOneValues.push(plusOne()))
+    plusOneValues.length = 0 // discard initial values from registration
+
+    const minusOneValues: number[] = []
+    createCallback(() => minusOneValues.push(minusOne()))
+    minusOneValues.length = 0 // discard initial values from registration
+
+    setInput(2)
+    setInput(3)
+
+    expect(plusOneValues).toEqual([3, 4])
+    expect(minusOneValues).toEqual([])
+  })
 })
