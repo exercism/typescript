@@ -42,6 +42,12 @@ function copyConfigForAssignment(name) {
     shell.mkdir('-p', copy)
   })
 
+  // DELETE legacy
+  ; ['.eslintignore', '.eslintrc.cjs'].forEach((file) => {
+    const source = path.join(destination, file)
+    shell.rm('-f', source)
+  })
+
   // Next copy over all the common files
   helpers.COMMON_FILES.forEach((file) => {
     if (file !== 'package.json') {
