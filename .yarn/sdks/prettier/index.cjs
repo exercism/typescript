@@ -5,7 +5,7 @@ const {createRequire, register} = require(`module`);
 const {resolve} = require(`path`);
 const {pathToFileURL} = require(`url`);
 
-const relPnpApiPath = "../../../../.pnp.cjs";
+const relPnpApiPath = "../../../.pnp.cjs";
 
 const absPnpApiPath = resolve(__dirname, relPnpApiPath);
 const absRequire = createRequire(absPnpApiPath);
@@ -15,7 +15,7 @@ const isPnpLoaderEnabled = existsSync(absPnpLoaderPath);
 
 if (existsSync(absPnpApiPath)) {
   if (!process.versions.pnp) {
-    // Setup the environment to be able to require typescript
+    // Setup the environment to be able to require prettier
     require(absPnpApiPath).setup();
     if (isPnpLoaderEnabled && register) {
       register(pathToFileURL(absPnpLoaderPath));
@@ -23,5 +23,5 @@ if (existsSync(absPnpApiPath)) {
   }
 }
 
-// Defer to the real typescript your application uses
-module.exports = absRequire(`typescript`);
+// Defer to the real prettier your application uses
+module.exports = absRequire(`prettier`);
