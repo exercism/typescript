@@ -1,3 +1,4 @@
+
 {
   "trailingComma": "es5",
   "tabWidth": 2,
@@ -5,11 +6,5 @@
   "singleQuote": true,
   "arrowParens": "always",
   "printWidth": 80,
-  "endOfLine": "lf",
-  "overrides": [
-    {
-      "files": "*.ts",
-      "options": { "parser": "typescript" }
-    }
-  ]
+  "endOfLine": "lf"
 }

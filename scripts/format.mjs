@@ -34,10 +34,19 @@ const versionLine = shell
   .find((line) => line.startsWith('EXERCISM_PRETTIER_VERSION:'))
 
 if (!versionLine) {
-  const { stdout: versionFromPackage } = shell.exec(
+  const { stdout: versionFromPackage, stderr: error } = shell.exec(
     "yarn info prettier --json --name-only | sed -n -e 's/^\"prettier@npm://' -e 's/\"//p'"
   )
-  EXERCISM_PRETTIER_VERSION = versionFromPackage.trim()
+
+  if (!error) {
+    EXERCISM_PRETTIER_VERSION = versionFromPackage.trim()
+  } else {
+    EXERCISM_PRETTIER_VERSION = process.env.EXERCISM_PRETTIER_VERSION
+    if (!EXERCISM_PRETTIER_VERSION) {
+      shell.error('Could not find prettier version in yarn info or ENV')
+      shell.exit(-1)
+    }
+  }
 } else {
   EXERCISM_PRETTIER_VERSION = versionLine.split(':')[1].trim().replace(/'/g, '')
 }

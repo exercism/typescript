@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// @ts-check
+
 /**
  * Run this script (from root directory):
  *
@@ -37,6 +39,7 @@ function copyConfigForAssignment(name) {
     const copy = path.join(destination, dir)
 
     shell.rm('-rf', copy)
+    shell.mkdir('-p', copy)
   })
 
   // Next copy over all the common files
@@ -48,6 +51,14 @@ function copyConfigForAssignment(name) {
       shell.mkdir('-p', path.dirname(copy))
       shell.cp(source, copy)
     }
+  })
+
+  // Copy the common dir matching contents
+  helpers.COMMON_DIR_COPY_CONTENTS.forEach((dir) => {
+    const source = path.join('common', dir)
+    const copy = path.join(destination, dir)
+
+    shell.cp('-R', source, copy)
   })
 
   // Now edit package.json and copy it over

@@ -4,6 +4,9 @@
 exercises/**/README.md
 !/README.md
 
+.vscode/**/*
+.yarn/**/*
+
 # Originates from https://github.com/exercism/org-wide-files
 CODE_OF_CONDUCT.md
 LICENSE

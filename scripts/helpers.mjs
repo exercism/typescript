@@ -18,13 +18,10 @@ const exerciseDirs = shell.ls(
 
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
-export const COMMON_DIRS = [
-  '.yarn',
-]
+export const COMMON_DIRS = ['.yarn', '.vscode']
+export const COMMON_DIR_COPY_CONTENTS = ['.yarn/releases', '.yarn/sdks', '.vscode']
 export const COMMON_FILES = [
-  path.join('.yarn', 'releases', 'yarn-3.6.4.cjs'),
-  '.eslintignore',
-  '.eslintrc.cjs',
+  'eslint.config.mjs',
   '.yarnrc.yml',
   'babel.config.cjs',
   'jest.config.cjs',
@@ -55,7 +52,7 @@ export function assertAssignment(assignment, shouldExist = true) {
     }
   }
 
-  shell.echo("[Failure] that's not a valid assignment reference")
+  shell.echo(`[Failure] "${assignment}" is not a valid assignment reference`)
 
   import('chalk').then((chalk) => {
     if (assignment.split(path.sep).length === 1) {
@@ -238,6 +235,7 @@ export function prepareAndRun(command, infoStr, failureStr) {
  * @returns {void}
  */
 export function cleanUp() {
+  return
   shell.rm('-rf', 'tmp_exercises')
   shell.rm('-f', 'exercise-package.json')
   shell.rm('-f', 'exercise-package.json.sha')
