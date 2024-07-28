@@ -19,7 +19,7 @@ const exerciseDirs = shell.ls(
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
 export const COMMON_DIRS = ['.yarn', '.vscode']
-export const COMMON_DIR_COPY_CONTENTS = ['.yarn/releases', '.yarn/sdks', '.vscode']
+export const COMMON_DIR_COPY_CONTENTS = ['.yarn/releases', /*'.yarn/sdks',*/ '.vscode']
 export const COMMON_FILES = [
   'eslint.config.mjs',
   '.yarnrc.yml',
