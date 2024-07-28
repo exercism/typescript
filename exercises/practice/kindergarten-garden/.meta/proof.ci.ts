@@ -44,7 +44,10 @@ function parse(diagram: string): Pots {
 export class Garden {
   private plots: Record<Student, Plants>
 
-  constructor(diagram: string, private students = DEFAULT_STUDENTS) {
+  constructor(
+    diagram: string,
+    private students = DEFAULT_STUDENTS
+  ) {
     this.students.sort()
 
     this.plots = {}

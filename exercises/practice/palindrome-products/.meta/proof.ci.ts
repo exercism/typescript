@@ -42,7 +42,10 @@ class Palindrome implements PalindromeShape {
   }
 }
 class Palindromes {
-  constructor(public maxFactor: number, public minFactor = 1) {}
+  constructor(
+    public maxFactor: number,
+    public minFactor = 1
+  ) {}
 
   public get largest(): PalindromeShape {
     let best = new Palindrome(this.minFactor, this.minFactor)

@@ -18,7 +18,11 @@ export class WordSearch {
         ...row
           .split('')
           .reduce(
-            (matchingLetterIndecies: number[], letter: string, index: number) =>
+            (
+              matchingLetterIndecies: number[],
+              letter: string,
+              index: number
+            ) =>
               letter === currentLetter
                 ? [...matchingLetterIndecies, index]
                 : matchingLetterIndecies,
