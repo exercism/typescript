@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
-      - name: Use Node.js LTS (18.x)
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
+      - name: Use Node.js LTS (20.x)
+        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Install project dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run exercism/typescript ci precheck (stub files, config integrity) for changed exercises
         run: |
@@ -33,19 +33,19 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [20.x, 22.x]
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
+        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install project dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run exercism/typescript ci (runs tests) for changed/added exercises
         run: |
@@ -62,9 +62,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Use Node.js 20.x
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
+        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
 
