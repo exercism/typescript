@@ -1,4 +1,5 @@
-import { valid } from './luhn'
+import { describe, it, expect, xit } from '@jest/globals'
+import { valid } from './luhn.ts'
 
 describe('Luhn', () => {
   it('single digit strings can not be valid', () => {

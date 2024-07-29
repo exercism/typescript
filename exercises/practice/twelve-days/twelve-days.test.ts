@@ -1,4 +1,5 @@
-import { recite } from './twelve-days'
+import { describe, it, expect, xit } from '@jest/globals'
+import { recite } from './twelve-days.ts'
 
 describe('verse', () => {
   it('first day a partridge in a pear tree', () => {

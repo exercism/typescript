@@ -1,4 +1,5 @@
-import { translate } from './protein-translation'
+import { describe, it, expect, xit } from '@jest/globals'
+import { translate } from './protein-translation.ts'
 
 describe('Translate input RNA sequences into proteins', () => {
   it('Methionine RNA sequence', () => {
@@ -129,19 +130,19 @@ describe('Translate input RNA sequences into proteins', () => {
   xit("Non-existing codon can't translate", () => {
     expect(() => {
       translate('AAA')
-    }).toThrowError('Invalid codon')
+    }).toThrow('Invalid codon')
   })
 
   xit("Unknown amino acids, not part of a codon, can't translate", () => {
     expect(() => {
       translate('XYZ')
-    }).toThrowError('Invalid codon')
+    }).toThrow('Invalid codon')
   })
 
   xit("Incomplete RNA sequence can't translate", () => {
     expect(() => {
       translate('AUGU')
-    }).toThrowError('Invalid codon')
+    }).toThrow('Invalid codon')
   })
 
   xit('Incomplete RNA sequence can translate if valid until a STOP codon', () => {

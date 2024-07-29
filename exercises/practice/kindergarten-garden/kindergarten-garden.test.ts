@@ -1,4 +1,5 @@
-import { Garden } from './kindergarten-garden'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Garden } from './kindergarten-garden.ts'
 
 describe('partial Garden', () => {
   it('garden with single student', () => {

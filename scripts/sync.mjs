@@ -43,7 +43,7 @@ function copyConfigForAssignment(name) {
   })
 
   // DELETE legacy
-  ; ['.eslintignore', '.eslintrc.cjs'].forEach((file) => {
+  ;['.eslintignore', '.eslintrc.cjs'].forEach((file) => {
     const source = path.join(destination, file)
     shell.rm('-f', source)
   })
@@ -62,10 +62,14 @@ function copyConfigForAssignment(name) {
   // Copy the common dir matching contents
   helpers.COMMON_DIR_COPY_CONTENTS.forEach((dir) => {
     const source = path.join('common', dir)
-    const copy = path.join(destination, dir)
+    const copy = path.join(destination, path.dirname(dir))
 
     shell.cp('-R', source, copy)
   })
+
+  // Touch an empty `yarn.lock` file so you can install yarn in each folder.
+  shell.rm(path.join(destination, 'yarn.lock'))
+  shell.touch(path.join(destination, 'yarn.lock'))
 
   // Now edit package.json and copy it over
   const packageJson = getCurrentPackageJson(assignmentPackageFilename)

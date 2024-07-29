@@ -1,11 +1,12 @@
-import { keep, discard } from './strain'
+import { describe, it, expect, xit } from '@jest/globals'
+import { keep, discard } from './strain.ts'
 
 describe('strain', () => {
   it('keeps on empty array returns empty array', () => {
     expect(keep<number>([], (e: number) => e < 10)).toEqual([])
   })
 
-  xit('keeps everything ', () => {
+  xit('keeps everything', () => {
     expect(keep<number>([1, 2, 3], (e: number) => e < 10)).toEqual([1, 2, 3])
   })
 

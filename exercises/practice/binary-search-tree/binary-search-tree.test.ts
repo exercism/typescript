@@ -1,4 +1,5 @@
-import { BinarySearchTree } from './binary-search-tree'
+import { describe, it, expect, xit } from '@jest/globals'
+import { BinarySearchTree } from './binary-search-tree.ts'
 
 function recordAllData(bst: BinarySearchTree): unknown[] {
   const out: unknown[] = []

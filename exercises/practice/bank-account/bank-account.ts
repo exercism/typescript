@@ -22,11 +22,11 @@ export class BankAccount {
     throw new Error('Remove this statement and implement this function')
   }
 
-  deposit(): unknown {
+  deposit(_argument: unknown): unknown {
     throw new Error('Remove this statement and implement this function')
   }
 
-  withdraw(): unknown {
+  withdraw(_argument: unknown): unknown {
     throw new Error('Remove this statement and implement this function')
   }
 

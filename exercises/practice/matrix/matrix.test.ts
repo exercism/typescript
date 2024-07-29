@@ -1,4 +1,5 @@
-import { Matrix } from './matrix'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Matrix } from './matrix.ts'
 
 describe('Matrix', () => {
   it('extract row from one number matrix', () => {

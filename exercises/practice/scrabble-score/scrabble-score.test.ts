@@ -1,4 +1,5 @@
-import { score } from './scrabble-score'
+import { describe, it, expect, xit } from '@jest/globals'
+import { score } from './scrabble-score.ts'
 
 describe('Scrabble', () => {
   it('scores an empty word as zero', () => expect(score('')).toEqual(0))

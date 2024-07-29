@@ -1,4 +1,5 @@
-import { DnDCharacter } from './dnd-character'
+import { describe, it, expect, xit } from '@jest/globals'
+import { DnDCharacter } from './dnd-character.ts'
 
 describe('Ability modifier', () => {
   it('Ability modifier for score 3 is -4', () => {

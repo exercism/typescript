@@ -2225,18 +2225,19 @@ __metadata:
   linkType: hard
 
 "@exercism/eslint-config-typescript@file:../eslint-config-typescript::locator=%40exercism%2Ftypescript-track%40workspace%3A.":
-  version: 0.6.0
-  resolution: "@exercism/eslint-config-typescript@file:../eslint-config-typescript#../eslint-config-typescript::hash=f0b4db&locator=%40exercism%2Ftypescript-track%40workspace%3A."
+  version: 0.7.0
+  resolution: "@exercism/eslint-config-typescript@file:../eslint-config-typescript#../eslint-config-typescript::hash=9a5b94&locator=%40exercism%2Ftypescript-track%40workspace%3A."
   dependencies:
     "@eslint/js": "npm:^9.8.0"
     "@stylistic/eslint-plugin-ts": "npm:^2.4.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-jest: "npm:^28.6.0"
+    globals: "npm:^15.8.0"
     typescript-eslint: "npm:^7.17.0"
   peerDependencies:
-    eslint: ">= 9.0"
+    eslint: ">= 9.8"
     typescript: ">= 5.5"
-  checksum: 10/d8459251da28d24660f3e8a6747bc15fd82996974c44c908ca7047e3b4cd9125c367efe5c21b63cbb01c5e29da8d99bfb73836f66c91765266cfc49c04c7398c
+  checksum: 10/cb59f816927795bf0357388548e48bd8314d3c918659a1216f64bd4c6d5dee0a5e55234e3604f300169dda817ec813e9ed71495d9a752ba7ce31b9eef664b521
   languageName: node
   linkType: hard
 
@@ -2254,6 +2255,8 @@ __metadata:
     core-js: "npm:~3.37.1"
     diff: "npm:^5.2.0"
     eslint: "npm:^9.8.0"
+    expect: "npm:^29.7.0"
+    globals: "npm:^15.8.0"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.3.3"
     shelljs: "npm:^0.8.5"
@@ -4505,6 +4508,13 @@ __metadata:
   version: 14.0.0
   resolution: "globals@npm:14.0.0"
   checksum: 10/03939c8af95c6df5014b137cac83aa909090c3a3985caef06ee9a5a669790877af8698ab38007e4c0186873adc14c0b13764acc754b16a754c216cc56aa5f021
+  languageName: node
+  linkType: hard
+
+"globals@npm:^15.8.0":
+  version: 15.8.0
+  resolution: "globals@npm:15.8.0"
+  checksum: 10/fbca69cc1084c28a5155fea06224f6f0fcd9a371d8b8057db9c1851adc4bf2aad8016dd0db4e161e0ad1da0953e4286b90c826ff9ef5dbfb864493f2bba806df
   languageName: node
   linkType: hard
 

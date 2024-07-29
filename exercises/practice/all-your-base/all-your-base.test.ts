@@ -1,4 +1,5 @@
-import { convert } from './all-your-base'
+import { describe, it, expect, xit } from '@jest/globals'
+import { convert } from './all-your-base.ts'
 
 describe('Converter', () => {
   it('single bit one to decimal', () => {

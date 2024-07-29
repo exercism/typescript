@@ -1,4 +1,5 @@
-import { square, total } from './grains'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { square, total } from './grains.ts'
 
 describe('returns the number of grains on the square', () => {
   it('1', () => {
@@ -49,7 +50,7 @@ describe('returns the number of grains on the square', () => {
   })
 })
 
-describe('returns the total number of grains on the board', () => {
+xdescribe('returns the total number of grains on the board', () => {
   xit('total', () => {
     const expected = 18446744073709551615n
     expect(total()).toEqual(expected)

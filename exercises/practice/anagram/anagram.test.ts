@@ -1,4 +1,5 @@
-import { Anagram } from './anagram'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Anagram } from './anagram.ts'
 
 describe('Anagram', () => {
   it('no matches', () => {

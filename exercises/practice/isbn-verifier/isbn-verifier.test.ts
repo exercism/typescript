@@ -1,4 +1,5 @@
-import { isValid } from './isbn-verifier'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isValid } from './isbn-verifier.ts'
 
 describe('ISBN Verifier', () => {
   it('valid isbn', () => {

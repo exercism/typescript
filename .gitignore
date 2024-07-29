@@ -42,7 +42,6 @@ bin/configlet.exe
 !/.yarn/versions
 
 # Maintainer specific generated files
-/exercises/**/yarn.lock
 /tmp_exercises
 /tmp
 exercise-package.json

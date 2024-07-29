@@ -1,4 +1,5 @@
-import { verse, sing } from './beer-song'
+import { describe, it, expect, xit } from '@jest/globals'
+import { verse, sing } from './beer-song.ts'
 
 describe('Beer', () => {
   it('prints an arbitrary verse', () => {

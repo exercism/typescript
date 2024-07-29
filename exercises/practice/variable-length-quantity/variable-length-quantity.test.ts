@@ -1,4 +1,5 @@
-import { encode, decode } from './variable-length-quantity'
+import { describe, it, expect, xit } from '@jest/globals'
+import { encode, decode } from './variable-length-quantity.ts'
 
 describe('VariableLengthQuantity', () => {
   describe('Encode a series of integers, producing a series of bytes.', () => {

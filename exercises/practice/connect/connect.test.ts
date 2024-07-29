@@ -1,4 +1,5 @@
-import { Board } from './connect'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Board } from './connect.ts'
 
 describe('Judging a game of connect', () => {
   it('an empty board has no winner', () => {

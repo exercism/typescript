@@ -1,4 +1,5 @@
-import { twoFer } from './two-fer'
+import { describe, it, expect, xit } from '@jest/globals'
+import { twoFer } from './two-fer.ts'
 
 describe('TwoFer', () => {
   it('no name given', () => {

@@ -1,4 +1,5 @@
-import { steps } from './collatz-conjecture'
+import { describe, it, expect, xit } from '@jest/globals'
+import { steps } from './collatz-conjecture.ts'
 
 describe('CollatzConjecture', () => {
   it('zero steps for one', () => {
@@ -25,20 +26,20 @@ describe('CollatzConjecture', () => {
     const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(0)
-    }).toThrowError(expected)
+    }).toThrow(expected)
   })
 
   xit('negative value is an error', () => {
     const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(-15)
-    }).toThrowError(expected)
+    }).toThrow(expected)
   })
 
   xit('non-integer value is an error', () => {
     const expected = 'Only positive integers are allowed'
     expect(() => {
       steps(3.1415)
-    }).toThrowError(expected)
+    }).toThrow(expected)
   })
 })

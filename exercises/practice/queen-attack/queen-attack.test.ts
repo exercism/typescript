@@ -1,4 +1,5 @@
-import { QueenAttack } from './queen-attack'
+import { describe, it, expect, xit } from '@jest/globals'
+import { QueenAttack } from './queen-attack.ts'
 
 describe('Queens', () => {
   describe('Test creation of Queens with valid and invalid positions', () => {

@@ -1,14 +1,27 @@
-  // @ts-check
+// @ts-check
 
 import tsEslint from 'typescript-eslint'
 import config from '@exercism/eslint-config-typescript'
 import maintainersConfig from '@exercism/eslint-config-typescript/maintainers.mjs'
 
+import globals from 'globals'
+
 export default [
-  ...tsEslint.config(...config, {
-    files: ['.meta/proof.ci.ts', '.meta/exemplar.ts', '*.test.ts'],
-    extends: maintainersConfig,
-  }),
+  ...tsEslint.config(
+    ...config,
+    {
+      files: ['.meta/proof.ci.ts', '.meta/exemplar.ts', '*.test.ts'],
+      extends: maintainersConfig,
+    },
+    {
+      files: ['scripts/**/*.mjs'],
+      languageOptions: {
+        globals: {
+          ...globals.node,
+        },
+      },
+    }
+  ),
   {
     ignores: [
       // # Protected or generated
@@ -24,7 +37,7 @@ export default [
 
       // # Configuration
       '/config',
-      '/babel.config.cjs'
-    ]
-  }
+      '/babel.config.cjs',
+    ],
+  },
 ]

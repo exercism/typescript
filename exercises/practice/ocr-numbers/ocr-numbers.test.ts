@@ -1,4 +1,5 @@
-import { convert } from './ocr-numbers'
+import { describe, it, expect, xit } from '@jest/globals'
+import { convert } from './ocr-numbers.ts'
 
 describe('ocr', () => {
   it('recognizes zero', () => {

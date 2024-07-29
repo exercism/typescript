@@ -1,7 +1,8 @@
-import { Series } from './series'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Series } from './series.ts'
 
 describe('Series', () => {
-  xit('slices of one from one', () => {
+  it('slices of one from one', () => {
     expect(new Series('1').slices(1)).toEqual([[1]])
   })
 

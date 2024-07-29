@@ -1,4 +1,5 @@
-import { ofSize } from './spiral-matrix'
+import { describe, it, expect, xit } from '@jest/globals'
+import { ofSize } from './spiral-matrix.ts'
 
 describe('Spiral Matrix', () => {
   it('empty spiral', () => {

@@ -1,4 +1,5 @@
-import { sayInEnglish } from './say'
+import { describe, it, expect, xit } from '@jest/globals'
+import { sayInEnglish } from './say.ts'
 
 describe('say', () => {
   it('zero', () => {

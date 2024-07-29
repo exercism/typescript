@@ -1,4 +1,5 @@
-import { Triangle } from './pascals-triangle'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Triangle } from './pascals-triangle.ts'
 
 describe('Triangle', () => {
   it('with one row', () => {

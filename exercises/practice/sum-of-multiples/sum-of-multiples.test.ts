@@ -1,4 +1,5 @@
-import { sum } from './sum-of-multiples'
+import { describe, it, expect, xit } from '@jest/globals'
+import { sum } from './sum-of-multiples.ts'
 
 describe('Sum Of Multiples', () => {
   it('no multiples within limit', () => {

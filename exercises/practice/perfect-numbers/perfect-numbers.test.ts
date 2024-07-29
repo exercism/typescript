@@ -1,4 +1,5 @@
-import { classify } from './perfect-numbers'
+import { describe, it, expect, xit } from '@jest/globals'
+import { classify } from './perfect-numbers.ts'
 
 describe('Perfect numbers', () => {
   it('Smallest perfect number is classified correctly', () => {

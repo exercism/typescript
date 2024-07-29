@@ -1,4 +1,5 @@
-import { WordSearch } from './word-search'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { WordSearch } from './word-search.ts'
 
 describe('single line grids', () => {
   it('should accept an initial game grid', () => {
@@ -68,7 +69,7 @@ describe('single line grids', () => {
   })
 })
 
-describe('multi line grids', () => {
+xdescribe('multi line grids', () => {
   xit('should locate a left to right word in a two line grid', () => {
     const grid = ['jefblpepre', 'clojurermt']
 
@@ -185,7 +186,7 @@ describe('multi line grids', () => {
   })
 })
 
-describe('multiple words', () => {
+xdescribe('multiple words', () => {
   xit('should locate two words written left to right', () => {
     const grid = [
       'aefblpepre',
@@ -216,7 +217,7 @@ describe('multiple words', () => {
   })
 })
 
-describe('different directions', () => {
+xdescribe('different directions', () => {
   xit('should locate a single word written right to left', () => {
     const grid = ['rixilelhrs']
     const expectedResults = {
@@ -259,7 +260,7 @@ describe('different directions', () => {
   })
 })
 
-describe('vertical directions', () => {
+xdescribe('vertical directions', () => {
   xit('should locate words written top to bottom', () => {
     const grid = [
       'jefblpepre',
@@ -551,7 +552,7 @@ describe('vertical directions', () => {
   })
 })
 
-describe('avoiding false-positives', () => {
+xdescribe('avoiding false-positives', () => {
   xit('should fail to locate a word that is not in the puzzle', () => {
     const grid = [
       'jefblpepre',

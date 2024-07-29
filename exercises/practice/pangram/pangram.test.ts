@@ -1,4 +1,5 @@
-import { isPangram } from './pangram'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isPangram } from './pangram.ts'
 
 describe('Pangram()', () => {
   it('empty sentence', () => {

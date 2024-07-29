@@ -1,4 +1,5 @@
-import { Bowling } from './bowling'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Bowling } from './bowling.ts'
 
 describe('Bowling', () => {
   describe('Check game can be scored correctly.', () => {

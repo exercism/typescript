@@ -1,4 +1,5 @@
-import { count } from './word-count'
+import { describe, it, expect, xit } from '@jest/globals'
+import { count } from './word-count.ts'
 
 describe('count()', () => {
   it('counts one word', () => {

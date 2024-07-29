@@ -72,8 +72,8 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
           const color = part.added
             ? chalk.green
             : part.removed
-            ? chalk.red
-            : chalk.gray
+              ? chalk.red
+              : chalk.gray
           return color(part.value)
         })
         .join('')

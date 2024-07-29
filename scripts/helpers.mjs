@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
 /**
@@ -19,11 +17,17 @@ const exerciseDirs = shell.ls(
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
 export const COMMON_DIRS = ['.yarn', '.vscode']
-export const COMMON_DIR_COPY_CONTENTS = ['.yarn/releases', /*'.yarn/sdks',*/ '.vscode']
+export const COMMON_DIR_COPY_CONTENTS = [
+  '.yarn/releases',
+  // '.yarn/sdks',
+  // '.vscode',
+]
 export const COMMON_FILES = [
-  'eslint.config.mjs',
+  '.vscode/extensions.json',
+  '.vscode/settings.json',
   '.yarnrc.yml',
   'babel.config.cjs',
+  'eslint.config.mjs',
   'jest.config.cjs',
   'package.json',
   'tsconfig.json',
@@ -235,7 +239,6 @@ export function prepareAndRun(command, infoStr, failureStr) {
  * @returns {void}
  */
 export function cleanUp() {
-  return
   shell.rm('-rf', 'tmp_exercises')
   shell.rm('-f', 'exercise-package.json')
   shell.rm('-f', 'exercise-package.json.sha')
@@ -372,7 +375,7 @@ export function prepare(assignment) {
       .sed(/x(test|it)\(/, 'it(', specFileDestination)
       .to(specFileDestination)
     shell
-      .sed('xdescribe', 'describe', specFileDestination)
+      .sed(/xdescribe\(/, 'describe(', specFileDestination)
       .to(specFileDestination)
   })
 
@@ -415,15 +418,14 @@ export function prepare(assignment) {
  */
 export function registerExitHandler() {
   function exitHandler(options, exitCode) {
-    cleanUp()
+    if (shouldCleanup() || options.cleanUp) {
+      cleanUp()
+    }
 
     if (options.error) {
       console.error(options.error)
     }
 
-    if (options.cleanup) {
-      /* clean exit */
-    }
     if (exitCode || exitCode === 0) {
       /* exit code given */
     }

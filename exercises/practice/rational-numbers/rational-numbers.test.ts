@@ -1,4 +1,5 @@
-import { Rational } from './rational-numbers'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Rational } from './rational-numbers.ts'
 
 function assertRational(
   actual: Rational,

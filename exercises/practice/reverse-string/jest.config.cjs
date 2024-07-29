@@ -17,6 +17,6 @@ module.exports = {
     '^.+\\.[jt]sx?$': 'babel-jest',
   },
   moduleNameMapper: {
-    "^(\\.\\/.+)\\.js$": "$1"
+    '^(\\.\\/.+)\\.js$': '$1',
   },
 }

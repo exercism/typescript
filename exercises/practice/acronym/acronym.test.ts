@@ -1,4 +1,5 @@
-import { parse } from './acronym'
+import { describe, it, expect, xit } from '@jest/globals'
+import { parse } from './acronym.ts'
 
 describe('Acronym are produced from', () => {
   it('title cased phrases', () => {
