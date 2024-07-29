@@ -24,15 +24,11 @@
     "typescript": "~5.5.4",
     "typescript-eslint": "^7.17.0"
   },
-  "dependencies": {},
   "scripts": {
     "test": "yarn lint:types && jest --no-cache",
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts"
   },
-  "packageManager": "yarn@4.3.1",
-  "resolutions": {
-    "@exercism/eslint-config-typescript": "file:../../../../eslint-config-typescript"
-  }
+  "packageManager": "yarn@4.3.1"
 }

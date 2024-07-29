@@ -2124,9 +2124,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@exercism/eslint-config-typescript@file:../../eslint-config-typescript::locator=%40exercism%2Ftypescript%40workspace%3A.":
+"@exercism/eslint-config-typescript@npm:^0.7.0":
   version: 0.7.0
-  resolution: "@exercism/eslint-config-typescript@file:../../eslint-config-typescript#../../eslint-config-typescript::hash=9a5b94&locator=%40exercism%2Ftypescript%40workspace%3A."
+  resolution: "@exercism/eslint-config-typescript@npm:0.7.0"
   dependencies:
     "@eslint/js": "npm:^9.8.0"
     "@stylistic/eslint-plugin-ts": "npm:^2.4.0"
@@ -2137,7 +2137,7 @@ __metadata:
   peerDependencies:
     eslint: ">= 9.8"
     typescript: ">= 5.5"
-  checksum: 10/cb59f816927795bf0357388548e48bd8314d3c918659a1216f64bd4c6d5dee0a5e55234e3604f300169dda817ec813e9ed71495d9a752ba7ce31b9eef664b521
+  checksum: 10/7c2042a6e10c4e165621bb347df52b7db51cc3fbda91f7bb94fe737b5024e0f2ab9c26b0071820f5af1de50cdcf2e79a82773d699292c4575b1989393ef61ee1
   languageName: node
   linkType: hard
 
@@ -2146,7 +2146,7 @@ __metadata:
   resolution: "@exercism/typescript@workspace:."
   dependencies:
     "@exercism/babel-preset-typescript": "npm:^0.4.0"
-    "@exercism/eslint-config-typescript": "npm:^0.6.0"
+    "@exercism/eslint-config-typescript": "npm:^0.7.0"
     "@jest/globals": "npm:^29.7.0"
     "@types/node": "npm:~22.0.0"
     babel-jest: "npm:^29.7.0"
