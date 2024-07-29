@@ -151,6 +151,12 @@ cleanUp()
 
 shell.echo('\n==========\nLint all the files\n')
 
+shell.mkdir('-p', 'tmp_exercises')
+shell.cp(
+  path.join('common', 'tsconfig.json'),
+  path.join('tmp_exercises', 'tsconfig.json')
+)
+
 shell.env['PREPARE'] = false
 shell.env['CLEANUP'] = false
 delete shell.env['ASSIGNMENT']
