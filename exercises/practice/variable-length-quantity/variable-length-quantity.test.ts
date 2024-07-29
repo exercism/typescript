@@ -107,13 +107,13 @@ describe('VariableLengthQuantity', () => {
     xit('incomplete sequence causes error', () => {
       expect(() => {
         decode([0xff])
-      }).toThrowError('Incomplete sequence')
+      }).toThrow('Incomplete sequence')
     })
 
     xit('incomplete sequence causes error, even if value is zero', () => {
       expect(() => {
         decode([0x80])
-      }).toThrowError('Incomplete sequence')
+      }).toThrow('Incomplete sequence')
     })
 
     xit('multiple values', () => {

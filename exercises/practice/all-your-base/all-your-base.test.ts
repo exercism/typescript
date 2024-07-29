@@ -37,7 +37,7 @@ describe('Converter', () => {
   xit('empty list', () => {
     expect(() => {
       convert([], 2, 10)
-    }).toThrowError('Input has wrong format')
+    }).toThrow('Input has wrong format')
   })
 
   xit('single zero', () => {
@@ -47,72 +47,72 @@ describe('Converter', () => {
   xit('multiple zeros', () => {
     expect(() => {
       convert([0, 0, 0], 10, 2)
-    }).toThrowError('Input has wrong format')
+    }).toThrow('Input has wrong format')
   })
 
   xit('leading zeros', () => {
     expect(() => {
       convert([0, 6, 0], 7, 10)
-    }).toThrowError('Input has wrong format')
+    }).toThrow('Input has wrong format')
   })
 
   xit('negative digit', () => {
     expect(() => {
       convert([1, -1, 1, 0, 1, 0], 2, 10)
-    }).toThrowError('Input has wrong format')
+    }).toThrow('Input has wrong format')
   })
 
   xit('invalid positive digit', () => {
     expect(() => {
       convert([1, 2, 1, 0, 1, 0], 2, 10)
-    }).toThrowError('Input has wrong format')
+    }).toThrow('Input has wrong format')
   })
 
   xit('first base is one', () => {
     expect(() => {
       convert([], 1, 10)
-    }).toThrowError('Wrong input base')
+    }).toThrow('Wrong input base')
   })
 
   xit('second base is one', () => {
     expect(() => {
       convert([1, 0, 1, 0, 1, 0], 2, 1)
-    }).toThrowError('Wrong output base')
+    }).toThrow('Wrong output base')
   })
 
   xit('first base is zero', () => {
     expect(() => {
       convert([], 0, 10)
-    }).toThrowError('Wrong input base')
+    }).toThrow('Wrong input base')
   })
 
   xit('second base is zero', () => {
     expect(() => {
       convert([7], 10, 0)
-    }).toThrowError('Wrong output base')
+    }).toThrow('Wrong output base')
   })
 
   xit('first base is negative', () => {
     expect(() => {
       convert([1], -2, 10)
-    }).toThrowError('Wrong input base')
+    }).toThrow('Wrong input base')
   })
 
   xit('second base is negative', () => {
     expect(() => {
       convert([1], 2, -7)
-    }).toThrowError('Wrong output base')
+    }).toThrow('Wrong output base')
   })
 
   xit('both bases are negative', () => {
     expect(() => {
       convert([1], -2, -7)
-    }).toThrowError('Wrong input base')
+    }).toThrow('Wrong input base')
   })
 
   xit('wrong output_base base not integer', () => {
     expect(() => {
       convert([0], 3, 2.5)
-    }).toThrowError('Wrong output base')
+    }).toThrow('Wrong output base')
   })
 })

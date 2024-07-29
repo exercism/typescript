@@ -83,12 +83,12 @@ describe('say', () => {
   xit('raises an error below zero', () => {
     expect(() => {
       sayInEnglish(-1)
-    }).toThrowError('Number must be between 0 and 999,999,999,999.')
+    }).toThrow('Number must be between 0 and 999,999,999,999.')
   })
 
   xit('raises an error above 999,999,999,999', () => {
     expect(() => {
       sayInEnglish(1000000000000)
-    }).toThrowError('Number must be between 0 and 999,999,999,999.')
+    }).toThrow('Number must be between 0 and 999,999,999,999.')
   })
 })
