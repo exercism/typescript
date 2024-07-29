@@ -61,7 +61,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
+      `yarn node ${path.join('scripts', 'checksum.mjs')}`
     ).code
 
     if (checkResult !== 0) {
@@ -69,7 +69,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = shell.exec(
-      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
+      `yarn node ${path.join('scripts', 'name-check.mjs')}`
     ).code
 
     if (nameCheckResult !== 0) {
@@ -80,7 +80,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       shell.env['ASSIGNMENT'] = exercise
 
       const checkResult = shell.exec(
-        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
+        `yarn node ${path.join('scripts', 'checksum.mjs')}`
       ).code
 
       if (checkResult !== 0) {
@@ -88,7 +88,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       }
 
       const nameCheckResult = shell.exec(
-        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
+        `yarn node ${path.join('scripts', 'name-check.mjs')}`
       ).code
 
       if (nameCheckResult !== 0) {
@@ -98,7 +98,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = shell.exec(
-    `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-uniq')}`
+    `yarn node ${path.join('scripts', 'name-uniq.mjs')}`
   ).code
 
   if (nameUniqResult !== 0) {
@@ -116,6 +116,12 @@ cleanUp()
  */
 
 shell.echo('\n==========\nLint all the files\n')
+
+shell.mkdir('-p', 'tmp_exercises')
+shell.cp(
+  path.join('common', 'tsconfig.json'),
+  path.join('tmp_exercises', 'tsconfig.json')
+)
 
 shell.env['PREPARE'] = false
 shell.env['CLEANUP'] = false

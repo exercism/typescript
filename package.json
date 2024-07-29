@@ -17,8 +17,8 @@
     "node": "^18.16.0 || >=20.0.0"
   },
   "devDependencies": {
-    "@exercism/babel-preset-typescript": "^0.4.0",
-    "@exercism/eslint-config-typescript": "^0.7.0",
+    "@exercism/babel-preset-typescript": "^0.5.0",
+    "@exercism/eslint-config-typescript": "^0.7.1",
     "@jest/globals": "^29.7.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "~22.0.0",
@@ -36,12 +36,12 @@
     "typescript-eslint": "^7.17.0"
   },
   "scripts": {
-    "ci": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/ci",
-    "ci:check": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/ci-check",
-    "lint": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/lint",
-    "sync": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/sync",
-    "test": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/test",
-    "format": "yarn dlx -q -p @babel/core -p @babel/node babel-node scripts/format"
+    "ci": "yarn node scripts/ci.mjs",
+    "ci:check": "yarn node scripts/ci-check.mjs",
+    "lint": "yarn node scripts/lint.mjs",
+    "sync": "yarn node scripts/sync.mjs",
+    "test": "yarn node scripts/test.mjs",
+    "format": "yarn node scripts/format.mjs"
   },
   "packageManager": "yarn@4.3.1"
 }

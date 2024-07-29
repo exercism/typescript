@@ -105,7 +105,7 @@ function updateObserver<T>(observer: Observer<T>): void {
 function createInput<T>(
   value: T,
   _equal?: boolean | EqualFn<T>,
-  options?: { name?: string }
+  options?: Options
 ): InputPair<T> {
   const s: Subject<T> = {
     name: options?.name,
@@ -119,8 +119,8 @@ function createInput<T>(
     return s.value
   }
 
-  const write: SetterFn<T> = (value) => {
-    s.value = value
+  const write: SetterFn<T> = (nextValue) => {
+    s.value = nextValue
     if (s.observer) updateObserver(s.observer as Observer<unknown>)
     return s.value
   }

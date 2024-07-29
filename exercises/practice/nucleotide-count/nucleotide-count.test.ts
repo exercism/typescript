@@ -50,6 +50,6 @@ describe('count all nucleotides in a strand', () => {
     const expected = 'Invalid nucleotide in strand'
     expect(() => {
       nucleotideCounts('AGXXACT')
-    }).toThrowError(expected)
+    }).toThrow(expected)
   })
 })

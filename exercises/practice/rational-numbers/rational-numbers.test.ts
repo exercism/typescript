@@ -1,7 +1,7 @@
 import { describe, it, expect, xit } from '@jest/globals'
 import { Rational } from './rational-numbers.ts'
 
-// eslint-disable jest/expect-expect
+/* eslint-disable jest/expect-expect */
 
 function assertRational(
   actual: Rational,

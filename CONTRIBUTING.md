@@ -314,7 +314,7 @@ ASSIGNMENT=practice/two-fer yarn sync
 /*
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/checksum
+ * $ yarn node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -378,7 +378,7 @@ Run this script to test all exercises.
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check
+ * $ yarn node scripts/name-check.mjs
  *
  * This will run following checks:
  *
@@ -386,7 +386,7 @@ Run this script to test all exercises.
  *
  * This script also allows fixing these names:
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check --fix
+ * $ yarn node scripts/name-check.mjs --fix
  */
 ```
 
@@ -399,7 +399,7 @@ Run this script with the `--fix` flag to automatically fix the names.
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-uniq
+ * $ yarn node scripts/name-uniq.mjs
  *
  * This will run following checks:
  *

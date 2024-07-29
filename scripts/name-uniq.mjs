@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-uniq
+ * $ yarn node scripts/name-uniq.mjs
  *
  * This will run following checks:
  *

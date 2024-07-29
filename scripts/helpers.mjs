@@ -247,13 +247,7 @@ export function cleanUp() {
 // These packages will be skipped while performing checksum. In other words,
 // these packages are only interesting for maintaining this repository and not
 // for the student.
-const SKIP_PACKAGES_FOR_CHECKSUM = [
-  'shelljs',
-  '@babel/node',
-  'prettier',
-  'diff',
-  'chalk',
-]
+const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs', '@babel/node', 'diff', 'chalk']
 
 // These fields may differ between package.json files.
 const SKIP_FIELDS_FOR_CHECKSUM = [
@@ -376,6 +370,12 @@ export function prepare(assignment) {
       .to(specFileDestination)
     shell
       .sed(/xdescribe\(/, 'describe(', specFileDestination)
+      .to(specFileDestination)
+    shell
+      .sed(/x(test|it|describe), ?/, '', specFileDestination)
+      .to(specFileDestination)
+    shell
+      .sed(/, ?x(test|it|describe) ?}/, '}', specFileDestination)
       .to(specFileDestination)
   })
 

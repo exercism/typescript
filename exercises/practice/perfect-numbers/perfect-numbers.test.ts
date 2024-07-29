@@ -66,12 +66,12 @@ describe('Invalid inputs', () => {
   xit('Zero is rejected (not a natural number)', () => {
     expect(() => {
       classify(0)
-    }).toThrowError('Classification is only possible for natural numbers.')
+    }).toThrow('Classification is only possible for natural numbers.')
   })
 
   xit('Negative integer is rejected (not a natural number)', () => {
     expect(() => {
       classify(-1)
-    }).toThrowError('Classification is only possible for natural numbers.')
+    }).toThrow('Classification is only possible for natural numbers.')
   })
 })

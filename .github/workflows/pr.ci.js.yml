@@ -26,7 +26,7 @@ jobs:
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn dlx -p @babel/core -p @babel/node babel-node scripts/pr-check
+            xargs -r yarn node scripts/pr-check.mjs
 
   ci:
     runs-on: ubuntu-22.04
@@ -52,7 +52,7 @@ jobs:
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
             jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn dlx -p @babel/core -p @babel/node babel-node scripts/pr
+            xargs -r yarn node scripts/pr.mjs
 
   impersonate:
     # This job tries to run tests for the 'hello-world' exercise, but

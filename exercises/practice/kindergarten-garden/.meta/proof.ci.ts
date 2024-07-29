@@ -26,21 +26,26 @@ type Plants = Plant[]
 type Pots = Plants[]
 
 function getPlants(pots: Pots, index: number): Plants {
-  const plants = []
+  const plants: Plants = []
+
   const position = 2 * index
   plants.push(pots[0][position])
   plants.push(pots[0][position + 1])
   plants.push(pots[1][position])
   plants.push(pots[1][position + 1])
+
   return plants
 }
 
 function parse(diagram: string): Pots {
   return diagram
     .split('\n')
-    .map((row) => [...row].map((sign) => PLANT_CODES[sign]))
+    .map((row) =>
+      [...row].map(
+        (sign) => PLANT_CODES[sign as keyof typeof PLANT_CODES] as Plant
+      )
+    )
 }
-
 export class Garden {
   private plots: Record<Student, Plants>
 
