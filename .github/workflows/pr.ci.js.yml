@@ -21,12 +21,6 @@ jobs:
           else
               echo "changed_files=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.event.after }} | xargs)" >> $GITHUB_OUTPUT
           fi
-      - name: List changed files
-        run: |
-          for file in ${{ steps.changed-files.outputs.changed_files }}; do
-              echo "$file was changed"
-          done
-
       - name: Checkout PR
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
@@ -39,11 +33,7 @@ jobs:
         run: yarn install --immutable
 
       - name: Run exercism/typescript ci precheck (stub files, config integrity) for changed exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn node scripts/pr-check.mjs
+        run: yarn node scripts/pr-check.mjs ${{ steps.changed-files.outputs.changed_files }}
 
   ci:
     runs-on: ubuntu-22.04
