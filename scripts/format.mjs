@@ -10,9 +10,10 @@
  */
 
 import shell from 'shelljs'
-import path, { join } from 'node:path'
+import path, { join, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mkdtempSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 
 const basedir = path.resolve(
   path.basename(fileURLToPath(import.meta.url)),
@@ -35,7 +36,8 @@ const versionLine = shell
   .find((line) => line.startsWith('EXERCISM_PRETTIER_VERSION:'))
 
 if (!versionLine) {
-  const versionInfo = join(mkdtempSync('version-info-prettier'), 'info.txt')
+  const tempDir = mkdtempSync(`${tmpdir}${sep}`)
+  const versionInfo = join(tempDir, 'info.txt')
   shell.touch(versionInfo)
 
   shell
@@ -45,7 +47,7 @@ if (!versionLine) {
   shell.sed(/\"$/, '', versionInfo).to(versionInfo)
 
   const versionFromPackage = shell.cat(versionInfo)
-  shell.rm(versionInfo)
+  shell.rm('-fr', tempDir)
 
   if (versionFromPackage && !versionFromPackage.includes('Usage Error')) {
     EXERCISM_PRETTIER_VERSION = versionFromPackage.trim()
@@ -65,5 +67,5 @@ if (!versionLine) {
 const command = `corepack yarn dlx prettier@${EXERCISM_PRETTIER_VERSION} --write "**/*.{js,jsx,ts,tsx,css,sass,scss,html,json,md,yml}"`
 shell.echo(`[format] ${command}`)
 
-const result = shell.exec(command)
-shell.echo(`[format] ${result}`)
+// Will print to console
+shell.exec(command, { silent: false })
