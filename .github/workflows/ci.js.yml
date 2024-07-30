@@ -75,7 +75,7 @@ jobs:
         working-directory: exercises/practice/hello-world
         run: |
           corepack enable yarn
-          corepack yarn install --immutable
+          corepack yarn install
 
       - name: Run tests
         working-directory: exercises/practice/hello-world
