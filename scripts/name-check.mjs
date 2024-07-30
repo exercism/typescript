@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn node scripts/name-check.mjs
+ * $ corepack yarn node scripts/name-check.mjs
  *
  * This will run following checks:
  *
@@ -11,7 +11,7 @@
  *
  * This script also allows fixing these names:
  *
- * $ yarn node scripts/name-check.mjs --fix
+ * $ corepack yarn node scripts/name-check.mjs --fix
  */
 
 import shell from 'shelljs'

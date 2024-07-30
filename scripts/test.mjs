@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn test
+ * $ corepack yarn test
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -24,4 +24,8 @@ shell.env['PREPARE'] = true
 // Cleans up after
 shell.env['CLEANUP'] = true
 
-helpers.prepareAndRun('yarn jest --bail tmp_exercises', infoStr, failureStr)
+helpers.prepareAndRun(
+  'corepack yarn jest --bail tmp_exercises',
+  infoStr,
+  failureStr
+)

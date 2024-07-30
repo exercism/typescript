@@ -29,10 +29,12 @@ jobs:
           node-version: 20.x
 
       - name: Install project dependencies
-        run: yarn install --immutable
+        run: |
+          corepack enable yarn
+          corepack yarn install --immutable
 
       - name: Run exercism/typescript ci precheck (stub files, config integrity) for changed exercises
-        run: yarn node scripts/pr-check.mjs ${{ steps.changed-files.outputs.changed_files }}
+        run: corepack yarn node scripts/pr-check.mjs ${{ steps.changed-files.outputs.changed_files }}
 
   ci:
     runs-on: ubuntu-22.04
@@ -61,10 +63,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install project dependencies
-        run: yarn install --immutable
+        run: |
+          corepack enable yarn
+          corepack yarn install --immutable
 
       - name: Run exercism/typescript ci (runs tests) for changed/added exercises
-        run: yarn node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}
+        run: corepack yarn node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}
 
   impersonate:
     # This job tries to run tests for the 'hello-world' exercise, but
@@ -91,8 +95,10 @@ jobs:
 
       - name: Install project dependencies
         working-directory: exercises/practice/hello-world
-        run: yarn install --no-immutable
+        run: |
+          corepack enable yarn
+          corepack yarn install --no-immutable
 
       - name: Run tests
         working-directory: exercises/practice/hello-world
-        run: yarn test
+        run: corepack yarn test

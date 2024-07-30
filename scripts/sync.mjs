@@ -5,16 +5,16 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn sync
+ * $ corepack yarn sync
  *
  * This script is used to copy the following files to all exercises and keep
  * them in sync:
  *
- * - <local yarn installation>
- * - .eslintignore
- * - .eslintrc
+ * - .vscode/extensions.json
+ * - .vscode/settings.json
  * - .yarnrc.yml
  * - babel.config.cjs
+ * - eslint.config.mjs
  * - jest.config.cjs
  * - package.json
  * - tsconfig.json

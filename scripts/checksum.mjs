@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn node scripts/checksum.mjs
+ * $ corepack yarn node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users

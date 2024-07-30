@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn lint
+ * $ corepack yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
@@ -39,7 +39,7 @@ shell.cp('eslint.config.mjs', path.join('tmp_exercises', 'eslint.config.mjs'))
 
 // Run lint all at once
 prepareAndRun(
-  'yarn eslint tmp_exercises -c tmp_exercises/eslint.config.mjs',
+  'corepack yarn eslint tmp_exercises -c tmp_exercises/eslint.config.mjs',
   infoStr,
   failureStr
 )

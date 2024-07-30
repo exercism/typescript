@@ -61,9 +61,11 @@ jobs:
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
 
       - name: 'Install dependencies'
-        run: yarn install
+        run: |
+          corepack enable yarn
+          corepack yarn install
       - name: 'Sync exercises'
-        run: yarn sync
+        run: corepack yarn sync
 
       - name: 'Commit changes'
         run: |

@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn node scripts/pr.mjs path/1 path/2 path/3
+ * $ corepack yarn node scripts/pr.mjs path/1 path/2 path/3
  *
  * This will run following checks:
  *
@@ -77,7 +77,7 @@ const failureStr = '[Failure] Tests failed!'
 exercises.forEach(prepare)
 
 // Run tests
-prepareAndRun('yarn jest --bail tmp_exercises', infoStr, failureStr)
+prepareAndRun('corepack yarn jest --bail tmp_exercises', infoStr, failureStr)
 
 shell.echo(
   exercises.length === 1

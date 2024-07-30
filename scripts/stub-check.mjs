@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn node scripts/stub-check.mjs
+ * $ corepack yarn node scripts/stub-check.mjs
  *
  * This script checks that all exercises have a stub file.
  * Ref: https://github.com/exercism/javascript/issues/705

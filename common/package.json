@@ -30,10 +30,10 @@
     "typescript-eslint": "^7.17.0"
   },
   "scripts": {
-    "test": "yarn lint:types && jest --no-cache",
-    "lint": "yarn lint:types && yarn lint:ci",
-    "lint:types": "yarn tsc --noEmit -p .",
-    "lint:ci": "eslint . --ext .tsx,.ts"
+    "test": "corepack yarn lint:types && jest --no-cache",
+    "lint": "corepack yarn lint:types && corepack yarn lint:ci",
+    "lint:types": "corepack yarn tsc --noEmit -p .",
+    "lint:ci": "corepack yarn eslint . --ext .tsx,.ts"
   },
   "packageManager": "yarn@4.3.1"
 }

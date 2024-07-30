@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn node scripts/name-uniq.mjs
+ * $ corepack yarn node scripts/name-uniq.mjs
  *
  * This will run following checks:
  *

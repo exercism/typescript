@@ -61,7 +61,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `yarn node ${path.join('scripts', 'checksum.mjs')}`
+      `corepack yarn node ${path.join('scripts', 'checksum.mjs')}`
     ).code
 
     if (checkResult !== 0) {
@@ -69,7 +69,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = shell.exec(
-      `yarn node ${path.join('scripts', 'name-check.mjs')}`
+      `corepack yarn node ${path.join('scripts', 'name-check.mjs')}`
     ).code
 
     if (nameCheckResult !== 0) {
@@ -80,7 +80,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       shell.env['ASSIGNMENT'] = exercise
 
       const checkResult = shell.exec(
-        `yarn node ${path.join('scripts', 'checksum.mjs')}`
+        `corepack yarn node ${path.join('scripts', 'checksum.mjs')}`
       ).code
 
       if (checkResult !== 0) {
@@ -88,7 +88,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       }
 
       const nameCheckResult = shell.exec(
-        `yarn node ${path.join('scripts', 'name-check.mjs')}`
+        `corepack yarn node ${path.join('scripts', 'name-check.mjs')}`
       ).code
 
       if (nameCheckResult !== 0) {
@@ -98,7 +98,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = shell.exec(
-    `yarn node ${path.join('scripts', 'name-uniq.mjs')}`
+    `corepack yarn node ${path.join('scripts', 'name-uniq.mjs')}`
   ).code
 
   if (nameUniqResult !== 0) {
@@ -130,7 +130,7 @@ exercises.forEach(prepare)
 
 shell.env['CLEANUP'] = true
 
-const checkResult = shell.exec(`yarn lint`).code
+const checkResult = shell.exec(`corepack yarn lint`).code
 if (checkResult !== 0) {
   shell.exit(checkResult)
 }
