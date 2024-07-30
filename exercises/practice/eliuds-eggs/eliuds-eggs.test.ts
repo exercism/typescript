@@ -1,4 +1,5 @@
-import { eggCount } from './eliuds-eggs'
+import { describe, it, expect, xit } from '@jest/globals'
+import { eggCount } from './eliuds-eggs.ts'
 
 describe('EliudsEggs', () => {
   it('0 eggs', () => {

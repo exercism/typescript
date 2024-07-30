@@ -1,4 +1,5 @@
-import { commands } from './secret-handshake'
+import { describe, it, expect, xit } from '@jest/globals'
+import { commands } from './secret-handshake.ts'
 
 describe('Secret Handshake', () => {
   describe('Create A Handshake For A Number', () => {

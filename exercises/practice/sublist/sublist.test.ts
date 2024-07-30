@@ -1,4 +1,5 @@
-import { List } from './sublist'
+import { describe, it, expect, xit } from '@jest/globals'
+import { List } from './sublist.ts'
 
 describe('Sublist', () => {
   it('empty lists', () => {

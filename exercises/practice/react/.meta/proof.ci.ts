@@ -275,7 +275,7 @@ function writeSubject<T>(subject: Subject<T>, value: T): T {
 function createInput<T>(
   value: T,
   equal?: boolean | EqualFn<T>,
-  options?: { name?: string }
+  options?: Options
 ): InputPair<T> {
   const subject: Subject<T> = {
     name: options?.name,
@@ -340,7 +340,7 @@ function createComputed<T>(
   updateFn: UpdateFn<T>,
   value?: T,
   equal?: boolean | EqualFn<T>,
-  options?: { name?: string }
+  options?: Options
 ): GetterFn<T> {
   const computed: Computed<T> = {
     name: options?.name,

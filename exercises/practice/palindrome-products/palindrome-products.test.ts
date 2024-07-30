@@ -1,4 +1,5 @@
-import { generate } from './palindrome-products'
+import { describe, it, expect, xit } from '@jest/globals'
+import { generate } from './palindrome-products.ts'
 
 describe('Palindromes', () => {
   it('smallest palindrome from single digit factors', () => {

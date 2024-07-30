@@ -1,4 +1,5 @@
-import { makeDiamond } from './diamond'
+import { describe, it, expect, xit } from '@jest/globals'
+import { makeDiamond } from './diamond.ts'
 
 function diamondify(parts: TemplateStringsArray): string {
   // prettier-ignore
@@ -23,7 +24,7 @@ describe('Make diamond function', () => {
     expect(makeDiamond('A')).toEqual(result)
   })
 
-  it('test letter C', () => {
+  xit('test letter C', () => {
     const result = diamondify`
       ··A··
       ·B·B·
@@ -34,7 +35,7 @@ describe('Make diamond function', () => {
     expect(makeDiamond('C')).toEqual(result)
   })
 
-  it('test letter E', () => {
+  xit('test letter E', () => {
     const result = diamondify`
       ····A····
       ···B·B···

@@ -1,4 +1,5 @@
-import { DiffieHellman } from './diffie-hellman'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { DiffieHellman } from './diffie-hellman.ts'
 
 describe('diffie-hellman', () => {
   it('throws an error if the constructor arguments are out of range', () => {
@@ -13,7 +14,7 @@ describe('diffie-hellman', () => {
     }).toThrow()
   })
 
-  describe('input validation', () => {
+  xdescribe('input validation', () => {
     const p = 23
     const g = 5
     const diffieHellman = new DiffieHellman(p, g)
@@ -49,7 +50,7 @@ describe('diffie-hellman', () => {
     })
   })
 
-  describe('stateless calculation', () => {
+  xdescribe('stateless calculation', () => {
     const diffieHellman = new DiffieHellman(23, 5)
 
     const alicePrivateKey = 6

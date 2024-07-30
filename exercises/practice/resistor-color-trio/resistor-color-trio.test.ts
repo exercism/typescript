@@ -1,4 +1,5 @@
-import { decodedResistorValue } from './resistor-color-trio'
+import { describe, it, expect, xit } from '@jest/globals'
+import { decodedResistorValue } from './resistor-color-trio.ts'
 
 describe('Resistor Colors', () => {
   it('Orange and orange and black', () => {

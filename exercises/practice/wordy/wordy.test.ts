@@ -1,4 +1,5 @@
-import { answer } from './wordy'
+import { describe, it, expect, xit } from '@jest/globals'
+import { answer } from './wordy.ts'
 
 describe('Wordy', () => {
   it('just a number', () => {

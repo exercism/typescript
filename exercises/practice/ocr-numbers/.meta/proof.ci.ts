@@ -44,7 +44,9 @@ const splitIntoDigits = (row: string): string[] => {
 }
 
 const getDigit = (text: string): Digit => {
-  const digit = Object.values(PATTERNS)
+  const digit = (
+    Object.values(PATTERNS) as (typeof PATTERNS)[keyof typeof PATTERNS][]
+  )
     .map((x) => x.join(''))
     .indexOf(text)
   if (digit === -1) {

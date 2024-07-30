@@ -1,4 +1,5 @@
-import { isArmstrongNumber } from './armstrong-numbers'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isArmstrongNumber } from './armstrong-numbers.ts'
 
 describe('Armstrong Numbers', () => {
   it('Single-digit numbers are Armstrong numbers', () => {

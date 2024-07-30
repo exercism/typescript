@@ -1,4 +1,5 @@
-import { Robot, InvalidInputError } from './robot-simulator'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { Robot, InvalidInputError } from './robot-simulator.ts'
 
 function turnRight(robot: Robot): void {
   robot.evaluate('R')
@@ -52,7 +53,7 @@ describe('Robot', () => {
     })
   })
 
-  describe('Rotating clockwise', () => {
+  xdescribe('Rotating clockwise', () => {
     const robot = new Robot()
 
     xit('changes north to east', () => {
@@ -92,7 +93,7 @@ describe('Robot', () => {
     })
   })
 
-  describe('Rotating counter-clockwise', () => {
+  xdescribe('Rotating counter-clockwise', () => {
     const robot = new Robot()
 
     xit('changes north to west', () => {
@@ -132,7 +133,7 @@ describe('Robot', () => {
     })
   })
 
-  describe('Moving forward one', () => {
+  xdescribe('Moving forward one', () => {
     const robot = new Robot()
 
     xit('advance when facing north', () => {
@@ -172,7 +173,7 @@ describe('Robot', () => {
     })
   })
 
-  describe('Follow series of instructions', () => {
+  xdescribe('Follow series of instructions', () => {
     const robot = new Robot()
 
     xit('moving east and north from README', () => {

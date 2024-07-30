@@ -1,4 +1,5 @@
-import { proverb } from './proverb'
+import { describe, it, expect, xit } from '@jest/globals'
+import { proverb } from './proverb.ts'
 
 describe('Proverb', () => {
   it('a single consequence', () => {

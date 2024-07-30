@@ -1,4 +1,5 @@
-import { BankAccount, ValueError } from './bank-account'
+import { describe, it, expect, xit } from '@jest/globals'
+import { BankAccount, ValueError } from './bank-account.ts'
 
 describe('Bank Account', () => {
   it('newly opened account has zero balance', () => {
@@ -118,6 +119,7 @@ describe('Bank Account', () => {
     const account = new BankAccount()
     account.open()
     expect(() => {
+      // @ts-expect-error This is supposed to be a read-only property
       account.balance = 100
     }).toThrow(Error)
   })

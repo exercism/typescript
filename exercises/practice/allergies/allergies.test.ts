@@ -1,4 +1,5 @@
-import { Allergies } from './allergies'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Allergies } from './allergies.ts'
 
 describe('allergicTo', () => {
   it('no allergies means not allergic', () => {

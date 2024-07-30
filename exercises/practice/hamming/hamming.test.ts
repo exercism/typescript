@@ -1,4 +1,5 @@
-import { compute } from './hamming'
+import { describe, it, expect, xit } from '@jest/globals'
+import { compute } from './hamming.ts'
 
 describe('Hamming', () => {
   it('empty strands', () => {
@@ -24,24 +25,24 @@ describe('Hamming', () => {
   xit('disallow first strand longer', () => {
     expect(() => {
       compute('AATG', 'AAA')
-    }).toThrowError('DNA strands must be of equal length.')
+    }).toThrow('DNA strands must be of equal length.')
   })
 
   xit('disallow second strand longer', () => {
     expect(() => {
       compute('ATA', 'AGTG')
-    }).toThrowError('DNA strands must be of equal length.')
+    }).toThrow('DNA strands must be of equal length.')
   })
 
   xit('disallow empty first strand', () => {
     expect(() => {
       compute('', 'G')
-    }).toThrowError('DNA strands must be of equal length.')
+    }).toThrow('DNA strands must be of equal length.')
   })
 
   xit('disallow empty second strand', () => {
     expect(() => {
       compute('G', '')
-    }).toThrowError('DNA strands must be of equal length.')
+    }).toThrow('DNA strands must be of equal length.')
   })
 })

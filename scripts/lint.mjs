@@ -3,12 +3,13 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn lint
+ * $ corepack yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
 
 import shell from 'shelljs'
+import path from 'node:path'
 import {
   registerExitHandler,
   prepareAndRun,
@@ -33,9 +34,12 @@ const infoStr = assignment
   : `Running lint for ${count} exercises...`
 const failureStr = '[Failure] Lint check failed!'
 
+shell.mkdir('-p', 'tmp_exercises')
+shell.cp('eslint.config.mjs', path.join('tmp_exercises', 'eslint.config.mjs'))
+
 // Run lint all at once
 prepareAndRun(
-  'yarn eslint tmp_exercises --ext .ts --ext .tsx -c node_modules/@exercism/eslint-config-typescript/maintainers.js',
+  'corepack yarn eslint tmp_exercises -c tmp_exercises/eslint.config.mjs',
   infoStr,
   failureStr
 )

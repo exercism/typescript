@@ -1,4 +1,5 @@
-import { calculatePrimeFactors } from './prime-factors'
+import { describe, it, expect, xit } from '@jest/globals'
+import { calculatePrimeFactors } from './prime-factors.ts'
 
 describe('calculatePrimeFactors', () => {
   it('returns an empty array for 1', () =>

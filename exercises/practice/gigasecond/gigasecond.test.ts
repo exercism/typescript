@@ -1,4 +1,5 @@
-import { Gigasecond } from './gigasecond'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Gigasecond } from './gigasecond.ts'
 
 describe('Gigasecond', () => {
   it('date only specification of time', () => {

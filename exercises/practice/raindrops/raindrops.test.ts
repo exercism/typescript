@@ -1,4 +1,5 @@
-import { convert } from './raindrops'
+import { describe, it, expect, xit } from '@jest/globals'
+import { convert } from './raindrops.ts'
 
 describe('Raindrops', () => {
   it('converts 1', () => expect(convert(1)).toEqual('1'))

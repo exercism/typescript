@@ -1,4 +1,5 @@
-import { toRoman } from './roman-numerals'
+import { describe, it, expect, xit } from '@jest/globals'
+import { toRoman } from './roman-numerals.ts'
 
 describe('toRoman()', () => {
   it('converts 1', () => expect(toRoman(1)).toEqual('I'))

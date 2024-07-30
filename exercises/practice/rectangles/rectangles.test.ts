@@ -1,4 +1,5 @@
-import { count } from './rectangles'
+import { describe, it, expect, xit } from '@jest/globals'
+import { count } from './rectangles.ts'
 
 describe('Rectangles', () => {
   it('no rows', () => {

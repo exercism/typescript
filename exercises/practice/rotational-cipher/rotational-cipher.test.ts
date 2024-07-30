@@ -1,4 +1,5 @@
-import { rotate } from './rotational-cipher'
+import { describe, it, expect, xit } from '@jest/globals'
+import { rotate } from './rotational-cipher.ts'
 
 describe('RotationalCipher', () => {
   it('rotate a by 1', () => {

@@ -1,4 +1,5 @@
-import { toRna } from './rna-transcription'
+import { describe, it, expect, xit } from '@jest/globals'
+import { toRna } from './rna-transcription.ts'
 
 describe('Transcriptor', () => {
   it('transcribes cytosine to guanine', () => {
@@ -22,14 +23,14 @@ describe('Transcriptor', () => {
   })
 
   xit('correctly handles invalid input', () => {
-    expect(() => toRna('U')).toThrowError('Invalid input DNA.')
+    expect(() => toRna('U')).toThrow('Invalid input DNA.')
   })
 
   xit('correctly handles completely invalid input', () => {
-    expect(() => toRna('XXX')).toThrowError('Invalid input DNA.')
+    expect(() => toRna('XXX')).toThrow('Invalid input DNA.')
   })
 
   xit('correctly handles partially invalid input', () => {
-    expect(() => toRna('ACGTXXXCTTAA')).toThrowError('Invalid input DNA.')
+    expect(() => toRna('ACGTXXXCTTAA')).toThrow('Invalid input DNA.')
   })
 })

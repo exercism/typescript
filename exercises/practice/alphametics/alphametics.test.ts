@@ -1,4 +1,5 @@
-import { solve } from './alphametics'
+import { describe, it, expect, xit } from '@jest/globals'
+import { solve } from './alphametics.ts'
 
 describe('Solve the alphametics puzzle', () => {
   it('puzzle with three letters', () => {

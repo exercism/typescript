@@ -1,4 +1,5 @@
-import { largestProduct } from './largest-series-product'
+import { describe, it, expect, xit } from '@jest/globals'
+import { largestProduct } from './largest-series-product.ts'
 
 describe('Largest Series Product', () => {
   it('finds the largest product if span equals length', () => {

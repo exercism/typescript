@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check
+ * $ corepack yarn node scripts/name-check.mjs
  *
  * This will run following checks:
  *
@@ -11,7 +11,7 @@
  *
  * This script also allows fixing these names:
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check --fix
+ * $ corepack yarn node scripts/name-check.mjs --fix
  */
 
 import shell from 'shelljs'

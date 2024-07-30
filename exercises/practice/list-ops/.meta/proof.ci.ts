@@ -49,7 +49,10 @@ const Null: Cons = {
   },
 }
 class Cons {
-  constructor(public readonly value: unknown, public next: Cons = Null) {}
+  constructor(
+    public readonly value: unknown,
+    public next: Cons = Null
+  ) {}
 
   public get(i: number): unknown {
     return i === 0 ? this.value : this.next.get(i - 1)

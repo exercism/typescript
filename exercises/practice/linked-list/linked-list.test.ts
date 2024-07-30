@@ -1,4 +1,5 @@
-import { LinkedList } from './linked-list'
+import { describe, it, expect, xit } from '@jest/globals'
+import { LinkedList } from './linked-list.ts'
 
 describe('LinkedList', () => {
   it('add/extract elements to the end of the list with push/pop', () => {

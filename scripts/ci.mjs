@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn ci
+ * $ corepack yarn ci
  *
  * This will run following checks:
  *
@@ -41,7 +41,7 @@ const failureStr = '[Failure] Tests failed!'
 exercises.forEach(prepare)
 
 // Run tests
-prepareAndRun('yarn jest --bail tmp_exercises', infoStr, failureStr)
+prepareAndRun('corepack yarn jest --bail tmp_exercises', infoStr, failureStr)
 
 shell.echo(
   exercises.length === 1

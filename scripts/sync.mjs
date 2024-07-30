@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
+// @ts-check
+
 /**
  * Run this script (from root directory):
  *
- * $ yarn sync
+ * $ corepack yarn sync
  *
  * This script is used to copy the following files to all exercises and keep
  * them in sync:
  *
- * - <local yarn installation>
- * - .eslintignore
- * - .eslintrc
+ * - .vscode/extensions.json
+ * - .vscode/settings.json
  * - .yarnrc.yml
  * - babel.config.cjs
+ * - eslint.config.mjs
  * - jest.config.cjs
  * - package.json
  * - tsconfig.json
@@ -37,6 +39,13 @@ function copyConfigForAssignment(name) {
     const copy = path.join(destination, dir)
 
     shell.rm('-rf', copy)
+    shell.mkdir('-p', copy)
+  })
+
+  // DELETE legacy
+  ;['.eslintignore', '.eslintrc.cjs'].forEach((file) => {
+    const source = path.join(destination, file)
+    shell.rm('-f', source)
   })
 
   // Next copy over all the common files
@@ -49,6 +58,18 @@ function copyConfigForAssignment(name) {
       shell.cp(source, copy)
     }
   })
+
+  // Copy the common dir matching contents
+  helpers.COMMON_DIR_COPY_CONTENTS.forEach((dir) => {
+    const source = path.join('common', dir)
+    const copy = path.join(destination, path.dirname(dir))
+
+    shell.cp('-R', source, copy)
+  })
+
+  // Touch an empty `yarn.lock` file so you can install yarn in each folder.
+  shell.rm(path.join(destination, 'yarn.lock'))
+  shell.touch(path.join(destination, 'yarn.lock'))
 
   // Now edit package.json and copy it over
   const packageJson = getCurrentPackageJson(assignmentPackageFilename)

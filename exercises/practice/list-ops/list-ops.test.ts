@@ -1,43 +1,62 @@
-import { List } from './list-ops'
+import { describe, it, expect, xit } from '@jest/globals'
+import { List } from './list-ops.ts'
+import type { MatcherFunction } from 'expect'
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace jest {
-    interface Matchers<R> {
-      toHaveValues(...expected: unknown[]): CustomMatcherResult
+type JestUtils = {
+  utils: {
+    printReceived(object: unknown): string
+  }
+}
+
+const toHaveValues: MatcherFunction<unknown[]> = function (
+  this: JestUtils,
+  received: unknown,
+  ...expected: unknown[]
+) {
+  if (typeof received !== 'object' || received === null) {
+    return {
+      pass: false,
+      message: () =>
+        `Expected ${this.utils.printReceived(received)} to be a non-null object`,
     }
+  }
+
+  if (!('forEach' in received) || typeof received.forEach !== 'function') {
+    return {
+      pass: false,
+      message: (): string => `Implement .forEach(callback) on your list`,
+    }
+  }
+
+  const values: unknown[] = []
+  received.forEach((item: unknown) => {
+    values.push(item)
+  })
+
+  const pass = JSON.stringify(values) === JSON.stringify(expected)
+  return {
+    pass,
+    message: (): string =>
+      pass
+        ? ''
+        : `Expected to see the following values: ${JSON.stringify(
+            expected
+          )}, actual: ${JSON.stringify(values)}`,
   }
 }
 
 expect.extend({
-  toHaveValues(
-    received: ReturnType<typeof List.create>,
-    ...expected: unknown[]
-  ): jest.CustomMatcherResult {
-    if (!('forEach' in received)) {
-      return {
-        pass: false,
-        message: (): string => `Implement .forEach(callback) on your list`,
-      }
-    }
-
-    const values: unknown[] = []
-    received.forEach((item) => {
-      values.push(item)
-    })
-
-    const pass = JSON.stringify(values) === JSON.stringify(expected)
-    return {
-      pass,
-      message: (): string =>
-        pass
-          ? ''
-          : `Expected to see the following values: ${JSON.stringify(
-              expected
-            )}, actual: ${JSON.stringify(values)}`,
-    }
-  },
+  toHaveValues,
 })
+
+declare module 'expect' {
+  interface AsymmetricMatchers {
+    toHaveValues(...expected: unknown[]): void
+  }
+  interface Matchers<R> {
+    toHaveValues(...expected: unknown[]): R
+  }
+}
 
 describe('append entries to a list and return the new list', () => {
   it('empty lists', () => {

@@ -1,4 +1,5 @@
-import { nucleotideCounts } from './nucleotide-count'
+import { describe, it, expect, xit } from '@jest/globals'
+import { nucleotideCounts } from './nucleotide-count.ts'
 
 describe('count all nucleotides in a strand', () => {
   it('empty strand', () => {
@@ -49,6 +50,6 @@ describe('count all nucleotides in a strand', () => {
     const expected = 'Invalid nucleotide in strand'
     expect(() => {
       nucleotideCounts('AGXXACT')
-    }).toThrowError(expected)
+    }).toThrow(expected)
   })
 })

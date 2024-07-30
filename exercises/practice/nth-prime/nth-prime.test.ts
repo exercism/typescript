@@ -1,4 +1,5 @@
-import { nth } from './nth-prime'
+import { describe, it, expect, xit } from '@jest/globals'
+import { nth } from './nth-prime.ts'
 
 describe('Prime', () => {
   it('first', () => {
@@ -18,6 +19,6 @@ describe('Prime', () => {
   })
 
   xit('weird case', () => {
-    expect(() => nth(0)).toThrowError('Prime is not possible')
+    expect(() => nth(0)).toThrow('Prime is not possible')
   })
 })

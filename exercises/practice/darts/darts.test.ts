@@ -1,4 +1,5 @@
-import { score } from './darts'
+import { describe, it, expect, xit } from '@jest/globals'
+import { score } from './darts.ts'
 
 describe('Darts', () => {
   it('Missed target', () => {

@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/pr-check path/1 path/2 path/3
+ * $ corepack yarn node scripts/pr-check.mjs path/1 path/2 path/3
  *
  * This will run following checks:
  * 1. Find the exercises at all the paths provided
@@ -96,7 +96,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   // TODO: be able to pass in any amount of exercises at once
   if (exercises.length >= 8) {
     const checkResult = shell.exec(
-      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
+      `corepack yarn node ${path.join('scripts', 'checksum.mjs')}`
     ).code
 
     if (checkResult !== 0) {
@@ -104,7 +104,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
     }
 
     const nameCheckResult = shell.exec(
-      `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
+      `corepack yarn node ${path.join('scripts', 'name-check.mjs')}`
     ).code
 
     if (nameCheckResult !== 0) {
@@ -115,14 +115,14 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
       shell.env['ASSIGNMENT'] = exercise
 
       const checkResult = shell.exec(
-        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'checksum')}`
+        `corepack yarn node ${path.join('scripts', 'checksum.mjs')}`
       ).code
       if (checkResult !== 0) {
         shell.exit(checkResult)
       }
 
       const nameCheckResult = shell.exec(
-        `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-check')}`
+        `corepack yarn node ${path.join('scripts', 'name-check.mjs')}`
       ).code
 
       if (nameCheckResult !== 0) {
@@ -132,7 +132,7 @@ if (!envIsThruthy('SKIP_INTEGRITY', false)) {
   }
 
   const nameUniqResult = shell.exec(
-    `yarn dlx -q -p @babel/core -p @babel/node babel-node ${path.join('scripts', 'name-uniq')}`
+    `corepack yarn node ${path.join('scripts', 'name-uniq.mjs')}`
   ).code
 
   if (nameUniqResult !== 0) {
@@ -151,6 +151,12 @@ cleanUp()
 
 shell.echo('\n==========\nLint all the files\n')
 
+shell.mkdir('-p', 'tmp_exercises')
+shell.cp(
+  path.join('common', 'tsconfig.json'),
+  path.join('tmp_exercises', 'tsconfig.json')
+)
+
 shell.env['PREPARE'] = false
 shell.env['CLEANUP'] = false
 delete shell.env['ASSIGNMENT']
@@ -159,7 +165,7 @@ exercises.forEach(prepare)
 
 shell.env['CLEANUP'] = true
 
-const checkResult = shell.exec(`yarn lint`).code
+const checkResult = shell.exec(`corepack yarn lint`).code
 if (checkResult !== 0) {
   shell.exit(checkResult)
 }

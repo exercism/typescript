@@ -75,7 +75,7 @@ If there is no such issue, you may open one. The baseline of work is as follows:
 1. We'll assign the issue to you, so you get to work on this exercise
 1. Create a new folder in `/exercises`
 1. You'll need to sync this folder with the matching config files.
-   You can use `sync` to do this: `ASSIGNMENT=practice/slug yarn sync`.
+   You can use `sync` to do this: `ASSIGNMENT=practice/slug corepack yarn sync`.
 1. Create a `<slug>.ts` stub file.
 1. Create a `<slug>.test.ts` test file.
    Here add the tests, per canonical data if possible (more on canonical data below).
@@ -89,11 +89,11 @@ If there is no such issue, you may open one. The baseline of work is as follows:
    Add yourself as author.
 1. Create a `.docs/instructions.md` file.
    Copy the instructions from the [problem specifications repository][problem-specifications]
-1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=practice/slug yarn test`.
-1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=practice/slug yarn lint`.
+1. Run the tests locally, using `scripts/test`: `ASSIGNMENT=practice/slug corepack yarn test`.
+1. Run the linter locally, using `scripts/lint`: `ASSIGNMENT=practice/slug corepack yarn lint`.
 1. Create an entry in `config.json`: a unique _new_ UUID (you can use the `configlet uuid` tool to generate one, scroll down to [tools](#tools) to see how you can get it), give it a difficulty (should be similar to similar exercises), and make sure the _order_ of the file is sane.
    Currently the file is ordered first on core - non core, then on difficulty low to high, and finally lexographically.
-1. Format the files, using `scripts/format`: `yarn format`.
+1. Format the files, using `scripts/format`: `corepack yarn format`.
 
 The final step is opening a Pull Request, with these items all checked off.
 Make sure the tests run and the linter is happy.
@@ -169,7 +169,7 @@ We use the following dependencies:
 - `jest` to run all the test files on all example implementations
 - `babel` to transpile everything so it works _regardless of your version of NodeJS_.
 
-We also use `prettier` to format the files. When possible, use `yarn format` to run prettier.
+We also use `prettier` to format the files. When possible, use `corepack yarn format` to run prettier.
 If you want to auto-format using your editor, match the version in the GitHub Workflow `verify-code-formatting.yml`.
 
 ### Fetch configlet
@@ -213,14 +213,14 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn format
+> corepack yarn format
 > ```
 
 ```typescript
 /*
  * Run this script (from root directory):
  *
- * $ yarn format
+ * $ corepack yarn format
  *
  * This runs `prettier` on all applicable files, FORCES using the same version
  * as the CI uses to check if the files have been formatted.
@@ -228,21 +228,21 @@ We have various `scripts` for you in order to aid with maintaining and contribut
 ```
 
 Use this action to format all the files using the correct version of prettier.
-If you want your editor to do this automatically, make sure you install `yarn install`.
+If you want your editor to do this automatically, make sure you install `corepack yarn install`.
 
 #### `lint`
 
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn lint
+> corepack yarn lint
 > ```
 
 ```typescript
 /*
  * Run this script (from root directory):
  *
- * $ yarn lint
+ * $ corepack yarn lint
  *
  * This runs `eslint` on all sample solutions (and test) files
  */
@@ -252,7 +252,7 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to lint `two-fer`, you may, depending on your environment use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn lint
+ASSIGNMENT=practice/two-fer corepack yarn lint
 ```
 
 #### `test`
@@ -260,14 +260,14 @@ ASSIGNMENT=practice/two-fer yarn lint
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn test
+> corepack yarn test
 > ```
 
 ```typescript
 /**
  * Run this script (from root directory):
  *
- * $ yarn test
+ * $ corepack yarn test
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -277,7 +277,7 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `example.js` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn test
+ASSIGNMENT=practice/two-fer corepack yarn test
 ```
 
 #### `sync`
@@ -285,14 +285,14 @@ ASSIGNMENT=practice/two-fer yarn test
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn sync
+> corepack yarn sync
 > ```
 
 ```typescript
 /**
  * Run this script (from root directory):
  *
- * $ yarn sync
+ * $ corepack yarn sync
  *
  * This script is used to propagate any change to root package.json to
  * all exercises and keep them in sync.
@@ -305,7 +305,7 @@ If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to sync the files for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=practice/two-fer yarn sync
+ASSIGNMENT=practice/two-fer corepack yarn sync
 ```
 
 #### `checksum`
@@ -314,7 +314,7 @@ ASSIGNMENT=practice/two-fer yarn sync
 /*
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/checksum
+ * $ corepack yarn node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -328,14 +328,14 @@ ASSIGNMENT=practice/two-fer yarn sync
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn ci:check
+> corepack yarn ci:check
 > ```
 
 ```typescript
 /**
  * Run this script (from root directory):
  *
- * $ yarn ci:check
+ * $ corepack yarn ci:check
  *
  * This will run following checks:
  *
@@ -352,7 +352,7 @@ Run this script to check stubs, configuration integrity and lint the code.
 > This has been aliased as a top-level package.json `scripts` script:
 >
 > ```shell
-> yarn ci
+> corepack yarn ci
 > ```
 
 This script is _almost_ the same as `test`. You may use them interchangeably at moment of writing
@@ -361,7 +361,7 @@ This script is _almost_ the same as `test`. You may use them interchangeably at 
 /**
  * Run this script (from root directory):
  *
- * $ yarn ci
+ * $ corepack yarn ci
  *
  * This will run following checks:
  *
@@ -378,7 +378,7 @@ Run this script to test all exercises.
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check
+ * $ corepack yarn node scripts/name-check.mjs
  *
  * This will run following checks:
  *
@@ -386,7 +386,7 @@ Run this script to test all exercises.
  *
  * This script also allows fixing these names:
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-check --fix
+ * $ corepack yarn node scripts/name-check.mjs --fix
  */
 ```
 
@@ -399,7 +399,7 @@ Run this script with the `--fix` flag to automatically fix the names.
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/name-uniq
+ * $ corepack yarn node scripts/name-uniq.mjs
  *
  * This will run following checks:
  *

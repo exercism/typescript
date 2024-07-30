@@ -1,4 +1,5 @@
-import { GradeSchool } from './grade-school'
+import { beforeEach, describe, it, expect, xit } from '@jest/globals'
+import { GradeSchool } from './grade-school.ts'
 
 describe('School', () => {
   let school: GradeSchool

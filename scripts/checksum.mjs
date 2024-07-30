@@ -3,7 +3,7 @@
 /**
  * Run this script (from root directory):
  *
- * $ yarn dlx -p @babel/core -p @babel/node babel-node scripts/checksum
+ * $ corepack yarn node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -72,8 +72,8 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
           const color = part.added
             ? chalk.green
             : part.removed
-            ? chalk.red
-            : chalk.gray
+              ? chalk.red
+              : chalk.gray
           return color(part.value)
         })
         .join('')
