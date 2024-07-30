@@ -43,8 +43,8 @@ if (!versionLine) {
   shell
     .exec('corepack yarn info prettier --json --name-only', { silent: true })
     .to(versionInfo)
-  shell.sed(/^\"prettier@npm:/, '', versionInfo).to(versionInfo)
-  shell.sed(/\"$/, '', versionInfo).to(versionInfo)
+  shell.sed(/^"prettier@npm:/, '', versionInfo).to(versionInfo)
+  shell.sed(/"$/, '', versionInfo).to(versionInfo)
 
   const versionFromPackage = shell.cat(versionInfo)
   shell.rm('-fr', tempDir)
