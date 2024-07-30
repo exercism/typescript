@@ -87,7 +87,7 @@ describe('append entries to a list and return the new list', () => {
 describe('concat lists and lists of lists into new list', () => {
   xit('empty list', () => {
     const list1 = List.create()
-    const list2 = List.create()
+    const list2 = List.create<ReturnType<typeof List.create>>()
     expect(list1.concat(list2)).toHaveValues()
   })
 
