@@ -36,7 +36,7 @@ const versionLine = shell
   .find((line) => line.startsWith('EXERCISM_PRETTIER_VERSION:'))
 
 if (!versionLine) {
-  const tempDir = mkdtempSync(`${tmpdir}${sep}`)
+  const tempDir = mkdtempSync(`${tmpdir()}${sep}`)
   const versionInfo = join(tempDir, 'info.txt')
   shell.touch(versionInfo)
 
