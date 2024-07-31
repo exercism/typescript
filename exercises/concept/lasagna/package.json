@@ -2,10 +2,7 @@
   "name": "@exercism/typescript-concept-lasagna",
   "version": "1.0.0",
   "description": "Exercism concept exercise on lasagna",
-  "author": "Katrina Owen",
-  "contributors": [
-    "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)"
-  ],
+  "author": "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)",
   "private": true,
   "repository": {
     "type": "git",
