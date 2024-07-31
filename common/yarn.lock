@@ -1494,7 +1494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@exercism/eslint-config-typescript@npm:^0.7.0":
+"@exercism/eslint-config-typescript@npm:^0.7.1":
   version: 0.7.1
   resolution: "@exercism/eslint-config-typescript@npm:0.7.1"
   dependencies:
@@ -1516,17 +1516,18 @@ __metadata:
   resolution: "@exercism/typescript@workspace:."
   dependencies:
     "@exercism/babel-preset-typescript": "npm:^0.5.0"
-    "@exercism/eslint-config-typescript": "npm:^0.7.0"
+    "@exercism/eslint-config-typescript": "npm:^0.7.1"
     "@jest/globals": "npm:^29.7.0"
-    "@types/node": "npm:~22.0.0"
+    "@types/node": "npm:~22.0.2"
     babel-jest: "npm:^29.7.0"
     core-js: "npm:~3.37.1"
     eslint: "npm:^9.8.0"
     expect: "npm:^29.7.0"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.3.3"
+    tstyche: "npm:^2.1.1"
     typescript: "npm:~5.5.4"
-    typescript-eslint: "npm:^7.17.0"
+    typescript-eslint: "npm:^7.18.0"
   languageName: unknown
   linkType: soft
 
@@ -2057,12 +2058,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:~22.0.0":
+"@types/node@npm:*":
   version: 22.0.0
   resolution: "@types/node@npm:22.0.0"
   dependencies:
     undici-types: "npm:~6.11.1"
   checksum: 10/7142a13ef1f884fde38f1e1499cbebcfe72755e8cb8657c4cb1ba1c2c91a3ae8656a72eb6e0a7d8189b0124c23c30e7c115324375d9c593435166da7a292e80e
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:~22.0.2":
+  version: 22.0.2
+  resolution: "@types/node@npm:22.0.2"
+  dependencies:
+    undici-types: "npm:~6.11.1"
+  checksum: 10/7f5937f22d5171df6d1764b838b64f03fd2686e0ebee15bb64eb609ee5280cfd8cbbb78efdf163bb49eee11c77de461ef8b85e2781e508d231777390ddf0e8ec
   languageName: node
   linkType: hard
 
@@ -6115,6 +6125,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tstyche@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "tstyche@npm:2.1.1"
+  peerDependencies:
+    typescript: 4.x || 5.x
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  bin:
+    tstyche: ./build/bin.js
+  checksum: 10/f30e7d782e51c262528ededf383c9daf39af8dea063d483667e3ff9f4800434891589c294c4b4f69802dd06daf8fb1d2a10553316d2f4631ba1413d3e48dab81
+  languageName: node
+  linkType: hard
+
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -6190,7 +6214,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^7.17.0":
+"typescript-eslint@npm:^7.17.0, typescript-eslint@npm:^7.18.0":
   version: 7.18.0
   resolution: "typescript-eslint@npm:7.18.0"
   dependencies:
