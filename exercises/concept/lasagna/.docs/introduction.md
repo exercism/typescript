@@ -11,18 +11,18 @@ Variables in JavaScript can be defined using the [`const`][mdn-const], [`let`][m
 A variable can reference different values over its lifetime when using `let` or `var`. For example, `myFirstVariable` can be defined and redefined many times using the assignment operator `=`:
 
 ```javascript
-let myFirstVariable = 1;
-myFirstVariable = 'Some string';
-myFirstVariable = new SomeComplexClass();
+let myFirstVariable = 1
+myFirstVariable = 'Some string'
+myFirstVariable = new SomeComplexClass()
 ```
 
 In contrast to `let` and `var`, variables that are defined with `const` can only be assigned once. This is used to define constants in JavaScript.
 
 ```javascript
-const MY_FIRST_CONSTANT = 10;
+const MY_FIRST_CONSTANT = 10
 
 // Can not be re-assigned.
-MY_FIRST_CONSTANT = 20;
+MY_FIRST_CONSTANT = 20
 // => TypeError: Assignment to constant variable.
 ```
 
@@ -34,10 +34,10 @@ In JavaScript, units of functionality are encapsulated in _functions_, usually g
 
 ```javascript
 function add(num1, num2) {
-  return num1 + num2;
+  return num1 + num2
 }
 
-add(1, 3);
+add(1, 3)
 // => 4
 ```
 
@@ -49,16 +49,16 @@ To make a `function`, a constant, or a variable available in _other files_, they
 
 ```javascript
 // file.js
-export const MY_VALUE = 10;
+export const MY_VALUE = 10
 
 export function add(num1, num2) {
-  return num1 + num2;
+  return num1 + num2
 }
 
 // file.spec.js
-import { MY_VALUE, add } from './file';
+import { MY_VALUE, add } from './file'
 
-add(MY_VALUE, 5);
+add(MY_VALUE, 5)
 // => 15
 ```
 
