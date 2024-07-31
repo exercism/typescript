@@ -16,7 +16,7 @@
     "highlightjs_language": "typescript"
   },
   "test_runner": {
-    "average_run_time": 4
+    "average_run_time": 8
   },
   "files": {
     "solution": [
@@ -38,8 +38,9 @@
         "slug": "lasagna",
         "name": "lasagna",
         "uuid": "a0bed44f-b179-4d09-8788-a23d2ace359e",
-        "concepts": [],
-        "prerequisites": []
+        "concepts": ["basics"],
+        "prerequisites": [],
+        "status": "beta"
       }
     ],
     "practice": [
