@@ -1459,6 +1459,13 @@
       }
     ]
   },
+  "concepts": [
+    {
+      "uuid": "6b93ea93-3312-4aee-ad6f-3f8b034e92d9",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
   "key_features": [
     {
       "title": "Evolving",
