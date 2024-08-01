@@ -72,10 +72,7 @@ class Cons<T> {
   }
 
   public concat(others: Cons<Cons<T>>): Cons<T> {
-    return others.foldl<Cons<T>>(
-      (result, other) => result.append(other),
-      this
-    )
+    return others.foldl<Cons<T>>((result, other) => result.append(other), this)
   }
 
   public foldl<TReturn = unknown>(
@@ -89,10 +86,7 @@ class Cons<T> {
     callback: (initial: TReturn | undefined, value: T) => TReturn,
     initial?: TReturn
   ): TReturn {
-    return this.next.foldl<TReturn>(
-      callback,
-      callback(initial, this.value)
-    )
+    return this.next.foldl<TReturn>(callback, callback(initial, this.value))
   }
 
   public forEach(callback: (value: T) => void): void {
@@ -111,7 +105,10 @@ class Cons<T> {
     initial?: TReturn
   ): TReturn {
     return callback(
-      this.next.foldr<TReturn>(callback as (initial: TReturn, value: T | undefined) => TReturn, initial as TReturn),
+      this.next.foldr<TReturn>(
+        callback as (initial: TReturn, value: T | undefined) => TReturn,
+        initial as TReturn
+      ),
       this.value
     )
   }
