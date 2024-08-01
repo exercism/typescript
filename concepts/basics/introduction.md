@@ -42,7 +42,10 @@ Because TypeScript can detect this statically, the TypeScript compiler will also
 
 This means you don't need to run the code to detect the `TypeError`.
 
-> 💡 In a later Learning Exercise, the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+<!--prettier-ignore -->
+~~~~exercism/note
+💡 In a later Learning Exercise, the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+~~~~
 
 ## Type inference
 
@@ -89,10 +92,13 @@ add(1, 3)
 Function parameters should usually be annotated with a type using a colon (`:`) followed by the type.
 Function return values can be annotated after closing the parameter list using a colon (`:`) followed by the type.
 
-> 💡 In TypeScript there are _many_ different ways to declare a function.
-> These other ways look different than using the `function` keyword.
-> The track tries to gradually introduce them, but if you already know about them, feel free to use any of them.
-> In most cases, using one or the other isn't better or worse.
+<!--prettier-ignore -->
+~~~~exercism/note
+💡 In TypeScript there are _many_ different ways to declare a function.
+These other ways look different than using the `function` keyword.
+The track tries to gradually introduce them, but if you already know about them, feel free to use any of them.
+In most cases, using one or the other isn't better or worse.
+~~~~
 
 ## Type Annotations
 

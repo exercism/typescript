@@ -49,7 +49,10 @@ Because TypeScript can detect this statically, the TypeScript compiler will also
 
 This means you don't need to run the code to detect the `TypeError`.
 
-> 💡 In a later Learning Exercise, the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+<!--prettier-ignore -->
+~~~~exercism/note
+💡 In a later Learning Exercise, the difference between _constant_ assignment / binding and _constant_ value is explored and explained.
+~~~~
 
 ## Type inference
 
@@ -149,10 +152,13 @@ add(1, 3)
 
 Here the return type was inferred because TypeScript knows that the result of `number + number` must always be `number`.
 
-> 💡 In TypeScript there are _many_ different ways to declare a function.
-> These other ways look different than using the `function` keyword.
-> The track tries to gradually introduce them, but if you already know about them, feel free to use any of them.
-> In most cases, using one or the other isn't better or worse.
+<!--prettier-ignore -->
+~~~~exercism/note
+💡 In TypeScript there are _many_ different ways to declare a function.
+These other ways look different than using the `function` keyword.
+The track tries to gradually introduce them, but if you already know about them, feel free to use any of them.
+In most cases, using one or the other isn't better or worse.
+~~~~
 
 ## Type Annotations
 
@@ -198,11 +204,14 @@ add(MY_VALUE, 5)
 // => 15
 ```
 
+<!--prettier-ignore -->
+~~~~exercism/advanced
 Because the TypeScript compiler does _not rewrite import paths_, the imports should be written using the `.js` extension (as that's what it will become after transpilation).
 However, the option `allowImportingTsExtensions` is on because we have a process that rewrites the paths.
 This allows importing from `.ts` (as well as `.js`).
 
 In older code you will find imports _without file extension_.
+~~~~
 
 [blog-live-bindings]: https://2ality.com/2015/07/es6-module-exports.html#es6-modules-export-immutable-bindings
 [blog-tree-shaking]: https://bitsofco.de/what-is-tree-shaking/
