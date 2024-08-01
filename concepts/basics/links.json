@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+    "description": "TypeScript for JavaScript Programmers"
+  },
+  {
+    "url": "https://www.typescriptlang.org/docs/handbook/2/basic-types.html",
+    "description": "TypeScript Handbook: The Basics"
+  },
+  {
+    "url": "https://www.typescriptlang.org/docs/handbook/type-inference.html",
+    "description": "TypeScript Handbook: Type Inference"
+  },
+  {
     "url": "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
     "description": "MDN Glossary: JavaScript Primitive"
   },
