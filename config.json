@@ -40,7 +40,7 @@
         "uuid": "a0bed44f-b179-4d09-8788-a23d2ace359e",
         "concepts": ["basics"],
         "prerequisites": [],
-        "status": "beta"
+        "status": "wip"
       }
     ],
     "practice": [
