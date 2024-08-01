@@ -18,6 +18,14 @@
     ]
   },
   "blurb": "Convert modern Arabic numbers into Roman numerals.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
   "source": "The Roman Numeral Kata",
   "source_url": "https://codingdojo.org/kata/RomanNumerals/"
 }

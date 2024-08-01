@@ -19,5 +19,13 @@
     ]
   },
   "blurb": "Manage robot factory settings.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }
