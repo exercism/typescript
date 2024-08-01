@@ -18,6 +18,14 @@
     ]
   },
   "blurb": "Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
   "source": "Learn to Program by Chris Pine",
   "source_url": "https://pine.fm/LearnToProgram/?Chapter=06"
 }

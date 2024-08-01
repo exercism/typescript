@@ -18,6 +18,14 @@
     ]
   },
   "blurb": "Compute Pascal's triangle up to a given number of rows.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
   "source": "Pascal's Triangle at Wolfram Math World",
   "source_url": "https://www.wolframalpha.com/input/?i=Pascal%27s+triangle"
 }
