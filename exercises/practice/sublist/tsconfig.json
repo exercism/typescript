@@ -27,6 +27,12 @@
     // https://babeljs.io/docs/en/babel-plugin-transform-typescript/#caveats
     "isolatedModules": true
   },
-  "include": ["*.ts", "*.tsx", ".meta/*.ts", ".meta/*.tsx"],
+  "include": [
+    "*.ts",
+    "*.tsx",
+    ".meta/*.ts",
+    ".meta/*.tsx",
+    "__typetests__/*.tst.ts"
+  ],
   "exclude": ["node_modules"]
 }

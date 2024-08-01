@@ -25,7 +25,7 @@ shell.env['PREPARE'] = true
 shell.env['CLEANUP'] = true
 
 helpers.prepareAndRun(
-  'corepack yarn jest --bail tmp_exercises',
+  'corepack yarn tstyche tmp_exercises --failFast && corepack yarn jest --bail tmp_exercises',
   infoStr,
   failureStr
 )
