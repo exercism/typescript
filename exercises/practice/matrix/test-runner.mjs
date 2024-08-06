@@ -34,8 +34,8 @@ import { URL } from 'node:url'
  * exercise config.json file which has metadata about which types of tests
  * to run for this solution.
  */
-const metaDirectory = new URL('./.meta', import.meta.url)
-const exercismDirectory = new URL('./.exercism', import.meta.url)
+const metaDirectory = new URL('./.meta/', import.meta.url)
+const exercismDirectory = new URL('./.exercism/', import.meta.url)
 const configDirectory = existsSync(metaDirectory)
   ? metaDirectory
   : execSync(exercismDirectory)
@@ -48,11 +48,14 @@ if (configDirectory === null) {
   )
 }
 
+const configFile = new URL('./config.json', configDirectory)
+if (!existsSync(configFile)) {
+  throw new Error('Expected config.json to exist at ' + configFile.toString())
+}
+
 // Experimental: import config from './config.json' with { type: 'json' }
 /** @type {import('./config.json') } */
-const config = JSON.parse(
-  readFileSync(new URL('./config.json', configDirectory))
-)
+const config = JSON.parse(readFileSync(configFile))
 
 const jest = !config.custom || config.custom['flag.tests.jest']
 const tstyche = config.custom?.['flag.tests.tstyche']
