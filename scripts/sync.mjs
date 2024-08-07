@@ -43,10 +43,12 @@ function copyConfigForAssignment(name) {
   })
 
   // DELETE legacy
-  ;['.eslintignore', '.eslintrc.cjs'].forEach((file) => {
-    const source = path.join(destination, file)
-    shell.rm('-f', source)
-  })
+  ;['.eslintignore', '.eslintrc.cjs', '.meta/test-runner.mjs'].forEach(
+    (file) => {
+      const source = path.join(destination, file)
+      shell.rm('-f', source)
+    }
+  )
 
   // Next copy over all the common files
   helpers.COMMON_FILES.forEach((file) => {

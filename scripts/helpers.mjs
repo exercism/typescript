@@ -23,7 +23,6 @@ export const COMMON_DIR_COPY_CONTENTS = [
   // '.vscode',
 ]
 export const COMMON_FILES = [
-  '.meta/test-runner.mjs',
   '.vscode/extensions.json',
   '.vscode/settings.json',
   '.yarnrc.yml',
@@ -31,6 +30,7 @@ export const COMMON_FILES = [
   'eslint.config.mjs',
   'jest.config.cjs',
   'package.json',
+  'test-runner.mjs',
   'tsconfig.json',
 ]
 
