@@ -38,7 +38,7 @@ const metaDirectory = new URL('./.meta/', import.meta.url)
 const exercismDirectory = new URL('./.exercism/', import.meta.url)
 const configDirectory = existsSync(metaDirectory)
   ? metaDirectory
-  : execSync(exercismDirectory)
+  : existsSync(exercismDirectory)
     ? exercismDirectory
     : null
 
