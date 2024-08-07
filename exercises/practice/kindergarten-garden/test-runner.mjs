@@ -25,7 +25,7 @@
  */
 
 import { execSync } from 'node:child_process'
-import { readFileSync, existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { exit } from 'node:process'
 import { URL } from 'node:url'
 
@@ -38,7 +38,7 @@ const metaDirectory = new URL('./.meta/', import.meta.url)
 const exercismDirectory = new URL('./.exercism/', import.meta.url)
 const configDirectory = existsSync(metaDirectory)
   ? metaDirectory
-  : execSync(exercismDirectory)
+  : existsSync(exercismDirectory)
     ? exercismDirectory
     : null
 
