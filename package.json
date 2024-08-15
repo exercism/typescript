@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@exercism/babel-preset-typescript": "^0.6.0",
-    "@exercism/eslint-config-typescript": "^0.7.1",
+    "@exercism/eslint-config-typescript": "^0.8.0",
     "@jest/globals": "^29.7.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "~22.0.2",
