@@ -59,16 +59,15 @@ jobs:
 
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
-
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
       - name: Use Node.js LTS (20.x)
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
           cache: 'yarn'
       - name: Install project development dependencies
-        run: |
-          corepack enable yarn
-          corepack yarn install --immutable
+        run: corepack yarn install --immutable
       - name: 'Format code'
         run: ./bin/format.sh
 
