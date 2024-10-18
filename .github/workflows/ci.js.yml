@@ -13,15 +13,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+
       - name: Use Node.js LTS (20.x)
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
+          cache: 'yarn'
 
       - name: Install project dependencies
-        run: |
-          corepack enable yarn
-          corepack yarn install --immutable
+        run: corepack yarn install --immutable
 
       - name: Run exercism/typescript ci precheck (checks config, lint code, and runs tests) for all exercises
         run: corepack yarn ci:check
@@ -35,15 +38,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
 
       - name: Install project dependencies
-        run: |
-          corepack enable yarn
-          corepack yarn install --immutable
+        run: corepack yarn install --immutable
 
       - name: Run exercism/typescript ci (checks config, lint code, and runs tests) for all exercises
         run: corepack yarn ci
@@ -57,10 +62,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+
       - name: Use Node.js 20.x
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
+          cache: 'yarn'
 
       - name: Remove root project files
         run: rm -f package.json yarn.lock .yarnrc.yml
@@ -73,9 +82,7 @@ jobs:
 
       - name: Install project dependencies
         working-directory: exercises/practice/hello-world
-        run: |
-          corepack enable yarn
-          corepack yarn install --no-immutable
+        run: corepack yarn install --no-immutable
 
       - name: Run tests
         working-directory: exercises/practice/hello-world

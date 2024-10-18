@@ -43,42 +43,16 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
   }
 
   if (fileSha !== expectedSha) {
-    const [chalk, diff] = await Promise.all([
-      import('chalk').then((d) => d.default),
-      import('diff'),
-    ])
-
     // prettier-ignore
     shell.echo(
-          `\n`,
-          `[Failure] ${filename} did not match for ${assignment} (${chalk.red(expectedSha)} != ${chalk.green(fileSha)})\n`,
-          `! Expected ${chalk.red(baseFile)} to match ${chalk.green(filePath)}\n`,
-          `! Did you forget to run ${chalk.bold(`yarn sync`)}?\n`
-        );
+      `\n`,
+      `[Failure] ${filename} did not match for ${assignment} (${expectedSha} != ${fileSha})\n`,
+      `! Expected ${baseFile} to match ${filePath}\n`,
+      `! Did you forget to run ${`yarn sync`}?\n`
+    );
 
     if (filename === 'package.json') {
       shell.echo(helpers.prepareExercisePackageJson(filePath, false))
-    }
-
-    if (chalk.supportsColor) {
-      const diffParts = diff.diffLines(
-        shell.cat(filePath).toString(),
-        shell.cat(baseFile).toString(),
-        { newlineIsToken: false }
-      )
-
-      const output = diffParts
-        .map((part) => {
-          const color = part.added
-            ? chalk.green
-            : part.removed
-              ? chalk.red
-              : chalk.gray
-          return color(part.value)
-        })
-        .join('')
-
-      shell.echo(output)
     }
 
     shell.exit(1)
