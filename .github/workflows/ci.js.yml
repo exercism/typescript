@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
 
       - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
         run: corepack enable yarn
@@ -37,7 +37,7 @@ jobs:
         node-version: [20.x, 22.x]
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
         run: corepack enable yarn
 
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
         run: corepack enable yarn
 
