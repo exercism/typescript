@@ -32,7 +32,9 @@ class NameDatabase {
   }
 
   public fetchNewName(): string {
-    if (this.availableNames.length === 0) throw 'no more names'
+    if (this.availableNames.length === 0) {
+      throw new Error('no more names')
+    }
 
     const randomPosition = rand(this.availableNames.length)
     const name = this.availableNames[randomPosition]

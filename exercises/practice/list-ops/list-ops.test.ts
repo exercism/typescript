@@ -29,6 +29,7 @@ const toHaveValues: MatcherFunction<unknown[]> = function (
   }
 
   const values: unknown[] = []
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   received.forEach((item: unknown) => {
     values.push(item)
   })

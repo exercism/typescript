@@ -117,6 +117,8 @@ describe('Palindromes', () => {
         maxFactor: 1,
         minFactor: 10000,
       })
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       palindromes.smallest
     }).toThrow(new Error('min must be <= max'))
   })
@@ -124,6 +126,8 @@ describe('Palindromes', () => {
   xit('error for largest if min is more than max', () => {
     expect(() => {
       const palindromes = generate({ maxFactor: 1, minFactor: 2 })
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       palindromes.largest
     }).toThrow(new Error('min must be <= max'))
   })
