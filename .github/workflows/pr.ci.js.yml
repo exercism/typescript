@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
-
+          cache: 'yarn'
       - name: Install project dependencies
         run: |
           corepack enable yarn
@@ -61,7 +61,7 @@ jobs:
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: ${{ matrix.node-version }}
-
+          cache: 'yarn'
       - name: Install project dependencies
         run: |
           corepack enable yarn
@@ -83,7 +83,7 @@ jobs:
         uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b
         with:
           node-version: 20.x
-
+          cache: 'yarn'
       - name: Remove root project files
         run: rm -f package.json yarn.lock .yarnrc.yml
 
