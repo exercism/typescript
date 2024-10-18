@@ -59,27 +59,25 @@ export function assertAssignment(assignment, shouldExist = true) {
 
   shell.echo(`[Failure] "${assignment}" is not a valid assignment reference`)
 
-  import('chalk').then((chalk) => {
-    if (assignment.split(path.sep).length === 1) {
-      // prettier-ignore
-      shell.echo(`
-Expected ${chalk.cyan(`{type}${path.sep}{slug}`)}, actual: ${chalk.yellow(assignment)}.
-- Use ${chalk.green(`concept${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a concept exercise.
-- Use ${chalk.green(`practice${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a practice exercise.
-    `.trim());
-    }
+  if (assignment.split(path.sep).length === 1) {
+    // prettier-ignore
+    shell.echo(`
+Expected ${`{type}${path.sep}{slug}`}, actual: ${assignment}.
+- Use ${`concept${path.sep}${assignment}`} if ${assignment} is a concept exercise.
+- Use ${`practice${path.sep}${assignment}`} if ${assignment} is a practice exercise.
+  `.trim());
+  }
 
-    const suggestions = knownAssignments().filter((known) =>
-      known.includes(assignment)
+  const suggestions = knownAssignments().filter((known) =>
+    known.includes(assignment)
+  )
+
+  if (suggestions.length > 0 && suggestions.length < 5) {
+    shell.echo(
+      '\nDid you mean:\n' +
+        suggestions.map((suggestion) => `- ${suggestion}`).join('\n')
     )
-
-    if (suggestions.length > 0 && suggestions.length < 5) {
-      shell.echo(
-        '\nDid you mean:\n' +
-          suggestions.map((suggestion) => `- ${suggestion}`).join('\n')
-      )
-    }
-  })
+  }
 
   return false
 }
@@ -248,7 +246,7 @@ export function cleanUp() {
 // These packages will be skipped while performing checksum. In other words,
 // these packages are only interesting for maintaining this repository and not
 // for the student.
-const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs', '@babel/node', 'diff', 'chalk']
+const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs']
 
 // These fields may differ between package.json files.
 const SKIP_FIELDS_FOR_CHECKSUM = [
