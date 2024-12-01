@@ -1487,7 +1487,7 @@ __metadata:
     expect: "npm:^29.7.0"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.3.3"
-    tstyche: "npm:^2.1.1"
+    tstyche: "npm:^3.0.0"
     typescript: "npm:~5.6.3"
     typescript-eslint: "npm:^8.10.0"
   languageName: unknown
@@ -6032,9 +6032,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tstyche@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "tstyche@npm:2.1.1"
+"tstyche@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "tstyche@npm:3.0.0"
   peerDependencies:
     typescript: 4.x || 5.x
   peerDependenciesMeta:
@@ -6042,7 +6042,7 @@ __metadata:
       optional: true
   bin:
     tstyche: ./build/bin.js
-  checksum: 10/f30e7d782e51c262528ededf383c9daf39af8dea063d483667e3ff9f4800434891589c294c4b4f69802dd06daf8fb1d2a10553316d2f4631ba1413d3e48dab81
+  checksum: 10/ed98a5a9eec96b537cde4ad584b8260c638c8b3c524d0eef5c0e9bf0020fe7ab49c3ff3661cb7b3382c43a3fccbdc17feaa667a826bd2b8673ffb53cdc318fdf
   languageName: node
   linkType: hard
 
