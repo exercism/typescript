@@ -2,14 +2,14 @@ import { describe, it, expect, xit } from '@jest/globals'
 import { Anagram } from './anagram.ts'
 
 let areSetsEqual = (setA, setB) =>
-  setA.size === setB.size && [...setA].every((val) => setB.has(val));
+  setA.size === setB.size && [...setA].every((val) => setB.has(val))
 
 describe('Anagram', () => {
   it('no matches', () => {
     const subject = new Anagram('diaper')
     const matches = subject.matches('hello', 'world', 'zombies', 'pants')
     const expected = []
-    
+
     expect(areSetsEqual(new Set(expected), new Set(matches))).toEqual(true)
   })
 
