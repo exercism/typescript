@@ -1,7 +1,7 @@
 import { describe, it, expect, xit } from '@jest/globals'
 import { Anagram } from './anagram.ts'
 
-const areSetsEqual = (setA, setB) =>
+const areSetsEqual = <T>(setA: Set<T>, setB: Set<T>): boolean =>
   setA.size === setB.size && [...setA].every((val) => setB.has(val))
 
 describe('Anagram', () => {
