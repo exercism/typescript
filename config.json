@@ -1271,6 +1271,19 @@
         "difficulty": 3
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "6bcfe2b6-e555-4c90-8c80-168730dd5ad3",
+        "practices": [],
+        "prerequisites": [],
+        "topics": [
+            "conditionals",
+            "loops",
+            "strings"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "dbe39983-5635-4369-89a3-fd549144259b",
