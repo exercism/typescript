@@ -26,7 +26,7 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  }
+  },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Atbash"
 }

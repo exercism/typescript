@@ -26,6 +26,6 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  }
+  },
   "source": "A pairing session with Phil Battos at gSchool"
 }

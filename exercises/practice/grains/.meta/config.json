@@ -27,7 +27,7 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  }
+  },
   "source": "The CodeRanch Cattle Drive, Assignment 6",
   "source_url": "https://web.archive.org/web/20240908084142/https://coderanch.com/wiki/718824/Grains"
 }

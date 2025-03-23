@@ -24,6 +24,6 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  }
+  },
   "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
 }

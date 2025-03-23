@@ -25,7 +25,7 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  }
+  },
   "source": "Conversation with James Edward Gray II",
   "source_url": "http://graysoftinc.com/"
 }
