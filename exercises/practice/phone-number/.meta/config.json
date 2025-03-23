@@ -27,7 +27,7 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Event Manager by JumpstartLab",
-  "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"
+  }
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
 }

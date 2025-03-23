@@ -16,7 +16,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Write a function that returns the earned points in a single toss of a Darts game.",
+  "blurb": "Calculate the points scored in a single toss of a Darts game.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -24,6 +24,6 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
+  }
   "source": "Inspired by an exercise created by a professor Della Paolera in Argentina"
 }
