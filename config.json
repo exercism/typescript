@@ -38,7 +38,9 @@
         "slug": "lasagna",
         "name": "lasagna",
         "uuid": "a0bed44f-b179-4d09-8788-a23d2ace359e",
-        "concepts": ["basics"],
+        "concepts": [
+          "basics"
+        ],
         "prerequisites": [],
         "status": "wip"
       }
@@ -1456,6 +1458,14 @@
         "topics": [
           "algorithms"
         ]
+      },
+      {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "c338cbce-fad4-4de0-bf0d-4a90803a0fe9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
