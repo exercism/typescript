@@ -17,7 +17,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Calculate the Hamming difference between two DNA strands.",
+  "blurb": "Calculate the Hamming distance between two DNA strands.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,

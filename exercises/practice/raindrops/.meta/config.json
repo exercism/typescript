@@ -15,7 +15,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Convert a number to a string, the content of which depends on the number's factors.",
+  "blurb": "Convert a number into its corresponding raindrop sounds - Pling, Plang and Plong.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,

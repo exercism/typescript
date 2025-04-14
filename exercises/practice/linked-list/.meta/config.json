@@ -17,7 +17,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Implement a doubly linked list",
+  "blurb": "Implement a doubly linked list.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,

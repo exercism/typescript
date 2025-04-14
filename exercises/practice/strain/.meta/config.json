@@ -17,7 +17,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Implement the `keep` and `discard` operation on collections. Given a collection and a predicate on the collection's elements, `keep` returns a new collection containing those elements where the predicate is true, while `discard` returns a new collection containing those elements where the predicate is false.",
+  "blurb": "Implement the `keep` and `discard` operation on collections.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
