@@ -628,6 +628,19 @@
         ]
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "bbdf7688-65cb-4291-9a4a-0ab89d122a31",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "algorithms",
+          "data_structures",
+          "maps"
+        ]
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "e431fb10-766a-4542-94ad-9c30224a3885",
