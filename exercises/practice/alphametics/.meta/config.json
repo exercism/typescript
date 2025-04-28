@@ -17,7 +17,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Write a function to solve alphametics puzzles.",
+  "blurb": "Given an alphametics puzzle, find the correct solution.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
