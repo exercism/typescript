@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "BNAndras",
+    "iignatov",
+    "masters3d",
+    "SleeplessByte"
+  ],
+  "files": {
+    "solution": [
+      "flower-field.ts"
+    ],
+    "test": [
+      "flower-field.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}
