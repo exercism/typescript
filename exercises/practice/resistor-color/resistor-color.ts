@@ -1,5 +1,5 @@
 export const colorCode = () => {
-  throw new Error('Delete this line and implement this function')
+  throw new Error('Remove this line and implement the function')
 }
 
 export const COLORS = undefined
