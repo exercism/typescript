@@ -11,14 +11,14 @@ export class QueenAttack {
   // white: [whiteRow, whiteColumn]
   // black: [blackRow, blackColumn]
   constructor({}: Partial<Positions> = {}) {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   get canAttack() {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 }
