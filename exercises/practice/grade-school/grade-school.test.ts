@@ -90,6 +90,6 @@ describe('School', () => {
     school.add('Aimee', 2)
     school.add('Aimee', 1)
 
-    expect(school.grade(2)).toEqual([])
+    expect(school.grade(2)).toEqual(['Aimee'])
   })
 })
