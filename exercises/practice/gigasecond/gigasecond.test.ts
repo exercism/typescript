@@ -1,27 +1,40 @@
-import { Gigasecond } from './gigasecond'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Gigasecond } from './gigasecond.ts'
 
 describe('Gigasecond', () => {
-  it('tells a gigasecond anniversary since midnight', () => {
-    const gs = new Gigasecond(new Date(Date.UTC(2015, 8, 14)))
-    const expectedDate = new Date(Date.UTC(2047, 4, 23, 1, 46, 40))
+  it('date only specification of time', () => {
+    const gs = new Gigasecond(new Date(Date.parse('2011-04-25')))
+    const expectedDate = new Date(Date.parse('2043-01-01T01:46:40Z'))
     expect(gs.date()).toEqual(expectedDate)
   })
 
-  xit('tells the anniversary is next day when you are born at night', () => {
-    const gs = new Gigasecond(new Date(Date.UTC(2015, 8, 14, 23, 59, 59)))
-    const expectedDate = new Date(Date.UTC(2047, 4, 24, 1, 46, 39))
+  xit('second test for date only specification of time', () => {
+    const gs = new Gigasecond(new Date(Date.parse('1977-06-13')))
+    const expectedDate = new Date(Date.parse('2009-02-19T01:46:40Z'))
     expect(gs.date()).toEqual(expectedDate)
   })
 
-  xit('even works before 1970 (beginning of Unix epoch )', () => {
-    const gs = new Gigasecond(new Date(Date.UTC(1959, 6, 19, 5, 13, 45)))
-    const expectedDate = new Date(Date.UTC(1991, 2, 27, 7, 0, 25))
+  xit('third test for date only specification of time', () => {
+    const gs = new Gigasecond(new Date(Date.parse('1959-07-19')))
+    const expectedDate = new Date(Date.parse('1991-03-27T01:46:40Z'))
     expect(gs.date()).toEqual(expectedDate)
   })
 
-  xit('make sure calling "date" doesn\'t mutate value', () => {
-    const gs = new Gigasecond(new Date(Date.UTC(1959, 6, 19, 5, 13, 45)))
-    const expectedDate = new Date(Date.UTC(1991, 2, 27, 7, 0, 25))
+  xit('full time specified', () => {
+    const gs = new Gigasecond(new Date(Date.parse('2015-01-24T22:00:00Z')))
+    const expectedDate = new Date(Date.parse('2046-10-02T23:46:40Z'))
+    expect(gs.date()).toEqual(expectedDate)
+  })
+
+  xit('full time with day roll-over', () => {
+    const gs = new Gigasecond(new Date(Date.parse('2015-01-24T23:59:59Z')))
+    const expectedDate = new Date(Date.parse('2046-10-03T01:46:39Z'))
+    expect(gs.date()).toEqual(expectedDate)
+  })
+
+  xit('does not mutate the input', () => {
+    const gs = new Gigasecond(new Date(Date.parse('2015-01-24T23:59:59Z')))
+    const expectedDate = new Date(Date.parse('2046-10-03T01:46:39Z'))
     gs.date()
     expect(gs.date()).toEqual(expectedDate)
   })

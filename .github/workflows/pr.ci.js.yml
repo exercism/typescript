@@ -7,49 +7,106 @@ on: pull_request
 
 jobs:
   precheck:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-
-      - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@56337c425554a6be30cdef71bf441f15be286854
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
         with:
-          node-version: 16.x
+          fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          if ${{ github.event_name == 'pull_request' }}; then
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM -r HEAD^1 HEAD | xargs)" >> $GITHUB_OUTPUT
+          else
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.event.after }} | xargs)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+
+      - name: Use Node.js LTS (20.x)
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
+        with:
+          node-version: 20.x
+          cache: 'yarn'
 
       - name: Install project dependencies
-        run: yarn install --frozen-lockfile
+        run: corepack yarn install --immutable
 
       - name: Run exercism/typescript ci precheck (stub files, config integrity) for changed exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn babel-node scripts/pr-check
+        run: corepack yarn node scripts/pr-check.mjs ${{ steps.changed-files.outputs.changed_files }}
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [20.x, 22.x]
 
     steps:
       - name: Checkout PR
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
+        with:
+          fetch-depth: ${{ github.event_name == 'pull_request' && 2 || 0 }}
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          if ${{ github.event_name == 'pull_request' }}; then
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM -r HEAD^1 HEAD | xargs)" >> $GITHUB_OUTPUT
+          else
+              echo "changed_files=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.event.after }} | xargs)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@56337c425554a6be30cdef71bf441f15be286854
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
 
       - name: Install project dependencies
-        run: yarn install --frozen-lockfile
+        run: corepack yarn install --immutable
 
       - name: Run exercism/typescript ci (runs tests) for changed/added exercises
+        run: corepack yarn node scripts/pr.mjs ${{ steps.changed-files.outputs.changed_files }}
+
+  impersonate:
+    # This job tries to run tests for the 'hello-world' exercise, but
+    # simulating what would happen if a student runs the tests standalone.
+    # We do this by removing all project files in the root.
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+
+      - name: Remove root project files
+        run: rm -f package.json yarn.lock .yarnrc.yml
+
+      - name: Move solution file so that tests pass
+        working-directory: exercises/practice/hello-world
         run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files?per_page=100" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(js|jsx|ts|tsx|md|json)$")) | .filename' | \
-            xargs -r yarn babel-node scripts/pr
+          rm -f hello-world.ts
+          cp ./.meta/proof.ci.ts hello-world.ts
+
+      - name: Install project dependencies
+        working-directory: exercises/practice/hello-world
+        run: corepack yarn install --no-immutable
+
+      - name: Run tests
+        working-directory: exercises/practice/hello-world
+        run: corepack yarn test

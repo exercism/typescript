@@ -1,4 +1,5 @@
-import { transpose } from './transpose'
+import { describe, it, expect, xit } from '@jest/globals'
+import { transpose } from './transpose.ts'
 
 describe('Transpose', () => {
   it('empty string', () => {

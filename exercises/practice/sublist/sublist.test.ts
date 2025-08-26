@@ -1,4 +1,5 @@
-import { List } from './sublist'
+import { describe, it, expect, xit } from '@jest/globals'
+import { List } from './sublist.ts'
 
 describe('Sublist', () => {
   it('empty lists', () => {
@@ -116,6 +117,14 @@ describe('Sublist', () => {
   xit('second list missing element from first list', () => {
     const listOne = new List(1, 2, 3)
     const listTwo = new List(1, 3)
+    const expected = 'unequal'
+
+    expect(listOne.compare(listTwo)).toEqual(expected)
+  })
+
+  xit('first list missing additional digits from second list', () => {
+    const listOne = new List(1, 2)
+    const listTwo = new List(1, 22)
     const expected = 'unequal'
 
     expect(listOne.compare(listTwo)).toEqual(expected)

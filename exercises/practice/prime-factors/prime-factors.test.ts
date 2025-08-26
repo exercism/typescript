@@ -1,4 +1,5 @@
-import { calculatePrimeFactors } from './prime-factors'
+import { describe, it, expect, xit } from '@jest/globals'
+import { calculatePrimeFactors } from './prime-factors.ts'
 
 describe('calculatePrimeFactors', () => {
   it('returns an empty array for 1', () =>
@@ -15,6 +16,8 @@ describe('calculatePrimeFactors', () => {
   xit('factors 8', () => expect(calculatePrimeFactors(8)).toEqual([2, 2, 2]))
 
   xit('factors 9', () => expect(calculatePrimeFactors(9)).toEqual([3, 3]))
+
+  xit('factors 12', () => expect(calculatePrimeFactors(12)).toEqual([2, 2, 3]))
 
   xit('factors 27', () => expect(calculatePrimeFactors(27)).toEqual([3, 3, 3]))
 

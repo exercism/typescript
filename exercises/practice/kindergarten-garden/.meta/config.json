@@ -1,12 +1,32 @@
 {
-  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
-  "authors": ["fredrb"],
-  "contributors": ["CRivasGomez", "masters3d", "SleeplessByte"],
+  "authors": [
+    "fredrb"
+  ],
+  "contributors": [
+    "CRivasGomez",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["kindergarten-garden.ts"],
-    "test": ["kindergarten-garden.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "kindergarten-garden.ts"
+    ],
+    "test": [
+      "kindergarten-garden.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
-  "source": "Random musings during airplane trip.",
-  "source_url": "http://jumpstartlab.com"
+  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
 }

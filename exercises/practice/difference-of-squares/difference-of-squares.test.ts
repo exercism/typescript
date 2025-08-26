@@ -1,4 +1,5 @@
-import { Squares } from './difference-of-squares'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { Squares } from './difference-of-squares.ts'
 
 describe('Squares', () => {
   describe('up to 5', () => {
@@ -17,7 +18,7 @@ describe('Squares', () => {
     })
   })
 
-  describe('up to 10', () => {
+  xdescribe('up to 10', () => {
     const squares = new Squares(10)
 
     xit('gets the square of sum', () => {
@@ -33,7 +34,7 @@ describe('Squares', () => {
     })
   })
 
-  describe('up to 100', () => {
+  xdescribe('up to 100', () => {
     const squares = new Squares(100)
 
     xit('gets the square of sum', () => {

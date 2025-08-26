@@ -1,12 +1,31 @@
 {
-  "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
-  "authors": ["masters3d"],
-  "contributors": ["lukaszklis", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["say.ts"],
-    "test": ["say.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "say.ts"
+    ],
+    "test": [
+      "say.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
-  "source": "A variation on JavaRanch CattleDrive, exercise 4a",
-  "source_url": "http://www.javaranch.com/say.jsp"
+  "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
+  "source": "A variation on the JavaRanch CattleDrive, Assignment 4",
+  "source_url": "https://web.archive.org/web/20240907035912/https://coderanch.com/wiki/718804"
 }

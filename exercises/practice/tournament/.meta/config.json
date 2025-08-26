@@ -1,10 +1,25 @@
 {
-  "blurb": "Tally the results of a small football competition.",
-  "authors": ["BrianDGLS"],
-  "contributors": [],
+  "authors": [
+    "BrianDGLS"
+  ],
   "files": {
-    "solution": ["tournament.ts"],
-    "test": ["tournament.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "tournament.ts"
+    ],
+    "test": [
+      "tournament.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Tally the results of a small football competition.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   }
 }

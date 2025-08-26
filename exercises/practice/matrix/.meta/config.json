@@ -1,12 +1,31 @@
 {
-  "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["matrix.ts"],
-    "test": ["matrix.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "matrix.ts"
+    ],
+    "test": [
+      "matrix.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
-  "source": "Warmup to the `saddle-points` warmup.",
-  "source_url": "http://jumpstartlab.com"
+  "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
 }

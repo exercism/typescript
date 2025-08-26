@@ -1,4 +1,5 @@
-import { translate } from './pig-latin'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { translate } from './pig-latin.ts'
 
 describe('ay is added to words that start with vowels', () => {
   it('word beginning with a', () => {
@@ -32,7 +33,7 @@ describe('ay is added to words that start with vowels', () => {
   })
 })
 
-describe('first letter and ay are moved to the end of words that start with consonants', () => {
+xdescribe('first letter and ay are moved to the end of words that start with consonants', () => {
   xit('word beginning with p', () => {
     const expected = 'igpay'
     expect(translate('pig')).toEqual(expected)
@@ -54,7 +55,7 @@ describe('first letter and ay are moved to the end of words that start with cons
   })
 })
 
-describe('some letter clusters are treated like a single consonant', () => {
+xdescribe('some letter clusters are treated like a single consonant', () => {
   xit('word beginning with ch', () => {
     const expected = 'airchay'
     expect(translate('chair')).toEqual(expected)
@@ -86,7 +87,7 @@ describe('some letter clusters are treated like a single consonant', () => {
   })
 })
 
-describe('position of y in a word determines if it is a consonant or a vowel', () => {
+xdescribe('position of y in a word determines if it is a consonant or a vowel', () => {
   xit('y is treated like a consonant at the beginning of a word', () => {
     const expected = 'ellowyay'
     expect(translate('yellow')).toEqual(expected)
@@ -98,7 +99,7 @@ describe('position of y in a word determines if it is a consonant or a vowel', (
   })
 })
 
-describe('phrases are translated', () => {
+xdescribe('phrases are translated', () => {
   xit('a whole phrase', () => {
     const expected = 'ickquay astfay unray'
     expect(translate('quick fast run')).toEqual(expected)

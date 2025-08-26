@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/stub-check
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn node scripts/stub-check.mjs
  *
  * This script checks that all exercises have a stub file.
  * Ref: https://github.com/exercism/javascript/issues/705

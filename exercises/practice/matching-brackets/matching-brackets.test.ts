@@ -1,4 +1,5 @@
-import { isPaired } from './matching-brackets'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isPaired } from './matching-brackets.ts'
 
 describe('Matching Brackets', () => {
   it('paired square brackets', () => {

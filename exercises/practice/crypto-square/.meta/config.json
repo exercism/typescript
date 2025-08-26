@@ -1,12 +1,31 @@
 {
-  "blurb": "Implement the classic method for composing secret messages called a square code.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["crypto-square.ts"],
-    "test": ["crypto-square.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "crypto-square.ts"
+    ],
+    "test": [
+      "crypto-square.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement the classic method for composing secret messages called a square code.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "J Dalbey's Programming Practice problems",
-  "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
+  "source_url": "https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
 }

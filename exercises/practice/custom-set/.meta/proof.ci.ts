@@ -76,6 +76,6 @@ export class CustomSet<T> {
   }
 
   public toList(): T[] {
-    return Object.values(this.data)
+    return Object.values(this.data) as T[]
   }
 }

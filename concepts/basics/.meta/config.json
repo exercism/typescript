@@ -1,0 +1,5 @@
+{
+  "blurb": "Basics contains the minimal knowledge required to get started in TypeScript: function declarations, variable assignment, and exposing entities.",
+  "authors": ["SleeplessByte"],
+  "contributors": ["junedev"]
+}

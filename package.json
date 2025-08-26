@@ -14,31 +14,35 @@
   },
   "type": "module",
   "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+    "node": "^18.16.0 || >=20.0.0"
   },
   "devDependencies": {
-    "@exercism/babel-preset-typescript": "^0.1.0",
-    "@exercism/eslint-config-typescript": "^0.4.1",
-    "@tsconfig/node16": "^1.0.2",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.27",
-    "babel-jest": "^28.0.3",
-    "chalk": "^5.0.0",
-    "core-js": "^3.21.1",
-    "diff": "^5.0.0",
-    "eslint": "^8.14.0",
-    "jest": "^27.5.1",
-    "prettier": "^2.6.2",
+    "@exercism/babel-preset-typescript": "^0.6.0",
+    "@exercism/eslint-config-typescript": "^0.8.0",
+    "@jest/globals": "^29.7.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "~22.7.6",
+    "babel-jest": "^29.7.0",
+    "core-js": "~3.38.1",
+    "eslint": "^9.12.0",
+    "expect": "^29.7.0",
+    "globals": "^15.11.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
     "shelljs": "^0.8.5",
-    "typescript": "^4.6.3"
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.10.0"
   },
   "scripts": {
-    "ci": "yarn babel-node scripts/ci",
-    "ci:check": "yarn babel-node scripts/ci-check",
-    "lint": "yarn babel-node scripts/lint",
-    "sync": "yarn babel-node scripts/sync",
-    "test": "yarn babel-node scripts/test",
-    "format": "yarn babel-node scripts/format"
+    "ci": "corepack yarn node scripts/ci.mjs",
+    "ci:check": "corepack yarn node scripts/ci-check.mjs",
+    "lint": "corepack yarn node scripts/lint.mjs",
+    "sync": "corepack yarn node scripts/sync.mjs",
+    "test": "corepack yarn node scripts/test.mjs",
+    "format": "corepack yarn node scripts/format.mjs"
   },
-  "dependencies": {}
+  "packageManager": "yarn@4.5.1",
+  "dependencies": {
+    "tstyche": "^2.1.1"
+  }
 }

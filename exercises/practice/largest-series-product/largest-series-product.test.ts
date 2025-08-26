@@ -1,4 +1,5 @@
-import { largestProduct } from './largest-series-product'
+import { describe, it, expect, xit } from '@jest/globals'
+import { largestProduct } from './largest-series-product.ts'
 
 describe('Largest Series Product', () => {
   it('finds the largest product if span equals length', () => {
@@ -45,14 +46,6 @@ describe('Largest Series Product', () => {
     )
   })
 
-  xit('reports 1 for empty string and empty product (0 span)', () => {
-    expect(largestProduct('', 0)).toEqual(1)
-  })
-
-  xit('reports 1 for nonempty string and empty product (0 span)', () => {
-    expect(largestProduct('123', 0)).toEqual(1)
-  })
-
   xit('rejects empty string and nonzero span', () => {
     expect(() => largestProduct('', 1)).toThrow(
       new Error('Span must be smaller than string length')
@@ -67,7 +60,7 @@ describe('Largest Series Product', () => {
 
   xit('rejects negative span', () => {
     expect(() => largestProduct('12345', -1)).toThrow(
-      new Error('Span must be greater than zero')
+      new Error('Span must not be negative')
     )
   })
 })

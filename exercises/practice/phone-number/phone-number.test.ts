@@ -1,4 +1,5 @@
-import { clean } from './phone-number'
+import { describe, it, expect, xit } from '@jest/globals'
+import { clean } from './phone-number.ts'
 
 describe('Phone Number', () => {
   describe('Cleanup user-entered phone numbers', () => {

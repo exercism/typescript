@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/test
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn test
  *
  * This runs `jest` tests for all sample solutions
  */
@@ -22,4 +24,8 @@ shell.env['PREPARE'] = true
 // Cleans up after
 shell.env['CLEANUP'] = true
 
-helpers.prepareAndRun('yarn jest --bail tmp_exercises', infoStr, failureStr)
+helpers.prepareAndRun(
+  'corepack yarn tstyche tmp_exercises --failFast && corepack yarn jest --bail tmp_exercises',
+  infoStr,
+  failureStr
+)

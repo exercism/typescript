@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/name-check
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn node scripts/name-check.mjs
  *
  * This will run following checks:
  *
  * 1. Package name is of the format "@exercism/typescript-<exercise>"
  *
- * This script also allows fixing these names: yarn babel-node scripts/name-check --fix
+ * This script also allows fixing these names:
+ *
+ * $ corepack yarn node scripts/name-check.mjs --fix
  */
 
 import shell from 'shelljs'
@@ -21,6 +25,12 @@ let exitCode = 0
 // First 2 arguments are node and script name skip them
 // Check if rest has --fix
 const fix = process.argv.slice(2).includes('--fix')
+
+if (fix) {
+  shell.echo('==============================================')
+  shell.echo('Fixing package names where necessary')
+  shell.echo('----------------------------------------------')
+}
 
 const envAssignment = shell.env['ASSIGNMENT']
 const finalPackageFiles = envAssignment

@@ -7,16 +7,16 @@ on:
 jobs:
   format:
     name: 'Format code'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/format')
     steps:
       - name: 'Post acknowledgement that it will format code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -34,7 +34,7 @@ jobs:
         id: fork_status
         run: |
           IS_FORK="$(jq '.head.repo.fork' "/tmp/pr.json")"
-          echo "::set-output name=fork::$IS_FORK"
+          echo "fork=$IS_FORK" >> "$GITHUB_OUTPUT"
 
       - name: 'Setup SSH deploy key'
         if: steps.fork_status.outputs.fork == 'false'
@@ -59,7 +59,15 @@ jobs:
 
           git clone $HEAD_REPO .
           git checkout -b "$HEAD_REF" "origin/$HEAD_REF"
-
+      - name: Enable corepack to fix https://github.com/actions/setup-node/pull/901
+        run: corepack enable yarn
+      - name: Use Node.js LTS (20.x)
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+      - name: Install project development dependencies
+        run: corepack yarn install --immutable
       - name: 'Format code'
         run: ./bin/format.sh
 
@@ -82,11 +90,11 @@ jobs:
 
       - name: 'Post acknowledgement that it has formatted the code'
         continue-on-error: true # Never fail the build if this fails
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -96,11 +104,11 @@ jobs:
       - name: 'Post reminder to trigger build manually'
         continue-on-error: true # Never fail the build if this fails
         if: steps.fork_status.outputs.fork == 'true'
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,

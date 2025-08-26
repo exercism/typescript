@@ -1,12 +1,31 @@
 {
-  "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
-  "authors": ["masters3d"],
-  "contributors": ["lukaszklis", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["space-age.ts"],
-    "test": ["space-age.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "space-age.ts"
+    ],
+    "test": [
+      "space-age.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
-  "source_url": "http://pine.fm/LearnToProgram/?Chapter=01"
+  "source_url": "https://pine.fm/LearnToProgram/?Chapter=01"
 }

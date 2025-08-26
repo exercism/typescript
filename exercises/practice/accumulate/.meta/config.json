@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement the `accumulate` operation, which, given a collection and an operation to perform on each element of the collection, returns a new collection containing the result of applying that operation to each element of the input collection.",
-  "authors": ["CRivasGomez"],
+  "authors": [
+    "CRivasGomez"
+  ],
   "contributors": [
     "emiller42",
     "lumosmind",
@@ -9,9 +10,24 @@
     "SleeplessByte"
   ],
   "files": {
-    "solution": ["accumulate.ts"],
-    "test": ["accumulate.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "accumulate.ts"
+    ],
+    "test": [
+      "accumulate.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement the `accumulate` operation, which, given a collection and an operation to perform on each element of the collection, returns a new collection containing the result of applying that operation to each element of the input collection.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Conversation with James Edward Gray II",
   "source_url": "https://twitter.com/jeg2"

@@ -6,7 +6,7 @@ export function largestProduct(digits: string, seriesLength: number): number {
     throw new Error('Span must be smaller than string length')
   }
   if (seriesLength < 0) {
-    throw new Error('Span must be greater than zero')
+    throw new Error('Span must not be negative')
   }
 
   if (!/^[0-9]+$/g.test(digits)) {

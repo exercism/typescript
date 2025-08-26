@@ -1,9 +1,25 @@
 {
-  "blurb": "Implement a basic reactive system.",
-  "authors": ["peerreynders"],
+  "authors": [
+    "peerreynders"
+  ],
   "files": {
-    "solution": ["react.ts"],
-    "test": ["react.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "react.ts"
+    ],
+    "test": [
+      "react.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement a basic reactive system.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   }
 }

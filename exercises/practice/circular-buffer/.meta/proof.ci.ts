@@ -16,7 +16,6 @@ export class BufferEmptyError extends Error {
   }
 }
 
-/* eslint-disable-next-line import/no-default-export */
 export default class CircularBuffer<T> implements Buffer<T> {
   private capacity: number
   private buffer: T[] = []

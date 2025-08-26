@@ -1,4 +1,5 @@
-import { TwoBucket } from './two-bucket'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { TwoBucket } from './two-bucket.ts'
 
 describe('TwoBucket', () => {
   describe('Measure using bucket one of size 3 and bucket two of size 5', () => {
@@ -27,7 +28,7 @@ describe('TwoBucket', () => {
     })
   })
 
-  describe('Measure using bucket one of size 7 and bucket two of size 11', () => {
+  xdescribe('Measure using bucket one of size 7 and bucket two of size 11', () => {
     const buckOne = 7
     const buckTwo = 11
     const goal = 2
@@ -49,7 +50,7 @@ describe('TwoBucket', () => {
     })
   })
 
-  describe('Measure one step using bucket one of size 1 and bucket two of size 3', () => {
+  xdescribe('Measure one step using bucket one of size 1 and bucket two of size 3', () => {
     xit('start with bucket two', () => {
       const twoBucket = new TwoBucket(1, 3, 3, 'two')
       expect(twoBucket.moves()).toEqual(1)
@@ -58,8 +59,8 @@ describe('TwoBucket', () => {
     })
   })
 
-  describe('Measure using bucket one of size 2 and bucket two of size 3', () => {
-    it.skip('start with bucket one and end with bucket two', () => {
+  xdescribe('Measure using bucket one of size 2 and bucket two of size 3', () => {
+    xit('start with bucket one and end with bucket two', () => {
       const twoBucket = new TwoBucket(2, 3, 3, 'one')
       expect(twoBucket.moves()).toEqual(2)
       expect(twoBucket.goalBucket).toEqual('two')
@@ -67,12 +68,12 @@ describe('TwoBucket', () => {
     })
   })
 
-  describe('Reachability', () => {
+  xdescribe('Reachability', () => {
     const buckOne = 6
     const buckTwo = 15
     const starterBuck = 'one'
 
-    it.skip('Not possible to reach the goal', () => {
+    xit('Not possible to reach the goal', () => {
       const goal = 5
       const twoBucket = new TwoBucket(buckOne, buckTwo, goal, starterBuck)
       expect(() => twoBucket.moves()).toThrow()
@@ -87,8 +88,8 @@ describe('TwoBucket', () => {
     })
   })
 
-  describe('Goal larger than both buckets', () => {
-    it.skip('Is impossible', () => {
+  xdescribe('Goal larger than both buckets', () => {
+    xit('Is impossible', () => {
       const twoBucket = new TwoBucket(5, 7, 8, 'one')
       expect(() => twoBucket.moves()).toThrow()
     })

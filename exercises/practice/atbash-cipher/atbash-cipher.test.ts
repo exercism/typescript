@@ -1,4 +1,5 @@
-import { encode, decode } from './atbash-cipher'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { encode, decode } from './atbash-cipher.ts'
 
 describe('AtbashCipher', () => {
   describe('encoding', () => {

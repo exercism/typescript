@@ -1,4 +1,5 @@
-import { find } from './binary-search'
+import { describe, it, expect, xit } from '@jest/globals'
+import { find } from './binary-search.ts'
 
 describe('Binary Search', () => {
   it('finds a value in an array with one element', () => {

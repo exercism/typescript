@@ -1,12 +1,32 @@
 {
-  "blurb": "Take input text and output it transposed.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "peerreynders", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "peerreynders",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["transpose.ts"],
-    "test": ["transpose.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "transpose.ts"
+    ],
+    "test": [
+      "transpose.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Take input text and output it transposed.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Reddit r/dailyprogrammer challenge #270 [Easy].",
-  "source_url": "https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text"
+  "source_url": "https://web.archive.org/web/20230630051421/https://old.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text/"
 }

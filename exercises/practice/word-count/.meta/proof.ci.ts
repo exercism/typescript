@@ -1,18 +1,19 @@
 export function count(input: string): Map<string, number> {
   const inputArray = input
+    .trim()
     .toLowerCase()
-    .replace(/\n/m, ' ')
-    .replace(/\t/m, ' ')
-    .split(' ')
+    .split(/[ ,\n]+/g)
   const inputMap = new Map<string, number>()
 
   for (const each of inputArray) {
-    if (each === '') {
+    const word = each.replace(/[.,!:"&@$%^?]|^'|'$/g, '')
+
+    if (word === '') {
       continue
     }
-    const value = inputMap.get(each) || 0
+    const value = inputMap.get(word) || 0
 
-    inputMap.set(each.trim(), value + 1)
+    inputMap.set(word, value + 1)
   }
   return inputMap
 }

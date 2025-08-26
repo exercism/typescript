@@ -1,4 +1,5 @@
-import { isPangram } from './pangram'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isPangram } from './pangram.ts'
 
 describe('Pangram()', () => {
   it('empty sentence', () => {
@@ -41,7 +42,7 @@ describe('Pangram()', () => {
     expect(isPangram('"Five quacking Zephyrs jolt my wax bed."')).toBe(true)
   })
 
-  xit('case insensitive', () => {
-    expect(isPangram('the quick brown fox jumps over with lazy FX')).toBe(false)
+  xit('a-m and A-M are 26 different characters but not a pangram', () => {
+    expect(isPangram('abcdefghijklm ABCDEFGHIJKLM')).toBe(false)
   })
 })

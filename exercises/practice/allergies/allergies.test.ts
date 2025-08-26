@@ -1,4 +1,5 @@
-import { Allergies } from './allergies'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Allergies } from './allergies.ts'
 
 describe('allergicTo', () => {
   it('no allergies means not allergic', () => {
@@ -101,6 +102,13 @@ describe('list', () => {
       'pollen',
       'cats',
     ]
+
+    expect(allergies.list()).toEqual(expected)
+  })
+
+  xit('ignore non allergen score parts, without highest valid score', () => {
+    const allergies = new Allergies(257)
+    const expected = ['eggs']
 
     expect(allergies.list()).toEqual(expected)
   })

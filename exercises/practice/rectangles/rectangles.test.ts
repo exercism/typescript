@@ -1,4 +1,5 @@
-import { count } from './rectangles'
+import { describe, it, expect, xit } from '@jest/globals'
+import { count } from './rectangles.ts'
 
 describe('Rectangles', () => {
   it('no rows', () => {
@@ -96,6 +97,20 @@ describe('Rectangles', () => {
       '+---+--+--+-+',
       '+------+  | |',
       '          +-+',
+    ])
+    expect(actual).toEqual(expected)
+  })
+
+  xit('rectangles must have four sides', () => {
+    const expected = 5
+    const actual = count([
+      '+-+ +-+',
+      '| | | |',
+      '+-+-+-+',
+      '  | |  ',
+      '+-+-+-+',
+      '| | | |',
+      '+-+ +-+',
     ])
     expect(actual).toEqual(expected)
   })

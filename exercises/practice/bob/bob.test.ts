@@ -1,4 +1,5 @@
-import { hey } from './bob'
+import { describe, it, expect, xit } from '@jest/globals'
+import { hey } from './bob.ts'
 
 describe('Bob', () => {
   it('stating something', () => {

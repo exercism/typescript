@@ -1,11 +1,29 @@
 {
-  "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
-  "authors": ["JoshiRaez"],
-  "contributors": ["SleeplessByte"],
+  "authors": [
+    "JoshiRaez"
+  ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["knapsack.ts"],
-    "test": ["knapsack.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "knapsack.ts"
+    ],
+    "test": [
+      "knapsack.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Knapsack_problem"

@@ -12,7 +12,7 @@ export function maximumValue({
 }): number {
   const maxValueForItemsSizeToWeight: number[][] = new Array(items.length + 1)
     .fill(undefined)
-    .map(() => new Array(maximumWeight + 1))
+    .map(() => new Array<number>(maximumWeight + 1))
 
   return solve(items.length, maximumWeight, items, maxValueForItemsSizeToWeight)
 }

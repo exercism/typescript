@@ -1,12 +1,29 @@
 {
-  "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
   "authors": [],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["two-bucket.ts"],
-    "test": ["two-bucket.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "two-bucket.ts"
+    ],
+    "test": [
+      "two-bucket.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Water Pouring Problem",
-  "source_url": "http://demonstrations.wolfram.com/WaterPouringProblem/"
+  "source_url": "https://demonstrations.wolfram.com/WaterPouringProblem/"
 }

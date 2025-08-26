@@ -1,4 +1,4 @@
-# TypeScript
+# Exercism TypeScript Track
 
 [![configlet](https://github.com/exercism/typescript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/typescript/actions/workflows/configlet.yml) [![typescript / ci](https://github.com/exercism/typescript/workflows/typescript%20/%20main/badge.svg)](https://github.com/exercism/typescript/actions?query=workflow%3A%22typescript+%2F+main%22)
 
@@ -22,21 +22,21 @@ This runs `jest` tests for all sample solutions.
 This _does not_ use the regular way to run `jest`, because the example solution files must be renamed to be imported correctly into the test files.
 
 ```shell
-yarn babel-node scripts/test
+corepack yarn test
 ```
 
 If the `ASSIGNMENT` environment variable is set, only _that_ exercise is tested.
 For example, if you only want to test the `two-fer.example.ts` for `two-fer`, you may, depending on your environment, use:
 
 ```shell
-ASSIGNMENT=two-fer yarn babel-node scripts/test
+ASSIGNMENT=practice/two-fer corepack yarn test
 ```
 
 > Running on Windows? Depending on your shell, environment variables are set differently.
 > You can use `cross-env` to normalize this. The following should work across environments:
 >
 > ```bash
-> yarn cross-env ASSIGNMENT=two-fer babel-node scripts/test
+> corepack yarn dlx cross-env ASSIGNMENT=practice/two-fer corepack yarn test
 > ```
 
 ## Related repositories

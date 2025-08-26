@@ -79,7 +79,10 @@ const PRIMES = [
 ]
 
 export class DiffieHellman {
-  constructor(private readonly p: number, private readonly g: number) {
+  constructor(
+    private readonly p: number,
+    private readonly g: number
+  ) {
     if (!DiffieHellman.validateInitialArguments(p, g)) {
       throw Error('Constructor arguments are out of range or non-prime!')
     }

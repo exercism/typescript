@@ -1,4 +1,5 @@
-import { SimpleCipher } from './simple-cipher'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { SimpleCipher } from './simple-cipher.ts'
 
 describe('Random key generation', () => {
   xit('generates keys at random', () => {
@@ -10,7 +11,7 @@ describe('Random key generation', () => {
   })
 })
 
-describe('Random key cipher', () => {
+xdescribe('Random key cipher', () => {
   const simpleCipher = new SimpleCipher()
 
   it('has a key made of letters', () => {
@@ -44,7 +45,7 @@ describe('Random key cipher', () => {
   })
 })
 
-describe('Substitution cipher', () => {
+xdescribe('Substitution cipher', () => {
   const key = 'abcdefghij'
   const simpleCipher = new SimpleCipher(key)
 

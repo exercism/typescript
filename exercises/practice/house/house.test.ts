@@ -1,4 +1,5 @@
-import { verse, verses } from './house'
+import { describe, it, expect, xit } from '@jest/globals'
+import { verse, verses } from './house.ts'
 
 describe('House', () => {
   it('verse one - the house that jack built', () => {

@@ -1,4 +1,5 @@
-import { maximumValue } from './knapsack'
+import { describe, it, expect, xit } from '@jest/globals'
+import { maximumValue } from './knapsack.ts'
 
 describe('Check if max carriable value is returned', () => {
   it('No items', () => {
@@ -10,7 +11,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it('One item, but too heavy', () => {
+  xit('One item, but too heavy', () => {
     const input = {
       maximumWeight: 10,
       items: [{ weight: 100, value: 1 }],
@@ -19,7 +20,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it("Five items. Can't be greedy by weight", () => {
+  xit("Five items. Can't be greedy by weight", () => {
     const input = {
       maximumWeight: 10,
       items: [
@@ -34,7 +35,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it("Five items. Can't be greedy by value", () => {
+  xit("Five items. Can't be greedy by value", () => {
     const input = {
       maximumWeight: 10,
       items: [
@@ -49,7 +50,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it('Example knapsack', () => {
+  xit('Example knapsack', () => {
     const input = {
       maximumWeight: 10,
       items: [
@@ -63,7 +64,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it('8 items', () => {
+  xit('8 items', () => {
     const input = {
       maximumWeight: 104,
       items: [
@@ -81,7 +82,7 @@ describe('Check if max carriable value is returned', () => {
     expect(maximumValue(input)).toEqual(expected)
   })
 
-  it('15 items', () => {
+  xit('15 items', () => {
     const input = {
       maximumWeight: 750,
       items: [

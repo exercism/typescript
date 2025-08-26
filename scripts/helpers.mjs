@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
 /**
@@ -18,12 +16,21 @@ const exerciseDirs = shell.ls(
 
 export const packageFiles = exerciseDirs.map((dir) => `${dir}/package.json`)
 
+export const COMMON_DIRS = ['.yarn', '.vscode']
+export const COMMON_DIR_COPY_CONTENTS = [
+  // '.yarn/releases',
+  // '.yarn/sdks',
+  // '.vscode',
+]
 export const COMMON_FILES = [
-  '.eslintignore',
-  '.eslintrc.cjs',
+  '.vscode/extensions.json',
+  '.vscode/settings.json',
+  '.yarnrc.yml',
   'babel.config.cjs',
+  'eslint.config.mjs',
   'jest.config.cjs',
   'package.json',
+  'test-runner.mjs',
   'tsconfig.json',
 ]
 
@@ -50,29 +57,27 @@ export function assertAssignment(assignment, shouldExist = true) {
     }
   }
 
-  shell.echo("[Failure] that's not a valid assignment reference")
+  shell.echo(`[Failure] "${assignment}" is not a valid assignment reference`)
 
-  import('chalk').then((chalk) => {
-    if (assignment.split(path.sep).length === 1) {
-      // prettier-ignore
-      shell.echo(`
-Expected ${chalk.cyan(`{type}${path.sep}{slug}`)}, actual: ${chalk.yellow(assignment)}.
-- Use ${chalk.green(`concept${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a concept exercise.
-- Use ${chalk.green(`practice${path.sep}${assignment}`)} if ${chalk.yellow(assignment)} is a practice exercise.
-    `.trim());
-    }
+  if (assignment.split(path.sep).length === 1) {
+    // prettier-ignore
+    shell.echo(`
+Expected ${`{type}${path.sep}{slug}`}, actual: ${assignment}.
+- Use ${`concept${path.sep}${assignment}`} if ${assignment} is a concept exercise.
+- Use ${`practice${path.sep}${assignment}`} if ${assignment} is a practice exercise.
+  `.trim());
+  }
 
-    const suggestions = knownAssignments().filter((known) =>
-      known.includes(assignment)
+  const suggestions = knownAssignments().filter((known) =>
+    known.includes(assignment)
+  )
+
+  if (suggestions.length > 0 && suggestions.length < 5) {
+    shell.echo(
+      '\nDid you mean:\n' +
+        suggestions.map((suggestion) => `- ${suggestion}`).join('\n')
     )
-
-    if (suggestions.length > 0 && suggestions.length < 5) {
-      shell.echo(
-        '\nDid you mean:\n' +
-          suggestions.map((suggestion) => `- ${suggestion}`).join('\n')
-      )
-    }
-  })
+  }
 
   return false
 }
@@ -196,7 +201,11 @@ export function prepareAndRun(command, infoStr, failureStr) {
     shell.mkdir('-p', 'tmp_exercises')
 
     COMMON_FILES.forEach((file) => {
-      shell.cp(path.join('common', file), path.join('tmp_exercises', file))
+      const source = path.join('common', file)
+      const destination = path.join('tmp_exercises', file)
+
+      shell.mkdir('-p', path.dirname(destination))
+      shell.cp(source, destination)
     })
 
     if (assignment) {
@@ -237,13 +246,7 @@ export function cleanUp() {
 // These packages will be skipped while performing checksum. In other words,
 // these packages are only interesting for maintaining this repository and not
 // for the student.
-const SKIP_PACKAGES_FOR_CHECKSUM = [
-  'shelljs',
-  '@babel/node',
-  'prettier',
-  'diff',
-  'chalk',
-]
+const SKIP_PACKAGES_FOR_CHECKSUM = ['shelljs']
 
 // These fields may differ between package.json files.
 const SKIP_FIELDS_FOR_CHECKSUM = [
@@ -365,7 +368,13 @@ export function prepare(assignment) {
       .sed(/x(test|it)\(/, 'it(', specFileDestination)
       .to(specFileDestination)
     shell
-      .sed('xdescribe', 'describe', specFileDestination)
+      .sed(/xdescribe\(/, 'describe(', specFileDestination)
+      .to(specFileDestination)
+    shell
+      .sed(/x(test|it|describe), ?/, '', specFileDestination)
+      .to(specFileDestination)
+    shell
+      .sed(/, ?x(test|it|describe) ?}/, '}', specFileDestination)
       .to(specFileDestination)
   })
 
@@ -408,15 +417,14 @@ export function prepare(assignment) {
  */
 export function registerExitHandler() {
   function exitHandler(options, exitCode) {
-    cleanUp()
+    if (shouldCleanup() || options.cleanUp) {
+      cleanUp()
+    }
 
     if (options.error) {
       console.error(options.error)
     }
 
-    if (options.cleanup) {
-      /* clean exit */
-    }
     if (exitCode || exitCode === 0) {
       /* exit code given */
     }

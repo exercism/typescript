@@ -1,7 +1,8 @@
-import { Series } from './series'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Series } from './series.ts'
 
 describe('Series', () => {
-  xit('slices of one from one', () => {
+  it('slices of one from one', () => {
     expect(new Series('1').slices(1)).toEqual([[1]])
   })
 
@@ -46,6 +47,12 @@ describe('Series', () => {
   xit('slice length is too large', () => {
     expect(() => {
       new Series('12345').slices(6)
+    }).toThrow(new Error('slice length cannot be greater than series length'))
+  })
+
+  xit('slice length is way too large', () => {
+    expect(() => {
+      new Series('12345').slices(42)
     }).toThrow(new Error('slice length cannot be greater than series length'))
   })
 

@@ -1,12 +1,31 @@
 {
-  "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
-  "authors": ["anuragsoni"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "anuragsoni"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["triangle.ts"],
-    "test": ["triangle.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "triangle.ts"
+    ],
+    "test": [
+      "triangle.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "The Ruby Koans triangle project, parts 1 & 2",
-  "source_url": "http://rubykoans.com"
+  "source_url": "https://web.archive.org/web/20220831105330/http://rubykoans.com"
 }

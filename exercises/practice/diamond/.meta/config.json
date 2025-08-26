@@ -1,12 +1,31 @@
 {
-  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
-  "authors": ["njgingrich"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "njgingrich"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["diamond.ts"],
-    "test": ["diamond.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "diamond.ts"
+    ],
+    "test": [
+      "diamond.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Seb Rose",
-  "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"
+  "source_url": "https://web.archive.org/web/20220807163751/http://claysnow.co.uk/recycling-tests-in-tdd/"
 }

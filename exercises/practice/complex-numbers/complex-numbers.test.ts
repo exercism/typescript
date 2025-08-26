@@ -1,4 +1,5 @@
-import { ComplexNumber } from './complex-numbers'
+import { describe, it, expect, xit } from '@jest/globals'
+import { ComplexNumber } from './complex-numbers.ts'
 
 describe('Complex numbers', () => {
   it('Real part of a purely real number', () => {

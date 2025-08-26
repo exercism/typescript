@@ -1,4 +1,5 @@
-import { reverse } from './reverse-string'
+import { describe, it, expect, xit } from '@jest/globals'
+import { reverse } from './reverse-string.ts'
 
 describe('Reverse String', () => {
   it('an empty string', () => {

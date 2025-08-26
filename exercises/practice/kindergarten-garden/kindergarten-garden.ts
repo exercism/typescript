@@ -26,16 +26,16 @@ const PLANT_CODES = {
 } as const
 
 type Student = string
-type Plant = typeof PLANT_CODES[keyof typeof PLANT_CODES]
+type Plant = (typeof PLANT_CODES)[keyof typeof PLANT_CODES]
 type Plants = Plant[]
 type Pots = Plants[]
 
 export class Garden {
   constructor(diagram: string, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   public plants(student: Student): Plants {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 }

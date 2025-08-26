@@ -1,4 +1,5 @@
-import { colorCode, COLORS } from './resistor-color'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { colorCode, COLORS } from './resistor-color.ts'
 
 describe('color code', () => {
   it('Black', () => {
@@ -14,7 +15,7 @@ describe('color code', () => {
   })
 })
 
-describe('Colors', () => {
+xdescribe('Colors', () => {
   xit('returns all colors', () => {
     expect(COLORS).toEqual([
       'black',

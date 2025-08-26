@@ -1,0 +1,27 @@
+{
+  "authors": ["SleeplessByte"],
+  "files": {
+    "solution": [
+      "lasagna.ts"
+    ],
+    "test": [
+      "__typetests__/lasagna.tst.ts",
+      "lasagna.test.ts"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ts"
+    ]
+  },
+  "forked_from": [
+    "javascript/lasagna"
+  ],
+  "blurb": "Learn the basics of TypeScript cooking a brilliant lasagna from your favorite cooking book.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": true,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": true
+  }
+}

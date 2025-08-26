@@ -42,7 +42,10 @@ class Palindrome implements PalindromeShape {
   }
 }
 class Palindromes {
-  constructor(public maxFactor: number, public minFactor = 1) {}
+  constructor(
+    public maxFactor: number,
+    public minFactor = 1
+  ) {}
 
   public get largest(): PalindromeShape {
     let best = new Palindrome(this.minFactor, this.minFactor)
@@ -67,15 +70,17 @@ class Palindromes {
   }
 
   public get smallest(): PalindromeShape {
+    let smallest: PalindromeShape = { value: null, factors: [] }
     for (let m = this.minFactor; m <= this.maxFactor; m += 1) {
       for (let n = this.minFactor; n <= this.maxFactor; n += 1) {
         const p = new Palindrome(m, n)
-        if (p.valid()) {
-          return p
+        if (p.valid() && (!smallest.value || smallest.value > p.value)) {
+          smallest = p
         }
       }
     }
-    return { value: null, factors: [] }
+
+    return smallest
   }
 }
 

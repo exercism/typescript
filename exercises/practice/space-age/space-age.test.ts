@@ -1,4 +1,5 @@
-import { age } from './space-age'
+import { describe, it, expect, xit } from '@jest/globals'
+import { age } from './space-age.ts'
 
 describe('Space Age', () => {
   it('age on Earth', () => {

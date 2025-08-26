@@ -1,12 +1,31 @@
 {
-  "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["house.ts"],
-    "test": ["house.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "house.ts"
+    ],
+    "test": [
+      "house.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "British nursery rhyme",
-  "source_url": "http://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built"
+  "source_url": "https://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built"
 }

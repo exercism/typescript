@@ -1,4 +1,5 @@
-import { accumulate } from './accumulate'
+import { describe, it, expect, xit } from '@jest/globals'
+import { accumulate } from './accumulate.ts'
 
 describe('accumulate()', () => {
   it('accumulation empty', () => {
@@ -6,19 +7,19 @@ describe('accumulate()', () => {
     expect(accumulate([], accumulator)).toEqual([])
   })
 
-  it('accumulate squares', () => {
+  xit('accumulate squares', () => {
     const accumulator = (n: number): number => n * n
     const result = accumulate([1, 2, 3], accumulator)
     expect(result).toEqual([1, 4, 9])
   })
 
-  it('accumulate upcases', () => {
+  xit('accumulate upcases', () => {
     const accumulator = (word: string): string => word.toUpperCase()
     const result = accumulate('hello world'.split(/\s/), accumulator)
     expect(result).toEqual(['HELLO', 'WORLD'])
   })
 
-  it('accumulate reversed strings', () => {
+  xit('accumulate reversed strings', () => {
     const accumulator = (word: string): string =>
       word.split('').reverse().join('')
     const result = accumulate(
@@ -28,7 +29,7 @@ describe('accumulate()', () => {
     expect(result).toEqual(['eht', 'kciuq', 'nworb', 'xof', 'cte'])
   })
 
-  it('accumulate recursively', () => {
+  xit('accumulate recursively', () => {
     const result = accumulate('a b c'.split(/\s/), (char: string) =>
       accumulate('1 2 3'.split(/\s/), (digit: string) => char + digit)
     )

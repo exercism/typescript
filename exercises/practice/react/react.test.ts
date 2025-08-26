@@ -1,4 +1,5 @@
-import { createInput, createComputed, createCallback } from './react'
+import { describe, it, expect, xit } from '@jest/globals'
+import { createInput, createComputed, createCallback } from './react.ts'
 
 describe('React module', () => {
   // c51ee736-d001-4f30-88d1-0c8e8b43cd07

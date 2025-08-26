@@ -1,8 +1,5 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
-  "compilerOptions": {
-    "module": "ES2020"
-  },
+  "extends": "@tsconfig/node20/tsconfig.json",
   "include": ["src", "exercises"],
   "exclude": ["test", "node_modules"]
 }

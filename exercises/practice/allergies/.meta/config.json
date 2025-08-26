@@ -1,12 +1,31 @@
 {
-  "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["allergies.ts"],
-    "test": ["allergies.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "allergies.ts"
+    ],
+    "test": [
+      "allergies.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
   },
-  "source": "Jumpstart Lab Warm-up",
-  "source_url": "http://jumpstartlab.com"
+  "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
 }

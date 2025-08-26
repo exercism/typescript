@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/checksum
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn node scripts/checksum.mjs
  *
  * This will check root `package.json` matches each exercise's `package.json`.
  * But the catch is there are some dependencies used for build but not served to end users
@@ -21,6 +23,7 @@ import path from 'node:path'
  * @param baseFile the file path that {filename} must be compared against
  * @param expectedSha known value of {baseFile}
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
   if (!assignment) {
     return
@@ -40,42 +43,16 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
   }
 
   if (fileSha !== expectedSha) {
-    const [chalk, diff] = await Promise.all([
-      import('chalk').then((d) => d.default),
-      import('diff'),
-    ])
-
     // prettier-ignore
     shell.echo(
-          `\n`,
-          `[Failure] ${filename} did not match for ${assignment} (${chalk.red(expectedSha)} != ${chalk.green(fileSha)})\n`,
-          `! Expected ${chalk.red(baseFile)} to match ${chalk.green(filePath)}\n`,
-          `! Did you forget to run ${chalk.bold(`yarn babel-node scripts/sync`)}?\n`
-        );
+      `\n`,
+      `[Failure] ${filename} did not match for ${assignment} (${expectedSha} != ${fileSha})\n`,
+      `! Expected ${baseFile} to match ${filePath}\n`,
+      `! Did you forget to run ${`yarn sync`}?\n`
+    );
 
     if (filename === 'package.json') {
       shell.echo(helpers.prepareExercisePackageJson(filePath, false))
-    }
-
-    if (chalk.supportsColor) {
-      const diffParts = diff.diffLines(
-        shell.cat(filePath).toString(),
-        shell.cat(baseFile).toString(),
-        { newlineIsToken: false }
-      )
-
-      const output = diffParts
-        .map((part) => {
-          const color = part.added
-            ? chalk.green
-            : part.removed
-            ? chalk.red
-            : chalk.gray
-          return color(part.value)
-        })
-        .join('')
-
-      shell.echo(output)
     }
 
     shell.exit(1)
@@ -88,6 +65,7 @@ async function checksumAssignment(assignment, filename, baseFile, expectedSha) {
  * @param filename filename in the exercise directory
  * @param rootFileName filename in the root directory
  */
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checkSumAll(filename, rootFileName = filename) {
   const assignments = [shell.env['ASSIGNMENT']].filter(Boolean)
 

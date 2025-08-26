@@ -1,4 +1,5 @@
-import { generate } from './palindrome-products'
+import { describe, it, expect, xit } from '@jest/globals'
+import { generate } from './palindrome-products.ts'
 
 describe('Palindromes', () => {
   it('smallest palindrome from single digit factors', () => {
@@ -67,7 +68,7 @@ describe('Palindromes', () => {
     expect(sortFactors(largest.factors)).toEqual(expected.factors)
   })
 
-  it.skip('smallest palindrome from four digit factors', () => {
+  xit('smallest palindrome from four digit factors', () => {
     const palindromes = generate({
       maxFactor: 9999,
       minFactor: 1000,
@@ -79,7 +80,7 @@ describe('Palindromes', () => {
     expect(sortFactors(smallest.factors)).toEqual(expected.factors)
   })
 
-  it.skip('largest palindrome from four digit factors', () => {
+  xit('largest palindrome from four digit factors', () => {
     const palindromes = generate({
       maxFactor: 9999,
       minFactor: 1000,
@@ -116,6 +117,8 @@ describe('Palindromes', () => {
         maxFactor: 1,
         minFactor: 10000,
       })
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       palindromes.smallest
     }).toThrow(new Error('min must be <= max'))
   })
@@ -123,8 +126,22 @@ describe('Palindromes', () => {
   xit('error for largest if min is more than max', () => {
     expect(() => {
       const palindromes = generate({ maxFactor: 1, minFactor: 2 })
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       palindromes.largest
     }).toThrow(new Error('min must be <= max'))
+  })
+
+  xit('smallest product does not use the smallest factor', () => {
+    const palindromes = generate({
+      maxFactor: 4000,
+      minFactor: 3215,
+    })
+    const smallest = palindromes.smallest
+    const expected = { value: 10988901, factors: [[3297, 3333]] }
+
+    expect(smallest.value).toEqual(expected.value)
+    expect(sortFactors(smallest.factors)).toEqual(expected.factors)
   })
 })
 

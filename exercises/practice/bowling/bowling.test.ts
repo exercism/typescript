@@ -1,4 +1,5 @@
-import { Bowling } from './bowling'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Bowling } from './bowling.ts'
 
 describe('Bowling', () => {
   describe('Check game can be scored correctly.', () => {
@@ -116,6 +117,17 @@ describe('Bowling', () => {
         bowling.roll(roll)
       })
       expect(bowling.score()).toEqual(30)
+    })
+
+    xit('last two strikes followed by only last bonus with non strike points', () => {
+      const rolls = [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1,
+      ]
+      const bowling = new Bowling()
+      rolls.forEach((roll) => {
+        bowling.roll(roll)
+      })
+      expect(bowling.score()).toEqual(31)
     })
 
     xit('a strike with the one roll bonus after a spare in the last frame does not get a bonus', () => {

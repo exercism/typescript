@@ -1,12 +1,32 @@
 {
-  "blurb": "Detect palindrome products in a given range.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["averaart", "masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "averaart",
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["palindrome-products.ts"],
-    "test": ["palindrome-products.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "palindrome-products.ts"
+    ],
+    "test": [
+      "palindrome-products.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Detect palindrome products in a given range.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Problem 4 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=4"
+  "source_url": "https://projecteuler.net/problem=4"
 }

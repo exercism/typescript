@@ -1,4 +1,5 @@
-import { Crypto } from './crypto-square'
+import { describe, it, expect, xit } from '@jest/globals'
+import { Crypto } from './crypto-square.ts'
 
 describe('Crypto', () => {
   it('empty plaintext results in an empty ciphertext', () => {

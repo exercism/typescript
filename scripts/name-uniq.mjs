@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Run this script (from root directory): yarn babel-node scripts/name-uniq
+ * Run this script (from root directory):
+ *
+ * $ corepack yarn node scripts/name-uniq.mjs
  *
  * This will run following checks:
  *

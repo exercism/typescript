@@ -1,4 +1,5 @@
-import { annotate } from './minesweeper'
+import { describe, it, expect, xit } from '@jest/globals'
+import { annotate } from './minesweeper.ts'
 
 describe('Minesweeper annotate', () => {
   it('handles no rows', () => {

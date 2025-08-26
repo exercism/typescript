@@ -1,4 +1,5 @@
-import { verse, verses } from './food-chain'
+import { describe, it, expect, xit } from '@jest/globals'
+import { verse, verses } from './food-chain.ts'
 
 describe('Food Chain', () => {
   it('fly', () => {

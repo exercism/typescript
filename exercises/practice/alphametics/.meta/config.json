@@ -1,10 +1,29 @@
 {
-  "blurb": "Write a function to solve alphametics puzzles.",
-  "authors": ["W0lfw00d"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "W0lfw00d"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["alphametics.ts"],
-    "test": ["alphametics.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "alphametics.ts"
+    ],
+    "test": [
+      "alphametics.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given an alphametics puzzle, find the correct solution.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   }
 }

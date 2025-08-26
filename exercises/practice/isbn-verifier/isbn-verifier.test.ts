@@ -1,7 +1,8 @@
-import { isValid } from './isbn-verifier'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isValid } from './isbn-verifier.ts'
 
 describe('ISBN Verifier', () => {
-  it('valid isbn number', () => {
+  it('valid isbn', () => {
     expect(isValid('3-598-21508-8')).toBeTruthy()
   })
 
@@ -9,7 +10,7 @@ describe('ISBN Verifier', () => {
     expect(isValid('3-598-21508-9')).toBeFalsy()
   })
 
-  xit('valid isbn number with a check digit of 10', () => {
+  xit('valid isbn with a check digit of 10', () => {
     expect(isValid('3-598-21507-X')).toBeTruthy()
   })
 
@@ -17,7 +18,11 @@ describe('ISBN Verifier', () => {
     expect(isValid('3-598-21507-A')).toBeFalsy()
   })
 
-  xit('invalid character in isbn', () => {
+  xit('invalid check digit in isbn is not treated as zero', () => {
+    expect(isValid('4-598-21507-B')).toBeFalsy()
+  })
+
+  xit('invalid character in isbn is not treated as zero', () => {
     expect(isValid('3-598-2K507-0')).toBeFalsy()
   })
 
@@ -37,16 +42,20 @@ describe('ISBN Verifier', () => {
     expect(isValid('359821507')).toBeFalsy()
   })
 
+  xit('too long isbn', () => {
+    expect(isValid('3-598-21507-XX')).toBeFalsy()
+  })
+
   xit('too long isbn and no dashes', () => {
     expect(isValid('3598215078X')).toBeFalsy()
   })
 
-  xit('isbn without check digit', () => {
-    expect(isValid('3-598-21507')).toBeFalsy()
+  xit('too short isbn', () => {
+    expect(isValid('00')).toBeFalsy()
   })
 
-  xit('too long isbn', () => {
-    expect(isValid('3-598-21507-XX')).toBeFalsy()
+  xit('isbn without check digit', () => {
+    expect(isValid('3-598-21507')).toBeFalsy()
   })
 
   xit('check digit of X should not be used for 0', () => {
@@ -55,5 +64,21 @@ describe('ISBN Verifier', () => {
 
   xit('empty isbn', () => {
     expect(isValid('')).toBeFalsy()
+  })
+
+  xit('input is 9 characters', () => {
+    expect(isValid('134456729')).toBeFalsy()
+  })
+
+  xit('invalid characters are not ignored after checking length', () => {
+    expect(isValid('3132P34035')).toBeFalsy()
+  })
+
+  xit('invalid characters are not ignored before checking length', () => {
+    expect(isValid('3598P215088')).toBeFalsy()
+  })
+
+  xit('input is too long but contains a valid isbn', () => {
+    expect(isValid('98245726788')).toBeFalsy()
   })
 })

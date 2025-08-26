@@ -1,4 +1,5 @@
-import { QueenAttack } from './queen-attack'
+import { describe, it, expect, xit } from '@jest/globals'
+import { QueenAttack } from './queen-attack.ts'
 
 describe('Queens', () => {
   describe('Test creation of Queens with valid and invalid positions', () => {
@@ -82,6 +83,11 @@ describe('Queens', () => {
     xit('queens can attack on another ne/sw diagonal', () => {
       const queens = new QueenAttack({ white: [2, 6], black: [5, 3] })
       expect(queens.canAttack).toEqual(true)
+    })
+
+    xit('queens cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal', () => {
+      const queens = new QueenAttack({ white: [4, 1], black: [2, 5] })
+      expect(queens.canAttack).toEqual(false)
     })
   })
 

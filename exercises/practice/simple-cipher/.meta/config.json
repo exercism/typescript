@@ -1,6 +1,7 @@
 {
-  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher",
-  "authors": ["CRivasGomez"],
+  "authors": [
+    "CRivasGomez"
+  ],
   "contributors": [
     "daveyarwood",
     "janczer",
@@ -9,10 +10,25 @@
     "tekerson"
   ],
   "files": {
-    "solution": ["simple-cipher.ts"],
-    "test": ["simple-cipher.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "simple-cipher.ts"
+    ],
+    "test": [
+      "simple-cipher.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Substitution Cipher at Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Substitution_cipher"
+  "source_url": "https://en.wikipedia.org/wiki/Substitution_cipher"
 }

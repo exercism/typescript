@@ -1,12 +1,29 @@
 {
-  "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
   "authors": [],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["sum-of-multiples.ts"],
-    "test": ["sum-of-multiples.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "sum-of-multiples.ts"
+    ],
+    "test": [
+      "sum-of-multiples.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "A variation on Problem 1 at Project Euler",
-  "source_url": "http://projecteuler.net/problem=1"
+  "source_url": "https://projecteuler.net/problem=1"
 }

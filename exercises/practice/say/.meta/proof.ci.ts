@@ -61,14 +61,14 @@ function numberGenerator(input: number): string {
   }
   const level = classifier(input)
   const thirdPlace = divideNoDecimal(input, level)
-  const remainer = input % level
+  const remainder = input % level
 
   let builder = ''
   builder +=
     thirdPlace === 0
       ? ''
       : `${numberGenerator(thirdPlace)} ${numbersMap.get(level)!}`
-  builder += remainer === 0 ? '' : ' ' + `${numberGenerator(remainer)}`
+  builder += remainder === 0 ? '' : ' ' + `${numberGenerator(remainder)}`
   return builder
 }
 
@@ -82,8 +82,12 @@ function zeroTo99(input: number): string {
   if (input > 20 && input < 100) {
     const teen = divideNoDecimal(input, 10) * 10
     const tens = numbersMap.get(teen)!
-    const remainer = numbersMap.get(input % teen)!
-    return `${tens}-${remainer}`
+    const remainder = numbersMap.get(input % teen)!
+    if (remainder === 'zero') {
+      return tens
+    } else {
+      return `${tens}-${remainder}`
+    }
   }
   return ''
 }

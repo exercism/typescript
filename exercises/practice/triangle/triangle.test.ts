@@ -1,4 +1,5 @@
-import { Triangle } from './triangle'
+import { describe, xdescribe, it, expect, xit } from '@jest/globals'
+import { Triangle } from './triangle.ts'
 
 describe('Triangle', () => {
   describe('equilateral triangle', () => {
@@ -28,7 +29,7 @@ describe('Triangle', () => {
     })
   })
 
-  describe('isosceles triangle', () => {
+  xdescribe('isosceles triangle', () => {
     xit('last two sides are equal', () => {
       const triangle = new Triangle(3, 4, 4)
       expect(triangle.isIsosceles).toBe(true)
@@ -75,7 +76,7 @@ describe('Triangle', () => {
     })
   })
 
-  describe('scalene triangle', () => {
+  xdescribe('scalene triangle', () => {
     xit('no sides are equal', () => {
       const triangle = new Triangle(5, 4, 6)
       expect(triangle.isScalene).toBe(true)
@@ -86,8 +87,18 @@ describe('Triangle', () => {
       expect(triangle.isScalene).toBe(false)
     })
 
-    xit('two sides are equal', () => {
+    xit('first and second sides are equal', () => {
       const triangle = new Triangle(4, 4, 3)
+      expect(triangle.isScalene).toBe(false)
+    })
+
+    xit('first and third sides are equal', () => {
+      const triangle = new Triangle(3, 4, 3)
+      expect(triangle.isScalene).toBe(false)
+    })
+
+    xit('second and third sides are equal', () => {
+      const triangle = new Triangle(4, 3, 3)
       expect(triangle.isScalene).toBe(false)
     })
 

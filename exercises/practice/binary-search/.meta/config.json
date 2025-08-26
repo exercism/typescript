@@ -1,12 +1,31 @@
 {
-  "blurb": "Implement a binary search algorithm.",
-  "authors": ["anuragsoni"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "anuragsoni"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["binary-search.ts"],
-    "test": ["binary-search.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "binary-search.ts"
+    ],
+    "test": [
+      "binary-search.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Implement a binary search algorithm.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
+  "source_url": "https://en.wikipedia.org/wiki/Binary_search_algorithm"
 }

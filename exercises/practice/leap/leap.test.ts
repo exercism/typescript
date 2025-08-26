@@ -1,4 +1,5 @@
-import { isLeap } from './leap'
+import { describe, it, expect, xit } from '@jest/globals'
+import { isLeap } from './leap.ts'
 
 describe('A leap year', () => {
   it('year not divisible by 4 in common year', () => {

@@ -1,4 +1,5 @@
-import { primes } from './sieve'
+import { describe, it, expect, xit } from '@jest/globals'
+import { primes } from './sieve.ts'
 
 describe('Sieve', () => {
   it('no primes under two', () => {

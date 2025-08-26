@@ -1,11 +1,30 @@
 {
-  "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
-  "authors": ["masters3d"],
-  "contributors": ["lukaszklis", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["wordy.ts"],
-    "test": ["wordy.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "wordy.ts"
+    ],
+    "test": [
+      "wordy.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Inspired by one of the generated questions in the Extreme Startup game.",
   "source_url": "https://github.com/rchatley/extreme_startup"

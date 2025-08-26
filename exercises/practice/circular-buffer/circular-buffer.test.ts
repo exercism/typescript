@@ -1,7 +1,8 @@
+import { describe, it, expect, xit } from '@jest/globals'
 import CircularBuffer, {
   BufferFullError,
   BufferEmptyError,
-} from './circular-buffer'
+} from './circular-buffer.ts'
 
 describe('CircularBuffer', () => {
   it('reading an empty buffer throws a BufferEmptyError', () => {
@@ -9,14 +10,14 @@ describe('CircularBuffer', () => {
     expect(() => buffer.read()).toThrow(BufferEmptyError)
   })
 
-  it('write and read back one item', () => {
+  xit('write and read back one item', () => {
     const buffer = new CircularBuffer<string>(1)
     buffer.write('1')
     expect(buffer.read()).toBe('1')
     expect(() => buffer.read()).toThrow(BufferEmptyError)
   })
 
-  it('write and read back multiple items', () => {
+  xit('write and read back multiple items', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     buffer.write('2')
@@ -25,7 +26,7 @@ describe('CircularBuffer', () => {
     expect(() => buffer.read()).toThrow(BufferEmptyError)
   })
 
-  it('clearing a buffer', () => {
+  xit('clearing a buffer', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     buffer.write('2')
@@ -37,7 +38,7 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('4')
   })
 
-  it('alternate write and read', () => {
+  xit('alternate write and read', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     expect(buffer.read()).toBe('1')
@@ -45,7 +46,7 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('2')
   })
 
-  it('reads back oldest item', () => {
+  xit('reads back oldest item', () => {
     const buffer = new CircularBuffer<string>(3)
     buffer.write('1')
     buffer.write('2')
@@ -55,14 +56,14 @@ describe('CircularBuffer', () => {
     expect(buffer.read()).toBe('3')
   })
 
-  it('writing to a full buffer throws a BufferFullError', () => {
+  xit('writing to a full buffer throws a BufferFullError', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     buffer.write('2')
     expect(() => buffer.write('A')).toThrow(BufferFullError)
   })
 
-  it('forced writes over write oldest item in a full buffer', () => {
+  xit('forced writes over write oldest item in a full buffer', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     buffer.write('2')
@@ -72,7 +73,7 @@ describe('CircularBuffer', () => {
     expect(() => buffer.read()).toThrow(BufferEmptyError)
   })
 
-  it('forced writes act like write in a non-full buffer', () => {
+  xit('forced writes act like write in a non-full buffer', () => {
     const buffer = new CircularBuffer<string>(2)
     buffer.write('1')
     buffer.forceWrite('2')
@@ -81,7 +82,7 @@ describe('CircularBuffer', () => {
     expect(() => buffer.read()).toThrow(BufferEmptyError)
   })
 
-  it('alternate force write and read into full buffer', () => {
+  xit('alternate force write and read into full buffer', () => {
     const buffer = new CircularBuffer<string>(5)
     buffer.write('1')
     buffer.write('2')

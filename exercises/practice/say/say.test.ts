@@ -1,4 +1,5 @@
-import { sayInEnglish } from './say'
+import { describe, it, expect, xit } from '@jest/globals'
+import { sayInEnglish } from './say.ts'
 
 describe('say', () => {
   it('zero', () => {
@@ -21,12 +22,28 @@ describe('say', () => {
     expect(sayInEnglish(22)).toBe('twenty-two')
   })
 
+  xit('thirty', () => {
+    expect(sayInEnglish(30)).toBe('thirty')
+  })
+
+  xit('ninety-nine', () => {
+    expect(sayInEnglish(99)).toBe('ninety-nine')
+  })
+
   xit('one hundred', () => {
     expect(sayInEnglish(100)).toBe('one hundred')
   })
 
   xit('one hundred twenty-three', () => {
     expect(sayInEnglish(123)).toBe('one hundred twenty-three')
+  })
+
+  xit('two hundred', () => {
+    expect(sayInEnglish(200)).toBe('two hundred')
+  })
+
+  xit('nine hundred ninety-nine', () => {
+    expect(sayInEnglish(999)).toBe('nine hundred ninety-nine')
   })
 
   xit('one thousand', () => {
@@ -66,12 +83,12 @@ describe('say', () => {
   xit('raises an error below zero', () => {
     expect(() => {
       sayInEnglish(-1)
-    }).toThrowError('Number must be between 0 and 999,999,999,999.')
+    }).toThrow('Number must be between 0 and 999,999,999,999.')
   })
 
   xit('raises an error above 999,999,999,999', () => {
     expect(() => {
       sayInEnglish(1000000000000)
-    }).toThrowError('Number must be between 0 and 999,999,999,999.')
+    }).toThrow('Number must be between 0 and 999,999,999,999.')
   })
 })

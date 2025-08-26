@@ -1,12 +1,32 @@
 {
-  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte",
+    "angelikatyborska"
+  ],
   "files": {
-    "solution": ["luhn.ts"],
-    "test": ["luhn.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "luhn.ts"
+    ],
+    "test": [
+      "luhn.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "The Luhn Algorithm on Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"
+  "source_url": "https://en.wikipedia.org/wiki/Luhn_algorithm"
 }

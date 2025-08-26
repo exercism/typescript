@@ -27,7 +27,7 @@ function samePosition({ white, black }: Positions): boolean {
 }
 
 function constructBoard(): Board {
-  return new Array(W * H).fill('_')
+  return new Array<string>(W * H).fill('_')
 }
 
 function placePieces(self: QueenAttack): void {

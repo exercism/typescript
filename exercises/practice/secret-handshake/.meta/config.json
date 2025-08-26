@@ -1,12 +1,31 @@
 {
-  "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
-  "authors": ["CRivasGomez"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "CRivasGomez"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["secret-handshake.ts"],
-    "test": ["secret-handshake.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "secret-handshake.ts"
+    ],
+    "test": [
+      "secret-handshake.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Bert, in Mary Poppins",
-  "source_url": "http://www.imdb.com/title/tt0058331/quotes/qt0437047"
+  "source_url": "https://www.imdb.com/title/tt0058331/quotes/?item=qt0437047"
 }

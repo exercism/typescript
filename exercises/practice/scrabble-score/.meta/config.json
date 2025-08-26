@@ -1,11 +1,30 @@
 {
-  "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": ["zgavin1"],
-  "contributors": ["masters3d", "SleeplessByte"],
+  "authors": [
+    "zgavin1"
+  ],
+  "contributors": [
+    "masters3d",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["scrabble-score.ts"],
-    "test": ["scrabble-score.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "scrabble-score.ts"
+    ],
+    "test": [
+      "scrabble-score.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Given a word, compute the Scrabble score for that word.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"

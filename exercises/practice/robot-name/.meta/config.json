@@ -1,11 +1,31 @@
 {
-  "blurb": "Manage robot factory settings.",
-  "authors": ["masters3d"],
-  "contributors": ["joshgoebel", "lukaszklis", "SleeplessByte"],
+  "authors": [
+    "masters3d"
+  ],
+  "contributors": [
+    "joshgoebel",
+    "lukaszklis",
+    "SleeplessByte"
+  ],
   "files": {
-    "solution": ["robot-name.ts"],
-    "test": ["robot-name.test.ts"],
-    "example": [".meta/proof.ci.ts"]
+    "solution": [
+      "robot-name.ts"
+    ],
+    "test": [
+      "robot-name.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Manage robot factory settings.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": true,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

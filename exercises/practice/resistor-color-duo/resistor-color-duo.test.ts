@@ -1,4 +1,5 @@
-import { decodedValue } from './resistor-color-duo'
+import { describe, it, expect, xit } from '@jest/globals'
+import { decodedValue } from './resistor-color-duo.ts'
 
 describe('Resistor Colors', () => {
   it('Brown and black', () => {
@@ -7,6 +8,10 @@ describe('Resistor Colors', () => {
 
   xit('Blue and grey', () => {
     expect(decodedValue(['blue', 'grey'])).toEqual(68)
+  })
+
+  xit('White and red', () => {
+    expect(decodedValue(['white', 'red'])).toEqual(92)
   })
 
   xit('Yellow and violet', () => {
@@ -19,5 +24,9 @@ describe('Resistor Colors', () => {
 
   xit('Ignore additional colors', () => {
     expect(decodedValue(['green', 'brown', 'orange'])).toEqual(51)
+  })
+
+  xit('Black and brown, one-digit', () => {
+    expect(decodedValue(['black', 'brown'])).toEqual(1)
   })
 })
