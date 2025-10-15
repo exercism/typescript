@@ -14,20 +14,3 @@ describe('color code', () => {
     expect(colorCode('orange')).toEqual(3)
   })
 })
-
-xdescribe('Colors', () => {
-  xit('returns all colors', () => {
-    expect(COLORS).toEqual([
-      'black',
-      'brown',
-      'red',
-      'orange',
-      'yellow',
-      'green',
-      'blue',
-      'violet',
-      'grey',
-      'white',
-    ])
-  })
-})
