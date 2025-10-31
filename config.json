@@ -892,6 +892,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
+        "status": "deprecated",
         "topics": [
           "conditionals",
           "loops",
