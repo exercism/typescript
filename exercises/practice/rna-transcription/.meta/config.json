@@ -18,7 +18,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
+  "blurb": "Given a DNA strand, return its RNA complement.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,

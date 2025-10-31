@@ -11,26 +11,26 @@ export class ValueError extends Error {
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   open(): unknown {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   close(): unknown {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   deposit(_argument: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   withdraw(_argument: unknown): unknown {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   get balance(): unknown {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 }

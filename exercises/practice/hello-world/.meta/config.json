@@ -21,7 +21,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "The classical introductory exercise. Just say \"Hello, World!\".",
+  "blurb": "Exercism's classic introductory exercise. Just say \"Hello, World!\".",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,

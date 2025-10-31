@@ -38,7 +38,9 @@
         "slug": "lasagna",
         "name": "lasagna",
         "uuid": "a0bed44f-b179-4d09-8788-a23d2ace359e",
-        "concepts": ["basics"],
+        "concepts": [
+          "basics"
+        ],
         "prerequisites": [],
         "status": "wip"
       }
@@ -415,6 +417,14 @@
         ]
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "bf4a0802-334b-4ed7-9ade-a3ef5fa6878e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "86d5a60a-fc44-443d-bc00-5c6265e736c4",
@@ -623,6 +633,19 @@
           "loops",
           "integers",
           "math"
+        ]
+      },
+      {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "bbdf7688-65cb-4291-9a4a-0ab89d122a31",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "algorithms",
+          "data_structures",
+          "maps"
         ]
       },
       {
@@ -1384,12 +1407,26 @@
         "difficulty": 6
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "f1c96aaa-0944-4a11-83df-9f3a4f5417f0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "algorithms",
+          "arrays",
+          "games"
+        ]
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "f5b00e76-3015-444d-8012-9862990db08c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7,
+        "status": "deprecated",
         "topics": [
           "algorithms",
           "arrays",
@@ -1469,6 +1506,14 @@
         "topics": [
           "algorithms"
         ]
+      },
+      {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "c338cbce-fad4-4de0-bf0d-4a90803a0fe9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },

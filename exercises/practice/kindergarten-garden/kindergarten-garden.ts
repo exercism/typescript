@@ -32,10 +32,10 @@ type Pots = Plants[]
 
 export class Garden {
   constructor(diagram: string, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 
   public plants(student: Student): Plants {
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 }

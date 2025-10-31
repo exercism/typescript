@@ -5,6 +5,9 @@ The track consists of various **core** exercises, the ones a student _must_ comp
 You can find this in the [`config.json`][file-config].
 It's not uncommon that people discover incorrect implementations of certain tests, have a suggestion for a track specific hint to aid the student on the _JavaScript specifics_, see optimisations in terms of the configurations of `jest`, `eslint` or other dependencies, report missing edge cases, factual errors, logical errors, and, implement exercises or develop new exercises.
 
+> [!IMPORTANT]
+> When contributing, please open your PR from a branch so our automated tooling can run.
+
 We welcome contributions of all sorts and sizes, from reporting issues to submitting patches, as well as joining the current [discussions 💬][issue-discussion].
 
 ---

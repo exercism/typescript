@@ -5,6 +5,6 @@ export class List {
     // DO *not* use any of the Array.prototype methods in your solution.
 
     // You may use the destructuring and spreading (...) syntax from Iterable.
-    throw new Error('Remove this statement and implement this function')
+    throw new Error('Remove this line and implement the function')
   }
 }
