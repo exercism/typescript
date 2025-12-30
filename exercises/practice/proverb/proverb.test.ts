@@ -22,7 +22,7 @@ describe('Proverb', () => {
     expect(proverb('key', 'value')).toEqual(expected)
   })
 
-  xit('the whole proveb', () => {
+  xit('the whole proverb', () => {
     const expected = `For want of a nail the shoe was lost.\nFor want of a shoe the horse was lost.\nFor want of a horse the rider was lost.\nFor want of a rider the message was lost.\nFor want of a message the battle was lost.\nFor want of a battle the kingdom was lost.\nAnd all for the want of a nail.`
     expect(
       proverb('nail', 'shoe', 'horse', 'rider', 'message', 'battle', 'kingdom')
