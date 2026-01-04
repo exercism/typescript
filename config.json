@@ -892,6 +892,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5,
+        "status": "deprecated",
         "topics": [
           "conditionals",
           "loops",
@@ -1291,6 +1292,19 @@
         "uuid": "2cdf947c-34ed-4ecf-92dd-4c4e6c21f9f3",
         "practices": [],
         "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "6bcfe2b6-e555-4c90-8c80-168730dd5ad3",
+        "practices": [],
+        "prerequisites": [],
+        "topics": [
+            "conditionals",
+            "loops",
+            "strings"
+        ],
         "difficulty": 3
       },
       {
