@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript-practice-bottle-song",
+  "name": "@exercism/typescript-bottle-song",
   "version": "1.0.0",
   "description": "Exercism practice exercise on bottle-song",
   "private": true,
