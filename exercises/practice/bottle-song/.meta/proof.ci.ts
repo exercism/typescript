@@ -17,7 +17,7 @@ export const recite = (
   takeDownCount = 1
 ): string[] => {
   const out: string[] = []
-
+  
   for (
     let i = initialBottleCount;
     i > initialBottleCount - takeDownCount;
@@ -26,14 +26,12 @@ export const recite = (
     const currentBottles = i === 1 ? 'bottle' : 'bottles'
     const nextBottles = i - 1 === 1 ? 'bottle' : 'bottles'
 
+    const line = `${NUMBERS[i]} green ${currentBottles} hanging on the wall,`
     out.push(
-      ...[
-        ...Array(2).fill(
-          `${NUMBERS[i]} green ${currentBottles} hanging on the wall,`
-        ),
-        `And if one green bottle should accidentally fall,`,
-        `There'll be ${NUMBERS[i - 1].toLowerCase()} green ${nextBottles} hanging on the wall.`,
-      ]
+      line,
+      line,
+      `And if one green bottle should accidentally fall,`,
+      `There'll be ${NUMBERS[i - 1].toLowerCase()} green ${nextBottles} hanging on the wall.`,
     )
 
     if (initialBottleCount - takeDownCount !== i - 1) {
