@@ -33,4 +33,10 @@ describe('Space Age', () => {
   xit('age on Neptune', () => {
     expect(age('neptune', 1821023456)).toEqual(0.35)
   })
+
+  xit('invalid planet causes error', () => {
+    expect(() => {
+      age('sun', 680804807)
+    }).toThrow('not a planet')
+  })
 })
