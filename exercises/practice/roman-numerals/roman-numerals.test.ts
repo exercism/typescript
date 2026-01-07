@@ -27,5 +27,6 @@ describe('toRoman()', () => {
   xit('converts 1666', () => expect(toRoman(1666)).toEqual('MDCLXVI'))
   xit('converts 3000', () => expect(toRoman(3000)).toEqual('MMM'))
   xit('converts 3001', () => expect(toRoman(3001)).toEqual('MMMI'))
+  xit('converts 3888', () => expect(toRoman(3888)).toEqual('MMMDCCCLXXXVIII'))
   xit('converts 3999', () => expect(toRoman(3999)).toEqual('MMMCMXCIX'))
 })
