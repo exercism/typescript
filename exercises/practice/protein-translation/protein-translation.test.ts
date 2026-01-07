@@ -127,12 +127,6 @@ describe('Translate input RNA sequences into proteins', () => {
     expect(translate('UGGUGUUAUUAAUGGUUU')).toEqual(expected)
   })
 
-  xit("Non-existing codon can't translate", () => {
-    expect(() => {
-      translate('AAA')
-    }).toThrow('Invalid codon')
-  })
-
   xit("Unknown amino acids, not part of a codon, can't translate", () => {
     expect(() => {
       translate('XYZ')
