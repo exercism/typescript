@@ -68,6 +68,22 @@ describe('TwoBucket', () => {
     })
   })
 
+  xdescribe('Very different sizes', () => {
+    xit('measure using bucket one much bigger than bucket two', () => {
+      const twoBucket = new TwoBucket(5, 1, 2, 'one')
+      expect(twoBucket.moves()).toEqual(6)
+      expect(twoBucket.goalBucket).toEqual('one')
+      expect(twoBucket.otherBucket).toEqual(1)
+    })
+
+    xit('measure using bucket one much smaller than bucket two', () => {
+      const twoBucket = new TwoBucket(3, 15, 9, 'one')
+      expect(twoBucket.moves()).toEqual(6)
+      expect(twoBucket.goalBucket).toEqual('two')
+      expect(twoBucket.otherBucket).toEqual(0)
+    })
+  })
+
   xdescribe('Reachability', () => {
     const buckOne = 6
     const buckTwo = 15
