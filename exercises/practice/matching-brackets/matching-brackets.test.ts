@@ -54,12 +54,24 @@ describe('Matching Brackets', () => {
     expect(isPaired('[({]})')).toEqual(false)
   })
 
+  xit('paired and wrong nested brackets but innermost are correct', () => {
+    expect(isPaired('[({}])')).toEqual(false)
+  })
+
   xit('paired and incomplete brackets', () => {
     expect(isPaired('{}[')).toEqual(false)
   })
 
   xit('too many closing brackets', () => {
     expect(isPaired('[]]')).toEqual(false)
+  })
+
+  xit('early unexpected brackets', () => {
+    expect(isPaired(')()')).toEqual(false)
+  })
+
+  xit('early mismatched brackets', () => {
+    expect(isPaired('{)()')).toEqual(false)
   })
 
   xit('math expression', () => {
