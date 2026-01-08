@@ -26,4 +26,14 @@ describe('Reverse String', () => {
     const expected = 'racecar'
     expect(reverse('racecar')).toEqual(expected)
   })
+
+  xit('an even-sized word', () => {
+    const expected = 'reward'
+    expect(reverse('drawer')).toEqual(expected)
+  })
+
+  xit('wide characters', () => {
+    const expected = '猫子'
+    expect(reverse('子猫')).toEqual(expected)
+  })
 })
