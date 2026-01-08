@@ -10,6 +10,10 @@ describe('strain', () => {
     expect(keep<number>([1, 3, 5], (e: number) => true)).toEqual([1, 3, 5])
   })
 
+  xit('keeps nothing', () => {
+    expect(keep<number>([1, 3, 5], (e: number) => false)).toEqual([])
+  })
+
   xit('keeps first and last', () => {
     expect(keep<number>([1, 2, 3], (e: number) => e % 2 === 1)).toEqual([1, 3])
   })
@@ -48,6 +52,10 @@ describe('strain', () => {
 
   xit('empty discard', () => {
     expect(discard<number>([], (e: number) => true)).toEqual([])
+  })
+
+  xit('discards everything', () => {
+    expect(discard<number>([1, 3, 5], (e: number) => true)).toEqual([])
   })
 
   it('discards nothing', () => {
