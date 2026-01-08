@@ -66,4 +66,9 @@ describe('Check if the given string is an isogram', () => {
     const expected = false
     expect(isIsogram('angola')).toEqual(expected)
   })
+
+  xit('word with duplicated character and with two hyphens', () => {
+    const expected = false
+    expect(isIsogram('up-to-date')).toEqual(expected)
+  })
 })
