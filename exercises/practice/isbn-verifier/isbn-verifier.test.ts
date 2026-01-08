@@ -29,6 +29,14 @@ describe('ISBN Verifier', () => {
   xit('X is only valid as a check digit', () => {
     expect(isValid('3-598-2X507-9')).toBeFalsy()
   })
+  
+  xit('only one check digit is allowed', () => {
+    expect(isValid('3-598-21508-96')).toBeFalsy()
+  });
+
+  xit('X is not substituted by the value 10', () => {
+    expect(isValid('3-598-2X507-5')).toBeFalsy()
+  });
 
   xit('valid isbn without separating dashes', () => {
     expect(isValid('3598215088')).toBeTruthy()
