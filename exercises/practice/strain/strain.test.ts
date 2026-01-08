@@ -44,7 +44,7 @@ describe('strain', () => {
       [2, 2, 1],
       [1, 2, 5],
     ]
-    const predicate = (row: number[]) => row.indexOf(5) > -1
+    const predicate = (row: number[]): boolean => row.indexOf(5) > -1
     const result = keep<number[]>(rows, predicate)
     expect(result).toEqual([
       [5, 5, 5],
@@ -82,7 +82,7 @@ describe('strain', () => {
 
   xit('discards strings', () => {
     const words = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot']
-    const predicate = (word: string) => word.indexOf('z') === 0
+    const predicate = (word: string): boolean => word.indexOf('z') === 0
     const result = discard<string>(words, predicate)
     expect(result).toEqual(['apple', 'banana', 'cherimoya'])
   })
@@ -98,7 +98,7 @@ describe('strain', () => {
       [1, 2, 5],
     ]
 
-    const predicate = (row: number[]) => row.indexOf(5) > -1
+    const predicate = (row: number[]): boolean => row.indexOf(5) > -1
     const result = discard<number[]>(rows, predicate)
     expect(result).toEqual([
       [1, 2, 3],
