@@ -53,6 +53,11 @@ xdescribe('first letter and ay are moved to the end of words that start with con
     const expected = 'atqay'
     expect(translate('qat')).toEqual(expected)
   })
+
+  xit('word beginning with consonant and vowel containing qu', () => {
+    const expected = 'iquidlay'
+    expect(translate('liquid')).toEqual(expected)
+  })
 })
 
 xdescribe('some letter clusters are treated like a single consonant', () => {
