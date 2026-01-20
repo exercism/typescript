@@ -3,17 +3,17 @@ import { keep, discard } from './strain.ts'
 
 describe('strain', () => {
   it('keeps on empty array returns empty array', () => {
-    const predicate = (e: number): boolean => true
+    const predicate = (_: number): boolean => true
     expect(keep<number>([], predicate)).toEqual([])
   })
 
   xit('keeps everything', () => {
-    const predicate = (e: number): boolean => true
+    const predicate = (_: number): boolean => true
     expect(keep<number>([1, 3, 5], predicate)).toEqual([1, 3, 5])
   })
 
   xit('keeps nothing', () => {
-    const predicate = (e: number): boolean => false
+    const predicate = (_: number): boolean => false
     expect(keep<number>([1, 3, 5], predicate)).toEqual([])
   })
 
@@ -55,17 +55,17 @@ describe('strain', () => {
   })
 
   xit('empty discard', () => {
-    const predicate = (e: number): boolean => true
+    const predicate = (_: number): boolean => true
     expect(discard<number>([], predicate)).toEqual([])
   })
 
   xit('discards everything', () => {
-    const predicate = (e: number): boolean => true
+    const predicate = (_: number): boolean => true
     expect(discard<number>([1, 3, 5], predicate)).toEqual([])
   })
 
   it('discards nothing', () => {
-    const predicate = (e: number): boolean => false
+    const predicate = (_: number): boolean => false
     expect(discard<number>([1, 3, 5], predicate)).toEqual([1, 3, 5])
   })
 
