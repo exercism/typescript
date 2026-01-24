@@ -42,7 +42,7 @@ describe('Camicia', () => {
     const playerB = ['3', '4', '5', '6', 'K']
     const expected = { status: 'finished', cards: 10, tricks: 1 }
     expect(simulateGame(playerA, playerB)).toEqual(expected)
-  })        
+  })
 
   xit('the jack betrays the queen', () => {
     const playerA = ['2', 'A', '7', '8', 'Q']
