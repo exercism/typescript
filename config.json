@@ -537,6 +537,19 @@
         ]
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "5ee5b5e4-bc56-4be5-b384-225b2b339444",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "loops",
+          "strings"
+        ]
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "7c60f7c5-2922-4ce4-acbe-51c5ab654b4d",
@@ -1300,12 +1313,12 @@
         "uuid": "6bcfe2b6-e555-4c90-8c80-168730dd5ad3",
         "practices": [],
         "prerequisites": [],
+        "difficulty": 3,
         "topics": [
-            "conditionals",
-            "loops",
-            "strings"
-        ],
-        "difficulty": 3
+          "conditionals",
+          "loops",
+          "strings"
+        ]
       },
       {
         "slug": "rotational-cipher",
