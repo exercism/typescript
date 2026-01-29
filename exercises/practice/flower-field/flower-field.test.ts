@@ -76,4 +76,8 @@ describe('Flower Field annotate', () => {
     ]
     expect(annotate(input)).toEqual(expected)
   })
+
+  xit('multiple adjacent flowers', () => {
+    expect(annotate([' ** '])).toEqual(['1**1'])
+  })
 })
