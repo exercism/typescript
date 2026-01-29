@@ -3,30 +3,35 @@ import { keep, discard } from './strain.ts'
 
 describe('strain', () => {
   it('keeps on empty array returns empty array', () => {
-    expect(keep<number>([], (e: number) => e < 10)).toEqual([])
+    const predicate = (_: number): boolean => true
+    expect(keep<number>([], predicate)).toEqual([])
   })
 
   xit('keeps everything', () => {
-    expect(keep<number>([1, 2, 3], (e: number) => e < 10)).toEqual([1, 2, 3])
+    const predicate = (_: number): boolean => true
+    expect(keep<number>([1, 3, 5], predicate)).toEqual([1, 3, 5])
+  })
+
+  xit('keeps nothing', () => {
+    const predicate = (_: number): boolean => false
+    expect(keep<number>([1, 3, 5], predicate)).toEqual([])
   })
 
   xit('keeps first and last', () => {
-    expect(keep<number>([1, 2, 3], (e: number) => e % 2 === 1)).toEqual([1, 3])
+    const predicate = (e: number): boolean => e % 2 === 1
+    expect(keep<number>([1, 2, 3], predicate)).toEqual([1, 3])
   })
 
   xit('keeps neither first nor last', () => {
-    expect(keep<number>([1, 2, 3, 4, 5], (e: number) => e % 2 === 0)).toEqual([
-      2, 4,
-    ])
+    const predicate = (e: number): boolean => e % 2 === 0
+    expect(keep<number>([1, 2, 3], predicate)).toEqual([2])
   })
 
   xit('keeps strings', () => {
-    const words = 'apple zebra banana zombies cherimoya zelot'.split(' ')
-    const result = keep<string>(
-      words,
-      (word: string) => word.indexOf('z') === 0
-    )
-    expect(result).toEqual('zebra zombies zelot'.split(' '))
+    const words = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot']
+    const predicate = (word: string): boolean => word.indexOf('z') === 0
+    const result = keep<string>(words, predicate)
+    expect(result).toEqual(['zebra', 'zombies', 'zealot'])
   })
 
   xit('keeps arrays', () => {
@@ -39,7 +44,8 @@ describe('strain', () => {
       [2, 2, 1],
       [1, 2, 5],
     ]
-    const result = keep<number[]>(rows, (row: number[]) => row.indexOf(5) > -1)
+    const predicate = (row: number[]): boolean => row.indexOf(5) > -1
+    const result = keep<number[]>(rows, predicate)
     expect(result).toEqual([
       [5, 5, 5],
       [5, 1, 2],
@@ -49,29 +55,36 @@ describe('strain', () => {
   })
 
   xit('empty discard', () => {
-    expect(discard<number>([], (e: number) => e < 10)).toEqual([])
+    const predicate = (_: number): boolean => true
+    expect(discard<number>([], predicate)).toEqual([])
+  })
+
+  xit('discards everything', () => {
+    const predicate = (_: number): boolean => true
+    expect(discard<number>([1, 3, 5], predicate)).toEqual([])
   })
 
   it('discards nothing', () => {
-    expect(discard<number>([1, 2, 3], (e: number) => e > 10)).toEqual([1, 2, 3])
+    const predicate = (_: number): boolean => false
+    expect(discard<number>([1, 3, 5], predicate)).toEqual([1, 3, 5])
   })
 
   xit('discards first and last', () => {
-    expect(discard<number>([1, 2, 3], (e: number) => e % 2 === 1)).toEqual([2])
+    const predicate = (e: number): boolean => e % 2 === 1
+    expect(discard<number>([1, 2, 3], predicate)).toEqual([2])
   })
 
   xit('discards neither first nor last', () => {
-    const result = discard<number>([1, 2, 3, 4, 5], (e: number) => e % 2 === 0)
-    expect(result).toEqual([1, 3, 5])
+    const predicate = (e: number): boolean => e % 2 === 0
+    const result = discard<number>([1, 2, 3], predicate)
+    expect(result).toEqual([1, 3])
   })
 
   xit('discards strings', () => {
-    const words = 'apple zebra banana zombies cherimoya zelot'.split(' ')
-    const result = discard<string>(
-      words,
-      (word: string) => word.indexOf('z') === 0
-    )
-    expect(result).toEqual('apple banana cherimoya'.split(' '))
+    const words = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot']
+    const predicate = (word: string): boolean => word.indexOf('z') === 0
+    const result = discard<string>(words, predicate)
+    expect(result).toEqual(['apple', 'banana', 'cherimoya'])
   })
 
   xit('discards arrays', () => {
@@ -84,10 +97,9 @@ describe('strain', () => {
       [2, 2, 1],
       [1, 2, 5],
     ]
-    const result = discard<number[]>(
-      rows,
-      (row: number[]) => row.indexOf(5) > -1
-    )
+
+    const predicate = (row: number[]): boolean => row.indexOf(5) > -1
+    const result = discard<number[]>(rows, predicate)
     expect(result).toEqual([
       [1, 2, 3],
       [2, 1, 2],
