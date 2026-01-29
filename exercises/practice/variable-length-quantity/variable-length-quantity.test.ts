@@ -11,6 +11,10 @@ describe('VariableLengthQuantity', () => {
       expect(encode([0x40])).toEqual([0x40])
     })
 
+    xit('asymmetric single byte', () => {
+      expect(encode([0x53])).toEqual([0x53])
+    })
+
     xit('largest single byte', () => {
       expect(encode([0x7f])).toEqual([0x7f])
     })
@@ -21,6 +25,10 @@ describe('VariableLengthQuantity', () => {
 
     xit('arbitrary double byte', () => {
       expect(encode([0x2000])).toEqual([0xc0, 0])
+    })
+
+    xit('asymmetric double byte', () => {
+      expect(encode([0xad])).toEqual([0x81, 0x2d])
     })
 
     xit('largest double byte', () => {
@@ -35,6 +43,10 @@ describe('VariableLengthQuantity', () => {
       expect(encode([0x100000])).toEqual([0xc0, 0x80, 0])
     })
 
+    xit('asymmetric triple byte', () => {
+      expect(encode([0x1d59c])).toEqual([0x87, 0xab, 0x1c])
+    })
+
     xit('largest triple byte', () => {
       expect(encode([0x1fffff])).toEqual([0xff, 0xff, 0x7f])
     })
@@ -47,6 +59,10 @@ describe('VariableLengthQuantity', () => {
       expect(encode([0x8000000])).toEqual([0xc0, 0x80, 0x80, 0])
     })
 
+    xit('asymmetric quadruple byte', () => {
+      expect(encode([0x357704])).toEqual([0x81, 0xd5, 0xee, 0x04])
+    })
+
     xit('largest quadruple byte', () => {
       expect(encode([0xfffffff])).toEqual([0xff, 0xff, 0xff, 0x7f])
     })
@@ -57,6 +73,10 @@ describe('VariableLengthQuantity', () => {
 
     xit('arbitrary quintuple byte', () => {
       expect(encode([0xff000000])).toEqual([0x8f, 0xf8, 0x80, 0x80, 0])
+    })
+
+    xit('asymmetric quintuple byte', () => {
+      expect(encode([0x86656105])).toEqual([0x88, 0xb3, 0x95, 0xc2, 0x05])
     })
 
     xit('maximum 32-bit integer input', () => {
