@@ -17,6 +17,11 @@ describe('Check if the given string is an isogram', () => {
     expect(isIsogram('eleven')).toEqual(expected)
   })
 
+  xit('word with one duplicated character from the end of the alphabet', () => {
+    const expected = false
+    expect(isIsogram('zzyzx')).toEqual(expected)
+  })
+
   xit('longest reported english isogram', () => {
     const expected = true
     expect(isIsogram('subdermatoglyphic')).toEqual(expected)
@@ -27,9 +32,19 @@ describe('Check if the given string is an isogram', () => {
     expect(isIsogram('Alphabet')).toEqual(expected)
   })
 
+  xit('word with duplicated character in mixed case, lowercase first', () => {
+    const expected = false
+    expect(isIsogram('alphAbet')).toEqual(expected)
+  })
+
   xit('hypothetical isogrammic word with hyphen', () => {
     const expected = true
     expect(isIsogram('thumbscrew-japingly')).toEqual(expected)
+  })
+
+  xit('hypothetical word with duplicated character following hyphen', () => {
+    const expected = false
+    expect(isIsogram('thumbscrew-jappingly')).toEqual(expected)
   })
 
   xit('isogram with duplicated hyphen', () => {
@@ -45,5 +60,15 @@ describe('Check if the given string is an isogram', () => {
   xit('duplicated character in the middle', () => {
     const expected = false
     expect(isIsogram('accentor')).toEqual(expected)
+  })
+
+  xit('same first and last characters', () => {
+    const expected = false
+    expect(isIsogram('angola')).toEqual(expected)
+  })
+
+  xit('word with duplicated character and with two hyphens', () => {
+    const expected = false
+    expect(isIsogram('up-to-date')).toEqual(expected)
   })
 })
