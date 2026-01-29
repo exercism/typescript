@@ -42,13 +42,13 @@ describe('Largest Series Product', () => {
 
   xit('rejects span longer than string length', () => {
     expect(() => largestProduct('123', 4)).toThrow(
-      new Error('Span must be smaller than string length')
+      new Error('Span must not exceed string length')
     )
   })
 
   xit('rejects empty string and nonzero span', () => {
     expect(() => largestProduct('', 1)).toThrow(
-      new Error('Span must be smaller than string length')
+      new Error('Span must not exceed string length')
     )
   })
 

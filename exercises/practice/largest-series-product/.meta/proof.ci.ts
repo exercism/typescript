@@ -3,7 +3,7 @@ export function largestProduct(digits: string, seriesLength: number): number {
     return 1
   }
   if (seriesLength > digits.length) {
-    throw new Error('Span must be smaller than string length')
+    throw new Error('Span must not exceed string length')
   }
   if (seriesLength < 0) {
     throw new Error('Span must not be negative')
