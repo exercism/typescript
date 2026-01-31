@@ -758,6 +758,14 @@
         ]
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "86316f23-cbea-4a4d-b5e0-577d24073f08",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "bbd4665c-be4b-4d70-bc92-e91ce7a1d55f",
