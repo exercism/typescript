@@ -7,6 +7,11 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('')
   })
 
+  xit('normalization results in empty plaintext', () => {
+    const crypto = new Crypto('... --- ...')
+    expect(crypto.ciphertext).toEqual('')
+  })
+
   xit('Lowercase', () => {
     const crypto = new Crypto('A')
     expect(crypto.ciphertext).toEqual('a')
@@ -32,7 +37,7 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('clu hlt io ')
   })
 
-  it.skip('54 character plaintext results in 7 chunks, the last two with trailing spaces', () => {
+  it.skip('54 character plaintext results in 8 chunks, the last two with trailing spaces', () => {
     const crypto = new Crypto(
       'If man was meant to stay on the ground, god would have given us roots.'
     )
