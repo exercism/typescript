@@ -33,6 +33,11 @@ describe('Abundant numbers', () => {
     const expected = 'abundant'
     expect(classify(33550335)).toEqual(expected)
   })
+
+  xit('Perfect square abundant number is classified correctly', () => {
+    const expected = 'abundant'
+    expect(classify(196)).toEqual(expected)
+  })
 })
 
 describe('Deficient numbers', () => {
