@@ -94,7 +94,7 @@ describe('Anagram', () => {
 
   xit('does not detect an anagram if the original word is repeated', () => {
     const subject = new Anagram('go')
-    const matches = subject.matches('go Go GO')
+    const matches = subject.matches('goGoGO')
     const expected = []
 
     expect(areSetsEqual(new Set(expected), new Set(matches))).toEqual(true)
@@ -136,6 +136,22 @@ describe('Anagram', () => {
     const subject = new Anagram('LISTEN')
     const matches = subject.matches('LISTEN', 'Silent')
     const expected = ['Silent']
+
+    expect(areSetsEqual(new Set(expected), new Set(matches))).toEqual(true)
+  })
+
+  xit('handles case of greek letters', () => {
+    const subject = new Anagram('ΑΒΓ')
+    const matches = subject.matches('ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ')
+    const expected = ['ΒΓΑ', 'γβα']
+
+    expect(areSetsEqual(new Set(expected), new Set(matches))).toEqual(true)
+  })
+
+  xit('different characters may have the same bytes', () => {
+    const subject = new Anagram('a⬂')
+    const matches = subject.matches('€a')
+    const expected = []
 
     expect(areSetsEqual(new Set(expected), new Set(matches))).toEqual(true)
   })
