@@ -7,17 +7,17 @@ describe('Crypto', () => {
     expect(crypto.ciphertext).toEqual('')
   })
 
-  it('Lowercase', () => {
+  xit('Lowercase', () => {
     const crypto = new Crypto('A')
     expect(crypto.ciphertext).toEqual('a')
   })
 
-  it('Remove spaces', () => {
+  xit('Remove spaces', () => {
     const crypto = new Crypto('  b ')
     expect(crypto.ciphertext).toEqual('b')
   })
 
-  it('Remove punctuation', () => {
+  xit('Remove punctuation', () => {
     const crypto = new Crypto('@1,%!')
     expect(crypto.ciphertext).toEqual('1')
   })
