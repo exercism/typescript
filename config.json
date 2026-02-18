@@ -314,6 +314,14 @@
         ]
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "ba7d5b31-50ab-482f-9669-718949ccb753",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "rational-numbers",
         "name": "Rational Numbers",
         "uuid": "4439ab9d-266b-483b-b5ca-3920c478fd62",
