@@ -22,7 +22,8 @@ const countSingles = (dice: number[], value: number): number =>
 /**
  * sorts a list of numbers in numerically increasing order
  */
-const sortNumbers = (dice: number[]): number[] => dice.toSorted((a, b) => a - b)
+const sortNumbers = (dice: number[]): number[] =>
+  [...dice].sort((a, b) => a - b)
 
 /**
  * build a mapping of the number of occurances of each die. For example. a full house of 1s and 6s will return `{1: 2, 6: 3}`
@@ -80,6 +81,6 @@ export const score = (dice: number[], category: Category): number => {
     case Category.YACHT:
       return new Set(dice).size === 1 ? 50 : 0
     default:
-      throw new Error(`unhandled case: ${category}`)
+      throw new Error('unhandled case')
   }
 }
