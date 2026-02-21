@@ -38,6 +38,10 @@ describe('Yacht', () => {
     expect(score([3, 3, 3, 3, 3], Category.FIVES)).toEqual(0)
   })
 
+  xit('Fives', () => {
+    expect(score([1, 5, 3, 5, 3], Category.FIVES)).toEqual(10)
+  })
+
   xit('Sixes', () => {
     expect(score([2, 3, 4, 5, 6], Category.SIXES)).toEqual(6)
   })
