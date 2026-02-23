@@ -18,6 +18,6 @@ export const enum Category {
   YACHT,
 }
 
-export const score = (dice: unknown, category: unknown): unknown => {
+export const score = (dice: unknown, category: Category): unknown => {
   throw new Error('Remove this statement and implement this function')
 }
