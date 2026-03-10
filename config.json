@@ -267,6 +267,14 @@
         ]
       },
       {
+        "slug": "split-second-stopwatch",
+        "name": "Split-Second Stopwatch",
+        "uuid": "bc1fc50f-36ed-4a16-92bd-3001c8cd53d3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "ac2ec51b-a2cd-4d8c-99e3-5bd6758b4e7b",
