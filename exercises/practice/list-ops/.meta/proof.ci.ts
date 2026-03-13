@@ -20,7 +20,7 @@ const Null: Cons<undefined> = {
   append<T>(other: Cons<T>): Cons<T> {
     return other
   },
-  concat(): Cons<undefined> {
+  concatenate(): Cons<undefined> {
     return this
   },
   forEach(): void {
@@ -71,7 +71,7 @@ class Cons<T> {
     return other.foldl((result, item) => result.push(item), this)
   }
 
-  public concat(others: Cons<Cons<T>>): Cons<T> {
+  public concatenate(others: Cons<Cons<T>>): Cons<T> {
     return others.foldl<Cons<T>>((result, other) => result.append(other), this)
   }
 
