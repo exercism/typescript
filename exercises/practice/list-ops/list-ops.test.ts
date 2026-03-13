@@ -85,11 +85,11 @@ describe('append entries to a list and return the new list', () => {
   })
 })
 
-describe('concat lists and lists of lists into new list', () => {
+describe('concatenate lists and lists of lists into new list', () => {
   xit('empty list', () => {
     const list1 = List.create()
     const list2 = List.create<ReturnType<typeof List.create>>()
-    expect(list1.concat(list2)).toHaveValues()
+    expect(list1.concatenate(list2)).toHaveValues()
   })
 
   xit('list of lists', () => {
@@ -98,7 +98,7 @@ describe('concat lists and lists of lists into new list', () => {
     const list3 = List.create<number>()
     const list4 = List.create(4, 5, 6)
     const listOfLists = List.create(list2, list3, list4)
-    expect(list1.concat(listOfLists)).toHaveValues(1, 2, 3, 4, 5, 6)
+    expect(list1.concatenate(listOfLists)).toHaveValues(1, 2, 3, 4, 5, 6)
   })
 })
 
