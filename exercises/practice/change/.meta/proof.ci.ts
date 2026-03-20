@@ -12,8 +12,7 @@ export const findFewestCoins = (coins: number[], target: number): number[] => {
     for (const coin of coins) {
       const updatedBalance = initialBalance + coin
 
-      if (updatedBalance > target || updatedBalance in visited)
-        continue
+      if (updatedBalance > target || updatedBalance in visited) continue
 
       const usedCoins = [...visited[initialBalance], coin]
 
