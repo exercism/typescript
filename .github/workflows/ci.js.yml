@@ -9,7 +9,7 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
@@ -30,7 +30,7 @@ jobs:
         run: corepack yarn ci:check
 
   ci:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     strategy:
       matrix:
@@ -58,7 +58,7 @@ jobs:
     # simulating what would happen if a student runs the tests standalone.
     # We do this by removing all project files in the root.
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
