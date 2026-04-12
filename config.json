@@ -578,6 +578,14 @@
         ]
       },
       {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "341fdb04-d9bc-42ad-92fb-dff927cff6d2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "7c60f7c5-2922-4ce4-acbe-51c5ab654b4d",
@@ -1572,7 +1580,12 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
-        "topics": ["arrays", "conditionals", "filtering", "games"]
+        "topics": [
+          "arrays",
+          "conditionals",
+          "filtering",
+          "games"
+        ]
       }
     ]
   },
