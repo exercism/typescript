@@ -1,0 +1,29 @@
+{
+  "authors": [
+  ],
+  "contributors": [
+    "thibault2705"
+  ],
+  "files": {
+    "solution": [
+      "poker.ts"
+    ],
+    "test": [
+      "poker.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Pick the best hand(s) from a list of poker hands.",
+  "custom": {
+    "version.tests.compatibility": "jest-29",
+    "flag.tests.task-per-describe": false,
+    "flag.tests.may-run-long": false,
+    "flag.tests.includes-optional": false,
+    "flag.tests.jest": true,
+    "flag.tests.tstyche": false
+  },
+  "source": "Inspired by the training course from Udacity.",
+  "source_url": "https://www.udacity.com/course/design-of-computer-programs--cs212"
+}

@@ -1574,6 +1574,20 @@
         "difficulty": 2
       },
       {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "56f78d43-4715-4e0b-80e9-b257b966db12",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "filtering",
+          "games"
+        ]
+      },
+      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "06ac7eed-1417-4510-b526-eb068af21ad9",
