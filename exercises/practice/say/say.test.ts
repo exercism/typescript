@@ -1,3 +1,4 @@
+// @ts-ignore
 import { describe, it, expect, xit } from '@jest/globals'
 import { sayInEnglish } from './say.ts'
 
