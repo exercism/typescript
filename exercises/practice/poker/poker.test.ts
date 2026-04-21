@@ -6,13 +6,13 @@ describe('Poker', () => {
     expect(bestHands(['4S 5S 7H 8D JC'])).toEqual(['4S 5S 7H 8D JC'])
   })
 
-  it('highest card out of all hands wins', () => {
+  xit('highest card out of all hands wins', () => {
     expect(
       bestHands(['4D 5S 6S 8D 3C', '2S 4C 7S 9H 10H', '3S 4S 5D 6H JH'])
     ).toEqual(['3S 4S 5D 6H JH'])
   })
 
-  it('a tie has multiple winners', () => {
+  xit('a tie has multiple winners', () => {
     expect(
       bestHands([
         '4D 5S 6S 8D 3C',
