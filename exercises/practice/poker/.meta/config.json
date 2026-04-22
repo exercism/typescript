@@ -2,8 +2,6 @@
   "authors": [
     "thibault2705"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "poker.ts"
@@ -16,6 +14,8 @@
     ]
   },
   "blurb": "Pick the best hand(s) from a list of poker hands.",
+  "source": "Inspired by the training course from Udacity.",
+  "source_url": "https://www.udacity.com/course/design-of-computer-programs--cs212",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -23,7 +23,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Inspired by the training course from Udacity.",
-  "source_url": "https://www.udacity.com/course/design-of-computer-programs--cs212"
+  }
 }
