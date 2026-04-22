@@ -102,13 +102,7 @@ describe('Poker', () => {
   })
 
   xit('with multiple decks, two players can have same three of a kind, ties go to highest remaining cards', () => {
-    expect(bestHands(['4S AH AS 7C AD', '4S AH AS 8C AD'])).toEqual([
-      '4S AH AS 8C AD',
-    ])
-  })
-
-  xit('with multiple decks, two players can have same three of a kind, ties go to highest remaining cards', () => {
-    expect(bestHands(['5S AH AS 7C AD', '4S AH AS 8C AD'])).toEqual([
+    expect(bestHands(["5S AH AS 7C AD", "4S AH AS 8C AD"])).toEqual([
       '4S AH AS 8C AD',
     ])
   })
