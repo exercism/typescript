@@ -17,7 +17,7 @@
       ".meta/proof.ci.ts"
     ]
   },
-  "blurb": "Determine if a word or phrase is an isogram.",
+  "blurb": "Determine whether a phrase is an isogram, a word with no repeated letters.",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +25,7 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
+  }
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"
 }
