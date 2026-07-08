@@ -17,7 +17,7 @@ export const findSequence = (start: Point, prisms: Prism[]): number[] => {
     const dirX = Math.cos(rad)
     const dirY = Math.sin(rad)
 
-    let nearest: Prism
+    let nearest: Prism | undefined
     let nearestDist = Infinity
 
     for (const prism of prisms) {
