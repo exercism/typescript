@@ -12,11 +12,9 @@ export class Crypto {
     }
 
     const splitRegex = new RegExp(`.{1,${chunkSize}}`, 'g')
-    return this.ciphertextSegments()
-      .join('')
-      .match(splitRegex)
-      .map((item) => item.padEnd(chunkSize, ' '))
-      .join(' ')
+    const segments = this.ciphertextSegments() ?? []
+    const chunks = segments.join('').match(splitRegex) ?? []
+    return chunks.map((item) => item.padEnd(chunkSize, ' ')).join(' ')
   }
 
   public get size(): number {
@@ -25,7 +23,7 @@ export class Crypto {
   }
 
   private ciphertextSegments(): string[] {
-    const textSegments = this.plaintextSegments()
+    const textSegments = this.plaintextSegments() ?? []
     const columns: string[][] = []
     let i: number
     let j: number
@@ -53,7 +51,7 @@ export class Crypto {
     return result
   }
 
-  private plaintextSegments(): RegExpMatchArray {
+  private plaintextSegments(): RegExpMatchArray | null {
     const plainText = this.plaintext
     const chunkSize = this.size
 
