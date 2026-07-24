@@ -2,6 +2,9 @@
   "authors": [
     "thibault2705"
   ],
+  "contributors": [
+    "SleeplessByte"
+  ],
   "files": {
     "solution": [
       "poker.ts"
