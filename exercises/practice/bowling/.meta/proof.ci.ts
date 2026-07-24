@@ -17,6 +17,8 @@ export class Bowling {
 
     this.frames = []
     this.frameScores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    this.frameRoll = 1
+    this.remainingPins = this.maxPins
 
     this.initializeFrame()
   }
