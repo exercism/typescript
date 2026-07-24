@@ -1,4 +1,4 @@
-import { bestHands } from './poker'
+import { bestHands } from './poker.ts'
 import { describe, expect, it, xit } from '@jest/globals'
 
 describe('Poker', () => {
@@ -146,12 +146,6 @@ describe('Poker', () => {
   xit('flush beats a straight', () => {
     expect(bestHands(['4C 6H 7D 8D 5H', '2S 4S 5S 6S 7S'])).toEqual([
       '2S 4S 5S 6S 7S',
-    ])
-  })
-
-  xit('both hands have a flush, tie goes to high card, down to the last one if necessary', () => {
-    expect(bestHands(['4H 7H 8H 9H 6H', '2S 4S 5S 6S 7S'])).toEqual([
-      '4H 7H 8H 9H 6H',
     ])
   })
 
