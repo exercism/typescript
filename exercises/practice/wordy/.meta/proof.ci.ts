@@ -12,6 +12,8 @@ const compute = (
       return operand1 / operand2
     case 'multiplied by':
       return operand1 * operand2
+    default:
+      throw new Error('Unknown operation')
   }
 }
 
@@ -32,6 +34,9 @@ export const answer = (question: string): number => {
 
   const operations = question.match(operationsPattern)
   const operands = question.match(/-?\d+/g)
+  if (!operands) {
+    throw new Error('Syntax error')
+  }
 
   let result = parseInt(operands[0])
 
