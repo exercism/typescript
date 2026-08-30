@@ -130,5 +130,10 @@ describe('Character creation', () => {
     const character = new DnDCharacter()
 
     expect(character.strength === character.strength).toBeTruthy()
+    expect(character.dexterity === character.dexterity).toBeTruthy()
+    expect(character.constitution === character.constitution).toBeTruthy()
+    expect(character.intelligence === character.intelligence).toBeTruthy()
+    expect(character.wisdom === character.wisdom).toBeTruthy()
+    expect(character.charisma === character.charisma).toBeTruthy()
   })
 })
