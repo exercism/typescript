@@ -1174,6 +1174,14 @@
         ]
       },
       {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "da0fa224-6095-4382-b869-f4e3953e09f6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "sublist",
         "name": "Sublist",
         "uuid": "c5ed4703-59cd-4e31-b109-ba5bfc48a578",
