@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
+  "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
+  "source_url": "https://pine.fm/LearnToProgram/chap_01.html",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
-  "source_url": "https://pine.fm/LearnToProgram/chap_01.html"
+  }
 }

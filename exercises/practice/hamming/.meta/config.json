@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Calculate the Hamming distance between two DNA strands.",
+  "source": "The Calculating Point Mutations problem at Rosalind",
+  "source_url": "https://rosalind.info/problems/hamm/",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "The Calculating Point Mutations problem at Rosalind",
-  "source_url": "https://rosalind.info/problems/hamm/"
+  }
 }

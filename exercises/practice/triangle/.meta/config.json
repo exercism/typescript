@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
+  "source": "The Ruby Koans triangle project, parts 1 & 2",
+  "source_url": "https://www.rubykoans.com/",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "The Ruby Koans triangle project, parts 1 & 2",
-  "source_url": "https://www.rubykoans.com/"
+  }
 }

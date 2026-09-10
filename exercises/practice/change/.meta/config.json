@@ -14,6 +14,8 @@
     ]
   },
   "blurb": "Correctly determine change to be given using the least number of coins.",
+  "source": "Software Craftsmanship - Coin Change Kata",
+  "source_url": "https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -21,7 +23,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Software Craftsmanship - Coin Change Kata",
-  "source_url": "https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata"
+  }
 }

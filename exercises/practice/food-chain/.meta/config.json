@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/There_Was_an_Old_Lady_Who_Swallowed_a_Fly"
+  }
 }

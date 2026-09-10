@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Implement the `keep` and `discard` operation on collections.",
+  "source": "Conversation with James Edward Gray II",
+  "source_url": "http://graysoftinc.com/",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Conversation with James Edward Gray II",
-  "source_url": "http://graysoftinc.com/"
+  }
 }

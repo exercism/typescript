@@ -21,6 +21,8 @@
     ]
   },
   "blurb": "Implement the Vigenère cipher, a simple substitution cipher.",
+  "source": "Substitution Cipher at Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Substitution_cipher",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -28,7 +30,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Substitution Cipher at Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Substitution_cipher"
+  }
 }

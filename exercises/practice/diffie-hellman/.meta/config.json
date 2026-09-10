@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Diffie-Hellman key exchange.",
+  "source": "Wikipedia, 1024 bit key from www.cryptopp.com/wiki.",
+  "source_url": "https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Wikipedia, 1024 bit key from www.cryptopp.com/wiki.",
-  "source_url": "https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
+  }
 }

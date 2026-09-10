@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Determine whether a phrase is an isogram, a word with no repeated letters.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -26,6 +28,4 @@
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
   }
-  "source": "Wikipedia",
-  "source_url": "https://en.wikipedia.org/wiki/Isogram"
 }

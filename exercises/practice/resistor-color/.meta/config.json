@@ -17,6 +17,8 @@
     ]
   },
   "blurb": "Convert a resistor band's color to its numeric representation.",
+  "source": "Maud de Vries, Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/1458",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -24,7 +26,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "Maud de Vries, Erik Schierboom",
-  "source_url": "https://github.com/exercism/problem-specifications/issues/1458"
+  }
 }

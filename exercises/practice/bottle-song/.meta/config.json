@@ -1,20 +1,19 @@
 {
-    "authors": [
-      "Budmin"
+  "authors": [
+    "Budmin"
+  ],
+  "files": {
+    "solution": [
+      "bottle-song.ts"
     ],
-    "files": {
-      "solution": [
-        "bottle-song.ts"
-      ],
-      "test": [
-        "bottle-song.test.ts"
-      ],
-      "example": [
-        ".meta/proof.ci.ts"
-      ]
-    },
-    "blurb": "Produce the lyrics to the popular children's repetitive song: Ten Green Bottles.",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Ten_Green_Bottles"
-  }
-  
+    "test": [
+      "bottle-song.test.ts"
+    ],
+    "example": [
+      ".meta/proof.ci.ts"
+    ]
+  },
+  "blurb": "Produce the lyrics to the popular children's repetitive song: Ten Green Bottles.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Ten_Green_Bottles"
+}

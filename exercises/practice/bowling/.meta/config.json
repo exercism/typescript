@@ -18,6 +18,8 @@
     ]
   },
   "blurb": "Score a bowling game.",
+  "source": "The Bowling Game Kata from UncleBob",
+  "source_url": "https://web.archive.org/web/20221001111000/http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata",
   "custom": {
     "version.tests.compatibility": "jest-29",
     "flag.tests.task-per-describe": false,
@@ -25,7 +27,5 @@
     "flag.tests.includes-optional": false,
     "flag.tests.jest": true,
     "flag.tests.tstyche": false
-  },
-  "source": "The Bowling Game Kata from UncleBob",
-  "source_url": "https://web.archive.org/web/20221001111000/http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata"
+  }
 }
