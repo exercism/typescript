@@ -1409,6 +1409,14 @@
         ]
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "2326f3c2-4e92-4111-b2f9-6d6a3bcbdfca",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "0f4f98fe-245a-4842-b3cf-6581b89afd44",
