@@ -2,23 +2,29 @@ version: 2
 
 updates:
   # Keep dependencies for GitHub Actions up-to-date
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: 'monthly'
+      interval: monthly
 
   # Enable version updates for npm (yarn)
-  - package-ecosystem: 'npm'
+  - package-ecosystem: npm
     # Look for `package.json` and `lock` files in the `root` directory
-    directory: '/'
+    directory: /
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: 'monthly'
+      interval: monthly
 
   # Enable version updates for npm (yarn)
-  - package-ecosystem: 'npm'
+  - package-ecosystem: npm
     # Look for `package.json` and `lock` files in the common directory
-    directory: '/common/'
+    directory: /common/
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: 'monthly'
+      interval: monthly
+
+  # Enable updates to the dependencies of our Dockerfile
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
