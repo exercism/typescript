@@ -36,7 +36,7 @@ export const gamestate = (board: string[]): string => {
   const xWins = scoringArray.some((score) => score === gridSize)
   const oWins = scoringArray.some((score) => score === -gridSize)
 
-  if (xWins && oWins) {
+  if ((xWins && numberOfX === numberOfO) || (oWins && numberOfX > numberOfO)) {
     throw new Error(
       'Impossible board: game should have ended after the game was won'
     )

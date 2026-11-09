@@ -155,5 +155,23 @@ describe('state-of-tic-tac-toe', () => {
         'Impossible board: game should have ended after the game was won'
       )
     })
+
+    xit('Invalid board: O kept playing after X wins', () => {
+      const board = ['OO ', 'XXX', ' O ']
+      expect(() => {
+        gamestate(board)
+      }).toThrow(
+        'Impossible board: game should have ended after the game was won'
+      )
+    })
+
+    xit('Invalid board: X kept playing after O wins', () => {
+      const board = ['XX ', 'OOO', ' XX']
+      expect(() => {
+        gamestate(board)
+      }).toThrow(
+        'Impossible board: game should have ended after the game was won'
+      )
+    })
   })
 })

@@ -61,6 +61,16 @@ describe('Judging a game of connect', () => {
     expect(new Board(board).winner()).toEqual('X')
   })
 
+  xit('X wins with left-hand dead end fork', () => {
+    const board = ['. . X .', ' X X . .', '  . X X X', '   O O O O']
+    expect(new Board(board).winner()).toEqual('X')
+  })
+
+  xit('X wins with right-hand dead end fork', () => {
+    const board = ['. . X X', ' X X . .', '  . X X .', '   O O O O']
+    expect(new Board(board).winner()).toEqual('X')
+  })
+
   xit('O wins crossing from top to bottom', () => {
     const board = [
       '. O . .',
