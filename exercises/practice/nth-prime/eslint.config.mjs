@@ -14,6 +14,8 @@ export default [
       // # Protected or generated
       '.git/**/*',
       '.vscode/**/*',
+      '**/#*',
+      '.yarn',
 
       //# When using npm
       'node_modules/**/*',
